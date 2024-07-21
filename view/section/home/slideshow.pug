@@ -1,0 +1,31 @@
+section.slideshow-homepage
+  #slideshowHomePage.slideshow.owl-carousel.owl-theme.owl-loaded
+    .owl-stage-outer
+      .owl-stage
+        .owl-item
+          a.slideshow-link(href="", target="_blank", rel="noopener noreferrer nofollow")
+            .slideshow-image(style="background-image: url(../../images/slideshow/chai-thuy-tinh-cao-cap-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg)")
+        .owl-item
+          a.slideshow-link(href="", target="_blank", rel="noopener noreferrer nofollow")
+            .slideshow-image(style="background-image: url(../../images/slideshow/ly-thuy-tinh-cao-cap-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg)")
+script.
+  $('#slideshowHomePage').owlCarousel({
+    loop: true,
+    nav: true,
+    lazyLoad:false,
+    rtl: false,
+    autoplay: false,
+    autoplayTimeout: 5000,
+    autoplaySpeed: 3000,
+    responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:1
+      },
+      1000:{
+          items:1
+      }
+    }
+  });

@@ -1,0 +1,108 @@
+- 
+  var menu = [
+    {
+      href: "",
+      follow: "dofollow",
+      text: "iSOGLASS",
+      child: false,
+      active: true
+    },
+    {
+      href: "",
+      follow: "dofollow",
+      text: "Chai thuỷ tinh",
+      child: [
+        {
+          icon02: "../../images/menu-icon/chai-thuy-tinh-dung-ruou.jpg",
+          text02: "Chai thuỷ tinh đựng rượu"
+        },
+        {
+          icon02: "../../images/menu-icon/chai-thuy-tinh-dung-nuoc.jpg",
+          text02: "Chai thuỷ tinh đựng nước"
+        },
+        {
+          icon02: "../../images/menu-icon/bo-binh-ly-thuy-tinh.jpg",
+          text02: "Bộ bình ly thuỷ tinh"
+        },
+        {
+          icon02: "../../images/menu-icon/chai-gom-dung-ruou.jpg",
+          text02: "Chai gốm đựng rượu"
+        }
+      ],
+      active: true 
+    },
+    {
+      href: "",
+      follow: "dofollow",
+      text: "Ly thuỷ tinh",
+      child: [
+        {
+          icon02: "../../images/menu-icon/bo-ly-thuy-tinh.jpg",
+          text02: "Bộ ly thuỷ tinh"
+        },
+        {
+          icon02: "../../images/menu-icon/ly-thuy-tinh-2-lop.jpg",
+          text02: "Ly thuỷ tinh 2 lớp"
+        },
+        {
+          icon02: "../../images/menu-icon/ly-thuy-tinh-uong-ruou.jpg",
+          text02: "Ly thuỷ tinh uống rượu"
+        },
+        {
+          icon02: "../../images/menu-icon/ly-thuy-tinh-cao-cap.jpg",
+          text02: "Ly thuỷ tinh cao cấp"
+        },
+        {
+          icon02: "../../images/menu-icon/ly-thuy-tinh-uong-bia.jpg",
+          text02: "Ly thuỷ tinh uống bia"
+        },
+        {
+          icon02: "../../images/menu-icon/ly-thuy-tinh-uong-ca-phe.jpg",
+          text02: "Ly thuỷ tinh uống cafe"
+        },
+      ],
+      active: false
+    },
+    {
+      href: "",
+      follow: "nofollow",
+      text: "In thương hiệu ly thủy tinh",
+      child: false,
+      active: false
+    },
+    {
+      href: "",
+      follow: "nofollow",
+      text: "Về chúng tôi",
+      child: false,
+      active: false
+    },
+    {
+      href: "",
+      follow: "nofollow",
+      text: "Liên hệ",
+      child: false,
+      active: false
+    }
+  ];
+
+nav.menu 
+  .menu-wrapper
+    button.menu-btn-close(type="button")
+      i.fa.fa-close(aria-hidden="true")
+    ul.menu-list
+      each item in menu
+        li.menu-list-item 
+          a.menu-list-item-link(href=item.href, target="_blank", rel=`noopener noreferrer ${item.follow}`)
+            span=item.text
+            if item.child
+              i.fa.fa-angle-down(aria-hidden="true")
+          if item.child
+            nav.menu-child
+              .menu-child-wrapper 
+                ul.menu-child-list 
+                  each text in item.child 
+                    li.menu-child-item 
+                      a.menu-child-item-link(href="#", target="_blank", rel="noopener noreferrer")
+                        img.menu-child-item-icon(src=text.icon02, alt=text.text02)
+                        span=text.text02
