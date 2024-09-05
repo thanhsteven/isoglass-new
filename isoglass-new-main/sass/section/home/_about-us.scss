@@ -1,0 +1,110 @@
+@use "../../abstracts" as *;
+.about-us {
+  background-color: $secondColor;
+  padding-block: 40px;
+  margin-top: unset;
+  &-title {
+    color: #333;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+  }
+  &-subtitle {
+    text-align: center;
+    margin-block: 20px;
+  }
+  &-wrapper {
+    @include flexbox(row, stretch, stretch, null);
+    margin-bottom: 20px;
+    @include maxWidth($large) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  &-image {
+    flex: 1 1 50%;
+    max-width: 50%;
+    height: 585px;
+    @include maxWidth($large) {
+      max-width: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: $border12;
+      border-bottom-left-radius: $border12;
+      @include maxWidth($large) {
+        border-top-right-radius: $border12;
+        border-bottom-left-radius: unset;
+        height: auto;
+      }
+    }
+  }
+  &-content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 585px;
+    background-color: $primaryColor;
+    border-top-right-radius: $border12;
+    border-bottom-right-radius: $border12;
+    @include maxWidth($large) {
+      max-width: 100%;
+      border-bottom-left-radius: $border12;
+      border-top-right-radius: unset;
+    }
+    &-wrapper {
+      padding: 8%;
+      @include flexbox(column, stretch, space-between, 10px);
+    }
+    &-subtitle {
+      color: #fff;
+      font-weight: 700;
+      font-size: 22px;
+      @include maxWidth($large) {
+        font-size: 22px;
+      }
+    }
+    &-title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.5;
+      @include maxWidth($large) {
+        font-size: 26px;
+      }
+    }
+    &-paragraph {
+      color: #fff;
+      line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 15px;
+      font-size: 17px;
+      @include maxWidth($large) {
+        line-height: 1.5;
+      }
+    }
+    blockquote {
+      color: #fff;
+      line-height: 1.6;
+      font-size: 17px;
+      text-align: justify;
+    }
+    &-btn {
+      display: block;
+      width: fit-content;
+      background-color: #fff;
+      color: $primaryColor;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      border: unset;
+      padding: 12px 20px;
+      border-radius: $border8;
+      margin-top: 20px;
+      &:hover {
+        box-shadow: $shadow;
+      }
+    }
+  }
+}

@@ -1,0 +1,317 @@
+.slideshow-homepage {
+  position: relative;
+  height: fit-content;
+  margin-top: unset;
+  margin-bottom: unset;
+  z-index: 100;
+}
+.slideshow-image {
+  --heigth: 600px;
+  display: block;
+  width: 100%;
+  height: var(--heigth);
+  min-height: var(--heigth);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slideshow .owl-nav {
+  margin-top: unset;
+}
+.slideshow .owl-nav button[type=button][class*=owl-] {
+  width: 60px;
+  height: 60px;
+  border-radius: 100rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  background-color: #fff;
+  font-size: 30px;
+  position: absolute;
+  top: 40%;
+}
+.slideshow .owl-nav button[type=button][class*=owl-]:hover {
+  color: inherit;
+}
+.slideshow .owl-nav .owl-prev {
+  left: 20px;
+}
+.slideshow .owl-nav .owl-next {
+  right: 20px;
+}
+.slideshow .owl-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 100rem;
+  padding: 4px;
+  bottom: 10px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 48%;
+  bottom: 20px;
+}
+.slideshow .owl-dots .owl-dot span {
+  width: 14px;
+  height: 14px;
+  margin: 4px 8px;
+}
+
+.about-us {
+  background-color: #b59d78;
+  padding-block: 40px;
+  margin-top: unset;
+}
+.about-us-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+}
+.about-us-subtitle {
+  text-align: center;
+  margin-block: 20px;
+}
+.about-us-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .about-us-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.about-us-image {
+  flex: 1 1 50%;
+  max-width: 50%;
+  height: 585px;
+}
+@media screen and (max-width: 992px) {
+  .about-us-image {
+    max-width: 100%;
+  }
+}
+.about-us-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+@media screen and (max-width: 992px) {
+  .about-us-image img {
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: unset;
+    height: auto;
+  }
+}
+.about-us-content {
+  flex: 0 0 50%;
+  max-width: 50%;
+  height: 585px;
+  background-color: #1a2c75;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+@media screen and (max-width: 992px) {
+  .about-us-content {
+    max-width: 100%;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: unset;
+  }
+}
+.about-us-content-wrapper {
+  padding: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 10px;
+}
+.about-us-content-subtitle {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+}
+@media screen and (max-width: 992px) {
+  .about-us-content-subtitle {
+    font-size: 22px;
+  }
+}
+.about-us-content-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 992px) {
+  .about-us-content-title {
+    font-size: 26px;
+  }
+}
+.about-us-content-paragraph {
+  color: #fff;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+@media screen and (max-width: 992px) {
+  .about-us-content-paragraph {
+    line-height: 1.5;
+  }
+}
+.about-us-content blockquote {
+  color: #fff;
+  line-height: 1.6;
+  font-size: 17px;
+  text-align: justify;
+}
+.about-us-content-btn {
+  display: block;
+  width: fit-content;
+  background-color: #fff;
+  color: #1a2c75;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: unset;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.about-us-content-btn:hover {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inlogo-container {
+  margin-inline: -15px;
+  border-radius: 12px;
+  max-height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .inlogo-container {
+    margin-inline: unset;
+    height: 300px;
+  }
+}
+.inlogo-container:hover .inlogo-background {
+  transform: scale(1.1);
+}
+.inlogo-container::after {
+  content: "";
+  background-color: #000;
+  opacity: 0.4;
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+}
+.inlogo-background {
+  transform: scale(1);
+  transition: 0.5s cubic-bezier(0, 0, 0.5, 1.2);
+}
+.inlogo-link {
+  display: block;
+  padding-inline: 60px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
+@media screen and (max-width: 600px) {
+  .inlogo-link {
+    padding-inline: 30px;
+  }
+}
+.inlogo-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.inlogo-subtitle {
+  background-color: #002f75;
+  display: block;
+  margin-inline: auto;
+  width: fit-content;
+  border-radius: 6px;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.inlogo-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  margin-block: 20px;
+  text-align: center;
+}
+.inlogo-sapo {
+  color: #fff;
+  font-size: 14px;
+  color: #ddd;
+  font-weight: 500;
+  text-align: center;
+}
+.inlogo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-block: 30px;
+}
+.inlogo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 850px) {
+  .inlogo-wrapper img {
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .inlogo-wrapper img {
+    display: none;
+  }
+}
+.inlogo-button {
+  display: block;
+  margin-inline: auto;
+  background-color: #fff;
+  color: #3e3e3e;
+  margin-top: 20px;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.1);
+  transition: background-color linear 0.3s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  z-index: 200;
+}
+.inlogo-button:hover {
+  background-color: #dedede;
+}
+.inlogo-button span {
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=home.css.map */

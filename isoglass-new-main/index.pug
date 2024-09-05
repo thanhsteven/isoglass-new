@@ -1,0 +1,16 @@
+extends ./view/layout/layout
+
+block titlePage 
+  title iSOGLASS sản xuất và cung cấp thủy tinh đạt chuẩn iSO tại Việt Nam 
+
+append styleSheet 
+  link(rel="stylesheet" href="./style/home.css")
+
+append mainHeading
+  h1.header-heading Sản xuất Chai thủy tinh và Ly thủy tinh theo tiêu chuẩn iSO tại TP.HCM 
+
+block main
+  main.main-wrapper
+    include ./view/section/home/slideshow
+    include ./view/section/home/about-us
+    include ./view/section/home/inlogolythuytinh

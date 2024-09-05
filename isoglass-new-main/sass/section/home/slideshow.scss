@@ -1,0 +1,59 @@
+@use "../../abstracts" as *;
+.slideshow {
+  &-homepage {
+    position: relative;
+    height: fit-content;
+    margin-top: unset;
+    margin-bottom: unset;
+    z-index: 100;
+  }
+  &-image {
+    --heigth: 600px;
+    display: block;
+    width: 100%;
+    height: var(--heigth);
+    min-height: var(--heigth);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .owl-nav {
+    margin-top: unset;
+    button[type="button"][class*="owl-"] {
+      @include square(60px);
+      border-radius: 100rem;
+      box-shadow: $shadow;
+      border: 1px solid #eee;
+      background-color: #fff;
+      font-size: 30px;
+      position: absolute;
+      top: 40%;
+      &:hover {
+        color: inherit;
+      }
+    }
+    .owl-prev {
+      left: 20px;
+    }
+    .owl-next {
+      right: 20px;
+    }
+  }
+  .owl-dots {
+    @include flexbox(row, center, center, null);
+    background-color: #fff;
+    border-radius: 100rem;
+    padding: 4px;
+    bottom: 10px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 48%;
+    bottom: 20px;
+    .owl-dot {
+      span {
+        @include square(14px);
+        margin: 4px 8px;
+      }
+    }
+  }
+}
