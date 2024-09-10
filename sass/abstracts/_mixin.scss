@@ -24,7 +24,7 @@
     color: $color;
   }
 }
-// ! Button
+// ! Button basic
 @mixin linkButton() {
   display: flex;
   color: #fff;
@@ -40,7 +40,7 @@
   }
 }
 
-//! Box
+// ! Box square
 @mixin square($width) {
   width: $width;
   height: $width;
@@ -50,7 +50,7 @@
   height: $height;
 }
 
-//! Under Line Menu Item
+// ! Under Line Menu Item
 @mixin underline($color, $transition) {
   content: "";
   display: block;
@@ -68,7 +68,7 @@
   width: $width;
 }
 
-//! Responsive
+// ! Responsive
 @mixin minWidth($breakpoint: 0) {
   @media screen and (min-width: $breakpoint) {
     @content;
