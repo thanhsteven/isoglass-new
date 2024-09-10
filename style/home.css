@@ -314,4 +314,12 @@
   text-transform: uppercase;
 }
 
+.featured {
+  background-color: #f8efe0;
+  padding-block: 40px;
+}
+.featured-title .subtitle {
+  display: none;
+}
+
 /*# sourceMappingURL=home.css.map */

@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+.title-wrapper {
+  @include flexbox(column, center, center, 12px);
+  .subtitle {
+    background-color: $primaryColor;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: $border8;
+    font-weight: 600;
+  }
+  .title {
+    font-size: 24px;
+    color: $primaryColor;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .title-after {
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    color: $textColor;
+    font-weight: 500;
+    line-height: 26px;
+  }
+}
+

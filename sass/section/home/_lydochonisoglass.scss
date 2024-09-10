@@ -1,0 +1,11 @@
+@use "../../abstracts" as *;
+.featured {
+  background-color: #f8efe0;
+  padding-block: 40px;
+  &-title {
+    .subtitle {
+      display: none;
+    }
+  }
+}
+

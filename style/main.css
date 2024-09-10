@@ -83,6 +83,35 @@ body {
   word-wrap: break-word;
 }
 
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.title-wrapper .subtitle {
+  background-color: #1a2c75;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.title-wrapper .title {
+  font-size: 24px;
+  color: #1a2c75;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.title-wrapper .title-after {
+  width: 80%;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  line-height: 26px;
+}
+
 .topbar {
   height: 30px;
   background-color: #1a2c75;
