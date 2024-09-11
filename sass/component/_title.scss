@@ -6,7 +6,8 @@
     color: #fff;
     padding: 4px 10px;
     border-radius: $border8;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 14px;
     @include maxWidth($small) {
       font-size: 14px;
       font-weight: 600;
@@ -15,8 +16,9 @@
   .title {
     font-size: 24px;
     color: $primaryColor;
-    text-transform: uppercase;
+    text-transform: inherit;
     font-weight: 600;
+    text-align: center;
   }
   .title-after {
     width: 80%;
@@ -30,4 +32,3 @@
     }
   }
 }
-

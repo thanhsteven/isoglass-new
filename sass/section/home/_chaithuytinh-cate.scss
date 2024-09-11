@@ -7,14 +7,21 @@
     --columns: 4;
     --gap: 15px;
     display: grid;
-    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: var(--gap);
+    margin-top: 10px;
+    @include maxWidth($small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &-item {
     display: block;
     position: relative;
     border-radius: $border12;
     overflow: hidden;
+    @include maxWidth($small) {
+      pointer-events: none;
+    }
     &:hover {
       .chaithuytinh-cate-image img {
         transform: scale(1.1);
@@ -36,25 +43,54 @@
     }
   }
   &-hover {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     left: 0px;
     right: 0px;
-    bottom: -100px;
+    bottom: -90px;
     transition: all ease-in-out 0.3s;
     border-bottom-left-radius: $border12;
     border-bottom-right-radius: $border12;
+    @include maxWidth($small) {
+      position: static;
+      background-color: transparent;
+    }
   }
   &-content {
     padding: 15px;
     height: var(--heigth-content);
+    @include maxWidth($small) {
+      padding: 4px 8px;
+      @include flexbox(column, center, stretch, 4px);
+      height: auto;
+    }
   }
   &-title {
     color: #fff;
-    font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 4px;
+    font-size: clamp(16px, 16px, 18px);
+    @include maxWidth($small) {
+      text-align: center;
+      color: $primaryColor;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: unset;
+    }
+    @include maxWidth(400px) {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
   &-count {
+    font-size: 14px;
+    font-weight: 400;
     color: #fff;
+    @include maxWidth($small) {
+      color: $primaryColor;
+    }
   }
 }

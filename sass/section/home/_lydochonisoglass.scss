@@ -12,7 +12,7 @@
     }
   }
   &-convert {
-    @include maxWidth($small) {
+    @include maxWidth($medium) {
       @include flexbox(column-reverse, stretch, space-between, 10px);
     }
   }
@@ -34,14 +34,14 @@
       --gap: 12px;
       padding-block: 20px;
     }
-    @include maxWidth($small) {
+    @include maxWidth($medium) {
       grid-template-columns: unset;
       grid-auto-flow: column;
       grid-auto-columns: 300px;
       scroll-snap-type: x mandatory;
       scroll-snap-stop: always;
       overflow-x: auto;
-      margin-block: unset;
+      margin-bottom: 15px;
       &::-webkit-scrollbar {
         @include square(8px);
       }
@@ -62,7 +62,7 @@
     @include maxWidth($large) {
       padding-inline: 10px;
     }
-    @include maxWidth($small) {
+    @include maxWidth($medium) {
       scroll-snap-align: center;
       word-break: break-word;
     }
@@ -96,4 +96,3 @@
     }
   }
 }
-
