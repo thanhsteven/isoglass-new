@@ -320,6 +320,9 @@
   padding-block: 40px;
   margin-top: 0px;
 }
+.featured-title .title-after {
+  font-weight: 400;
+}
 .featured-title .subtitle {
   display: none;
 }

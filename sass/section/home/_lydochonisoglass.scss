@@ -4,6 +4,9 @@
   padding-block: 40px;
   margin-top: 0px;
   &-title {
+    .title-after {
+      font-weight: 400;
+    }
     .subtitle {
       display: none;
     }
