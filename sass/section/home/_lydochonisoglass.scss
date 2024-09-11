@@ -7,6 +7,10 @@
       display: none;
     }
   }
+  &-convert {
+    @include maxWidth($small) {
+    }
+  }
   &-wrapper {
     --columns: 3;
     --gap: 20px;
