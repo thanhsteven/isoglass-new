@@ -1,0 +1,131 @@
+@use "../abstracts" as *;
+.topbar {
+  height: $topbarHeight;
+  background-color: $primaryColor;
+  @include maxWidth($small) {
+    h1 {
+      text-wrap: wrap;
+      line-height: 1.5;
+    }
+    height: fit-content;
+    padding-block: 6px;
+  }
+}
+.header {
+  @include maxWidth($medium) {
+    .container {
+      padding-inline: unset;
+    }
+  }
+  &-heading {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    line-height: $topbarHeight;
+  }
+  &-main {
+    @include flexbox(row, stretch, space-between, null);
+    padding-block: 15px;
+    @include maxWidth($large) {
+      flex-direction: column;
+      row-gap: 28px;
+    }
+    @include maxWidth($small) {
+      padding-bottom: 0px;
+    }
+  }
+  &-left {
+    max-width: 250px;
+    flex: 0 0 250px;
+    @include maxWidth($large) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-block: 4px;
+    }
+  }
+  &-right {
+    max-width: 250px;
+    @include maxWidth($large) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      justify-content: space-between;
+      padding-inline: 15px;
+      padding-block: 4px;
+    }
+    @include maxWidth($medium) {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    @include flexbox(row, center, center, null);
+    &-menu {
+      background-color: unset;
+      border: unset;
+      padding-block: 8px;
+      padding-right: 15px;
+      color: #333;
+      font-size: 18px;
+      transition: color ease 0.2s;
+      cursor: pointer;
+      display: none;
+      @include maxWidth($large) {
+        display: block;
+      }
+      &:hover {
+        color: #bfd2d7;
+      }
+      span {
+        margin-left: 6px;
+        color: inherit;
+        font-size: inherit;
+        font-weight: 500;
+      }
+    }
+    &-hotline {
+      @include flexbox(row, center, center, null);
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      text-transform: initial;
+      border-radius: $border8;
+      background-color: $primaryColor;
+      i {
+        display: none;
+      }
+      span {
+        margin-right: 8px;
+      }
+      @include maxWidth($medium) {
+        background-color: unset;
+        color: $primaryColor;
+        font-weight: 600;
+        font-size: 18px;
+        text-align: right;
+        span {
+          display: none;
+        }
+        i {
+          display: inline-block;
+          margin-right: 8px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  &-logo {
+    display: block;
+    max-width: 250px;
+    @include maxWidth($large) {
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

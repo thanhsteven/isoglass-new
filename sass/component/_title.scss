@@ -21,6 +21,9 @@
     color: $textColor;
     font-weight: 500;
     line-height: 26px;
+    @include maxWidth($small) {
+      width: 100%;
+    }
   }
 }
 
