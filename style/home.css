@@ -420,6 +420,7 @@
 .featured-banner {
   border-radius: 12px;
   border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 @media screen and (max-width: 576px) {
@@ -543,6 +544,56 @@
   .chaithuytinh-cate-count {
     color: #1a2c75;
   }
+}
+
+.chaithuytinh-product-banner {
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.chaithuytinh-product-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform ease 0.3s;
+}
+.chaithuytinh-product-banner:hover img {
+  transform: scale(1.1);
+}
+.chaithuytinh-product-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-block: 20px;
+}
+.chaithuytinh-product-link {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.chaithuytinh-product-link:hover .chaithuytinh-product-image img {
+  transform: scale(1.1);
+}
+.chaithuytinh-product-image {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.chaithuytinh-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  border-radius: 12px;
+  transition: transform ease 0.3s;
+}
+.chaithuytinh-product-hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=home.css.map */

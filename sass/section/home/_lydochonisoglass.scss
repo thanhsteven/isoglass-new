@@ -85,6 +85,7 @@
   &-banner {
     border-radius: $border12;
     border: 1px solid $borderColor;
+    box-shadow: $shadow2;
     overflow: hidden;
     @include maxWidth($small) {
       margin-top: 15px;
@@ -96,3 +97,4 @@
     }
   }
 }
+

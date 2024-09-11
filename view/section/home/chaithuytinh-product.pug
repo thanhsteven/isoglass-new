@@ -32,7 +32,6 @@
     }
   ]
 
-
 section.chaithuytinh-product
   .container 
     +title("Sản phẩm nổi bật", "CHAI THỦY TINH")
@@ -40,8 +39,10 @@ section.chaithuytinh-product
       img(src="../../images/chaithuytinh/chai-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg", alt="Chai thủy tinh iSOGLASS - Tạo hình tinh tế tạo nên không gian đẳng cấp", srcset="../../images/chaithuytinh/chai-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg 2x")
     .chaithuytinh-product-wrapper 
       each item in chaithuytinh_product
-        a.chaithuytinh-product-item(href=item.href, target="_blank", rel="noopener noreferrer")
+        a.chaithuytinh-product-link(href=item.href, target="_blank", rel="noopener noreferrer")
           .chaithuytinh-product-image 
             img(src=item.image, alt=item.title, srcset=item.image)
-          h3.chaithuytinh-product-title=item.title 
-          a.chaithuytinh-product-readmore(href=item.href, target="_blank", rel="nofollow noopener noreferrer") Đọc tiếp
+            .chaithuytinh-product-hover 
+              .chaithuytinh-product-content 
+                h3.chaithuytinh-product-title=item.title 
+                a.chaithuytinh-product-readmore(href=item.href rel="nofollow noopener noreferrer") Đọc tiếp
