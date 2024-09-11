@@ -1,5 +1,6 @@
 @use "../../abstracts" as *;
 .chaithuytinh-cate {
+  --heigth-content: 90px;
   background-color: #c0d1d6;
   padding-block: 40px;
   &-wrapper {
@@ -11,6 +12,17 @@
   }
   &-item {
     display: block;
+    position: relative;
+    border-radius: $border12;
+    overflow: hidden;
+    &:hover {
+      .chaithuytinh-cate-image img {
+        transform: scale(1.1);
+      }
+      .chaithuytinh-cate-hover {
+        bottom: 0px;
+      }
+    }
   }
   &-image {
     border-radius: $border12;
@@ -22,13 +34,27 @@
       transform: scale(1);
       transition: transform linear 0.3s;
     }
-    &:hover {
-      img {
-        transform: scale(1.1);
-      }
-    }
   }
   &-hover {
+    background-color: #000;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: -100px;
+    transition: all ease-in-out 0.3s;
+    border-bottom-left-radius: $border12;
+    border-bottom-right-radius: $border12;
+  }
+  &-content {
+    padding: 15px;
+    height: var(--heigth-content);
+  }
+  &-title {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  &-count {
+    color: #fff;
   }
 }
-
