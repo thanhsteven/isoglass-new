@@ -433,4 +433,33 @@
   object-fit: cover;
 }
 
+.chaithuytinh-cate {
+  background-color: #c0d1d6;
+  padding-block: 40px;
+}
+.chaithuytinh-cate-wrapper {
+  --columns: 4;
+  --gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: var(--gap);
+}
+.chaithuytinh-cate-item {
+  display: block;
+}
+.chaithuytinh-cate-image {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.chaithuytinh-cate-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform linear 0.3s;
+}
+.chaithuytinh-cate-image:hover img {
+  transform: scale(1.1);
+}
+
 /*# sourceMappingURL=home.css.map */

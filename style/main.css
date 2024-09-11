@@ -97,6 +97,12 @@ body {
   border-radius: 8px;
   font-weight: 600;
 }
+@media screen and (max-width: 576px) {
+  .title-wrapper .subtitle {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
 .title-wrapper .title {
   font-size: 24px;
   color: #1a2c75;
