@@ -9,6 +9,7 @@
   }
   &-convert {
     @include maxWidth($small) {
+      @include flexbox(column-reverse, stretch, space-between, 10px);
     }
   }
   &-wrapper {
@@ -33,10 +34,10 @@
       grid-template-columns: unset;
       grid-auto-flow: column;
       grid-auto-columns: 300px;
-      margin-block: 10px;
       scroll-snap-type: x mandatory;
       scroll-snap-stop: always;
       overflow-x: auto;
+      margin-block: unset;
       &::-webkit-scrollbar {
         @include square(8px);
       }
@@ -81,6 +82,9 @@
     border-radius: $border12;
     border: 1px solid $borderColor;
     overflow: hidden;
+    @include maxWidth($small) {
+      margin-top: 15px;
+    }
     img {
       width: 100%;
       height: 100%;

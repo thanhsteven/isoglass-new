@@ -321,6 +321,15 @@
 .featured-title .subtitle {
   display: none;
 }
+@media screen and (max-width: 576px) {
+  .featured-convert {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
 .featured-wrapper {
   --columns: 3;
   --gap: 20px;
@@ -349,10 +358,10 @@
     grid-template-columns: unset;
     grid-auto-flow: column;
     grid-auto-columns: 300px;
-    margin-block: 10px;
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
     overflow-x: auto;
+    margin-block: unset;
   }
   .featured-wrapper::-webkit-scrollbar {
     width: 8px;
@@ -407,6 +416,11 @@
   border-radius: 12px;
   border: 1px solid #eee;
   overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .featured-banner {
+    margin-top: 15px;
+  }
 }
 .featured-banner img {
   width: 100%;
