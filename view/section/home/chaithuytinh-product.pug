@@ -40,9 +40,10 @@ section.chaithuytinh-product
     .chaithuytinh-product-wrapper 
       each item in chaithuytinh_product
         a.chaithuytinh-product-link(href=item.href, target="_blank", rel="noopener noreferrer")
-          .chaithuytinh-product-image 
+          .chaithuytinh-product-image
             img(src=item.image, alt=item.title, srcset=item.image)
-            .chaithuytinh-product-hover 
-              .chaithuytinh-product-content 
-                h3.chaithuytinh-product-title=item.title 
-                a.chaithuytinh-product-readmore(href=item.href rel="nofollow noopener noreferrer") Đọc tiếp
+          .chaithuytinh-product-hover
+            .chaithuytinh-product-content
+              h3.chaithuytinh-product-title=item.title
+              button.chaithuytinh-product-readmore(href=item.href rel="nofollow")
+                span.button-product-text
