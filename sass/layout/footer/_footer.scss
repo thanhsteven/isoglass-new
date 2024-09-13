@@ -40,7 +40,7 @@
     }
     &-btn {
       background-color: #99a8a1;
-      border-radius: $border8;
+      border-radius: $border4;
       border: unset;
       width: 100px;
       height: 50px;
@@ -52,7 +52,7 @@
         background-color: #bfd2d7;
       }
       @include maxWidth($small) {
-        width: 80%;
+        width: 100%;
         margin-inline: auto;
       }
     }
@@ -110,6 +110,9 @@
         }
         &:hover {
           background-color: $hoverColor;
+          i {
+            color: $primaryColor;
+          }
           @include maxWidth($large) {
             background-color: initial;
           }
