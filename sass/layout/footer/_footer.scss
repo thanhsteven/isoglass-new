@@ -49,7 +49,7 @@
       cursor: pointer;
       transition: background-color linear 0.2s;
       &:hover {
-        background-color: #bfd2d7;
+        background-color: $secondColor;
       }
       @include maxWidth($small) {
         width: 100%;
