@@ -1,47 +1,46 @@
 - 
   var vohopchaithuytinh = [
-    {
-      image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-6.jpg"
-    },
-        {
-      image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-7.jpg"
-    },
-        {
-      image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-8.jpg"
-    },
-        {
-      image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-10.jpg"
-    },
-        {
-      image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-12.jpg"
-    },
-        {
-      image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-13.jpg"
-    },
-        {
-      image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-15.jpg"
-    },
-        {
-      image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-16.jpg"
-    },
-        {
-      image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-17.jpg"
-    },
-            {
-      image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-20.jpg"
-    },
-
+    {image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-6.jpg"},
+    {image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-7.jpg"},
+    {image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-8.jpg"},
+    {image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-10.jpg"},
+    {image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-12.jpg"},
+    {image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-13.jpg"},
+    {image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-15.jpg"},
+    {image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-16.jpg"},
+    {image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-17.jpg"},
+    {image: "../../images/vohopdungruou/vo-hop-chai-thuy-tinh-isoglass-20.jpg"}
   ]
-
 
 section.vohopdungruou-product
   .container 
-    +title("Danh mục sản phẩm", "Vỏ hộp cho Chai thủy tinh", "iSOGLASS sản xuất và cung cấp Vỏ hộp cho chai thủy tinh giúp bảo vệ chai khỏi va đập, tăng tính thẩm mỹ và tăng thêm vẻ sang trọng trong mắt khách hàng. Thiết kế theo yêu cầu về kích thước của vỏ hộp để phù hợp với kích thước của chai thủy tinh. ")
-    .vohopdungruou-product-wrapper
-    #vohopdungruou.slideshow.owl-carousel.owl-theme.owl-loaded
-    .owl-stage-outer
-      .owl-stage
-        .owl-item
-          .vohopdungruou-product-image 
-            img(src="", alt="", srcset="")
-            .vohopdungruou-product-hover 
+    +title("Danh mục sản phẩm", "Vỏ hộp cho Chai thủy tinh", "iSOGLASS sản xuất và cung cấp Vỏ hộp cho chai thủy tinh giúp bảo vệ chai khỏi va đập, tăng tính thẩm mỹ và tăng thêm vẻ sang trọng trong mắt khách hàng. Thiết kế theo yêu cầu về kích thước của vỏ hộp để phù hợp với kích thước của chai thủy tinh.")
+    #vohopdungruou.owl-carousel.owl-theme.owl-loaded
+      .owl-stage-outer
+        .owl-stage
+          each item in vohopchaithuytinh
+            .owl-item
+              .vohopdungruou-product-item
+                .vohopdungruou-product-image
+                  img(src=item.image, alt="", srcset=item.image)
+                .vohopdungruou-product-hover
+    .vohopdungruou-product-contact
+      a.vohopdungruou-product-contact-button(href="#", target="_blank", rel="noopener noreferrer nofollow") LIÊN HỆ SẢN XUẤT VỎ HỘP
+
+script.
+  $('#vohopdungruou').owlCarousel({
+      loop:true,
+      margin:15,
+      nav:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:3
+          },
+          1000:{
+              items:4
+          }
+      }
+  })

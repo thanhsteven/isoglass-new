@@ -26,12 +26,11 @@
   }
   &-main {
     @include flexbox(row, stretch, space-between, null);
-    padding-block: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     @include maxWidth($large) {
       flex-direction: column;
       row-gap: 28px;
-    }
-    @include maxWidth($small) {
       padding-bottom: 0px;
     }
   }
