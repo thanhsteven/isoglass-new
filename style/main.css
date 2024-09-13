@@ -94,9 +94,9 @@ body {
   color: #fff;
   width: var(--width);
   height: var(--height);
-  cursor: pointer;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 .btn-product-readmore::before {
   content: "Liên hệ";

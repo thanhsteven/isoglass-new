@@ -81,6 +81,7 @@
     position: absolute;
     inset: 0;
     visibility: hidden;
+    z-index: 999;
     @include maxWidth($small) {
       position: static;
       height: auto;
@@ -120,6 +121,10 @@
       border-radius: $border8;
       font-size: 14px;
       font-weight: 600;
+      transition: all linear 0.3s;
+      &:hover {
+        background-color: $secondColor;
+      }
     }
   }
 }

@@ -639,6 +639,7 @@
   position: absolute;
   inset: 0;
   visibility: hidden;
+  z-index: 999;
 }
 @media screen and (max-width: 576px) {
   .chaithuytinh-product-content {
@@ -684,6 +685,10 @@
     border-radius: 8px;
     font-size: 14px;
     font-weight: 600;
+    transition: all linear 0.3s;
+  }
+  .chaithuytinh-product-readmore:hover {
+    background-color: #b59d78;
   }
 }
 

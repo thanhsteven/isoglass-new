@@ -6,9 +6,9 @@
   color: #fff;
   width: var(--width);
   height: var(--height);
-  cursor: pointer;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
   &::before {
     content: "Liên hệ";
     width: 100%;
