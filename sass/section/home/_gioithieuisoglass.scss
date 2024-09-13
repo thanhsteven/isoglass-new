@@ -57,6 +57,9 @@
     &-wrapper {
       padding: 8%;
       @include flexbox(column, stretch, space-between, 10px);
+      @include maxWidth($large) {
+        padding: 15px;
+      }
     }
     &-subtitle {
       color: #fff;
@@ -72,7 +75,7 @@
       font-size: 28px;
       line-height: 1.5;
       @include maxWidth($large) {
-        font-size: 26px;
+        font-size: 24px;
       }
     }
     &-paragraph {
@@ -80,7 +83,8 @@
       line-height: 1.6;
       text-align: justify;
       margin-bottom: 15px;
-      font-size: 17px;
+      font-size: 16px;
+      font-weight: 400;
       @include maxWidth($large) {
         line-height: 1.5;
       }
@@ -109,4 +113,3 @@
     }
   }
 }
-

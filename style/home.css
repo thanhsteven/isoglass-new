@@ -134,6 +134,11 @@
   justify-content: space-between;
   gap: 10px;
 }
+@media screen and (max-width: 992px) {
+  .about-us-content-wrapper {
+    padding: 15px;
+  }
+}
 .about-us-content-subtitle {
   color: #fff;
   font-weight: 700;
@@ -152,7 +157,7 @@
 }
 @media screen and (max-width: 992px) {
   .about-us-content-title {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 .about-us-content-paragraph {
@@ -160,7 +165,8 @@
   line-height: 1.6;
   text-align: justify;
   margin-bottom: 15px;
-  font-size: 17px;
+  font-size: 16px;
+  font-weight: 400;
 }
 @media screen and (max-width: 992px) {
   .about-us-content-paragraph {
@@ -413,7 +419,7 @@
   font-weight: 700;
 }
 .featured-service-desc {
-  text-align: justify;
+  text-align: center;
   text-align-last: center;
   line-height: 24px;
 }
@@ -527,7 +533,7 @@
     margin-bottom: unset;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
   .chaithuytinh-cate-title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -564,36 +570,67 @@
 }
 .chaithuytinh-product-wrapper {
   --columns: 3;
+  --gap: 15px;
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
-  gap: 15px;
+  gap: var(--gap);
   margin-block: 20px;
 }
-.chaithuytinh-product-link {
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
+@media screen and (max-width: 576px) {
+  .chaithuytinh-product-wrapper {
+    --columns: 2;
+    --gap: 15px;
+  }
 }
-.chaithuytinh-product-link:hover .chaithuytinh-product-image img {
+.chaithuytinh-product-item {
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.chaithuytinh-product-item:hover .chaithuytinh-product-image img {
   transform: scale(1.1);
 }
-.chaithuytinh-product-link:hover .chaithuytinh-product-hover {
+.chaithuytinh-product-item:hover .chaithuytinh-product-hover {
   opacity: 1;
 }
+.chaithuytinh-product-item:hover .chaithuytinh-product-content {
+  visibility: visible;
+}
+@media screen and (max-width: 576px) {
+  .chaithuytinh-product-item {
+    pointer-events: none;
+    box-shadow: unset;
+  }
+}
 .chaithuytinh-product-image {
+  aspect-ratio: 1/1;
   border-radius: 12px;
-  overflow: hidden;
-  position: relative;
 }
 .chaithuytinh-product-image img {
   width: 100%;
+  border-radius: 12px;
   height: 100%;
   object-fit: cover;
   transform: scale(1);
-  border-radius: 12px;
   transition: transform ease 0.3s;
 }
 .chaithuytinh-product-hover {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity ease 0.3s;
+  position: absolute;
+  inset: 0;
+}
+@media screen and (max-width: 576px) {
+  .chaithuytinh-product-hover {
+    position: static;
+  }
+}
+.chaithuytinh-product-content {
+  height: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -601,30 +638,53 @@
   gap: 10px;
   position: absolute;
   inset: 0;
-  z-index: 10;
-  opacity: 0;
-  border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity ease 0.3s;
+  visibility: hidden;
 }
-.chaithuytinh-product-content {
-  text-align: center;
-  color: #fff;
-  padding: 20px;
+@media screen and (max-width: 576px) {
+  .chaithuytinh-product-content {
+    position: static;
+    height: auto;
+    padding: unset;
+    padding-inline: 4px;
+    visibility: unset;
+  }
 }
 .chaithuytinh-product-title {
+  color: #fff;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 24px;
-  color: inherit;
   margin-bottom: 8px;
+}
+@media screen and (max-width: 576px) {
+  .chaithuytinh-product-title {
+    color: #1a2c75;
+    font-weight: 700;
+    font-size: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-bottom: unset;
+  }
+}
+.chaithuytinh-product-title h3 {
+  text-align: center;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }
 .chaithuytinh-product-readmore {
   background-color: transparent;
   border: 2px solid #fff;
-  cursor: pointer;
-  overflow: hidden;
-  color: #fff;
+}
+@media screen and (max-width: 576px) {
+  .chaithuytinh-product-readmore {
+    background-color: #1a2c75;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

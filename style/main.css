@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -81,6 +82,44 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   word-wrap: break-word;
+}
+
+.btn-product-readmore {
+  --width: 90px;
+  --height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: var(--width);
+  height: var(--height);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.btn-product-readmore::before {
+  content: "Liên hệ";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform: translateY(calc(1 * var(--height)));
+  transition: transform ease-in-out 0.2s;
+}
+.btn-product-readmore span {
+  position: absolute;
+  transform: translateY(0);
+  transition: transform ease-in-out 0.2s;
+}
+.btn-product-readmore:hover span {
+  transform: translateY(calc(-1 * var(--height)));
+}
+.btn-product-readmore:hover::before {
+  transform: translateY(0);
 }
 
 .title-wrapper {
@@ -732,6 +771,7 @@ body {
   color: inherit;
   font-size: inherit;
   line-height: inherit;
+  text-wrap: wrap;
 }
 .footer-inner-wrapper .footer-info-list-item i.fa {
   margin-right: 10px;

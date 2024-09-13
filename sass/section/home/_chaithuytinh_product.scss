@@ -20,15 +20,22 @@
   }
   &-wrapper {
     --columns: 3;
+    --gap: 15px;
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
-    gap: 15px;
+    gap: var(--gap);
     margin-block: 20px;
+    @include maxWidth($small) {
+      --columns: 2;
+      --gap: 15px;
+    }
   }
-  &-link {
+  &-item {
     border-radius: $border12;
-    overflow: hidden;
+    box-shadow: $shadow2;
+    cursor: pointer;
     position: relative;
+    overflow: hidden;
     &:hover {
       .chaithuytinh-product-image img {
         transform: scale(1.1);
@@ -36,48 +43,83 @@
       .chaithuytinh-product-hover {
         opacity: 1;
       }
+      .chaithuytinh-product-content {
+        visibility: visible;
+      }
+    }
+    @include maxWidth($small) {
+      pointer-events: none;
+      box-shadow: unset;
     }
   }
   &-image {
+    aspect-ratio: 1/1;
     border-radius: $border12;
-    overflow: hidden;
-    position: relative;
     img {
       width: 100%;
+      border-radius: $border12;
       height: 100%;
       object-fit: cover;
       transform: scale(1);
-      border-radius: $border12;
       transition: transform ease 0.3s;
     }
   }
   &-hover {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity ease 0.3s;
+    position: absolute;
+    inset: 0;
+    @include maxWidth($small) {
+      position: static;
+    }
+  }
+  &-content {
+    height: 100%;
+    padding: 20px;
     @include flexbox(column, center, center, 10px);
     position: absolute;
     inset: 0;
-    z-index: 10;
-    opacity: 0;
-    border-radius: $border12;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity ease 0.3s;
-  }
-  &-content {
-    text-align: center;
-    color: #fff;
-    padding: 20px;
+    visibility: hidden;
+    @include maxWidth($small) {
+      position: static;
+      height: auto;
+      padding: unset;
+      padding-inline: 4px;
+      visibility: unset;
+    }
   }
   &-title {
+    color: #fff;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 24px;
-    color: inherit;
     margin-bottom: 8px;
+    @include maxWidth($small) {
+      color: $primaryColor;
+      font-weight: 700;
+      font-size: 15px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      margin-bottom: unset;
+    }
+    h3 {
+      text-align: center;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
   }
   &-readmore {
     background-color: transparent;
     border: 2px solid #fff;
-    cursor: pointer;
-    overflow: hidden;
-    color: #fff;
+    @include maxWidth($small) {
+      background-color: $primaryColor;
+      border-radius: $border8;
+      font-size: 14px;
+      font-weight: 600;
+    }
   }
 }

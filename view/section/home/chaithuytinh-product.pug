@@ -3,32 +3,26 @@
     {
       title: "Chai thuỷ tinh thân vuông nắp côn đựng rượu size 500ml iSO-32",
       image: "../../images/chaithuytinh/chai-thuy-tinh-than-vuong-nap-con-dung-ruou-size-500ml-iso-32.jpg",
-      href: "#"
     },
     {
       title: "Chai thuỷ tinh đế núi độc lạ đựng rượu size 500ml iSO-25",
       image: "../../images/chaithuytinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg",
-      href: "#"
     },
     {
       title: "Chai thuỷ tinh đựng nước khoáng có nắp cài size 1000ml iSO-13",
       image: "../../images/chaithuytinh/chai-thuy-tinh-dung-nuoc-khoang-co-nap-cai-size-1000ml-iso-13.jpg",
-      href: "#"
     },
     {
       title: "Chai thuỷ tinh thân trụ vuông đựng rượu size 750ml iSO-45",
       image: "../../images/chaithuytinh/chai-thuy-tinh-than-tru-vuong-dung-ruou-size-750ml-iso-45.jpg",
-      href: "#"
     },
     {
       title: "Chai thuỷ tinh thân trụ tròn đựng rượu size 750ml iSO-46",
       image: "../../images/chaithuytinh/chai-thuy-tinh-than-tru-tron-dung-ruou-size-750ml-iso-46.jpg",
-      href: "#"
     },
     {
       title: "Chai thuỷ tinh đựng nước có nắp cài size 500ml iSO-07",
       image: "../../images/chaithuytinh/chai-thuy-tinh-dung-nuoc-co-nap-cai-size-500ml-iso-07.jpg",
-      href: "#"
     }
   ]
 
@@ -39,11 +33,11 @@ section.chaithuytinh-product
       img(src="../../images/chaithuytinh/chai-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg", alt="Chai thủy tinh iSOGLASS - Tạo hình tinh tế tạo nên không gian đẳng cấp", srcset="../../images/chaithuytinh/chai-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg 2x")
     .chaithuytinh-product-wrapper 
       each item in chaithuytinh_product
-        a.chaithuytinh-product-link(href=item.href, target="_blank", rel="noopener noreferrer")
+        .chaithuytinh-product-item
           .chaithuytinh-product-image
             img(src=item.image, alt=item.title, srcset=item.image)
           .chaithuytinh-product-hover
-            .chaithuytinh-product-content
-              h3.chaithuytinh-product-title=item.title
-              button.chaithuytinh-product-readmore(href=item.href rel="nofollow")
-                span.button-product-text
+          .chaithuytinh-product-content
+            a.chaithuytinh-product-title(href=`${item.title}`, target="_blank", rel="noopener noreferrer")
+              h3=item.title
+            +buttonProduct("Đọc tiếp")(class="chaithuytinh-product-readmore")
