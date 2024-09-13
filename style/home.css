@@ -600,7 +600,6 @@
 }
 @media screen and (max-width: 576px) {
   .chaithuytinh-product-item {
-    pointer-events: none;
     box-shadow: unset;
     padding: 5px;
   }
@@ -608,6 +607,7 @@
 .chaithuytinh-product-image {
   aspect-ratio: 1/1;
   border-radius: 12px;
+  overflow: hidden;
 }
 .chaithuytinh-product-image img {
   width: 100%;

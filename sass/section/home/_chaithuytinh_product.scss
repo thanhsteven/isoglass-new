@@ -48,7 +48,6 @@
       }
     }
     @include maxWidth($small) {
-      pointer-events: none;
       box-shadow: unset;
       padding: 5px;
     }
@@ -56,6 +55,7 @@
   &-image {
     aspect-ratio: 1/1;
     border-radius: $border12;
+    overflow: hidden;
     img {
       width: 100%;
       border-radius: $border12;
