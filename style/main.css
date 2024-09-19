@@ -554,7 +554,7 @@ body {
 .footer {
   margin-top: 40px;
   background-color: #1a2c75;
-  padding-block: 40px;
+  padding-top: 40px;
 }
 .footer-wrapper {
   display: grid;
@@ -749,7 +749,7 @@ body {
 }
 .footer-copy {
   margin-top: 40px;
-  padding-block: 40px;
+  padding-block: 15px;
   border-top: 1px solid #fff;
 }
 .footer-copy p {

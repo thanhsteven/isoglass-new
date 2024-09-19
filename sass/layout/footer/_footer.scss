@@ -2,7 +2,7 @@
 .footer {
   margin-top: 40px;
   background-color: $primaryColor;
-  padding-block: 40px;
+  padding-top: 40px;
   &-wrapper {
     display: grid;
     grid-template-columns: 300px auto 250px;
@@ -156,7 +156,7 @@
   }
   &-copy {
     margin-top: 40px;
-    padding-block: 40px;
+    padding-block: 15px;
     border-top: 1px solid #fff;
     p {
       text-align: center;
