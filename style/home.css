@@ -492,7 +492,7 @@
   left: 0px;
   right: 0px;
   bottom: -90px;
-  transition: all ease-in-out 0.3s;
+  transition: all ease 0.2s;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }

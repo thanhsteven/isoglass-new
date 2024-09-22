@@ -48,7 +48,7 @@
     left: 0px;
     right: 0px;
     bottom: -90px;
-    transition: all ease-in-out 0.3s;
+    transition: all ease 0.2s;
     border-bottom-left-radius: $border12;
     border-bottom-right-radius: $border12;
     @include maxWidth($small) {
@@ -94,3 +94,4 @@
     }
   }
 }
+
