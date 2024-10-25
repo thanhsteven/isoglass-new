@@ -1,0 +1,55 @@
+@use "../../abstracts" as *;
+.lythuytinh-cate {
+  background-color: #c0d1d6;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  padding-block: 40px;
+  &-item {
+    border-radius: $border12;
+    box-shadow: $shadow2;
+    overflow: hidden;
+    &:hover {
+      .lythuytinh-cate-hover {
+        transform: translateY(0%);
+      }
+      .lythuytinh-cate-image img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &-link {
+    display: block;
+    position: relative;
+  }
+  &-image {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1);
+      transition: transform ease 0.2s;
+    }
+  }
+  &-hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: $border12;
+    border-bottom-right-radius: $border12;
+    padding-block: 12px;
+    padding-inline: 16px;
+    transform: translateY(100%);
+    transition: transform ease-in-out 0.2s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &-content {
+    color: #fff;
+  }
+  &-title {
+    color: #fff;
+    line-height: 2rem;
+  }
+}
+
