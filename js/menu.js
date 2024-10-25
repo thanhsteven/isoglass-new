@@ -2,7 +2,7 @@
   const navMenu = document.querySelector(".menu");
   const mediaSize = 992;
 
-  // ! Mở Menu Mobile
+  // * Mở Menu Mobile
   navMenu.addEventListener("click", (event) => {
     if (
       event.target.hasAttribute("data-toggle") &&
