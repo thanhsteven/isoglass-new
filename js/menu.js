@@ -42,21 +42,21 @@
   const headerRight = document.querySelector(".header-right");
   const closeHeaderRight = document.querySelector(".close-header-right");
   const headerOverlay = document.querySelector(".header-overlay");
-  //! Mở/đóng Header bên phải
+  // * Mở/đóng Header bên phải
   openHeaderRight.addEventListener("click", toggleHeaderRight);
   closeHeaderRight.addEventListener("click", toggleHeaderRight);
   function toggleHeaderRight() {
     headerRight.classList.toggle("header-right-open");
     headerOverlay.classList.toggle("header-overlay-active");
   }
-  //! Mở đóng Menu Mobile
+  // * Mở đóng Menu Mobile
   btnOpenMenu.addEventListener("click", toggleNav);
   btnCloseMenu.addEventListener("click", toggleNav);
   function toggleNav() {
     navMenu.classList.toggle("menu-main-open");
     headerOverlay.classList.toggle("header-overlay-active");
   }
-  //! Đóng Menu Mobile và Header phải bằng click bên ngoài
+  // * Đóng Menu Mobile và Header phải bằng click bên ngoài
   headerOverlay.addEventListener("click", closeHeaderOverlay);
   function closeHeaderOverlay() {
     headerRight.classList.remove("header-right-open");
@@ -82,4 +82,3 @@
     }
   }
 })();
-

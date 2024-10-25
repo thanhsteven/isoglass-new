@@ -23,11 +23,11 @@
       pointer-events: none;
     }
     &:hover {
-      .chaithuytinh-cate-image img {
+      .ctt-category-image img {
         transform: scale(1.1);
       }
-      .chaithuytinh-cate-hover {
-        bottom: 0px;
+      .ctt-category-hover {
+        transform: translateY(0%);
       }
     }
   }
@@ -39,16 +39,17 @@
       height: 100%;
       object-fit: cover;
       transform: scale(1);
-      transition: transform linear 0.3s;
+      transition: $transition;
     }
   }
   &-hover {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: -90px;
-    transition: all ease 0.35s;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: $transition;
     border-bottom-left-radius: $border12;
     border-bottom-right-radius: $border12;
     @include maxWidth($small) {

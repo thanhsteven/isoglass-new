@@ -28,7 +28,7 @@
       height: 100%;
       object-fit: cover;
       transform: scale(1);
-      transition: transform ease 0.2s;
+      transition: $transition;
     }
   }
   &-hover {
@@ -38,7 +38,7 @@
     padding-block: 12px;
     padding-inline: 16px;
     transform: translateY(100%);
-    transition: transform ease-in-out 0.2s;
+    transition: $transition;
     position: absolute;
     left: 0;
     right: 0;
@@ -52,4 +52,3 @@
     line-height: 2rem;
   }
 }
-
