@@ -1,12 +1,60 @@
-section.lythuytinh-cate 
+- 
+  var danhmuc_lythuytinh = [
+    {
+      image: "../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-1.jpg",
+      title : "Ly thuỷ tinh sản xuất tại TP.HCM",
+      count: "49 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-2.jpg",
+      title : "Ly thuỷ tinh sản xuất tại TP.HCM",
+      count: "49 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-3.jpg",
+      title : "Ly thuỷ tinh sản xuất tại TP.HCM",
+      count: "49 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-4.jpg",
+      title : "Ly thuỷ tinh sản xuất tại TP.HCM",
+      count: "49 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-5.jpg",
+      title : "Ly thuỷ tinh sản xuất tại TP.HCM",
+      count: "49 sản phẩm",
+      href: "#"
+    },
+  ]
+
+- var [item1, ...rest] = danhmuc_lythuytinh;
+
+section.ltt-cate 
   .container 
     +title("Danh mục nổi bật", "Ly thuỷ tinh iSOGLASS")
-    .lythuytinh-cate-wrapper 
-      .lythuytinh-cate-item 
-        a.lythuytinh-cate-link(href="#")
-          .lythuytinh-cate-image
-            img(src="../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-1.jpg", alt="Ly thuỷ tinh iSOGLASS giá tốt tại TP.HCM")
-          .lythuytinh-cate-hover 
-            .lythuytinh-cate-content 
-              h3.lythuytinh-cate-title Ly thuỷ tinh sản xuất tại TP.HCM 
-              span.lythuytinh-cate-count 49 sản phẩm
+    .ltt-cate-wrapper 
+      .ltt-cate-first-item 
+        each value in item1
+          .ltt-cate-item 
+            a.ltt-cate-link(href=value.href)
+              .ltt-cate-image
+                img(src=value.image, alt="Ly thuỷ tinh iSOGLASS giá tốt tại TP.HCM")
+              .ltt-cate-hover 
+                .ltt-cate-content 
+                  h3.ltt-cate-title=value.title
+                  span.ltt-cate-count=value.count
+      .ltt-cate-another-item
+        each item in rest
+          .ltt-cate-item 
+            a.ltt-cate-link(href=item.href)
+              .ltt-cate-image
+                img(src=item.image, alt="Ly thuỷ tinh iSOGLASS giá tốt tại TP.HCM")
+              .ltt-cate-hover 
+                .ltt-cate-content 
+                  h3.ltt-cate-title=item.title
+                  span.ltt-cate-count=item.count

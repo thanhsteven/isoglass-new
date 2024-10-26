@@ -1,9 +1,12 @@
 @use "../../abstracts" as *;
-.lythuytinh-cate {
+.ltt-cate {
   background-color: #c0d1d6;
   margin-top: -40px;
   margin-bottom: -40px;
   padding-block: 40px;
+  &-wrapper {
+    display: flex;
+  }
   &-item {
     border-radius: $border12;
     box-shadow: $shadow2;
@@ -16,6 +19,11 @@
         transform: scale(1.1);
       }
     }
+  }
+  &-another-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   &-link {
     display: block;
@@ -52,3 +60,4 @@
     line-height: 2rem;
   }
 }
+
