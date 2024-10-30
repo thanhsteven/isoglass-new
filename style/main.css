@@ -94,24 +94,21 @@ body {
   color: #fff;
   width: var(--width);
   height: var(--height);
-  overflow: hidden;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
 .btn-product-readmore::before {
   content: "Liên hệ";
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   position: absolute;
-  transform: translateY(calc(1 * var(--height)));
+  transform: translateY(calc(var(--height) - 10px));
   transition: transform ease-in-out 0.2s;
 }
 .btn-product-readmore span {
-  position: absolute;
   transform: translateY(0);
   transition: transform ease-in-out 0.2s;
 }

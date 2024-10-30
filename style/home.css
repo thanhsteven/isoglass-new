@@ -940,7 +940,6 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    font-size: 15px;
     color: #1a2c75;
     font-weight: 600;
     line-height: 22px;
@@ -980,10 +979,14 @@
   gap: var(--gap);
   margin-block: 20px;
 }
+@media screen and (max-width: 992px) {
+  .ltt-product-wrapper {
+    --gap: 10px;
+  }
+}
 @media screen and (max-width: 576px) {
   .ltt-product-wrapper {
     --columns: 2;
-    --gap: 10px;
   }
 }
 .ltt-product-item {
@@ -991,6 +994,12 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+  .ltt-product-item {
+    box-shadow: unset;
+    padding: 5px;
+  }
 }
 .ltt-product-item:hover .ltt-product-image img {
   transform: scale(1.05);
@@ -1006,15 +1015,11 @@
   visibility: visible;
   opacity: 1;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .ltt-product-item:hover .ltt-product-readmore {
     transform: unset;
-  }
-}
-@media screen and (max-width: 576px) {
-  .ltt-product-item {
-    box-shadow: unset;
-    padding: 5px;
+    visibility: visible;
+    opacity: 1;
   }
 }
 .ltt-product-link {
@@ -1046,11 +1051,11 @@
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .ltt-product-hover {
-    position: static;
-    opacity: 1;
     background-color: unset;
+    position: static;
+    opacity: unset;
   }
 }
 .ltt-product-content {
@@ -1058,7 +1063,7 @@
   padding: 20px;
   visibility: hidden;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .ltt-product-content {
     padding-inline: 4px;
     visibility: visible;
@@ -1074,8 +1079,10 @@
   text-align: center;
   padding-inline: 20px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .ltt-product-title {
+    color: #1a2c75;
+    margin-top: 10px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -1088,7 +1095,6 @@
   }
 }
 .ltt-product-readmore {
-  display: block;
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid #fff;
@@ -1100,15 +1106,16 @@
   transform: translateX(-50px) translateY(50px);
   transition: all ease 0.3s;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .ltt-product-readmore {
+    margin-top: 10px;
+    margin-inline: auto;
+    border: unset;
     background-color: #1a2c75;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 600;
-    position: static;
-    opacity: 1;
+    opacity: unset;
+    visibility: visible;
     transform: unset;
+    position: static;
   }
   .ltt-product-readmore:hover {
     background-color: #b59d78;
