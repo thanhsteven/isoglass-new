@@ -19,9 +19,6 @@
     position: relative;
     border-radius: $border12;
     overflow: hidden;
-    @include maxWidth($small) {
-      pointer-events: none;
-    }
     &:hover {
       .ctt-category-image img {
         transform: scale(1.1);
@@ -55,6 +52,7 @@
     @include maxWidth($small) {
       position: static;
       background-color: transparent;
+      transform: unset;
     }
   }
   &-content {
