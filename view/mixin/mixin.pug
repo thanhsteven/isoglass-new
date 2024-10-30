@@ -9,3 +9,14 @@ mixin title(subtitle, title, titleAfter)
 mixin buttonProduct(text1)
   a.btn-product-readmore(class!=attributes.class href="#", target="_blank", rel="nofollow noopener noreferrer")
     span=text1 
+
+// Product Box Style 01
+mixin productInfoStyle01(href, image, title)
+  .product-info-1-item
+    a.product-info-1-link(href=href, target="_blank", rel="noopener noreferrer")
+      .product-info-1-image
+        img(src=image, alt=title, srcset=`${image} x2`)
+      .product-info-1-hover
+        .product-info-1-content
+          h3.product-info-1-title=title 
+    +buttonProduct("Đọc tiếp")(class="product-info-1-product-readmore")
