@@ -3,7 +3,7 @@ mixin productStyle01(href, image, title)
   .product_item1-wrapper
     a.product_item1-link(href=href, target="_blank", rel="noopener noreferrer")
       .product_item1-image
-        img(src=image, alt=title, srcset=`${image} x2`)
+        img(src=image, alt=title, srcset=`${image} 2x`)
       .product_item1-hover
         .product_item1-content
           h3.product_item1-title=title 
@@ -14,7 +14,7 @@ mixin productStyle02(href, image, title, cats)
   .product-item-2-wrapper 
     a.product-item-2-link(href=href, target="_blank", rel="nofollow noopener noreferrer")
       .product-item-2-image
-        img(src=image, alt=title, srcset=`${image} x2`)
+        img(src=image, alt=title, srcset=`${image} 2x`)
     a(href=href, target="_blank", rel="noopener noreferrer")
       h3.product-item-2-title=title
     .product-item-2-cats

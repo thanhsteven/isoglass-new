@@ -97,6 +97,15 @@
         &-image::before {
           background-color: rgba(0, 0, 0, 0.5);
         }
+        &-count {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+        &-title {
+          &-text {
+            transform: translateY(0px);
+          }
+        }
       }
     }
   }
@@ -141,19 +150,25 @@
     inset: 0;
     z-index: 500;
     &-text {
-      padding-inline: 10px;
+      padding: 12px 15px;
       border-radius: 100rem;
       background-color: #fff;
-      font-size: 14px;
+      font-size: 16px;
+      font-weight: 700;
       color: $primaryColor;
-      font-weight: 600;
+      transform: translateY(15px);
+      transition: all ease 0.3s;
     }
   }
   &-count {
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     height: fit-content;
-    // position: absolute;
-    // inset: 0;
+    margin-top: 10px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all ease 0.2s;
+    transition-delay: 0.1s;
   }
 }
+
