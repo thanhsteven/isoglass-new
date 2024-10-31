@@ -5,36 +5,42 @@
       image: "../../images/ly-thuy-tinh/ly-thuy-tinh-champagne-cau-vong-size-180ml-iso-49.jpg",
       href: "#",
       cate: "Ly thủy tinh",
+      count: "12 sản phẩm"
     },
     {
       title: "Ly thuỷ tinh dáng tulip uống rượu size 180ml iSO-50",
       image: "../../images/ly-thuy-tinh/ly-thuy-tinh-dang-tulip-uong-ruou-size-180ml-iso-50.jpg",
       href: "#",
       cate: "Ly thủy tinh",
+      count: "12 sản phẩm"
     },
     {
       title: "Ly thuỷ tinh đế theo yêu cầu uống rượu size 300ml iSO-39",
       image: "../../images/ly-thuy-tinh/ly-thuy-tinh-de-theo-yeu-cau-uong-ruou-size-300ml-iso-39.jpg",
       href: "#",
       cate: "Ly thủy tinh",
+      count: "12 sản phẩm"
     },
     {
       title: "Ly thuỷ tinh đơn giản uống rượu size 300ml iSO-47",
       image: "../../images/ly-thuy-tinh/ly-thuy-tinh-don-gian-uong-ruou-size-300ml-iso-47-1.jpg",
       href: "#",
       cate: "Ly thủy tinh",
+      count: "12 sản phẩm"
     },
     {
       title: "Ly thuỷ tinh hình vác nghiêng uống rượu size 300ml iSO-40",
       image: "../../images/ly-thuy-tinh/ly-thuy-tinh-hinh-vac-nghieng-uong-ruou-size-300ml-iso-40-1.jpg",
       href: "#",
       cate: "Ly thủy tinh",
+      count: "12 sản phẩm"
     },
     {
       title: "Ly thuỷ tinh màu hổ phách uống rượu size 380ml iSO-48",
       image: "../../images/ly-thuy-tinh/ly-thuy-tinh-mau-ho-phach-uong-ruou-size-380ml-iso-48.jpg",
       href: "#",
       cate: "Ly thủy tinh",
+      count: "12 sản phẩm"
     }
   ]
 
@@ -44,3 +50,6 @@ section.inlogo-product
     .test-product-wrapper 
       each item in inlogo_product
         +productStyle02(item.href, item.image, item.title, item.cate)
+    .test-category-wrapper 
+      each cat in inlogo_product
+        +categoryStyle02(cat.href, cat.image, cat.title, cat.count)

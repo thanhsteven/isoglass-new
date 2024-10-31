@@ -7,3 +7,13 @@ mixin categoryStyle01(href, image, title, countNumber)
       .category_item1-content
         h3.category_item1-title=title
         span.category_item1-count=countNumber
+
+// Category Infomation Box - Style 02
+mixin categoryStyle02(href, image, title, countNumber)
+  .category-item-2-wrapper
+    a.category-item-2-link(href=href, target="_blank", rel="noopener noreferrer")
+      .category-item-2-image
+        img(src=image, alt=title, srcset=`${image} x2`)
+      .category-item-2-title
+        h3.category-item-2-title-text=title
+        .category-item-2-count=countNumber 
