@@ -317,6 +317,7 @@ body {
   transform: translateY(0%);
 }
 .category_item1-image {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   overflow: hidden;
 }

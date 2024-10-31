@@ -20,6 +20,7 @@
     }
   }
   &-image {
+    box-shadow: $shadow2;
     border-radius: $border12;
     overflow: hidden;
     img {
