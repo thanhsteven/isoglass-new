@@ -4,20 +4,18 @@
   background-color: $primaryColor;
   padding-block: 4px;
   border-bottom: 0.5px solid #fff;
-  @include maxWidth(900px) {
-    display: none;
-  }
   @include maxWidth($large) {
     background-color: #fff;
-    width: 50vw;
+    width: 40vw;
     height: 100vh;
     position: fixed;
-    left: 0;
+    left: -100%;
     top: 0;
     z-index: 999;
     overflow-y: auto;
     padding-bottom: 20px;
     box-shadow: $shadow;
+    transition: all linear 0.3s;
     &::-webkit-scrollbar {
       width: 6px;
     }
@@ -25,6 +23,12 @@
       background-color: $primaryColor;
       border-radius: 20px;
     }
+    &-show {
+      left: 0%;
+    }
+  }
+  @include maxWidth($small) {
+    width: 70vw;
   }
   &-wrapper {
     max-width: 1200px;

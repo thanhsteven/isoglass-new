@@ -728,23 +728,19 @@ body {
   padding-block: 4px;
   border-bottom: 0.5px solid #fff;
 }
-@media screen and (max-width: 900px) {
-  .menu {
-    display: none;
-  }
-}
 @media screen and (max-width: 992px) {
   .menu {
     background-color: #fff;
-    width: 50vw;
+    width: 40vw;
     height: 100vh;
     position: fixed;
-    left: 0;
+    left: -100%;
     top: 0;
     z-index: 999;
     overflow-y: auto;
     padding-bottom: 20px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all linear 0.3s;
   }
   .menu::-webkit-scrollbar {
     width: 6px;
@@ -752,6 +748,14 @@ body {
   .menu::-webkit-scrollbar-thumb {
     background-color: #1a2c75;
     border-radius: 20px;
+  }
+  .menu-show {
+    left: 0%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .menu {
+    width: 70vw;
   }
 }
 .menu-wrapper {
@@ -1245,6 +1249,18 @@ body {
   .footer-column-5 .footer-inner-wrapper {
     grid-template-columns: auto;
   }
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all linear 0.3s;
+}
+.modal-show {
+  opacity: 1;
+  position: fixed;
+  inset: 0;
+  z-index: 700;
 }
 
 @keyframes cta-ring-animate {
