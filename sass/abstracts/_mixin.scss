@@ -95,3 +95,10 @@
   bottom: 100%;
   z-index: 120;
 }
+
+@mixin webkitBox($row) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+  overflow: hidden;
+}

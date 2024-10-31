@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+// CSS Product 01
 .product_item1 {
   &-wrapper {
     border-radius: $border12;
@@ -124,5 +125,56 @@
       transform: unset;
       position: static;
     }
+  }
+}
+// CSS Product 02
+.product-item-2 {
+  &-wrapper {
+    @include flexbox(column, center, center, 10px);
+    border-radius: $border12;
+  }
+  &-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: $border12;
+    box-shadow: $shadow2;
+    overflow: hidden;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all ease 0.3s;
+    }
+  }
+  &-title {
+    color: $primaryColor;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.3rem;
+    padding-inline: 8px;
+    text-align: center;
+    transition: color ease 0.2s;
+    &:hover {
+      color: $secondColor;
+    }
+    @include maxWidth($medium) {
+      @include webkitBox(2);
+    }
+    @include maxWidth($small) {
+      font-size: 14px;
+    }
+  }
+  &-cats {
+    color: $secondColor;
+    font-size: 12px;
+    font-weight: 500;
+    padding-inline: 8px;
+    text-align: center;
+    width: 100%;
   }
 }

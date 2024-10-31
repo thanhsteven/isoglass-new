@@ -6,9 +6,14 @@ mixin title(subtitle, title, titleAfter)
     p.title-after=titleAfter
 
 // Button Product Style 01
-mixin buttonProduct01(text)
+mixin btnProduct(text)
   a.btn_product_ver1(class!=attributes.class href="#", target="_blank", rel="nofollow noopener noreferrer")
     span=text 
+
+// Button Product Style 02
+mixin btnProduct2(text)
+  a.btn-product-2(class!=attributes.class href="#", target="_blank", rel="nofollow noopener noreferrer")
+      span=text
 
 // Product Infomation Box - Style 01
 mixin productStyle01(href, image, title)
@@ -19,7 +24,7 @@ mixin productStyle01(href, image, title)
       .product_item1-hover
         .product_item1-content
           h3.product_item1-title=title 
-    +buttonProduct01("Đọc tiếp")(class="product_item1-button")
+    +btnProduct("Đọc tiếp")(class="product_item1-button")
 
 // Category Infomation Box - Style 01
 mixin categoryStyle01(href, image, title, countNumber)
@@ -30,3 +35,17 @@ mixin categoryStyle01(href, image, title, countNumber)
       .category_item1-content
         h3.category_item1-title=title
         span.category_item1-count=countNumber
+
+
+// Product Infomation Box - Style 02
+mixin productStyle02(href, image, title, cats)
+  .product-item-2-wrapper 
+    a.product-item-2-link(href=href, target="_blank", rel="nofollow noopener noreferrer")
+      .product-item-2-image
+        img(src=image, alt=title, srcset=`${image} x2`)
+    a(href=href, target="_blank", rel="noopener noreferrer")
+      h3.product-item-2-title=title
+    .product-item-2-cats
+      a(href=href, target="_blank", rel="nofollow noopener noreferrer")=cats 
+    .product-item-2-button
+      +btnProduct2("Xem thêm")(class="product-item-2-button")
