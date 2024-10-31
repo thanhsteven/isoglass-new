@@ -1,0 +1,9 @@
+// Category Infomation Box - Style 01
+mixin categoryStyle01(href, image, title, countNumber)
+  a.category_item1-wrapper(href=href, target="_blank", rel="noopener noreferrer")
+    .category_item1-image
+      img(src=image, alt=title)
+    .category_item1-hover
+      .category_item1-content
+        h3.category_item1-title=title
+        span.category_item1-count=countNumber
