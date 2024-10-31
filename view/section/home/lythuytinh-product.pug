@@ -39,11 +39,4 @@ section.ltt-product
       img(src="../../images/ly-thuy-tinh/ly-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg", alt="Chai thủy tinh iSOGLASS - Tạo hình tinh tế tạo nên không gian đẳng cấp", srcset="../../images/ly-thuy-tinh/ly-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg 2x")
     .ltt-product-wrapper 
       each item in lythuytinh_product
-        .ltt-product-item
-          a.ltt-product-link(href=item.href, target="_blank", rel="noopener noreferrer")
-            .ltt-product-image
-              img(src=item.image, alt=item.title, srcset=`${item.image} x2`)
-            .ltt-product-hover
-              .ltt-product-content
-                h3.ltt-product-title=item.title 
-          +buttonProduct("Đọc tiếp")(class="ltt-product-readmore")
+        +productStyle01(item.href, item.image, item.title)

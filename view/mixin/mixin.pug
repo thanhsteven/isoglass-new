@@ -1,22 +1,32 @@
-// Title
+// Title Style 01
 mixin title(subtitle, title, titleAfter)
   .title-wrapper 
     span.subtitle=subtitle
     h2.title=title
     p.title-after=titleAfter
 
-// Button Product Design 01
-mixin buttonProduct(text1)
-  a.btn-product-readmore(class!=attributes.class href="#", target="_blank", rel="nofollow noopener noreferrer")
-    span=text1 
+// Button Product Style 01
+mixin buttonProduct01(text)
+  a.btn_product_ver1(class!=attributes.class href="#", target="_blank", rel="nofollow noopener noreferrer")
+    span=text 
 
-// Product Box Style 01
-mixin productInfoStyle01(href, image, title)
-  .product-info-1-item
-    a.product-info-1-link(href=href, target="_blank", rel="noopener noreferrer")
-      .product-info-1-image
+// Product Infomation Box - Style 01
+mixin productStyle01(href, image, title)
+  .product_item1-wrapper
+    a.product_item1-link(href=href, target="_blank", rel="noopener noreferrer")
+      .product_item1-image
         img(src=image, alt=title, srcset=`${image} x2`)
-      .product-info-1-hover
-        .product-info-1-content
-          h3.product-info-1-title=title 
-    +buttonProduct("Đọc tiếp")(class="product-info-1-product-readmore")
+      .product_item1-hover
+        .product_item1-content
+          h3.product_item1-title=title 
+    +buttonProduct01("Đọc tiếp")(class="product_item1-button")
+
+// Category Infomation Box - Style 01
+mixin categoryStyle01(href, image, title, countNumber)
+  a.category_item1-wrapper(href=href, target="_blank", rel="noopener noreferrer")
+    .category_item1-image
+      img(src=image, alt=title)
+    .category_item1-hover
+      .category_item1-content
+        h3.category_item1-title=title
+        span.category_item1-count=countNumber

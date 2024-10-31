@@ -32,11 +32,11 @@
     }
   ]
 
-section.ltt-product
+section.inlogo-product
   .container 
-    +title("Sản phẩm nổi bật", "LY THỦY TINH")
-    .ltt-product-banner
+    +title("Sản phẩm nổi bật", "IN LOGO LY THỦY TINH")
+    .inlogo-product-banner
       img(src="../../images/ly-thuy-tinh/ly-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg", alt="Chai thủy tinh iSOGLASS - Tạo hình tinh tế tạo nên không gian đẳng cấp", srcset="../../images/ly-thuy-tinh/ly-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg 2x")
-    .ltt-product-wrapper 
+    .inlogo-product-wrapper 
       each item in inlogo_product
-        +productInfoStyle01(item.href, item.image, item.title)
+        +productStyle01(item.href, item.image, item.title)

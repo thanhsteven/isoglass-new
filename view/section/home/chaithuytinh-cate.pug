@@ -31,10 +31,4 @@ section.ctt-category
     +title("Danh mục nổi bật", "Chai thuỷ tinh iSOGLASS")
     .ctt-category-wrapper
       each item in danhmuc_chaithuytinh
-        a.ctt-category-item(href=item.href, target="_blank", rel="noopener noreferrer")
-          .ctt-category-image
-            img(src=item.image, alt=item.title)
-          .ctt-category-hover
-            .ctt-category-content
-              h3.ctt-category-title=item.title 
-              span.ctt-category-count=item.count
+        +categoryStyle01(item.href, item.image, item.title, item.count)

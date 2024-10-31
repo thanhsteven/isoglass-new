@@ -1,5 +1,5 @@
 @use "../abstracts" as *;
-.btn-product-readmore {
+.btn_product_ver1 {
   --width: 90px;
   --height: 40px;
   @include flexbox(row, center, center, null);
@@ -29,4 +29,3 @@
     }
   }
 }
-

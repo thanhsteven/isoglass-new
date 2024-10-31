@@ -37,11 +37,4 @@ section.ltt-cate
     +title("Danh mục nổi bật", "Ly thuỷ tinh iSOGLASS")
     .ltt-cate-wrapper 
       each item in danhmuc_lythuytinh
-        .ltt-cate-item 
-          a.ltt-cate-link(href=item.href)
-            .ltt-cate-image
-              img(src=item.image, alt="Ly thuỷ tinh iSOGLASS giá tốt tại TP.HCM")
-            .ltt-cate-hover 
-              .ltt-cate-content 
-                h3.ltt-cate-title=item.title
-                span.ltt-cate-count=item.count
+        +categoryStyle01(item.href, item.image, item.title, item.count)

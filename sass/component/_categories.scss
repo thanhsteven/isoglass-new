@@ -1,0 +1,86 @@
+@use "../abstracts" as *;
+.category_item1 {
+  &-wrapper {
+    display: block;
+    position: relative;
+    border-radius: $border12;
+    overflow: hidden;
+    @include maxWidth($large) {
+      height: fit-content;
+    }
+    &:hover {
+      .category_item1 {
+        &-image img {
+          transform: scale(1.1);
+        }
+        &-hover {
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+  &-image {
+    border-radius: $border12;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1);
+      transition: $transition;
+    }
+  }
+  &-hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: $transition;
+    border-bottom-left-radius: $border12;
+    border-bottom-right-radius: $border12;
+    @include maxWidth($small) {
+      position: static;
+      background-color: transparent;
+      transform: unset;
+    }
+  }
+  &-content {
+    padding: 15px;
+    height: var(--heigth-content);
+    @include maxWidth($small) {
+      padding: 4px 8px;
+      @include flexbox(column, center, stretch, 4px);
+      height: auto;
+    }
+  }
+  &-title {
+    color: #fff;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 4px;
+    font-size: clamp(16px, 16px, 18px);
+    @include maxWidth($small) {
+      text-align: center;
+      color: $primaryColor;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: unset;
+    }
+    @include maxWidth($small) {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  &-count {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    @include maxWidth($small) {
+      color: $primaryColor;
+    }
+  }
+}
