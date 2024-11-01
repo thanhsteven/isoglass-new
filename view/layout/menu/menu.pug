@@ -1,14 +1,14 @@
 - 
   var menu = [
     {
-      href: "",
+      href: "#",
       follow: "dofollow",
       text: "iSOGLASS",
       child: false,
       active: true
     },
     {
-      href: "",
+      href: "#",
       follow: "dofollow",
       text: "Chai thuỷ tinh",
       child: [
@@ -32,7 +32,7 @@
       active: true 
     },
     {
-      href: "",
+      href: "#",
       follow: "dofollow",
       text: "Ly thuỷ tinh",
       child: [
@@ -64,21 +64,21 @@
       active: false
     },
     {
-      href: "",
+      href: "#",
       follow: "nofollow",
       text: "In thương hiệu ly thủy tinh",
       child: false,
       active: false
     },
     {
-      href: "",
+      href: "#",
       follow: "nofollow",
       text: "Về chúng tôi",
       child: false,
       active: false
     },
     {
-      href: "",
+      href: "#",
       follow: "nofollow",
       text: "Liên hệ",
       child: false,
@@ -93,10 +93,12 @@ nav.menu
     ul.menu-list
       each item in menu
         li.menu-list-item 
-          a.menu-list-item-link(href=item.href, target="_blank", rel=`noopener noreferrer ${item.follow}`)
-            span=item.text
+          .menu-list-item-wrapper
+            a.menu-list-item-link(href=item.href, target="_blank", rel=`noopener noreferrer ${item.follow}`)
+              span=item.text
             if item.child
-              i.fa.fa-angle-down(aria-hidden="true")
+              span.menu-list-item-icon
+                i.fa.fa-angle-down.menu-list-item-arrow(aria-hidden="true")
           if item.child
             nav.menu-child
               .menu-child-wrapper 

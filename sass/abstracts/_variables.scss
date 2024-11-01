@@ -7,13 +7,14 @@ $font-primary: "Inter", sans-serif;
 $container: 1200px;
 $topbarHeight: 30px;
 $headerHeight: 90px;
+$heightMenuChildItem: 50px;
 
 // * Color
 $primaryColor: #1a2c75;
 $hoverColor: #c1a887;
 $secondColor: #b59d78;
 $textColor: #333;
-$borderColor: #eee;
+$borderColor: rgba(0, 0, 0, 0.1);
 
 // * Base
 $border4: 4px;

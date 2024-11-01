@@ -1,8 +1,8 @@
 @use "../../abstracts" as *;
+// - Menu chính
 .menu {
   display: block;
   background-color: $primaryColor;
-  padding-block: 4px;
   border-bottom: 0.5px solid #fff;
   @include maxWidth($large) {
     background-color: #fff;
@@ -15,7 +15,7 @@
     overflow-y: auto;
     padding-bottom: 20px;
     box-shadow: $shadow;
-    transition: all linear 0.3s;
+    transition: all ease-in-out 0.5s;
     &::-webkit-scrollbar {
       width: 6px;
     }
@@ -41,70 +41,107 @@
     @include flexbox(row, center, space-around, 10px);
     @include maxWidth($large) {
       display: block;
-      li.menu-list-item:first-child {
+      &-item:first-child {
         border-top: unset;
       }
     }
-    &-item {
-      position: relative;
+  }
+}
+// - Menu List Item
+.menu-list-item {
+  position: relative;
+  @include maxWidth($large) {
+    position: unset;
+    border-top: 1px solid $borderColor;
+  }
+  @include maxWidth($medium) {
+    width: 100%;
+    justify-content: space-between;
+  }
+  &-wrapper {
+    @include flexbox(row, center, space-between, null);
+    padding-inline: 10px;
+    @include maxWidth($large) {
+      padding-inline: unset;
+      padding-left: 15px;
+      cursor: pointer;
+    }
+  }
+  &-link {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    @include maxWidth($large) {
+      flex: 0 0 auto;
+      color: $primaryColor;
+      padding: 0px;
+      line-height: $heightMenuChildItem;
+    }
+    @include maxWidth($medium) {
+      min-width: fit-content;
+    }
+    span {
+      color: inherit;
+      font-size: 20px;
+      font-weight: 500;
+      transition: opacity linear 0.2s;
       @include maxWidth($large) {
-        position: unset;
-        border-top: 1px solid #eee;
+        font-size: 15px;
+        font-weight: 600;
       }
-      &:hover {
-        .menu-child {
-          opacity: 1;
-          visibility: visible;
-          transform: translateY(0px);
-          @include maxWidth($large) {
-            opacity: unset;
-            visibility: unset;
-            transform: unset;
+    }
+  }
+  &-icon {
+    @include maxWidth($large) {
+      flex: 0 1 60px;
+      display: inline-block;
+      height: $heightMenuChildItem;
+      line-height: $heightMenuChildItem;
+      text-align: center;
+      border-left: 1px solid $borderColor;
+    }
+  }
+  &-arrow {
+    color: #fff;
+    font-weight: bold;
+    transition: transform linear 0.3s;
+    @include maxWidth($large) {
+      color: $primaryColor;
+      transform: rotate(-90deg);
+    }
+  }
+  &:hover {
+    .menu {
+      &-list {
+        &-item {
+          &-link span {
+            opacity: 0.7;
+            @include maxWidth($large) {
+              opacity: unset;
+            }
           }
-        }
-        &:hover {
-          .menu-list-item-link span {
-            opacity: 0.8;
-          }
-          i.fa {
+          &-arrow {
             transform: rotateX(180deg);
-          }
-          @include maxWidth($large) {
-            i.fa {
-              transform: initial;
+            @include maxWidth($large) {
+              transform: rotate(-90deg);
             }
           }
         }
       }
-      &-link {
-        display: block;
-        color: #fff;
-        padding-block: 10px;
-        padding-inline: 8px;
+      &-child {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
         @include maxWidth($large) {
-          color: $primaryColor;
-          @include flexbox(row, center, space-between, null);
-          padding-right: 20px;
-          padding-left: 20px;
-          padding-block: unset;
-          line-height: 50px;
-        }
-        span {
-          color: inherit;
-          font-size: 20px;
-          font-weight: 500;
-          transition: opacity linear 0.2s;
-        }
-        i.fa {
-          margin-left: 8px;
-          font-weight: bold;
-          transition: transform linear 0.3s;
+          opacity: unset;
+          visibility: unset;
+          transform: unset;
         }
       }
     }
   }
 }
-
+// - Menu con
 .menu-child {
   width: fit-content;
   min-width: 250px;
@@ -115,8 +152,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 999;
-  // Effect Animations
+  z-index: 900;
   transform: translateY(15px);
   opacity: 0;
   visibility: hidden;
@@ -125,10 +161,18 @@
     position: unset;
     box-shadow: unset;
     border: unset;
-    width: 100%;
     opacity: unset;
     visibility: unset;
     transform: unset;
+    min-width: unset;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    display: none;
+    transition: all ease 0.5s;
+    &-show {
+      display: block;
+    }
   }
   &::before {
     content: "";
@@ -143,8 +187,7 @@
   &-wrapper {
     width: fit-content;
     min-width: inherit;
-    padding-block: 10px;
-    border: 1px solid #eee;
+    border: 1px solid $borderColor;
     border-radius: $border12;
     @include maxWidth($large) {
       border: unset;
@@ -156,7 +199,7 @@
   }
   &-item {
     @include maxWidth($large) {
-      border-top: 1px solid #eee;
+      border-top: 1px solid $borderColor;
     }
     &-link {
       @include flexbox(row, center, start, 8px);
@@ -181,9 +224,10 @@
       }
     }
     &-icon {
-      object-fit: cover;
+      display: block;
       width: 20px;
       height: 20px;
+      object-fit: cover;
       border-radius: 4px;
     }
   }
@@ -211,4 +255,3 @@
     }
   }
 }
-
