@@ -1,23 +1,25 @@
 include ../mixin/mixin
 include ../mixin/categories
-inlcude ../mixin/products
+
 
 doctype html
 html(lang="vi")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    
     block titleCategory
       title Ly thuỷ tinh giá tốt tại TP.HCM
-
+    
     link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
     link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
     
-    block stylesheet 
-      link(rel="stylesheet", href="../style/main.css")
+    block stylesheet
+      link(rel="stylesheet" href="../style/main.css")
       link(rel="stylesheet", href="../style/categories.css")
 
   body 
     include ./header/header
     include ./menu/menu-2
+    block main 
     include ./footer/footer

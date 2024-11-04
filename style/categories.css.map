@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"categories.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/categories.scss"],"names":[],"mappings":"AACQ;AACR;EACE;EACA;EACA;EACA","file":"categories.css"}
