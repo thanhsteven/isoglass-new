@@ -11,4 +11,3 @@ pug index.pug --watch --pretty --out HTML
 pug about-us.pug --watch --pretty --out HTML
 pug contact.pug --watch --pretty --out HTML
 pug lythuytinh.pug --watch --pretty --out HTML
-

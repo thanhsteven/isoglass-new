@@ -106,7 +106,6 @@
       @include maxWidth($large) {
         color: $primaryColor;
         transform: rotate(-90deg);
-        pointer-events: none;
       }
     }
   }
@@ -119,8 +118,7 @@
       &-arrow {
         transform: rotateX(180deg);
         @include maxWidth($large) {
-          transform: unset;
-          pointer-events: none;
+          transform: rotate(-90deg);
         }
       }
     }
@@ -129,6 +127,12 @@
       opacity: 1;
       transform: translateY(0px);
     }
+  }
+}
+
+.icon-show {
+  .menu-item-arrow {
+    transform: unset !important;
   }
 }
 
@@ -148,17 +152,18 @@
   opacity: 0;
   transform: translateY(30px);
   transition: $transition;
+  // - Điều chỉnh Mobile
   @include maxWidth($large) {
     visibility: unset;
     opacity: unset;
     transform: unset;
-    transition: unset;
+    transition: all linear 0.3s;
     position: static;
     width: 100%;
     max-width: unset;
     border-radius: unset;
     box-shadow: unset;
-    height: 0px;
+    max-height: 0px;
   }
   &-item {
     padding-left: 15px;
@@ -192,4 +197,3 @@
     }
   }
 }
-

@@ -1309,7 +1309,6 @@ body {
   .menu-item-arrow {
     color: #1a2c75;
     transform: rotate(-90deg);
-    pointer-events: none;
   }
 }
 
@@ -1318,14 +1317,17 @@ body {
 }
 @media screen and (max-width: 992px) {
   .menu-item:hover .menu-item-arrow {
-    transform: unset;
-    pointer-events: none;
+    transform: rotate(-90deg);
   }
 }
 .menu-item:hover .sub-menu {
   visibility: visible;
   opacity: 1;
   transform: translateY(0px);
+}
+
+.icon-show .menu-item-arrow {
+  transform: unset !important;
 }
 
 .sub-menu {
@@ -1349,13 +1351,13 @@ body {
     visibility: unset;
     opacity: unset;
     transform: unset;
-    transition: unset;
+    transition: all linear 0.3s;
     position: static;
     width: 100%;
     max-width: unset;
     border-radius: unset;
     box-shadow: unset;
-    height: 0px;
+    max-height: 0px;
   }
 }
 .sub-menu-item {
