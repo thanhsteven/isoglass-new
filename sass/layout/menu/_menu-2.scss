@@ -17,6 +17,12 @@
         left: 0;
       }
     }
+    @include maxWidth($medium) {
+      width: 50vw;
+    }
+    @include maxWidth($small) {
+      width: 60vw;
+    }
   }
   &-close {
     border: none;
@@ -97,7 +103,7 @@
         background-color: #fff;
         text-align: center;
         border-left: 1px solid $borderColor;
-        // border-bottom: 1px solid $borderColor;
+        transition: all linear 0.3s;
       }
     }
     &-arrow {
@@ -131,8 +137,11 @@
 }
 
 .icon-show {
+  background-color: $primaryColor;
+  color: #fff;
   .menu-item-arrow {
     transform: unset !important;
+    color: inherit;
   }
 }
 

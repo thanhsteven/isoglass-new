@@ -1,20 +1,35 @@
 (function () {
-  const submenu = document.querySelector(".sub-menu");
-
   const btnOpenMenu = document.querySelector(".header-right-menu");
   const modal = document.querySelector(".modal");
   const navMenu = document.querySelector(".menu-nav");
   const btnCloseMenu = document.querySelector(".menu-close");
-  const menuItemAll = document.querySelectorAll(".menu-item");
 
-  navMenu.addEventListener("click", function (e) {
-    if (e.target.hasAttribute("data-toggle")) {
-      const iconArrow = e.target.querySelector(".menu-item-icon");
-      iconArrow.classList.toggle("icon-show");
+  navMenu.addEventListener("click", function (event) {
+    if (event.target.hasAttribute("data-toggle")) {
+      const submenu = event.target.querySelector(".sub-menu");
+      console.log(submenu);
+      if (submenu.hasAttribute("style")) {
+        submenu.removeAttribute("style");
+        rotateIcon(event.target);
+      } else {
+        submenu.style.maxHeight = submenu.scrollHeight + "px";
+        rotateIcon(event.target);
+      }
     } else {
-      console.log(false);
+      return false;
     }
   });
+
+  function rotateIcon(element) {
+    const iconArrow = element.querySelector(".menu-item-icon");
+    iconArrow.classList.toggle("icon-show");
+  }
+
+  function collapseSubMenu() {
+    navMenu
+      .querySelector(".menu .menu-item .sub-menu")
+      .removeAttribute("style");
+  }
 
   // menuItemAll.forEach(function (menuItem) {
   //   menuItem.addEventListener("click", function (e) {
@@ -28,10 +43,6 @@
   //     }
   //   });
   // });
-
-  // function collapseSubMenu() {
-  //   submenu.removeAttribute("style");
-  // }
 
   // navMenu.addEventListener("click", function (e) {
   //   const iconArrow = e.target.querySelector(".menu-item-arrow");
@@ -57,3 +68,4 @@
     }
   }
 })();
+
