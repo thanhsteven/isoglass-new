@@ -85,3 +85,23 @@
       active: false
     }
   ];
+
+nav.menu-nav 
+  button.menu-close
+    i.fa.fa-close(aria-hidden="true")
+  ul.menu
+    each item in menu
+      li.menu-item(data-toggle=item.child ? "sub-menu" : false)
+        .menu-item-wrapper
+          a.menu-item-link(href=item.href rel=`noopener noreferrer ${item.follow}`)
+            span.menu-item-text=item.text
+          if item.child 
+            span.menu-item-icon
+              i.fa.fa-angle-down.menu-item-arrow(aria-hidden="true")
+        if item.child 
+          ul.sub-menu 
+            each child in item.child
+              li.sub-menu-item
+                a.sub-menu-item-link(href="#" rel="noopener noreferrer")
+                  img.sub-menu-item-image(src=child.icon02, alt=child.text02, srcset=`${child.icon02} 2x`)
+                  span.sub-menu-item-text=child.text02
