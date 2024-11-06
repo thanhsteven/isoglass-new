@@ -6,8 +6,6 @@
   const menuIconAll = navMenu.querySelectorAll(".menu-item-icon");
   const btnCloseMenu = document.querySelector(".menu-close");
 
-  console.log(menuIconAll);
-
   navMenu.addEventListener("click", function (event) {
     if (event.target.hasAttribute("data-toggle")) {
       const submenu = event.target.querySelector(".sub-menu");
@@ -34,43 +32,6 @@
     const iconArrow = element.querySelector(".menu-item-icon");
     iconArrow.classList.toggle("icon-show");
   }
-
-  function collapseSubMenu() {
-    const subMenuAll = navMenu.querySelector(".menu .menu-item .sub-menu");
-    if (subMenuAll.hasAttribute("style")) {
-      subMenuAll.removeAttribute("style");
-    }
-    // let iconsubMenuAll = navMenu.querySelector(
-    //   ".menu .menu-item .menu-item-wrapper .menu-item-icon.icon-show"
-    // );
-    // if (iconsubMenuAll) {
-    //   iconsubMenuAll.classList.remove("icon-show");
-    // }
-  }
-
-  // menuItemAll.forEach(function (menuItem) {
-  //   menuItem.addEventListener("click", function (e) {
-  //     iconArrow.classList.toggle("menu-item-arrow-rotate");
-
-  //     if (e.target.hasAttribute("data-toggle")) {
-  //       submenu.style.maxHeight = submenu.scrollHeight + "px";
-  //       console.log(submenu);
-  //     } else {
-  //       console.log(false);
-  //     }
-  //   });
-  // });
-
-  // navMenu.addEventListener("click", function (e) {
-  //   const iconArrow = e.target.querySelector(".menu-item-arrow");
-  //   console.log(e.target);
-
-  //   const submenu = navMenu.querySelector(".sub-menu");
-  //   if (e.target.hasAttribute("data-toggle")) {
-  //     iconArrow.classList.toggle("menu-item-arrow-rotate");
-  //     submenu.style.maxHeight = submenu.scrollHeight + "px";
-  //   }
-  // });
 
   btnOpenMenu.addEventListener("click", menuMobile);
   btnCloseMenu.addEventListener("click", menuMobile);
