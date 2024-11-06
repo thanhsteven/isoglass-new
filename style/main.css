@@ -1303,6 +1303,7 @@ body {
 }
 @media screen and (max-width: 992px) {
   .menu-item-icon {
+    margin-right: 1px;
     line-height: 45px;
     max-width: 50px;
     background-color: #fff;
@@ -1387,6 +1388,9 @@ body {
   .sub-menu-item {
     padding-left: 20px;
   }
+}
+.sub-menu-item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
 }
 .sub-menu-item-link {
   display: flex;

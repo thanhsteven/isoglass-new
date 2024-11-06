@@ -98,6 +98,7 @@
       display: block;
       min-height: 100%;
       @include maxWidth($large) {
+        margin-right: 1px;
         line-height: $heightMenuChildItem;
         max-width: 50px;
         background-color: #fff;
@@ -183,6 +184,9 @@
     transition: all linear 0.3s;
     @include maxWidth($large) {
       padding-left: 20px;
+    }
+    &:first-child {
+      border-top: 1px solid $borderColor;
     }
     &-link {
       @include flexbox(row, center, flex-start, 10px);
