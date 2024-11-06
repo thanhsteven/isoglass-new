@@ -11,6 +11,7 @@
       window.innerWidth <= mediaSize
     ) {
       event.preventDefault();
+      console.log(event.target);
       const menuItemHasChildren = event.target.parentElement;
       if (menuItemHasChildren.classList.contains("active")) {
         collapseSubMenu();
@@ -60,4 +61,3 @@
     document.body.classList.toggle("hidden-scrolling");
   }
 })();
-

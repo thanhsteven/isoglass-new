@@ -2,33 +2,58 @@
   const btnOpenMenu = document.querySelector(".header-right-menu");
   const modal = document.querySelector(".modal");
   const navMenu = document.querySelector(".menu-nav");
+  // const menu_con_ngoai = navMenu.querySelectorAll(".menu .menu-item .sub-menu");
+  const menu_con_ngoai = navMenu.querySelector(".menu .menu-item .sub-menu");
   const btnCloseMenu = document.querySelector(".menu-close");
 
+  // console.log(menu_con_ngoai);
+
+  // navMenu.addEventListener("click", function (event) {
+  //   menu_con_ngoai.forEach(function (subMenu) {
+  //     // console.log(subMenu);
+  //     if (event.target.hasAttribute("data-toggle")) {
+  //       console.log(event.target);
+  //       // Click vào thì ra hết cả 2 là sai rồi
+  //     }
+  //   });
+  // });
+
   navMenu.addEventListener("click", function (event) {
+    // const subMenuOut = navMenu.querySelector(".sub-menu");
+    // console.log(subMenuOut);
+
     if (event.target.hasAttribute("data-toggle")) {
-      const submenu = event.target.querySelector(".sub-menu");
-      console.log(submenu);
+      const submenu = event.target.querySelector(".sub-menu"); // subMenu tại điểm click (bên trong)
+
       if (submenu.hasAttribute("style")) {
         submenu.removeAttribute("style");
-        rotateIcon(event.target);
+        toggleIcon(event.target);
       } else {
         submenu.style.maxHeight = submenu.scrollHeight + "px";
-        rotateIcon(event.target);
+        toggleIcon(event.target);
       }
     } else {
+      console.log("Không có menu con - submenu bên trong");
       return false;
     }
   });
 
-  function rotateIcon(element) {
+  function toggleIcon(element) {
     const iconArrow = element.querySelector(".menu-item-icon");
     iconArrow.classList.toggle("icon-show");
   }
 
   function collapseSubMenu() {
-    navMenu
-      .querySelector(".menu .menu-item .sub-menu")
-      .removeAttribute("style");
+    const menu_con_ngoai = navMenu.querySelector(".menu .menu-item .sub-menu");
+    if (menu_con_ngoai.hasAttribute("style")) {
+      menu_con_ngoai.removeAttribute("style");
+    }
+    // let iconmenu_con_ngoai = navMenu.querySelector(
+    //   ".menu .menu-item .menu-item-wrapper .menu-item-icon.icon-show"
+    // );
+    // if (iconmenu_con_ngoai) {
+    //   iconmenu_con_ngoai.classList.remove("icon-show");
+    // }
   }
 
   // menuItemAll.forEach(function (menuItem) {
@@ -68,4 +93,3 @@
     }
   }
 })();
-
