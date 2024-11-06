@@ -1,0 +1,215 @@
+@use "../../abstracts" as *;
+.menu {
+  &-nav {
+    background-color: $primaryColor;
+    @include maxWidth($large) {
+      background-color: #fff;
+      overflow-y: auto;
+      width: 40vw;
+      height: 100vh;
+      position: fixed;
+      left: -100%;
+      top: 0;
+      z-index: 999;
+      box-shadow: $shadow2;
+      transition: all ease-in-out 0.5s;
+      &-show {
+        left: 0;
+        overflow: hidden;
+      }
+    }
+    @include maxWidth($medium) {
+      width: 50vw;
+    }
+    @include maxWidth($small) {
+      width: 60vw;
+    }
+  }
+  &-close {
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin-left: 86%;
+    margin-top: 10px;
+    background-color: #eee;
+    border-radius: $border4;
+    box-shadow: $shadow2;
+    cursor: pointer;
+    @include minWidth($large) {
+      display: none;
+    }
+  }
+}
+// - Main menu
+.menu {
+  width: $container;
+  margin: 0 auto;
+  color: #fff;
+  @include flexbox(row, center, space-around, 15px);
+  @include maxWidth($large) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: unset;
+    width: 100%;
+  }
+  &-item {
+    position: relative;
+    @include maxWidth($large) {
+      width: 100%;
+      cursor: pointer;
+    }
+    &:first-child {
+      @include maxWidth($large) {
+        .menu-item-wrapper {
+          border: unset;
+        }
+      }
+    }
+    &-wrapper {
+      @include flexbox(row, center, space-between, 10px);
+      @include maxWidth($large) {
+        align-items: unset;
+        border-top: 1px solid $borderColor;
+        padding-left: 15px;
+        pointer-events: none;
+      }
+    }
+    &-link {
+      flex: 0 0 auto;
+      padding-block: 10px;
+      display: inline-block;
+      @include maxWidth($large) {
+        display: block;
+        padding-block: unset;
+        line-height: $heightMenuChildItem;
+      }
+    }
+    &-text {
+      color: #fff;
+      font-weight: 700;
+      line-height: 22px;
+      font-size: 16px;
+      @include maxWidth($large) {
+        color: $primaryColor;
+      }
+    }
+    &-icon {
+      flex: 1 1 auto;
+      display: block;
+      min-height: 100%;
+      @include maxWidth($large) {
+        margin-right: 1px;
+        line-height: $heightMenuChildItem;
+        max-width: 50px;
+        background-color: #fff;
+        text-align: center;
+        border-left: 1px solid $borderColor;
+        transition: all linear 0.3s;
+      }
+    }
+    &-arrow {
+      color: #fff;
+      transition: $transition;
+      @include maxWidth($large) {
+        color: $primaryColor;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+// - Hover
+.menu-item {
+  &:hover {
+    .menu-item {
+      &-arrow {
+        transform: rotateX(180deg);
+        @include maxWidth($large) {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    .sub-menu {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}
+
+.icon-show {
+  background-color: $primaryColor;
+  color: #fff;
+  .menu-item-arrow {
+    transform: unset !important;
+    color: inherit;
+  }
+}
+
+// - Sub Menu
+.sub-menu {
+  background-color: #fff;
+  border-radius: $border12;
+  max-width: 300px;
+  width: fit-content;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 500;
+  overflow: hidden;
+  box-shadow: $shadow;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: $transition;
+  // - Điều chỉnh Mobile
+  @include maxWidth($large) {
+    visibility: unset;
+    opacity: unset;
+    transform: unset;
+    transition: all linear 0.3s;
+    position: static;
+    width: 100%;
+    max-width: unset;
+    border-radius: unset;
+    box-shadow: unset;
+    max-height: 0px;
+  }
+  &-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    transition: all linear 0.3s;
+    @include maxWidth($large) {
+      padding-left: 20px;
+      border-top: 1px solid $borderColor;
+    }
+    &:first-child {
+      border-top: 1px solid $borderColor;
+    }
+    &-link {
+      @include flexbox(row, center, flex-start, 10px);
+    }
+    &-image {
+      max-width: 30px;
+      border-radius: $border4;
+      object-fit: cover;
+      height: 100%;
+    }
+    &-text {
+      color: $primaryColor;
+      font-size: 14px;
+      text-wrap: nowrap;
+    }
+    &:hover {
+      background-color: #ddd;
+      @include maxWidth($large) {
+        background-color: unset;
+      }
+    }
+  }
+}
+
