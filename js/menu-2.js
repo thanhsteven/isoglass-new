@@ -2,33 +2,25 @@
   const btnOpenMenu = document.querySelector(".header-right-menu");
   const modal = document.querySelector(".modal");
   const navMenu = document.querySelector(".menu-nav");
-  // const menu_con_ngoai = navMenu.querySelectorAll(".menu .menu-item .sub-menu");
-  const menu_con_ngoai = navMenu.querySelector(".menu .menu-item .sub-menu");
+  const subMenuAll = navMenu.querySelectorAll(".menu .menu-item .sub-menu");
+  const menuIconAll = navMenu.querySelectorAll(".menu-item-icon");
   const btnCloseMenu = document.querySelector(".menu-close");
 
-  // console.log(menu_con_ngoai);
-
-  // navMenu.addEventListener("click", function (event) {
-  //   menu_con_ngoai.forEach(function (subMenu) {
-  //     // console.log(subMenu);
-  //     if (event.target.hasAttribute("data-toggle")) {
-  //       console.log(event.target);
-  //       // Click vào thì ra hết cả 2 là sai rồi
-  //     }
-  //   });
-  // });
+  console.log(menuIconAll);
 
   navMenu.addEventListener("click", function (event) {
-    // const subMenuOut = navMenu.querySelector(".sub-menu");
-    // console.log(subMenuOut);
-
     if (event.target.hasAttribute("data-toggle")) {
-      const submenu = event.target.querySelector(".sub-menu"); // subMenu tại điểm click (bên trong)
-
+      const submenu = event.target.querySelector(".sub-menu");
       if (submenu.hasAttribute("style")) {
         submenu.removeAttribute("style");
         toggleIcon(event.target);
       } else {
+        [...subMenuAll].forEach((item) => {
+          item.removeAttribute("style");
+        });
+        [...menuIconAll].forEach((item) => {
+          item.classList.remove("icon-show");
+        });
         submenu.style.maxHeight = submenu.scrollHeight + "px";
         toggleIcon(event.target);
       }
@@ -44,15 +36,15 @@
   }
 
   function collapseSubMenu() {
-    const menu_con_ngoai = navMenu.querySelector(".menu .menu-item .sub-menu");
-    if (menu_con_ngoai.hasAttribute("style")) {
-      menu_con_ngoai.removeAttribute("style");
+    const subMenuAll = navMenu.querySelector(".menu .menu-item .sub-menu");
+    if (subMenuAll.hasAttribute("style")) {
+      subMenuAll.removeAttribute("style");
     }
-    // let iconmenu_con_ngoai = navMenu.querySelector(
+    // let iconsubMenuAll = navMenu.querySelector(
     //   ".menu .menu-item .menu-item-wrapper .menu-item-icon.icon-show"
     // );
-    // if (iconmenu_con_ngoai) {
-    //   iconmenu_con_ngoai.classList.remove("icon-show");
+    // if (iconsubMenuAll) {
+    //   iconsubMenuAll.classList.remove("icon-show");
     // }
   }
 
