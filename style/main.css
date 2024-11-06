@@ -318,6 +318,8 @@ body {
 }
 .product_item1-button span {
   color: #fff;
+  font-weight: 600;
+  font-size: 14px;
 }
 @media screen and (max-width: 992px) {
   .product_item1-button {
