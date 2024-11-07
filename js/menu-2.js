@@ -8,11 +8,18 @@ console.log("Đang kiểm tra lại logic menu ! chưa hoàn thành");
     let menuHasChild = event.target;
     if (menuHasChild.hasAttribute("data-toggle")) {
       let subMenu = menuHasChild.querySelector(".sub-menu");
+      let icon = menuHasChild.querySelector(".menu-item-icon");
+      // Kiểm tra submenu có đang mở hay không ?
       if (subMenu.hasAttribute("style")) {
-        subMenu.removeAttribute("style");
+        // Nếu submenu đang mở ~ icon sẽ hiện
+        subMenu.removeAttribute("style"); // đóng submenu lại
+        icon.classList.remove("icon-show"); // đóng luôn cái icon
       } else {
-        collapseMenu();
-        subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+        // Nếu submenu ko mở
+        collapseMenu(); // Đóng cái thằng ở ngoài đang mở lại
+        toggleIcon(); // Đóng luôn cái icon nằm ở ngoài và đang mở --> đóng lại
+        subMenu.style.maxHeight = subMenu.scrollHeight + "px"; // Mở cái thằng đang click vào
+        icon.classList.add("icon-show");
       }
     } else {
       console.log("Không có menu con => Khỏi xử lý sự kiện");
@@ -56,4 +63,3 @@ console.log("Đang kiểm tra lại logic menu ! chưa hoàn thành");
 
 // nếu có style --> remove style
 // nếu ko có style --> remove hết trước mấy thằng đang có đi rồi mới thêm style vào
-

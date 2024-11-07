@@ -177,10 +177,6 @@
     max-height: 0px;
   }
   &-item {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     background-color: #fff;
     transition: all linear 0.3s;
     @include maxWidth($large) {
@@ -191,6 +187,11 @@
     }
     &-link {
       @include flexbox(row, center, flex-start, 10px);
+      @include maxWidth($large) {
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
     }
     &-image {
       max-width: 30px;

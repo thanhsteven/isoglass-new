@@ -16,6 +16,7 @@
   }
   .menu-nav-show {
     left: 0;
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 768px) {
@@ -197,17 +198,12 @@
   }
 }
 .sub-menu-item {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   background-color: #fff;
   transition: all linear 0.3s;
 }
 @media screen and (max-width: 992px) {
   .sub-menu-item {
     padding-left: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
   }
 }
 .sub-menu-item:first-child {
@@ -219,6 +215,13 @@
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
+}
+@media screen and (max-width: 992px) {
+  .sub-menu-item-link {
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 .sub-menu-item-image {
   max-width: 30px;
