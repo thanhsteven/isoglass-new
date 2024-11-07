@@ -13,6 +13,8 @@
   &::before {
     content: "Liên hệ";
     @include flexbox(row, center, center, null);
+    font-size: 14px;
+    font-weight: 600;
     position: absolute;
     transform: translateY(calc(var(--height) - 10px));
     transition: transform ease-in-out 0.2s;
