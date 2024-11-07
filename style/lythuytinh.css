@@ -130,6 +130,7 @@
     background-color: #fff;
     text-align: center;
     border-left: 1px solid rgba(0, 0, 0, 0.1019607843);
+    pointer-events: none;
     transition: all linear 0.3s;
   }
 }
@@ -139,6 +140,7 @@
 }
 @media screen and (max-width: 992px) {
   .menu-item-arrow {
+    pointer-events: none;
     color: #1a2c75;
     transform: rotate(-90deg);
   }
@@ -214,7 +216,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 8px;
+  padding: 10px 16px;
 }
 @media screen and (max-width: 992px) {
   .sub-menu-item-link {

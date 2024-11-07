@@ -1,9 +1,6 @@
 console.log("Đang kiểm tra lại logic menu ! chưa hoàn thành");
 (function () {
   const navMenu = document.querySelector(".menu-nav");
-  const subMenus = navMenu.querySelectorAll(".sub-menu");
-  const menuIcons = navMenu.querySelectorAll(".menu-item-icon");
-
   navMenu.addEventListener("click", function (event) {
     let menuHasChild = event.target;
     if (menuHasChild.hasAttribute("data-toggle")) {
@@ -27,6 +24,8 @@ console.log("Đang kiểm tra lại logic menu ! chưa hoàn thành");
     }
   });
 
+  const subMenus = navMenu.querySelectorAll(".sub-menu");
+  const menuIcons = navMenu.querySelectorAll(".menu-item-icon");
   function collapseMenu() {
     [...subMenus].forEach((item) => {
       if (item.hasAttribute("style")) {
@@ -34,7 +33,6 @@ console.log("Đang kiểm tra lại logic menu ! chưa hoàn thành");
       }
     });
   }
-
   function toggleIcon() {
     [...menuIcons].forEach((item) => {
       if (item.classList.contains("icon-show")) {
@@ -46,7 +44,6 @@ console.log("Đang kiểm tra lại logic menu ! chưa hoàn thành");
   const btnOpenMenu = document.querySelector(".header-right-menu");
   const modal = document.querySelector(".modal");
   const btnCloseMenu = document.querySelector(".menu-close");
-
   btnOpenMenu.addEventListener("click", menuMobile);
   btnCloseMenu.addEventListener("click", menuMobile);
   modal.addEventListener("click", menuMobile);
@@ -59,7 +56,15 @@ console.log("Đang kiểm tra lại logic menu ! chưa hoàn thành");
       document.body.style.setProperty("overflow", "hidden");
     }
   }
-})();
 
-// nếu có style --> remove style
-// nếu ko có style --> remove hết trước mấy thằng đang có đi rồi mới thêm style vào
+  const mediaSize = 991;
+  window.addEventListener("resize", function () {
+    if (this.innerWidth <= mediaSize) {
+      resizeMenu();
+    }
+  });
+  function resizeMenu() {
+    modal.classList.remove("modal-show");
+    navMenu.classList.remove("menu-nav-show");
+  }
+})();
