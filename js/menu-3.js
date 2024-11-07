@@ -1,3 +1,6 @@
+console.log(
+  "Hoàn thành 90% ! Vẫn còn 1 chút xíu lỗi nhỏ ở phần logic click menu"
+);
 (function () {
   const btnOpenMenu = document.querySelector(".header-right-menu");
   const modal = document.querySelector(".modal");
@@ -48,3 +51,4 @@
 
   function toggleMenuIcon(item) {}
 })();
+
