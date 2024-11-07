@@ -1,0 +1,19 @@
+extends ./view/layout/categories
+
+block titleCategory
+  title Chai thuỷ tinh giá tốt tại TP.HCM
+
+append stylesheet 
+  link(rel="stylesheet", href="../style/chaithuytinh.css")
+
+append mainHeading 
+  h1.header-heading Chai thuỷ tinh
+
+append menu
+  include ./view/layout/menu/menu-2
+
+block main 
+  main.main-wrapper 
+
+block scriptJS  
+  script(src="../js/menu-3.js")

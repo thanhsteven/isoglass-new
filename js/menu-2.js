@@ -1,37 +1,44 @@
+console.log("Đang kiểm tra lại logic menu ! chưa hoàn thành");
 (function () {
-  const btnOpenMenu = document.querySelector(".header-right-menu");
-  const modal = document.querySelector(".modal");
   const navMenu = document.querySelector(".menu-nav");
-  const subMenuAll = navMenu.querySelectorAll(".menu .menu-item .sub-menu");
-  const menuIconAll = navMenu.querySelectorAll(".menu-item-icon");
-  const btnCloseMenu = document.querySelector(".menu-close");
+  const subMenus = navMenu.querySelectorAll(".sub-menu");
+  const menuIcons = navMenu.querySelectorAll(".menu-item-icon");
 
   navMenu.addEventListener("click", function (event) {
-    if (event.target.hasAttribute("data-toggle")) {
-      const submenu = event.target.querySelector(".sub-menu");
-      if (submenu.hasAttribute("style")) {
-        submenu.removeAttribute("style");
-        toggleIcon(event.target);
+    let menuHasChild = event.target;
+    if (menuHasChild.hasAttribute("data-toggle")) {
+      let subMenu = menuHasChild.querySelector(".sub-menu");
+      if (subMenu.hasAttribute("style")) {
+        subMenu.removeAttribute("style");
       } else {
-        [...subMenuAll].forEach((item) => {
-          item.removeAttribute("style");
-        });
-        [...menuIconAll].forEach((item) => {
-          item.classList.remove("icon-show");
-        });
-        submenu.style.maxHeight = submenu.scrollHeight + "px";
-        toggleIcon(event.target);
+        collapseMenu();
+        subMenu.style.maxHeight = subMenu.scrollHeight + "px";
       }
     } else {
-      console.log("Không có menu con - submenu bên trong");
+      console.log("Không có menu con => Khỏi xử lý sự kiện");
       return false;
     }
   });
 
-  function toggleIcon(element) {
-    const iconArrow = element.querySelector(".menu-item-icon");
-    iconArrow.classList.toggle("icon-show");
+  function collapseMenu() {
+    [...subMenus].forEach((item) => {
+      if (item.hasAttribute("style")) {
+        item.removeAttribute("style");
+      }
+    });
   }
+
+  function toggleIcon() {
+    [...menuIcons].forEach((item) => {
+      if (item.classList.contains("icon-show")) {
+        item.classList.remove("icon-show");
+      }
+    });
+  }
+
+  const btnOpenMenu = document.querySelector(".header-right-menu");
+  const modal = document.querySelector(".modal");
+  const btnCloseMenu = document.querySelector(".menu-close");
 
   btnOpenMenu.addEventListener("click", menuMobile);
   btnCloseMenu.addEventListener("click", menuMobile);
@@ -46,3 +53,7 @@
     }
   }
 })();
+
+// nếu có style --> remove style
+// nếu ko có style --> remove hết trước mấy thằng đang có đi rồi mới thêm style vào
+
