@@ -21,7 +21,9 @@ html(lang="vi")
   body 
     include ./header/header
     block menu
+      include ./menu/menu-2
     block main
     include ./footer/footer
 
-  block scriptJS  
+  block scriptJS
+    script(src="../js/menu-2.js")
