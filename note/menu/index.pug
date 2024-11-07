@@ -1,0 +1,63 @@
+doctype html
+html(lang="vi")
+  head
+    title Dropdown Menu Responsive
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", type="text/css", href="css/main.css")
+  
+  body
+    // header start
+    header.header
+      .container
+        .header-main
+          .header-logo
+            a(href="#") Logo
+          .nav-menu-open
+            span
+          .menu-overlay
+          
+          // navigation menu start
+          nav.nav-menu
+            .close-nav-menu
+              img(src="img/close.svg", alt="close")
+            ul.menu
+              li.menu-item.menu-item-has-children
+                a(href="#", data-toggle="sub-menu") Home 
+                  i.plus
+                ul.sub-menu
+                  li.menu-item
+                    a(href="#") Home 1
+                  li.menu-item
+                    a(href="#") Home 2
+                  li.menu-item
+                    a(href="#") Home 3
+                  li.menu-item
+                    a(href="#") Home 4
+              li.menu-item
+                a(href="#") About
+              li.menu-item
+                a(href="#") Services
+              li.menu-item.menu-item-has-children
+                a(href="#", data-toggle="sub-menu") Pages 
+                  i.plus
+                ul.sub-menu
+                  li.menu-item
+                    a(href="#") page 1
+                  li.menu-item
+                    a(href="#") page 2
+                  li.menu-item
+                    a(href="#") page 3
+                  li.menu-item
+                    a(href="#") page 4
+              li.menu-item
+                a(href="#") News
+              li.menu-item
+                a(href="#") Contact
+          // navigation menu end
+    
+    // home section start
+    section.home-section
+    // home section end
+
+    script(src="js/main.js")

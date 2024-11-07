@@ -1,5 +1,5 @@
 (function () {
-  const openNavMenu = document.querySelector(".open-nav-menu");
+  const openNavMenu = document.querySelector(".menu-nav-open");
   const closeNavMenu = document.querySelector(".close-nav-menu");
   const navMenu = document.querySelector(".nav-menu");
   const menuOverlay = document.querySelector(".menu-overlay");
