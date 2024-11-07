@@ -742,7 +742,6 @@ body {
   }
   .menu-nav-show {
     left: 0;
-    overflow: hidden;
   }
 }
 @media screen and (max-width: 768px) {
