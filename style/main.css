@@ -754,7 +754,8 @@ body {
 }
 @media screen and (max-width: 576px) {
   .menu-nav {
-    width: 60vw;
+    width: 70vw;
+    min-width: fit-content;
   }
 }
 .menu-close {
