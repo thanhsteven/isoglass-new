@@ -5,7 +5,6 @@ pug lythuytinh.pug --watch --pretty --out html
 pug chaithuytinh.pug --watch --pretty --out html
 pug about-us.pug --watch --pretty --out html
 pug contact.pug --watch --pretty --out html
-
 pug product-example.pug --watch --pretty --out html
 
 <!-- - Convert to CSS - -->
