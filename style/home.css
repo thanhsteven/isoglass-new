@@ -683,6 +683,7 @@
 @media screen and (max-width: 992px) {
   .test-product-wrapper {
     --gap: 10px;
+    grid-template-columns: repeat(auto-fit, 1fr);
   }
 }
 @media screen and (max-width: 576px) {
@@ -708,6 +709,10 @@
   .test-category-wrapper {
     --columns: 2;
   }
+}
+
+body {
+  background-color: #f5f2eb;
 }
 
 /*# sourceMappingURL=home.css.map */
