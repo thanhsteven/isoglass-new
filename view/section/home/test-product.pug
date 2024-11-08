@@ -131,6 +131,7 @@ section.inlogo-product
       each cat in danhmuc_test
         +categoryStyle02(cat.href, cat.image, cat.cate, cat.count)
     //- Test Product 03
+    +title("sản phẩm test", "Product Item Style 03")
     .test-product-wrapper 
       each item in inlogo_product
-        +productStyle03()
+        +productStyle03(item.href, item.image, item.image2, item.title, item.rating, item.cate, item.status)

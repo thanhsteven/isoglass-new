@@ -9,6 +9,7 @@
     margin-block: 20px;
     @include maxWidth($large) {
       --gap: 10px;
+      grid-template-columns: repeat(auto-fit, 1fr);
     }
     @include maxWidth($small) {
       --columns: 2;
@@ -30,3 +31,8 @@
     --columns: 2;
   }
 }
+
+body {
+  background-color: #f5f2eb;
+}
+

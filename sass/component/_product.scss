@@ -182,4 +182,137 @@
 }
 
 .product-item-3 {
+  --height-btn: 40px;
+  &-wrapper {
+    @include flexbox(column, flex-start, space-between, 10px);
+    background-color: #fff;
+    border-radius: $border12;
+    box-shadow: $shadow;
+    min-width: 300px;
+    overflow: hidden;
+    max-height: 390px;
+    @include maxWidth($large) {
+      min-width: unset;
+    }
+    &:hover {
+      .product-item-3 {
+        &-hover {
+          padding-top: 10px;
+          transform: translateY(-65px);
+        }
+      }
+    }
+  }
+  &-link {
+    display: block;
+    width: 100%;
+  }
+  &-image {
+    border-top-left-radius: $border12;
+    border-top-right-radius: $border12;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      .product-item-3 {
+        &-image {
+          &-first {
+            visibility: hidden;
+            opacity: 0;
+          }
+          &-last {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+    }
+    &-first {
+      visibility: visible;
+      opacity: 1;
+      transition: all linear 0.3s;
+      position: absolute;
+      inset: 0;
+      z-index: 100;
+    }
+    &-last {
+      transform: scale(1);
+      transition: all linear 3s;
+      transition-duration: 0.5s;
+    }
+  }
+  &-hover {
+    width: 100%;
+    background-color: #fff;
+    border-bottom-left-radius: $border12;
+    border-bottom-right-radius: $border12;
+    transform: translateY(6px);
+    z-index: 500;
+    transition: $transition;
+  }
+  &-content {
+    @include flexbox(column, flex-start, space-between, 8px);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  &-title {
+    @include flexbox(row, center, space-between, 15px);
+    h3 {
+      flex: 0 0 80%;
+      color: $primaryColor;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      @include webkitBox(2);
+    }
+  }
+  &-rating {
+    flex: 1 1 30%;
+    text-align: center;
+    span {
+      font-size: 14px;
+      color: $primaryColor;
+      font-weight: 700;
+    }
+    i.fa-star {
+      color: #eabf12;
+      font-size: 18px;
+      margin-left: 4px;
+    }
+  }
+  &-cate {
+    a {
+      color: $primaryColor;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  &-btn {
+    @include flexbox(row, center, space-between, 4px);
+    width: 100%;
+    &-hotline,
+    &-zalo {
+      color: #fff;
+      border: none;
+      outline: unset;
+      border-radius: $border8;
+      cursor: pointer;
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    &-zalo {
+      background-color: #3583f5;
+    }
+    &-hotline {
+      background-color: $primaryColor;
+    }
+  }
 }
+

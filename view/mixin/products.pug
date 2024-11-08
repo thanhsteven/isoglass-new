@@ -25,18 +25,20 @@ mixin productStyle02(href, image, title, cats)
 // Product Infomation Box - Style 03
 mixin productStyle03(href, image1, image2, title, rating, cate, status)
   .product-item-3-wrapper
-    a(href=href, rel="noopener noreferrer nofollow")
+    a.product-item-3-link(href=href, rel="noopener noreferrer nofollow")
       .product-item-3-image 
-        img.product-item-3-first(src=image1, alt=title, srcset=`${image1} 2x`)
-        img.product-item-3-last(src=image2, alt=title, srcset=`${iamge2} 2x`)
+        img.product-item-3-image-first(src=image1, alt=title, srcset=`${image1} 2x`)
+        img.product-item-3-image-last(src=image2, alt=title, srcset=`${image2} 2x`)
+    .product-item-3-hover 
       .product-item-3-content 
         .product-item-3-title 
-          h3=title 
+          a(href=href, rel="noopener noreferrer nofollow")
+            h3=title
           .product-item-3-rating
             span=rating 
             i.fa.fa-star 
         .product-item-3-cate 
-          a(href="#", target="_blank", rel="noopener noreferrer")
-      .product-item-3-btn
-        button.product-item-3-btn-hotline Liên hệ hotline
-        button.product-item-3-btn-zalo Báo giá Zalo
+          a(href="#", target="_blank", rel="noopener noreferrer")=cate
+        .product-item-3-btn
+          button.product-item-3-btn-hotline Liên hệ Hotline 
+          button.product-item-3-btn-zalo Báo giá Zalo
