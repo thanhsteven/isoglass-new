@@ -94,3 +94,7 @@ section.inlogo-product
     .test-category-wrapper 
       each cat in danhmuc_test
         +categoryStyle02(cat.href, cat.image, cat.cate, cat.count)
+    //- Test Product 03
+    .test-product-wrapper 
+      each item in inlogo_product
+        +productStyle03()
