@@ -190,13 +190,14 @@
     min-width: 300px;
     overflow: hidden;
     max-height: 380px;
+    position: relative;
     @include maxWidth($large) {
       min-width: unset;
     }
     &:hover {
       .product-item-3 {
         &-hover {
-          transform: translateY(-50px);
+          transform: translateY(-60px);
         }
         &-image {
           &-first {
@@ -204,7 +205,7 @@
             opacity: 0;
           }
           &-last {
-            transform: scale(1.1);
+            transform: scale(1.05);
           }
         }
       }
@@ -308,15 +309,17 @@
         font-weight: 600;
       }
       &:hover {
-        background-color: $secondColor;
-        color: $primaryColor;
+        background-color: $primaryColor;
+        color: #fff;
       }
     }
     &-zalo {
       background-color: #3583f5;
     }
     &-hotline {
-      background-color: $primaryColor;
+      background-color: transparent;
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
     }
   }
 }

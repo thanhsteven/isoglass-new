@@ -1,0 +1,15 @@
+@use "../../abstracts" as *;
+.binhthuytinh {
+  &-wrapper {
+    --gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+    @include maxWidth($large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include maxWidth($medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

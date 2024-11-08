@@ -1,0 +1,60 @@
+@use "../../abstracts" as *;
+.tab-info {
+  &-wrapper {
+    width: 100%;
+    margin-top: 20px;
+  }
+  &-head {
+    @include flexbox(row, center, flex-start, null);
+    background-color: #fff;
+    cursor: pointer;
+  }
+  &-list {
+    span {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $primaryColor;
+      padding: 20px;
+      pointer-events: none;
+    }
+    &:nth-child(2) {
+      border-left: 1px solid $borderColor;
+      border-right: 1px solid $borderColor;
+    }
+    &:first-child {
+      border-left: 1px solid $borderColor;
+    }
+    &:last-child {
+      border-right: 1px solid $borderColor;
+    }
+  }
+  &-body {
+    margin-top: 20px;
+  }
+  &-content {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    transition: all linear 0.3s;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: $border12;
+    box-shadow: $shadow;
+    p {
+      font-size: 14px;
+      color: $textColor;
+      margin-block: 10px;
+    }
+  }
+}
+
+.tab-active {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  background-color: #f8f8f8;
+  span {
+    border-top: 3px solid $primaryColor;
+  }
+}
