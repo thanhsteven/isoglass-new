@@ -12,7 +12,7 @@
     {image: "../../images/vo-hop-dung-ruou/vo-hop-chai-thuy-tinh-isoglass-20.jpg"}
   ]
 
-section.vohopdungruou-product
+section.vo-hop-ruou
   .container 
     +title("Danh mục sản phẩm", "Vỏ hộp cho Chai thủy tinh", "iSOGLASS sản xuất và cung cấp Vỏ hộp cho chai thủy tinh giúp bảo vệ chai khỏi va đập, tăng tính thẩm mỹ và tăng thêm vẻ sang trọng trong mắt khách hàng. Thiết kế theo yêu cầu về kích thước của vỏ hộp để phù hợp với kích thước của chai thủy tinh.")
     #vohopdungruou.owl-carousel.owl-theme.owl-loaded
@@ -20,12 +20,13 @@ section.vohopdungruou-product
         .owl-stage
           each item in vohopchaithuytinh
             .owl-item
-              .vohopdungruou-product-item
-                .vohopdungruou-product-image
-                  img(src=item.image, alt="", srcset=item.image)
-                .vohopdungruou-product-hover
-    .vohopdungruou-product-contact
-      a.vohopdungruou-product-contact-button(href="#", target="_blank", rel="noopener noreferrer nofollow") LIÊN HỆ SẢN XUẤT VỎ HỘP
+              .vo-hop-ruou-product-item
+                .vo-hop-ruou-product-image
+                  img(src=item.image, alt="Vỏ hộp cho chai thuỷ tinh đựng rượu", srcset=`${item.image} 2x`)
+                .vo-hop-ruou-product-hover 
+                  +btnZalo("Báo giá mẫu này")(class="vo-hop-ruou-product-hover-btn")
+    .vo-hop-ruou-product-contact
+      a.vo-hop-ruou-product-contact-button(href="#", target="_blank", rel="noopener noreferrer nofollow") LIÊN HỆ SẢN XUẤT VỎ HỘP
 
 script.
   $('#vohopdungruou').owlCarousel({

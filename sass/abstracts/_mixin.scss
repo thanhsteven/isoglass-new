@@ -96,9 +96,18 @@
   z-index: 120;
 }
 
+// * Hiện tiêu đề chỉ 2 dòng
 @mixin webkitBox($row) {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: $row;
   overflow: hidden;
+}
+
+// * Hiện thanh scroll ngang trên mobile
+@mixin scrollHorizontalBar() {
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+  overflow-x: auto;
+  margin-bottom: 15px;
 }

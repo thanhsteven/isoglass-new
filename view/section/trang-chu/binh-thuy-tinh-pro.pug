@@ -1,5 +1,5 @@
 - 
-  var binhthuytinh = [
+  var binh_thuy_tinh = [
     {
       title: "Ly thuỷ tinh champagne cầu vồng size 180ml iSO-49",
       image: "../../images/ly-thuy-tinh/ly-thuy-tinh-champagne-cau-vong-size-180ml-iso-49.jpg",
@@ -62,9 +62,9 @@
     }
   ]
 
-section.binhthuytinh
+section.binh-thuy-tinh
   .container 
     +title("sản phẩm nổi bật", "BÌNH THỦY TINH")
-    .binhthuytinh-wrapper
-      each item in binhthuytinh 
+    .binh-thuy-tinh-wrapper
+      each item in binh_thuy_tinh 
         +productStyle03(item.href, item.image, item.image2, item.title ,item.rating, item.cate)

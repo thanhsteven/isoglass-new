@@ -1,9 +1,6 @@
 @use "../../abstracts" as *;
-.about-us {
+.gioi-thieu {
   background-color: $secondColor;
-  padding-block: 40px;
-  margin-top: unset;
-  margin-bottom: unset;
   &-title {
     color: #333;
     font-weight: 700;
@@ -137,3 +134,4 @@
     }
   }
 }
+

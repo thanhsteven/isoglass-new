@@ -1,5 +1,5 @@
 - 
-  var danhmuc_chaithuytinh = [
+  var danh_muc_chai_thuy_tinh = [
     {
       image: "../../images/chai-thuy-tinh/chai-thuy-tinh-gia-tot-san-xuat-tai-tphcm-02.jpg",
       title: "Chai thuỷ tinh giá tốt - sản xuất tại TP.HCM",
@@ -26,9 +26,9 @@
     },
   ]
 
-section.ctt-category
+section.chai-thuy-tinh-cat
   .container
     +title("Danh mục nổi bật", "Chai thuỷ tinh iSOGLASS")
-    .ctt-category-wrapper
-      each item in danhmuc_chaithuytinh
+    .chai-thuy-tinh-cat-wrapper
+      each item in danh_muc_chai_thuy_tinh
         +categoryStyle01(item.href, item.image, item.title, item.count)

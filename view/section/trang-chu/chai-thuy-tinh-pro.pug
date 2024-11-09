@@ -1,5 +1,5 @@
 - 
-  var chaithuytinh_product = [
+  var chai_thuy_tinh_product = [
     {
       title: "Chai thuỷ tinh thân vuông nắp côn đựng rượu size 500ml iSO-32",
       image: "../../images/chai-thuy-tinh/chai-thuy-tinh-than-vuong-nap-con-dung-ruou-size-500ml-iso-32.jpg",
@@ -32,11 +32,11 @@
     }
   ]
 
-section.chaithuytinh-product
+section.chai-thuy-tinh-pro
   .container 
     +title("Sản phẩm nổi bật", "CHAI THỦY TINH")
-    .ctt-product-banner
+    .chai-thuy-tinh-pro-banner
       img(src="../../images/chai-thuy-tinh/chai-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg", alt="Chai thủy tinh iSOGLASS - Tạo hình tinh tế tạo nên không gian đẳng cấp", srcset="../../images/chai-thuy-tinh/chai-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg 2x")
-    .ctt-product-wrapper 
-      each item in chaithuytinh_product
+    .chai-thuy-tinh-pro-wrapper 
+      each item in chai_thuy_tinh_product
         +productStyle01(item.href, item.image, item.title)

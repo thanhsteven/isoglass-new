@@ -18,7 +18,8 @@
     background-position: center;
   }
   .owl-nav {
-    margin-top: unset;
+    margin-top: unset !important;
+    margin-bottom: unset !important;
     button[type="button"][class*="owl-"] {
       @include square(60px);
       border-radius: 100rem;

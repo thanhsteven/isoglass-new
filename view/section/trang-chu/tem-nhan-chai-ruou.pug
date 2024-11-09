@@ -1,0 +1,47 @@
+- 
+  var tem_nhan_chai_ruou = [
+    {image: "../../images/tem-nhan-chai-ruou/san-xuat-va-in-tem-nhan-cho-chai-thuy-tinh-dung-ruou-isoglass-5.jpg"},
+    {image: "../../images/tem-nhan-chai-ruou/san-xuat-va-in-tem-nhan-cho-chai-thuy-tinh-dung-ruou-isoglass-7.jpg"},
+    {image: "../../images/tem-nhan-chai-ruou/san-xuat-va-in-tem-nhan-cho-chai-thuy-tinh-dung-ruou-isoglass-9.jpg"},
+    {image: "../../images/tem-nhan-chai-ruou/san-xuat-va-in-tem-nhan-cho-chai-thuy-tinh-dung-ruou-isoglass-12.jpg"},
+    {image: "../../images/tem-nhan-chai-ruou/san-xuat-va-in-tem-nhan-cho-chai-thuy-tinh-dung-ruou-isoglass-13.jpg"},
+    {image: "../../images/tem-nhan-chai-ruou/san-xuat-va-in-tem-nhan-cho-chai-thuy-tinh-dung-ruou-isoglass-15.jpg"},
+    {image: "../../images/tem-nhan-chai-ruou/san-xuat-va-in-tem-nhan-cho-chai-thuy-tinh-dung-ruou-isoglass-17.jpg"},
+    {image: "../../images/tem-nhan-chai-ruou/san-xuat-va-in-tem-nhan-cho-chai-thuy-tinh-dung-ruou-isoglass-20.jpg"},
+    {image: "../../images/tem-nhan-chai-ruou/san-xuat-va-in-tem-nhan-cho-chai-thuy-tinh-dung-ruou-isoglass-22.jpg"},
+    {image: "../../images/tem-nhan-chai-ruou/san-xuat-va-in-tem-nhan-cho-chai-thuy-tinh-dung-ruou-isoglass-23.jpg"},
+  ]
+
+section.tem-nhan-chai-ruou
+  .container-fluid 
+    +title(null, "Tem nhãn cho chai rượu thuỷ tinh đựng rượu", "Tem nhãn cho chai thủy tinh đựng rượu là một phần quan trọng của bao bì sản phẩm. Tem nhãn không chỉ giúp cung cấp thông tin sản phẩm, mà còn giúp tạo ấn tượng và thu hút khách hàng.")
+    #tem_nhan_chai_ruou.owl-carousel.owl-theme.owl-loaded
+      .owl-stage-outer
+        .owl-stage
+          each item in tem_nhan_chai_ruou
+            .owl-item
+              .tem-nhan-chai-ruou-item 
+                .tem-nhan-chai-ruou-image 
+                  img(src=item.image, alt="Tem nhãn chai thuỷ tinh đựng rượu", srcset=`${item.image} 2x`)
+                .tem-nhan-chai-ruou-hover 
+                  +btnZalo("Báo giá mẫu này")(class="tem-nhan-chai-ruou-hover-btn")
+    .tem-nhan-chai-ruou-button
+
+script.
+  $('#tem_nhan_chai_ruou').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+          0:{
+            nav: false,
+            items:2
+          },
+          600:{
+            items:3
+          },
+          1000:{
+            items:5
+          }
+      }
+  })

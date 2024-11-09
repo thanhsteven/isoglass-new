@@ -1,8 +1,6 @@
 @use "../../abstracts" as *;
-.ltt-cate {
+.ly-thuy-tinh-cat {
   background-color: #c0d1d6;
-  margin-top: -40px;
-  padding-block: 40px;
   &-wrapper {
     --gap: 15px;
     display: grid;
@@ -23,3 +21,4 @@
     grid-row: 1/3;
   }
 }
+

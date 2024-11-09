@@ -1,8 +1,7 @@
 @use "../../abstracts" as *;
-.ctt-category {
+.chai-thuy-tinh-cat {
   --heigth-content: 90px;
   background-color: #c0d1d6;
-  padding-block: 40px;
   &-wrapper {
     --columns: 4;
     --gap: 15px;

@@ -1,5 +1,5 @@
 - 
-  var danhmuc_lythuytinh = [
+  var ly_thuy_tinh_cat = [
     {
       image: "../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-1.jpg",
       title : "Ly thuỷ tinh sản xuất tại TP.HCM",
@@ -32,9 +32,9 @@
     },
   ]
 
-section.ltt-cate 
+section.ly-thuy-tinh-cat 
   .container 
     +title("Danh mục nổi bật", "Ly thuỷ tinh iSOGLASS")
-    .ltt-cate-wrapper 
-      each item in danhmuc_lythuytinh
+    .ly-thuy-tinh-cat-wrapper 
+      each item in ly_thuy_tinh_cat
         +categoryStyle01(item.href, item.image, item.title, item.count)

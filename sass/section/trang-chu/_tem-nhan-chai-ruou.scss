@@ -1,0 +1,82 @@
+@use "../../abstracts" as *;
+.tem-nhan-chai-ruou {
+  .title-wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    @include maxWidth($large) {
+      max-width: 90%;
+    }
+    @include maxWidth($medium) {
+      max-width: unset;
+    }
+  }
+  .title-after {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  &-item {
+    border-radius: $border12;
+    position: relative;
+    overflow: hidden;
+  }
+  &-image {
+    border-radius: $border12;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      transform: scale(1);
+      transition: all linear 0.3s;
+    }
+  }
+  &-hover {
+    background-color: rgba($color: #000, $alpha: 0.5);
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    z-index: 300;
+    transition: all ease 0.5s;
+  }
+  &-hover-btn {
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    border: unset;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    transition: all linear 0.2s;
+    &:hover {
+      background-color: $primaryColor;
+      color: #fff;
+    }
+  }
+}
+
+.tem-nhan-chai-ruou {
+  &-item {
+    &:hover {
+      .tem-nhan-chai-ruou {
+        &-image {
+          img {
+            transform: scale(1.1);
+          }
+        }
+        &-hover {
+          opacity: 1;
+          visibility: visible;
+        }
+        &-btn {
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
+

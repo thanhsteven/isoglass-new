@@ -1,23 +1,22 @@
 @use "../../abstracts" as *;
-.vohopdungruou {
+.vo-hop-ruou {
+  background-color: $primaryColor;
+  .title-wrapper {
+    padding-block: 20px;
+  }
+  .title {
+    color: #fff;
+  }
+  .subtitle {
+    background-color: #fff;
+    color: $primaryColor;
+    font-weight: 600;
+  }
+  .title-after {
+    color: #fff;
+    font-weight: 400;
+  }
   &-product {
-    background-color: $primaryColor;
-    padding-block: 40px;
-    .title-wrapper {
-      padding-block: 20px;
-    }
-    .title {
-      color: #fff;
-    }
-    .subtitle {
-      background-color: #fff;
-      color: $primaryColor;
-      font-weight: 600;
-    }
-    .title-after {
-      color: #fff;
-      font-weight: 300;
-    }
     &-item {
       border-radius: $border12;
       cursor: pointer;
@@ -29,11 +28,6 @@
         object-fit: cover;
         border-radius: $border12;
       }
-      &:hover {
-        .vohopdungruou-product-hover {
-          opacity: 1;
-        }
-      }
     }
     &-hover {
       background-color: rgba(0, 0, 0, 0.4);
@@ -41,7 +35,23 @@
       inset: 0;
       opacity: 0;
       border-radius: $border12;
-      transition: opacity ease-in-out 0.1s;
+      transition: all linear 0.5s;
+      &-btn {
+        max-width: 150px;
+        border: unset;
+        font-size: 14px;
+        font-weight: 600;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        transition: all ease 0.3s;
+        &:hover {
+          background-color: $primaryColor;
+          color: #fff;
+        }
+      }
     }
     &-contact {
       text-align: center;
@@ -55,6 +65,22 @@
         margin-inline: auto;
         &:hover {
           background-color: $secondColor;
+        }
+      }
+    }
+  }
+}
+
+.vo-hop-ruou-product {
+  &-item {
+    &:hover {
+      .vo-hop-ruou-product {
+        &-hover {
+          opacity: 1;
+          &-btn {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+          }
         }
       }
     }
@@ -91,3 +117,4 @@
     }
   }
 }
+

@@ -1,32 +1,62 @@
 @use "../../abstracts" as *;
-.inlogo {
+.in-logo-ly-thuy-tinh {
+  .title-wrapper {
+    gap: 10px;
+    @include maxWidth($small) {
+      gap: 15px;
+    }
+  }
+  .title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+  }
+  .title-after {
+    color: #fff;
+    font-size: 14px;
+    color: #ddd;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+// - CSS thành phần bên trong
+.in-logo {
   &-container {
-    margin-inline: -15px;
     border-radius: 12px;
     max-height: 550px;
     position: relative;
     overflow: hidden;
-    @include maxWidth(600px) {
+    @include minmax($large, $extra-large) {
+      max-height: 450px;
+    }
+    @include maxWidth($medium) {
       margin-inline: unset;
-      height: 300px;
+      max-height: 250px;
     }
     &:hover {
-      .inlogo-background {
+      .in-logo-background {
         transform: scale(1.1);
       }
     }
     &::after {
       content: "";
-      background-color: #000;
-      opacity: 0.4;
+      background-color: rgba($color: #000, $alpha: 0.5);
       position: absolute;
       inset: 0;
       z-index: 100;
     }
   }
   &-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
     transform: scale(1);
-    transition: 0.5s cubic-bezier(0, 0, 0.5, 1.2);
+    transition: $transition;
+    @include maxWidth($medium) {
+      aspect-ratio: unset;
+    }
   }
   &-link {
     display: block;
@@ -36,56 +66,29 @@
     left: 0;
     right: 0;
     z-index: 200;
-    @include maxWidth(600px) {
+    @include maxWidth($medium) {
+      top: 20px;
       padding-inline: 30px;
     }
   }
-  &-background {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  &-subtitle {
-    background-color: #002f75;
-    display: block;
-    margin-inline: auto;
-    width: fit-content;
-    border-radius: 6px;
-    color: #fff;
-    padding: 4px 8px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-  &-title {
-    color: #fff;
-    font-weight: 700;
-    font-size: 22px;
-    margin-block: 20px;
-    text-align: center;
-  }
-  &-sapo {
-    color: #fff;
-    font-size: 14px;
-    color: #ddd;
-    font-weight: 500;
-    text-align: center;
-  }
   &-wrapper {
     @include flexbox(row, center, space-between, 15px);
-    margin-block: 30px;
+    margin-block: 20px;
+    @include maxWidth($medium) {
+      display: none;
+    }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      max-width: 250px;
-      border-radius: 15px;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-      @include maxWidth(850px) {
-        max-width: 200px;
+      max-width: 300px;
+      border-radius: $border12;
+      box-shadow: $shadow;
+      @include maxWidth(1100px) {
+        max-height: 200px;
       }
-      @include maxWidth(600px) {
-        display: none;
+      @include maxWidth($small) {
+        scroll-snap-align: center;
       }
     }
   }
@@ -94,16 +97,15 @@
     margin-inline: auto;
     background-color: #fff;
     color: #3e3e3e;
-    margin-top: 20px;
     width: fit-content;
     padding: 10px 20px;
     border-radius: 6px;
-    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.1);
     transition: background-color linear 0.3s;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 30px;
+    bottom: 0;
+    transform: translateY(-20px);
     z-index: 200;
     &:hover {
       background-color: #dedede;

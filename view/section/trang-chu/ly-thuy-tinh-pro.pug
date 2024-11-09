@@ -1,5 +1,5 @@
 - 
-  var lythuytinh_product = [
+  var ly_thuy_tinh_pro = [
     {
       title: "Ly thuỷ tinh champagne cầu vồng size 180ml iSO-49",
       image: "../../images/ly-thuy-tinh/ly-thuy-tinh-champagne-cau-vong-size-180ml-iso-49.jpg",
@@ -32,11 +32,11 @@
     }
   ]
 
-section.ltt-product
+section.ly-thuy-tinh-pro
   .container 
     +title("Sản phẩm nổi bật", "LY THỦY TINH")
-    .ltt-product-banner
+    .ly-thuy-tinh-pro-banner
       img(src="../../images/ly-thuy-tinh/ly-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg", alt="Chai thủy tinh iSOGLASS - Tạo hình tinh tế tạo nên không gian đẳng cấp", srcset="../../images/ly-thuy-tinh/ly-thuy-tinh-noi-bat-isoglass-tao-hinh-tinh-te-tao-nen-khong-gian-dang-cap.jpg 2x")
-    .ltt-product-wrapper 
-      each item in lythuytinh_product
+    .ly-thuy-tinh-pro-wrapper 
+      each item in ly_thuy_tinh_pro
         +productStyle01(item.href, item.image, item.title)
