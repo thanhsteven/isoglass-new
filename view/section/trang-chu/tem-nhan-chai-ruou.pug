@@ -26,12 +26,13 @@ section.tem-nhan-chai-ruou
                 .tem-nhan-chai-ruou-hover 
                   +btnZalo("Báo giá mẫu này")(class="tem-nhan-chai-ruou-hover-btn")
     .tem-nhan-chai-ruou-button
+      +btnOrder("Đặt hàng ngay")
 
 script.
   $('#tem_nhan_chai_ruou').owlCarousel({
       loop:true,
       margin:10,
-      nav:true,
+      nav:false,
       responsive:{
           0:{
             nav: false,

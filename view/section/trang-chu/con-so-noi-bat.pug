@@ -1,0 +1,38 @@
+- 
+  var con_so_noi_bat = [
+    {
+      title: "Hơn 8 năm hoạt động",
+      number: 2023
+    },
+    {
+      title: "Khách hàng",
+      number: 3250
+    },
+    {
+      title: "Kho lưu trữ",
+      number: 3
+    },
+    {
+      title: "Dự án",
+      number: 500
+    },
+    {
+      title: "Xưởng sản xuất",
+      number: 4
+    },
+    {
+      title: "Nhân sự",
+      number: 100
+    },
+  ]
+
+section.con-so-noi-bat 
+  .container 
+    .con-so-wrapper 
+      .con-so-title 
+        +title(null, "NHỮNG CON SỐ NỔI BẬT CỦA iSOGLASS", null)
+      .con-so-box 
+        each item in con_so_noi_bat
+          .con-so-box-item
+            span.con-so-box-item-number=item.number
+            span.con-so-box-item-title=item.title

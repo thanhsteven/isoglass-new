@@ -184,9 +184,13 @@
     transition: all linear 0.3s;
     @include maxWidth($large) {
       padding-left: 20px;
+      border-bottom: 1px solid $borderColor;
     }
     &:first-child {
       border-top: 1px solid $borderColor;
+    }
+    &:last-child {
+      border-bottom: unset;
     }
     &-link {
       @include flexbox(row, center, flex-start, 8px);
@@ -216,3 +220,4 @@
     }
   }
 }
+

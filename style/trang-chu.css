@@ -499,6 +499,7 @@
 }
 
 .chai-thuy-tinh-pro-banner {
+  margin-top: 20px;
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -637,6 +638,7 @@
 }
 .ly-thuy-tinh-cat-wrapper {
   --gap: 15px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 250px);
@@ -654,12 +656,16 @@
     grid-template-rows: unset;
   }
 }
+.ly-thuy-tinh-cat .category_item1-hover {
+  transform: unset;
+}
 .ly-thuy-tinh-cat .category_item1-wrapper:first-child {
   grid-column: 1/3;
   grid-row: 1/3;
 }
 
 .ly-thuy-tinh-pro-banner {
+  margin-top: 20px;
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -695,6 +701,7 @@
 }
 
 .binh-thuy-tinh-wrapper {
+  margin-top: 20px;
   --gap: 15px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -732,6 +739,7 @@
 }
 .tem-nhan-chai-ruou-item {
   border-radius: 12px;
+  min-width: 276px;
   position: relative;
   overflow: hidden;
 }
@@ -744,7 +752,6 @@
   height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  transform: scale(1);
   transition: all linear 0.3s;
 }
 .tem-nhan-chai-ruou-hover {
@@ -766,22 +773,131 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 100%);
-  transition: all linear 0.2s;
+  transition: opacity 0.5s cubic-bezier(0.2, 1, 0.2, 1), visibility 0.5s cubic-bezier(0.2, 1, 0.2, 1), transform 0.5s cubic-bezier(0.2, 1, 0.2, 1);
 }
 .tem-nhan-chai-ruou-hover-btn:hover {
   background-color: #1a2c75;
   color: #fff;
 }
-
-.tem-nhan-chai-ruou-item:hover .tem-nhan-chai-ruou-image img {
-  transform: scale(1.1);
+.tem-nhan-chai-ruou-button {
+  margin-top: 4px;
+  text-align: center;
 }
+.tem-nhan-chai-ruou-button a {
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  line-height: 32px;
+  min-width: 200px;
+}
+
 .tem-nhan-chai-ruou-item:hover .tem-nhan-chai-ruou-hover {
   opacity: 1;
   visibility: visible;
 }
-.tem-nhan-chai-ruou-item:hover .tem-nhan-chai-ruou-btn {
+.tem-nhan-chai-ruou-item:hover .tem-nhan-chai-ruou-hover-btn {
   transform: translate(-50%, -50%);
+}
+
+.con-so-noi-bat {
+  background-image: url("../../images/hosting/about-us-3-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-block: 40px;
+}
+
+.con-so-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-inline: 15px;
+}
+@media screen and (max-width: 768px) {
+  .con-so-wrapper {
+    flex-direction: column;
+    padding-inline: unset;
+  }
+}
+.con-so-title {
+  flex: 0 0 30%;
+}
+@media screen and (max-width: 992px) {
+  .con-so-title {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .con-so-title {
+    flex-basis: 100%;
+  }
+}
+.con-so-title .title {
+  text-align: left;
+  color: #fff;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .con-so-title .title {
+    font-size: 20px;
+  }
+}
+.con-so-box {
+  flex: 0 0 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 768px) {
+  .con-so-box {
+    flex: 1 1 100%;
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+.con-so-box-item {
+  padding: 30px;
+  text-align: center;
+}
+.con-so-box-item-number {
+  display: block;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+}
+.con-so-box-item-title {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 576px) {
+  .con-so-box-item-title {
+    font-size: 14px;
+  }
+}
+.con-so-box-item:first-child {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.con-so-box-item:nth-child(2) {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.con-so-box-item:nth-child(3) {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.con-so-box-item:nth-child(4) {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.con-so-box-item:nth-child(5) {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .gioi-thieu {

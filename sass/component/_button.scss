@@ -104,3 +104,17 @@
   }
 }
 
+// - Button Order
+.btn-order {
+  background-color: $primaryColor;
+  border-radius: $border4;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all linear 0.1s;
+  &:hover {
+    background-color: $secondColor;
+    color: $primaryColor;
+  }
+}
+

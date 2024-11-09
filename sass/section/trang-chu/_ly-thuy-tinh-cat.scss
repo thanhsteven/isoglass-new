@@ -3,6 +3,7 @@
   background-color: #c0d1d6;
   &-wrapper {
     --gap: 15px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 250px);
@@ -15,6 +16,9 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: unset;
     }
+  }
+  .category_item1-hover {
+    transform: unset;
   }
   .category_item1-wrapper:first-child {
     grid-column: 1/3;

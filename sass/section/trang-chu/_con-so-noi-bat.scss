@@ -1,0 +1,85 @@
+@use "../../abstracts" as *;
+.con-so-noi-bat {
+  background-image: url("../../images/hosting/about-us-3-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-block: 40px;
+}
+
+.con-so {
+  &-wrapper {
+    @include flexbox(row, center, space-between, 10px);
+    padding-inline: 15px;
+    @include maxWidth($medium) {
+      flex-direction: column;
+      padding-inline: unset;
+    }
+  }
+  &-title {
+    flex: 0 0 30%;
+    @include maxWidth($large) {
+      flex-basis: 50%;
+    }
+    @include maxWidth($medium) {
+      flex-basis: 100%;
+    }
+    .title {
+      text-align: left;
+      color: #fff;
+      font-weight: 700;
+      font-size: 33px;
+      line-height: 3rem;
+      @include maxWidth($medium) {
+        font-size: 20px;
+      }
+    }
+  }
+  &-box {
+    flex: 0 0 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include maxWidth($medium) {
+      flex: 1 1 100%;
+      margin-top: 15px;
+      width: 100%;
+    }
+    &-item {
+      padding: 30px;
+      text-align: center;
+      &-number {
+        display: block;
+        color: #fff;
+        font-size: 34px;
+        font-weight: 700;
+      }
+      &-title {
+        display: block;
+        color: rgba($color: #fff, $alpha: 0.7);
+        font-weight: 700;
+        font-size: 16px;
+        margin-top: 10px;
+        @include maxWidth($small) {
+          font-size: 14px;
+        }
+      }
+      &:first-child {
+        border-right: 2px solid rgba($color: #fff, $alpha: 0.3);
+        border-bottom: 2px solid rgba($color: #fff, $alpha: 0.3);
+      }
+      &:nth-child(2) {
+        border-bottom: 2px solid rgba($color: #fff, $alpha: 0.3);
+      }
+      &:nth-child(3) {
+        border-right: 2px solid rgba($color: #fff, $alpha: 0.3);
+        border-bottom: 2px solid rgba($color: #fff, $alpha: 0.3);
+      }
+      &:nth-child(4) {
+        border-bottom: 2px solid rgba($color: #fff, $alpha: 0.3);
+      }
+      &:nth-child(5) {
+        border-right: 2px solid rgba($color: #fff, $alpha: 0.3);
+      }
+    }
+  }
+}
+

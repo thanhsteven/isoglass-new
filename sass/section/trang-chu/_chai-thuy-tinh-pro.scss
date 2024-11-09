@@ -1,6 +1,7 @@
 @use "../../abstracts" as *;
 .chai-thuy-tinh-pro {
   &-banner {
+    margin-top: 20px;
     border-radius: $border12;
     cursor: pointer;
     box-shadow: $shadow2;

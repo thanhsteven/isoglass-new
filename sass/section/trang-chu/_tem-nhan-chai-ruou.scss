@@ -17,6 +17,7 @@
   }
   &-item {
     border-radius: $border12;
+    min-width: 276px;
     position: relative;
     overflow: hidden;
   }
@@ -28,7 +29,6 @@
       height: 100%;
       aspect-ratio: 1/1;
       object-fit: cover;
-      transform: scale(1);
       transition: all linear 0.3s;
     }
   }
@@ -51,10 +51,24 @@
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 100%);
-    transition: all linear 0.2s;
+    transition: $transition;
     &:hover {
       background-color: $primaryColor;
       color: #fff;
+    }
+  }
+  &-button {
+    margin-top: 4px;
+    text-align: center;
+    a {
+      display: inline-block;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 5px 20px;
+      line-height: 32px;
+      min-width: 200px;
     }
   }
 }
@@ -63,17 +77,12 @@
   &-item {
     &:hover {
       .tem-nhan-chai-ruou {
-        &-image {
-          img {
-            transform: scale(1.1);
-          }
-        }
         &-hover {
           opacity: 1;
           visibility: visible;
-        }
-        &-btn {
-          transform: translate(-50%, -50%);
+          &-btn {
+            transform: translate(-50%, -50%);
+          }
         }
       }
     }

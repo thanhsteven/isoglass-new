@@ -1,6 +1,7 @@
 @use "../../abstracts" as *;
 .binh-thuy-tinh {
   &-wrapper {
+    margin-top: 20px;
     --gap: 15px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -13,3 +14,4 @@
     }
   }
 }
+

@@ -4,7 +4,8 @@ mixin title(subtitle, title, titleAfter)
     if (subtitle)
       span.subtitle=subtitle
     h2.title=title
-    p.title-after=titleAfter
+    if (titleAfter)
+      p.title-after=titleAfter
 
 // Button Product Style 01
 mixin btnProduct(text)
@@ -18,3 +19,6 @@ mixin btnProduct2(text)
 
 mixin btnZalo(text)
   a.btn-zalo(class!=attributes.class, href="https://zalo.me/0963181517", target="_blank", rel="noopener noreferrer nofollow")=text
+
+mixin btnOrder(text)
+  a.btn-order(href="", target="_blank", rel="noopener noreferrer nofollow", class!=attributes.class)=text
