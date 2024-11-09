@@ -1,0 +1,21 @@
+extends ./view/layout/layout
+
+block titlePage 
+  title Công ty TNHH TMDV iSOGLASS | Thủy tinh iSOGLASS
+
+block owlCarousel
+  - var useOwlCarousel = false;
+
+append styleSheet 
+  link(rel="stylesheet" href="../style/aboutus.css")
+
+append mainHeading
+  h1.header-heading Giới thiệu về iSOGLASS
+
+block main
+  main.main-wrapper
+    include ./view/section/trang-gioi-thieu/ve-chung-toi
+    include ./view/section/trang-gioi-thieu/gia-tri-cot-loi
+    include ./view/section/trang-gioi-thieu/lich-su-hinh-thanh
+    include ./view/section/trang-gioi-thieu/con-so-noi-bat
+    include ./view/section/trang-gioi-thieu/doi-ngu-nhan-su
