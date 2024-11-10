@@ -1,0 +1,95 @@
+@use "../../abstracts" as *;
+.cam-nhan-khach-hang {
+  .owl-carousel {
+    margin-top: 20px;
+  }
+  .owl-stage-outer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 20%;
+    z-index: 350;
+    transition: all ease-in-out 0.2s;
+  }
+  .owl-prev {
+    left: -7%;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .owl-next {
+    right: -7%;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .owl-carousel {
+    &::before,
+    &::after {
+      content: "";
+      width: 70px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 300;
+    }
+    &::before {
+      left: -70px;
+    }
+    &::after {
+      right: -70px;
+    }
+  }
+  .owl-carousel:hover {
+    .owl-prev {
+      left: -5%;
+      visibility: visible;
+      opacity: 1;
+    }
+    .owl-next {
+      right: -5%;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+.cam-nhan {
+  &-item {
+    border-radius: $border12;
+    box-shadow: $shadow2;
+    overflow: hidden;
+    padding: 20px;
+  }
+  &-avatar {
+    border-radius: 100rem;
+    @include square(70px);
+    margin: 0 auto;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-content {
+    padding-block: 20px;
+    p {
+      text-align: center;
+      line-height: 24px;
+      font-size: 15px;
+    }
+  }
+  &-name {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  &-job {
+    text-align: center;
+    font-size: 14px;
+    color: #868686;
+  }
+}
+

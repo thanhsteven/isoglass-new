@@ -1,6 +1,6 @@
 @use "../../abstracts" as *;
+@forward "./prefooter";
 .footer {
-  margin-top: 40px;
   background-color: $primaryColor;
   padding-top: 40px;
   &-wrapper {
@@ -128,6 +128,9 @@
       height: 100%;
       object-fit: cover;
     }
+    @include maxWidth($large) {
+      max-width: 450px;
+    }
   }
   &-legal {
     &-header {
@@ -238,6 +241,12 @@
         }
       }
     }
+  }
+}
+
+.footer-column-1 {
+  @include maxWidth($large) {
+    max-width: 500px;
   }
 }
 

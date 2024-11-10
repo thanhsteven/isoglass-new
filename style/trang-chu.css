@@ -848,6 +848,14 @@
     font-size: 20px;
   }
 }
+.con-so-title .title-wrapper {
+  align-items: flex-start;
+}
+.con-so-title .subtitle {
+  padding-left: 0px;
+  padding-bottom: 0px;
+  background-color: transparent;
+}
 .con-so-box {
   flex: 0 0 50%;
   display: grid;
@@ -900,6 +908,156 @@
   border-right: 2px solid rgba(255, 255, 255, 0.3);
 }
 
+.khach-hang-isoglass {
+  background-color: #f9f9f9;
+  padding-block: 40px;
+}
+.khach-hang-isoglass .title {
+  font-size: 28px;
+}
+.khach-hang-isoglass .title-after {
+  font-weight: 400;
+}
+.khach-hang-isoglass .owl-stage-outer {
+  margin-top: 20px;
+}
+.khach-hang-isoglass .owl-prev,
+.khach-hang-isoglass .owl-next {
+  position: absolute;
+  top: 20%;
+  z-index: 350;
+  transition: all ease-in-out 0.2s;
+}
+.khach-hang-isoglass .owl-prev {
+  left: -7%;
+  visibility: hidden;
+  opacity: 0;
+}
+.khach-hang-isoglass .owl-next {
+  right: -7%;
+  visibility: hidden;
+  opacity: 0;
+}
+.khach-hang-isoglass .owl-carousel::before, .khach-hang-isoglass .owl-carousel::after {
+  content: "";
+  width: 70px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 300;
+}
+.khach-hang-isoglass .owl-carousel::before {
+  left: -70px;
+}
+.khach-hang-isoglass .owl-carousel::after {
+  right: -70px;
+}
+.khach-hang-isoglass .owl-carousel:hover .owl-prev {
+  left: -5%;
+  visibility: visible;
+  opacity: 1;
+}
+.khach-hang-isoglass .owl-carousel:hover .owl-next {
+  right: -5%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.khach-hang-item {
+  cursor: pointer;
+  overflow: hidden;
+}
+.khach-hang-image {
+  border-radius: 12px;
+}
+
+.cam-nhan-khach-hang .owl-carousel {
+  margin-top: 20px;
+}
+.cam-nhan-khach-hang .owl-stage-outer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.cam-nhan-khach-hang .owl-prev,
+.cam-nhan-khach-hang .owl-next {
+  position: absolute;
+  top: 20%;
+  z-index: 350;
+  transition: all ease-in-out 0.2s;
+}
+.cam-nhan-khach-hang .owl-prev {
+  left: -7%;
+  visibility: hidden;
+  opacity: 0;
+}
+.cam-nhan-khach-hang .owl-next {
+  right: -7%;
+  visibility: hidden;
+  opacity: 0;
+}
+.cam-nhan-khach-hang .owl-carousel::before, .cam-nhan-khach-hang .owl-carousel::after {
+  content: "";
+  width: 70px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 300;
+}
+.cam-nhan-khach-hang .owl-carousel::before {
+  left: -70px;
+}
+.cam-nhan-khach-hang .owl-carousel::after {
+  right: -70px;
+}
+.cam-nhan-khach-hang .owl-carousel:hover .owl-prev {
+  left: -5%;
+  visibility: visible;
+  opacity: 1;
+}
+.cam-nhan-khach-hang .owl-carousel:hover .owl-next {
+  right: -5%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.cam-nhan-item {
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 20px;
+}
+.cam-nhan-avatar {
+  border-radius: 100rem;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.cam-nhan-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cam-nhan-content {
+  padding-block: 20px;
+}
+.cam-nhan-content p {
+  text-align: center;
+  line-height: 24px;
+  font-size: 15px;
+}
+.cam-nhan-name {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.cam-nhan-job {
+  text-align: center;
+  font-size: 14px;
+  color: #868686;
+}
+
 .gioi-thieu {
   margin-top: 0px;
   padding-block: 40px;
@@ -940,6 +1098,15 @@
 .in-logo-ly-thuy-tinh {
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+.con-so-noi-bat {
+  margin-bottom: unset;
+}
+
+.khach-hang-isoglass {
+  margin-top: unset;
+  margin-bottom: unset;
 }
 
 /*# sourceMappingURL=trang-chu.css.map */

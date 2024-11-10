@@ -32,6 +32,14 @@
       @include maxWidth($medium) {
         font-size: 20px;
       }
+      &-wrapper {
+        align-items: flex-start;
+      }
+    }
+    .subtitle {
+      padding-left: 0px;
+      padding-bottom: 0px;
+      background-color: transparent;
     }
   }
   &-box {

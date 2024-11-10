@@ -10,6 +10,8 @@
 @forward "./binh-thuy-tinh-pro";
 @forward "./tem-nhan-chai-ruou";
 @forward "./con-so-noi-bat";
+@forward "./khach-hang-isoglass";
+@forward "./cam-nhan-khach-hang";
 
 .gioi-thieu {
   margin-top: 0px;
@@ -45,5 +47,12 @@
 .in-logo-ly-thuy-tinh {
   margin-bottom: 20px;
   margin-top: 20px;
+}
+.con-so-noi-bat {
+  margin-bottom: unset;
+}
+.khach-hang-isoglass {
+  margin-top: unset;
+  margin-bottom: unset;
 }
 

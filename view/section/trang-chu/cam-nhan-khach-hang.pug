@@ -1,0 +1,68 @@
+- 
+  var cam_nhan_khach_hang = [
+    {
+      name: "Nguyễn Thị Hương",
+      avatar: "../../images/khach-hang/nguyen-thi-huong.jpg",
+      job: "Giám đốc kinh doanh",
+      content: "Tôi luôn hài lòng với chất lượng sản phẩm của iSOGLASS và đội ngũ nhân viên của họ rất chuyên nghiệp và thân thiện.",
+    },
+    {
+      name: "Trần Văn Minh",
+      avatar: "../../images/khach-hang/tran-van-minh.jpg",
+      job: "Kỹ sư phát triển sản phẩm",
+      content: "iSOGLASS là một thương hiệu rất đáng tin cậy và sản phẩm của họ rất đa dạng về kiểu dáng và kích thước.",
+    },
+    {
+      name: "Phạm Văn Đức",
+      avatar: "../../images/khach-hang/pham-van-duc.jpg",
+    job: "Quản lý hành chính nhân sự",
+      content: "iSOGLASS có rất nhiều sản phẩm tốt và chất lượng cao, tôi luôn tin tưởng khi sử dụng các sản phẩm của họ.",
+    },
+    {
+      name: "Lê Thị Mai Anh",
+      avatar: "../../images/khach-hang/le-thi-mai-anh.jpg",
+      job: "Trưởng nhóm thiết kế",
+      content: "Sản phẩm của iSOGLASS rất đáp ứng được nhu cầu công việc của tôi và chất lượng của chúng rất tuyệt vời.",
+    },
+    {
+      name: "Võ Minh Hải",
+      avatar: "../../images/khach-hang/vo-minh-hai.jpg",
+      job: "Quản lý sản xuất",
+      content: "Tôi rất hài lòng với sự đa dạng sản phẩm của iSOGLASS, tôi đã sử dụng nhiều sản phẩm của họ và tất cả đều đáp ứng được nhu cầu của tôi.",
+    }
+  ]
+
+section.cam-nhan-khach-hang 
+  .container 
+    +title("Cảm nhận của khách hàng", "CẢM NHẬN CỦA CÁC CHỦ DOANH NGHIỆP", null)
+    #cam_nhan_khach_hang.owl-carousel.owl-theme.owl-loaded
+      .owl-stage-outer
+        .owl-stage
+          each item in cam_nhan_khach_hang
+            .owl-item
+              .cam-nhan-item 
+                .cam-nhan-avatar 
+                  img(src=item.avatar, alt=item.name, srcset=`${item.avatar} 2x`)
+                .cam-nhan-content 
+                  p=item.content 
+                .cam-nhan-info 
+                  p.cam-nhan-name=item.name 
+                  p.cam-nhan-job=item.job 
+
+script.
+  $('#cam_nhan_khach_hang').owlCarousel({
+      loop:true,
+      margin:15,
+      nav:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:3
+          }
+      }
+  })
