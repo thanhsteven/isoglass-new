@@ -24,16 +24,20 @@
       flex-basis: 100%;
     }
     .title {
-      text-align: left;
       color: #fff;
       font-weight: 700;
       font-size: 33px;
       line-height: 3rem;
+      text-align: unset;
       @include maxWidth($medium) {
         font-size: 20px;
       }
       &-wrapper {
         align-items: flex-start;
+        @include maxWidth($medium) {
+          text-align: center;
+          align-items: center;
+        }
       }
     }
     .subtitle {

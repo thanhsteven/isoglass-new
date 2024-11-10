@@ -10,7 +10,9 @@
     gap: var(--gap);
     margin-top: 10px;
     @include maxWidth($small) {
+      margin-top: 20px;
       grid-template-columns: repeat(2, 1fr);
     }
   }
 }
+

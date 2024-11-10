@@ -468,6 +468,12 @@
   height: 150px;
   border-radius: 100%;
 }
+@media screen and (max-width: 576px) {
+  .featured-service-image {
+    width: 140px;
+    height: 140px;
+  }
+}
 .featured-service-title {
   color: #1a2c75;
   text-transform: uppercase;
@@ -478,6 +484,12 @@
   text-align: center;
   text-align-last: center;
   line-height: 24px;
+}
+@media screen and (max-width: 576px) {
+  .featured-service-desc {
+    text-align: justify;
+    font-size: 15px;
+  }
 }
 
 .chai-thuy-tinh-cat {
@@ -494,6 +506,7 @@
 }
 @media screen and (max-width: 576px) {
   .chai-thuy-tinh-cat-wrapper {
+    margin-top: 20px;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -573,6 +586,7 @@
   border: unset;
   font-size: 14px;
   font-weight: 600;
+  white-space: nowrap;
   opacity: 0;
   position: absolute;
   bottom: 0;
@@ -837,11 +851,11 @@
   }
 }
 .con-so-title .title {
-  text-align: left;
   color: #fff;
   font-weight: 700;
   font-size: 33px;
   line-height: 3rem;
+  text-align: unset;
 }
 @media screen and (max-width: 768px) {
   .con-so-title .title {
@@ -850,6 +864,12 @@
 }
 .con-so-title .title-wrapper {
   align-items: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .con-so-title .title-wrapper {
+    text-align: center;
+    align-items: center;
+  }
 }
 .con-so-title .subtitle {
   padding-left: 0px;

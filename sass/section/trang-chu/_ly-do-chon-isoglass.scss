@@ -83,6 +83,9 @@
     &-image {
       @include square(150px);
       border-radius: 100%;
+      @include maxWidth($small) {
+        @include square(140px);
+      }
     }
     &-title {
       color: $primaryColor;
@@ -94,6 +97,11 @@
       text-align: center;
       text-align-last: center;
       line-height: 24px;
+      @include maxWidth($small) {
+        text-align: justify;
+        font-size: 15px;
+      }
     }
   }
 }
+
