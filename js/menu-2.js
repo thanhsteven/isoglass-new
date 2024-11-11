@@ -1,4 +1,4 @@
-console.log("Đang kiểm tra lại logic menu ! chưa hoàn thành");
+console.log("Đã hoàn thành menu");
 (function () {
   const navMenu = document.querySelector(".menu-nav");
   navMenu.addEventListener("click", function (event) {

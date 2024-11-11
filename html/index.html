@@ -1,7 +1,10 @@
 
 <!-- Title Style 01-->
+<!-- Page Title for Page, Categories-->
 <!-- Button Product Style 01-->
 <!-- Button Product Style 02-->
+<!-- Button Zalo for CTA-->
+<!-- Button Order-->
 <!-- Product Infomation Box - Style 01-->
 <!-- Product Infomation Box - Style 02-->
 <!-- Product Infomation Box - Style 03-->
@@ -466,11 +469,13 @@
         </div>
       </section>
       <section class="tem-nhan-chai-ruou">
-        <div class="container-fluid"> 
+        <div class="container"> 
           <div class="title-wrapper"> 
             <h2 class="title">Tem nhãn cho chai rượu thuỷ tinh đựng rượu</h2>
             <p class="title-after">Tem nhãn cho chai thủy tinh đựng rượu là một phần quan trọng của bao bì sản phẩm. Tem nhãn không chỉ giúp cung cấp thông tin sản phẩm, mà còn giúp tạo ấn tượng và thu hút khách hàng.</p>
           </div>
+        </div>
+        <div class="container-fluid"> 
           <div class="owl-carousel owl-theme owl-loaded" id="tem_nhan_chai_ruou">
             <div class="owl-stage-outer">
               <div class="owl-stage">
@@ -554,17 +559,17 @@
       <script>
         $('#tem_nhan_chai_ruou').owlCarousel({
             loop:true,
-            margin:10,
-            nav:false,
+            margin:15,
+            nav:true,
             responsive:{
                 0:{
                   nav: false,
                   items:2
                 },
-                600:{
+                768:{
                   items:3
                 },
-                1000:{
+                992:{
                   items:5
                 }
             }

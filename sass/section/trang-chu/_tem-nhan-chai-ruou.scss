@@ -1,15 +1,7 @@
 @use "../../abstracts" as *;
 .tem-nhan-chai-ruou {
   .title-wrapper {
-    max-width: 70%;
-    margin: 0 auto;
     margin-bottom: 30px;
-    @include maxWidth($large) {
-      max-width: 90%;
-    }
-    @include maxWidth($medium) {
-      max-width: unset;
-    }
   }
   .title-after {
     font-weight: 400;
@@ -88,4 +80,3 @@
     }
   }
 }
-

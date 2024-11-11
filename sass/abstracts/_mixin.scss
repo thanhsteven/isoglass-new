@@ -44,6 +44,7 @@
 @mixin square($width) {
   width: $width;
   height: $width;
+  line-height: $width;
 }
 @mixin size($width: 0, $height: 0) {
   width: $width;

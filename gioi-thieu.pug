@@ -7,12 +7,13 @@ block owlCarousel
   - var useOwlCarousel = false;
 
 append styleSheet 
-  link(rel="stylesheet" href="../style/aboutus.css")
+  link(rel="stylesheet" href="../style/trang-gioi-thieu.css")
 
 append mainHeading
-  h1.header-heading Giới thiệu về iSOGLASS
+  p.header-heading Giới thiệu về iSOGLASS
 
 block main
+  +secTitleBase("Về chúng tôi", "../images/hosting/background-title-about-us.jpg")
   main.main-wrapper
     include ./view/section/trang-gioi-thieu/ve-chung-toi
     include ./view/section/trang-gioi-thieu/gia-tri-cot-loi

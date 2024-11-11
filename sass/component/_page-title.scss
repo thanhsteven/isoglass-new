@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+.page-title {
+  &-wrapper {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    padding-block: 40px;
+  }
+  &-entry {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+}

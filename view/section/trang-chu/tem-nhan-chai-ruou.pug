@@ -13,8 +13,9 @@
   ]
 
 section.tem-nhan-chai-ruou
-  .container-fluid 
+  .container 
     +title(null, "Tem nhãn cho chai rượu thuỷ tinh đựng rượu", "Tem nhãn cho chai thủy tinh đựng rượu là một phần quan trọng của bao bì sản phẩm. Tem nhãn không chỉ giúp cung cấp thông tin sản phẩm, mà còn giúp tạo ấn tượng và thu hút khách hàng.")
+  .container-fluid 
     #tem_nhan_chai_ruou.owl-carousel.owl-theme.owl-loaded
       .owl-stage-outer
         .owl-stage
@@ -31,17 +32,17 @@ section.tem-nhan-chai-ruou
 script.
   $('#tem_nhan_chai_ruou').owlCarousel({
       loop:true,
-      margin:10,
-      nav:false,
+      margin:15,
+      nav:true,
       responsive:{
           0:{
             nav: false,
             items:2
           },
-          600:{
+          768:{
             items:3
           },
-          1000:{
+          992:{
             items:5
           }
       }

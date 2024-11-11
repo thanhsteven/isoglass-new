@@ -22,6 +22,7 @@
 .slideshow .owl-nav button[type=button][class*=owl-] {
   width: 60px;
   height: 60px;
+  line-height: 60px;
   border-radius: 100rem;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #eee;
@@ -56,6 +57,7 @@
 .slideshow .owl-dots .owl-dot span {
   width: 14px;
   height: 14px;
+  line-height: 14px;
   margin: 4px 8px;
 }
 
@@ -417,6 +419,7 @@
   .ly-do-chon-iso-wrapper::-webkit-scrollbar {
     width: 8px;
     height: 8px;
+    line-height: 8px;
   }
   .ly-do-chon-iso-wrapper::-webkit-scrollbar-thumb {
     background-color: #1a2c75;
@@ -466,12 +469,14 @@
 .featured-service-image {
   width: 150px;
   height: 150px;
+  line-height: 150px;
   border-radius: 100%;
 }
 @media screen and (max-width: 576px) {
   .featured-service-image {
     width: 140px;
     height: 140px;
+    line-height: 140px;
   }
 }
 .featured-service-title {
@@ -625,6 +630,7 @@
 #vohopdungruou .owl-prev, #vohopdungruou .owl-next {
   width: 40px;
   height: 40px;
+  line-height: 40px;
   border-radius: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 24px;
@@ -733,19 +739,7 @@
 }
 
 .tem-nhan-chai-ruou .title-wrapper {
-  max-width: 70%;
-  margin: 0 auto;
   margin-bottom: 30px;
-}
-@media screen and (max-width: 992px) {
-  .tem-nhan-chai-ruou .title-wrapper {
-    max-width: 90%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .tem-nhan-chai-ruou .title-wrapper {
-    max-width: unset;
-  }
 }
 .tem-nhan-chai-ruou .title-after {
   font-weight: 400;
@@ -860,6 +854,7 @@
 @media screen and (max-width: 768px) {
   .con-so-title .title {
     font-size: 20px;
+    line-height: 2rem;
   }
 }
 .con-so-title .title-wrapper {
@@ -1050,6 +1045,7 @@
   border-radius: 100rem;
   width: 70px;
   height: 70px;
+  line-height: 70px;
   margin: 0 auto;
   overflow: hidden;
 }

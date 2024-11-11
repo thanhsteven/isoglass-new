@@ -1,0 +1,68 @@
+- 
+  var isoglass_social = [
+    {
+      title: "Facebook",
+      icon: "fa-facebook-square",
+      href: "https://www.facebook.com/isoglass.vn"
+    },
+    {
+      title: "Twitter",
+      icon: "fa-twitter-square",
+      href: "https://x.com/iSOGLASS_VN"
+    },
+    {
+      title: "linkedin",
+      icon: "fa-linkedin-square",
+      href: "https://www.linkedin.com/in/thuy-tinh-isoglass-isoglass/"
+    },
+    {
+      title: "Youtube",
+      icon: "fa-youtube-play",
+      href: "https://www.youtube.com/channel/UCzSTLCmXHkFl_bvaHiTHwuQ"
+    },
+    {
+      title: "Pinterest",
+      icon: "fa-pinterest-square",
+      href: "https://www.pinterest.com/thuytinhisoglass/"
+    },
+    {
+      title: "Instagram",
+      icon: "fa-instagram",
+      href: "https://www.instagram.com/isoglass.vn/"
+    },
+    {
+      title: "Messenger",
+      icon: "fa-comment",
+      href: "Zalo.me/0963181517"
+    },
+    {
+      title: "Google map",
+      icon: "fa-map-marker",
+      href: "https://maps.app.goo.gl/hziDhmUEjemVw7Nq8"
+    },
+  ]
+
+section.about-isoglass 
+  .container 
+    .about-isoglass-wrapper 
+      .about-isoglass-image 
+        img(src="../../images/hosting/san-xuat-gia-cong-chai-thuy-tinh-va-ly-thuy-tinh-gia-tot-tai-tp-hcm.jpg", alt="Sản xuất gia công chai thủy tinh và ly thủy tinh giá tốt tại TP.HCM", srcset="../../images/hosting/san-xuat-gia-cong-chai-thuy-tinh-va-ly-thuy-tinh-gia-tot-tai-tp-hcm.jpg 2x")
+      .about-isoglass-info 
+        h1.about-isoglass-header Giới thiệu về iSOGLASS
+        .about-isoglass-content 
+          p 
+            a(href="/") 
+              strong iSOGLASS 
+            | hay còn gọi là Thuỷ Tinh iSO. Chúng tôi tiên phong trong ngành sản xuất thuỷ tinh tại Việt Nam, nhằm đáp ứng được nhu cầu của từng Doanh nghiệp và cá nhân với các sản phẩm thuỷ tinh riêng biệt. 
+          p Bên cạnh việc cung cấp các mẫu thủy tinh có sẵn. iSOGLASS có dịch vụ sản xuất thủy tinh theo yêu cầu, giúp hiện thực hóa các ý tưởng của quý khách và thể hiện trên các sản phẩm thủy tinh theo một thiết kế riêng. 
+          p Thông qua đặt hàng sản xuất theo nhu cầu riêng, bạn có thể lựa chọn kiểu dáng, dung tích, màu sắc, kiểu in khắc cho chính nhu cầu bạn cần.
+          h2.about-isoglass-header Slogan iSOGLASS 
+          p 
+            strong Shape Your Win: 
+            | Kế hoạch cho chiến thắng.
+          h2.about-isoglass-header(style="margin-top: 20px") Theo dõi chúng tôi tại
+          .about-isoglass-social 
+            each item in isoglass_social
+              a(href=item.href, target="_blank", rel="noopener noreferrer nofollow")
+                i.fa(class=item.icon, aria-hidden="true")
+                span.about-isoglass-hover=item.title 
