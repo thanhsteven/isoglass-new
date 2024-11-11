@@ -1,7 +1,11 @@
 @use "../../abstracts" as *;
 .about-isoglass {
   &-wrapper {
-    @include flexbox(row, center, space-between, 15px);
+    @include flexbox(row, stretch, space-between, 20px);
+    padding-block: 40px;
+    @include maxWidth($large) {
+      flex-direction: column;
+    }
   }
   &-image {
     flex: 0 0 50%;
@@ -15,23 +19,44 @@
   }
   &-info {
     flex: 1 1 50%;
-    @include flexbox(column, flex-start, space-between, 15px);
-  }
-  &-header {
-    color: $primaryColor;
-    font-size: 2em;
-    font-weight: 700;
-  }
-  &-content {
-    a,
-    strong {
-      color: $primaryColor;
+    @include flexbox(column, stretch, flex-start, 15px);
+    @include maxWidth($medium) {
+      gap: 10px;
     }
     p {
       font-size: 1em;
       line-height: 1.5em;
       text-align: justify;
+      margin-top: 15px;
+      color: $textColor;
+      @include maxWidth($medium) {
+        margin-top: 10px;
+      }
+    }
+  }
+  &-header {
+    color: $primaryColor;
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 15px;
+    @include maxWidth($large) {
+      font-size: 1.5em;
+    }
+  }
+  &-list {
+    margin-left: 30px;
+    li {
       margin-block: 15px;
+      font-size: 1em;
+      b {
+        margin-right: 10px;
+      }
+    }
+  }
+  &-content {
+    a,
+    strong {
+      color: $primaryColor;
     }
   }
   &-social {
@@ -42,12 +67,12 @@
       font-size: 20px;
       width: 50px;
       height: 40px;
-      line-height: 36px;
+      line-height: 38px;
       text-align: center;
       border-radius: $border6;
       margin-right: 10px;
-      margin-top: 30px;
-      border: 2px solid $primaryColor;
+      margin-top: 15px;
+      border: 1px solid $primaryColor;
       transition: all linear 0.2s;
       position: relative;
       &:hover {

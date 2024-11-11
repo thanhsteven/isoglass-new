@@ -1,0 +1,13 @@
+section.gia-tri-cot-loi
+  .container 
+    h2.about-isoglass-heading-out Giá trị cốt lõi
+    .about-isoglass-wrapper-core
+      each item in isoglass_core
+        .about-isoglass-core
+          .about-isoglass-core-image 
+            img(src=item.image, alt=item.title)
+          .about-isoglass-core-content 
+            .about-isoglass-core-subtitle 
+              span=item.subtitle 
+            h3.about-isoglass-core-title=item.title 
+            .about-isoglass-core-text=item.content 

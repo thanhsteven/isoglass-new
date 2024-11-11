@@ -276,8 +276,9 @@
   inset: 0;
   z-index: 700;
   &-show {
-    visibility: visible;
-    opacity: 1;
+    @include maxWidth($large) {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
-

@@ -21,4 +21,3 @@ sass ./sass/danh-muc-con.scss ./style/danh-muc-con.css --watch
 
 sass ./sass/ly-thuy-tinh-cat.scss ./style/ly-thuy-tinh-cat.css --watch
 sass ./sass/chai-thuy-tinh-cat.scss ./style/chai-thuy-tinh-cat.css --watch
-

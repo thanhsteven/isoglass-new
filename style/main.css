@@ -45,6 +45,10 @@ strong {
   color: inherit;
 }
 
+b {
+  font-weight: bold;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -1174,6 +1178,7 @@ body {
     padding-right: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-weight: 600;
   }
 }
 .sub-menu-item-image {
@@ -1186,6 +1191,7 @@ body {
   color: #1a2c75;
   font-size: 14px;
   text-wrap: nowrap;
+  font-weight: 600;
 }
 .sub-menu-item:hover {
   background-color: #ddd;
@@ -1584,9 +1590,11 @@ body {
   inset: 0;
   z-index: 700;
 }
-.modal-show {
-  visibility: visible;
-  opacity: 1;
+@media screen and (max-width: 992px) {
+  .modal-show {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 @keyframes cta-ring-animate {

@@ -1,9 +1,15 @@
 .about-isoglass-wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  gap: 15px;
+  gap: 20px;
+  padding-block: 40px;
+}
+@media screen and (max-width: 992px) {
+  .about-isoglass-wrapper {
+    flex-direction: column;
+  }
 }
 .about-isoglass-image {
   flex: 0 0 50%;
@@ -19,24 +25,51 @@
   flex: 1 1 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: stretch;
+  justify-content: flex-start;
   gap: 15px;
+}
+@media screen and (max-width: 768px) {
+  .about-isoglass-info {
+    gap: 10px;
+  }
+}
+.about-isoglass-info p {
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: justify;
+  margin-top: 15px;
+  color: #333;
+}
+@media screen and (max-width: 768px) {
+  .about-isoglass-info p {
+    margin-top: 10px;
+  }
 }
 .about-isoglass-header {
   color: #1a2c75;
   font-size: 2em;
   font-weight: 700;
+  margin-top: 15px;
+}
+@media screen and (max-width: 992px) {
+  .about-isoglass-header {
+    font-size: 1.5em;
+  }
+}
+.about-isoglass-list {
+  margin-left: 30px;
+}
+.about-isoglass-list li {
+  margin-block: 15px;
+  font-size: 1em;
+}
+.about-isoglass-list li b {
+  margin-right: 10px;
 }
 .about-isoglass-content a,
 .about-isoglass-content strong {
   color: #1a2c75;
-}
-.about-isoglass-content p {
-  font-size: 1em;
-  line-height: 1.5em;
-  text-align: justify;
-  margin-block: 15px;
 }
 .about-isoglass-social a {
   display: inline-block;
@@ -45,12 +78,12 @@
   font-size: 20px;
   width: 50px;
   height: 40px;
-  line-height: 36px;
+  line-height: 38px;
   text-align: center;
   border-radius: 6px;
   margin-right: 10px;
-  margin-top: 30px;
-  border: 2px solid #1a2c75;
+  margin-top: 15px;
+  border: 1px solid #1a2c75;
   transition: all linear 0.2s;
   position: relative;
 }
@@ -97,6 +130,293 @@
   transform: translate(-10%, -150%);
   visibility: visible;
   opacity: 1;
+}
+
+.about-isoglass-history p {
+  line-height: 26px;
+  text-align: justify;
+  text-align-last: center;
+  margin-block: 15px;
+}
+.about-isoglass-heading {
+  color: #b59d79;
+  font-size: 3em;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .about-isoglass-heading {
+    font-size: 2em;
+  }
+}
+.about-isoglass-heading-out {
+  color: #1a2c75;
+  font-size: 18px;
+  font-weight: 700;
+  margin-block: 20px;
+  text-align: center;
+}
+
+.about-isoglass-wrapper-core {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 992px) {
+  .about-isoglass-wrapper-core {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-isoglass-wrapper-core {
+    grid-auto-flow: column;
+    grid-auto-columns: 320px;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    overflow-x: auto;
+    margin-bottom: 15px;
+  }
+  .about-isoglass-wrapper-core::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .about-isoglass-wrapper-core::-webkit-scrollbar-thumb {
+    background-color: #1a2c75;
+    border-radius: 4px;
+  }
+  .about-isoglass-wrapper-core::-webkit-scrollbar-track {
+    background-color: #f8f8f8;
+  }
+}
+.about-isoglass-core {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .about-isoglass-core {
+    scroll-snap-align: center;
+    width: 100%;
+  }
+}
+.about-isoglass-core-image {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 100rem;
+}
+.about-isoglass-core-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.about-isoglass-core-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.about-isoglass-core-subtitle {
+  color: #1a2c75;
+  font-weight: 700;
+  font-size: 16px;
+}
+.about-isoglass-core-title {
+  font-weight: 700;
+}
+.about-isoglass-core-text {
+  font-size: 16px;
+  line-height: 28px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.con-so-noi-bat {
+  background-image: url("../../images/hosting/about-us-3-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-block: 40px;
+}
+
+.con-so-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-inline: 15px;
+}
+@media screen and (max-width: 768px) {
+  .con-so-wrapper {
+    flex-direction: column;
+    padding-inline: unset;
+  }
+}
+.con-so-title {
+  flex: 0 0 30%;
+}
+@media screen and (max-width: 992px) {
+  .con-so-title {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .con-so-title {
+    flex-basis: 100%;
+  }
+}
+.con-so-title .title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 3rem;
+  text-align: unset;
+}
+@media screen and (max-width: 768px) {
+  .con-so-title .title {
+    font-size: 20px;
+    line-height: 2rem;
+  }
+}
+.con-so-title .title-wrapper {
+  align-items: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .con-so-title .title-wrapper {
+    text-align: center;
+    align-items: center;
+  }
+}
+.con-so-title .subtitle {
+  padding-left: 0px;
+  padding-bottom: 0px;
+  background-color: transparent;
+}
+.con-so-box {
+  flex: 0 0 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 768px) {
+  .con-so-box {
+    flex: 1 1 100%;
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+.con-so-box-item {
+  padding: 30px;
+  text-align: center;
+}
+.con-so-box-item-number {
+  display: block;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+}
+.con-so-box-item-title {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 576px) {
+  .con-so-box-item-title {
+    font-size: 14px;
+  }
+}
+.con-so-box-item:first-child {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.con-so-box-item:nth-child(2) {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.con-so-box-item:nth-child(3) {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.con-so-box-item:nth-child(4) {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.con-so-box-item:nth-child(5) {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.team-member-wrapper {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 992px) {
+  .team-member-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-member-wrapper {
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    overflow-x: auto;
+    margin-bottom: 15px;
+  }
+  .team-member-wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .team-member-wrapper::-webkit-scrollbar-thumb {
+    background-color: #1a2c75;
+    border-radius: 4px;
+  }
+  .team-member-wrapper::-webkit-scrollbar-track {
+    background-color: #f8f8f8;
+  }
+}
+.team-member-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  .team-member-item {
+    scroll-snap-align: center;
+    width: 100%;
+  }
+}
+.team-member-image {
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.team-member-image img {
+  border-radius: 12px;
+}
+.team-member-position span {
+  font-weight: 600;
+  font-size: 14px;
+}
+.team-member-name {
+  color: #1a2c75;
+  font-weight: 700;
+}
+
+.about-isoglass {
+  margin-top: unset;
 }
 
 /*# sourceMappingURL=trang-gioi-thieu.css.map */

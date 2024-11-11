@@ -199,6 +199,7 @@
         padding-right: 15px;
         padding-top: 10px;
         padding-bottom: 10px;
+        font-weight: 600;
       }
     }
     &-image {
@@ -211,6 +212,7 @@
       color: $primaryColor;
       font-size: 14px;
       text-wrap: nowrap;
+      font-weight: 600;
     }
     &:hover {
       background-color: #ddd;
@@ -220,4 +222,3 @@
     }
   }
 }
-
