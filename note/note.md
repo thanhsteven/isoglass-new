@@ -1,1 +1,4 @@
 - Sửa lại CSS chỗ Danh mục nổi bật - Chai thuỷ tinh --> bị sai so với bản gốc
+- Trường hợp nếu git pull bị lỗi thì cách tốt nhất là xoá hết các file trong source đi để clone lại từ trên git về từ đầu sẽ an toàn hơn
+- Do cấu trúc thiết kế của git sẽ cần 1 thiết bị chính để kết nối và đẩy nó lên trên git, cho nên nếu 2 thiết bị chính thì sẽ dễ bị lỗi.
+- Phím tắt hiển thị file ẩn .git là cmd + shift + .
