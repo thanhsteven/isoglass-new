@@ -1,10 +1,145 @@
+@use "./abstracts" as *;
 @use "./section/trang-danh-muc";
-
+//- CSS chung dành cho Trang danh mục Cha
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-body {
-  font-family: "Inter", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+.category-main {
+  &-breadcrumb {
+    text-align: center;
+    ul {
+      @include flexbox(row, center, center, 10px);
+    }
+    li {
+      color: $primaryColor;
+      font-size: 15px;
+      font-weight: 600;
+      position: relative;
+    }
+  }
+  &-heading {
+    color: $primaryColor;
+    font-size: 1.6em;
+    line-height: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+  &-rating {
+    @include flexbox(row, center, center, 8px);
+    margin-bottom: 10px;
+    span {
+      font-weight: 600;
+    }
+    &-star {
+      color: #f7c600;
+      font-size: 20px;
+      i.fa {
+        margin-left: 4px;
+      }
+    }
+  }
+  &-sapo {
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+    color: $textColor;
+  }
+  &-wrapper {
+    @include flexbox(row, stretch, space-between, 10px);
+  }
+  &-content {
+    flex: 0 0 80%;
+    p {
+      line-height: 1.5em;
+      font-size: 1em;
+      color: $textColor;
+    }
+    h2 {
+      color: $primaryColor;
+      font-size: 1.3em;
+      font-weight: 700;
+      margin-block: 10px;
+    }
+    h3 {
+      color: $primaryColor;
+      font-size: 1em;
+      font-weight: 700;
+      margin-block: 10px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $border12;
+    }
+  }
+  &-sidebar {
+    flex: 0 0 20%;
+  }
 }
 
+.sidebar {
+  &-zalo {
+    background-color: $primaryColor;
+    padding: 20px;
+    border-radius: $border12;
+    p {
+      color: #fff;
+      font-weight: 600;
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+  &-contact {
+    border-radius: $border12;
+    box-shadow: $shadow;
+    @include flexbox(column, stretch, center, 10px);
+    padding: 15px;
+    margin-top: 15px;
+    a {
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: $border6;
+      padding: 10px;
+      text-align: center;
+      transition: all linear 0.2s;
+    }
+    &-call,
+    &-more {
+      background-color: $primaryColor;
+      color: #fff;
+      &:hover {
+        background-color: $secondColor;
+        color: $primaryColor;
+      }
+    }
+    &-zalo {
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+      &:hover {
+        background-color: $primaryColor;
+        color: #fff;
+      }
+    }
+  }
+  &-support {
+    p {
+      color: $textColor;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.4em;
+      padding-inline: 20px;
+      margin-bottom: 10px;
+    }
+    &-avatar {
+      @include flexbox(row, center, center, 8px);
+      padding-inline: 10px;
+      img {
+        width: calc(100% / 3);
+        max-width: 90px;
+        object-fit: cover;
+        border-radius: $border8;
+      }
+    }
+  }
+}
