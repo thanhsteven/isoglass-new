@@ -19,7 +19,6 @@ html(lang="vi")
       include ./header/header
     block menu
       include ./menu/menu-2
-
     block main
       main.main-wrapper
         block slideshow 
@@ -42,13 +41,9 @@ html(lang="vi")
             .category-main-sapo
           block categoryProduct 
             .category-main-products 
-
           block article 
-
-
-      block sidebar 
-        include ./sidebar
-
+        block sidebar 
+          //- include ./sidebar
     block footer 
       include ./footer/footer
 

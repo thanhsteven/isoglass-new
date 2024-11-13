@@ -14,6 +14,7 @@ pug ly-thuy-tinh.pug --watch --pretty --out html
 <!-- - Convert to CSS - -->
 
 sass ./sass/main.scss ./style/main.css --watch
+
 sass ./sass/trang-chu.scss ./style/trang-chu.css --watch
 sass ./sass/trang-gioi-thieu.scss ./style/trang-gioi-thieu.css --watch
 sass ./sass/trang-lien-he.scss ./style/trang-lien-he.css --watch
