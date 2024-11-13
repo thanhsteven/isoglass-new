@@ -1,7 +1,6 @@
 include ../mixin/mixins
 include ../mixin/categories
 include ../mixin/products
-
 doctype html
 html(lang="vi")
   head
@@ -9,17 +8,24 @@ html(lang="vi")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     block titleCategory
       title Layout Danh mục CHA cho các trang danh mục
+    block owlCarousel
+      - var useOwlCarousel = true ;
+      if useOwlCarousel
+        link(rel="stylesheet" href="../vendors/owl-carousel/css/owl.carousel.min.css")
+        link(rel="stylesheet" href="../vendors/owl-carousel/css/owl.theme.default.min.css")
+        script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+        script(src="../vendors/owl-carousel/js/owl.carousel.js")
     block stylesheet
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
       link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
       link(rel="stylesheet", href="../style/danh-muc-cha.css")
   body 
-    block header
-      include ./header/header
-    block menu
-      include ./menu/menu-2
-    block main
+    block header 
+      include ./header/header 
+    block menu 
+      include ./menu/menu-2 
+    block main 
       main.main-wrapper
         block slideshow 
         .container 
@@ -37,15 +43,21 @@ html(lang="vi")
               i.fa.fa-star(aria-hidden="true")
               i.fa.fa-star(aria-hidden="true")
               i.fa.fa-star(aria-hidden="true")
-          block sapo
-            .category-main-sapo
-          block categoryProduct 
-            .category-main-products 
-          block article 
-        block sidebar 
-          //- include ./sidebar
+          .category-main-sapo
+            block sapo
+          .category-main-products 
+            block categoryProduct 
+          .category-main-wrapper
+            .category-main-content
+              block article 
+            .category-main-sidebar
+              block sidebarCate 
+              block sidebar 
+                include ./sidebar
+        block moreSection
+        block answerQuestion 
+        block comment 
     block footer 
       include ./footer/footer
-
   block scriptJS
     script(src="../js/menu-2.js")

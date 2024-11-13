@@ -1,5 +1,6 @@
 @use "./abstracts" as *;
 @use "./section/trang-danh-muc";
+@use "./section/block-based/tem-nhan-chai-ruou";
 //- CSS chung dành cho Trang danh mục Cha
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .category-main {
@@ -46,7 +47,7 @@
     @include flexbox(row, stretch, space-between, 10px);
   }
   &-content {
-    flex: 0 0 80%;
+    flex: 0 0 75%;
     p {
       line-height: 1.5em;
       font-size: 1em;
@@ -54,13 +55,13 @@
     }
     h2 {
       color: $primaryColor;
-      font-size: 1.3em;
+      font-size: 26px;
       font-weight: 700;
       margin-block: 10px;
     }
     h3 {
       color: $primaryColor;
-      font-size: 1em;
+      font-size: 24px;
       font-weight: 700;
       margin-block: 10px;
     }
@@ -72,11 +73,13 @@
     }
   }
   &-sidebar {
-    flex: 0 0 20%;
+    flex: 0 0 25%;
+    @include flexbox(column, stretch, center, 15px);
   }
 }
 
 .sidebar {
+  @include flexbox(column, stretch, center, 15px);
   &-zalo {
     background-color: $primaryColor;
     padding: 20px;
@@ -93,7 +96,6 @@
     box-shadow: $shadow;
     @include flexbox(column, stretch, center, 10px);
     padding: 15px;
-    margin-top: 15px;
     a {
       text-transform: uppercase;
       text-align: center;
@@ -139,6 +141,49 @@
         max-width: 90px;
         object-fit: cover;
         border-radius: $border8;
+      }
+    }
+  }
+}
+.sidebar {
+  &-title {
+    background-color: $primaryColor;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1em;
+    font-weight: 700;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    border-top-right-radius: $border12;
+    border-top-left-radius: $border12;
+  }
+  &-list {
+    border: 1px solid $borderColor;
+    border-bottom-right-radius: $border12;
+    border-bottom-left-radius: $border12;
+    &-item {
+      border-top: 1px solid $borderColor;
+      &:first-child {
+        border-top: unset;
+      }
+      &:hover {
+        background-color: #f7f7f7;
+      }
+      &-link {
+        padding: 10px 15px;
+        @include flexbox(row, center, flex-start, 10px);
+      }
+      &-image {
+        width: 30px;
+        height: 30px;
+        border-radius: $border4;
+        object-fit: cover;
+      }
+      &-text {
+        color: $textColor;
+        font-weight: 700;
+        font-size: 14px;
       }
     }
   }

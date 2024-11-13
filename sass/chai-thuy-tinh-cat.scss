@@ -1,2 +1,36 @@
 // - CSS chỉ dành riêng cho Danh mục Chai thủy tinh
 @use "./abstracts" as *;
+.chai-thuy-tinh-slideshow {
+  margin-top: unset;
+  margin-bottom: unset;
+}
+.chai-thuy-tinh {
+  &-question {
+    color: $primaryColor;
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 10px;
+    &-item {
+      border-bottom: 1px solid $borderColor;
+      padding-block: 20px;
+      cursor: pointer;
+      &:first-child {
+        border-top: 1px solid $borderColor;
+      }
+    }
+    &-title {
+      @include flexbox(row, center, flex-start, 15px);
+      span {
+        color: $primaryColor;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+    &-answer {
+      line-height: 1.5em;
+      padding-left: 20px;
+      max-height: 0px;
+      overflow-y: hidden;
+    }
+  }
+}

@@ -1,14 +1,10 @@
 extends ./view/layout/layout
-
 block titlePage 
   title iSOGLASS sản xuất và cung cấp thủy tinh đạt chuẩn iSO tại Việt Nam 
-
 append styleSheet 
   link(rel="stylesheet" href="../style/trang-chu.css")
-
 append mainHeading
   h1.header-heading Sản xuất Chai thủy tinh và Ly thủy tinh theo tiêu chuẩn iSO tại TP.HCM 
-
 block main
   main.main-wrapper
     include ./view/section/trang-chu/banner-slideshow
@@ -20,7 +16,7 @@ block main
     include ./view/section/trang-chu/ly-thuy-tinh-cat
     include ./view/section/trang-chu/ly-thuy-tinh-pro
     include ./view/section/trang-chu/in-logo-ly-thuy-tinh
-    include ./view/section/trang-chu/tem-nhan-chai-ruou
+    include ./view/section/block-based/tem-nhan-chai-ruou
     include ./view/section/trang-chu/binh-thuy-tinh-pro
     include ./view/section/block-based/con-so-noi-bat
     include ./view/section/trang-chu/khach-hang-isoglass

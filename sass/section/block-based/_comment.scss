@@ -1,0 +1,12 @@
+@use "../../abstracts" as *;
+.comment {
+  &-wrapper {
+    @include flexbox(row, center, space-between, 15px);
+  }
+  &-reviews {
+    flex: 0 0 80%;
+  }
+  &-respond {
+    flex: 0 0 20%;
+  }
+}

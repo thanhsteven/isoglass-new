@@ -1,25 +1,20 @@
 include ../mixin/mixins
 include ../mixin/products
 include ../mixin/categories
-
 doctype html
 html(lang="vi")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    
     block titlePage 
       title iSOGLASS sản xuất và cung cấp thủy tinh đạt chuẩn iSO tại Việt Nam 
-    
     //- Google Fonts
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet")
     link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
-    
     //- Font Awesome
     link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
-    
     //- Owl Carousel
     block owlCarousel
       - var useOwlCarousel = true ;
@@ -28,16 +23,13 @@ html(lang="vi")
         link(rel="stylesheet" href="../vendors/owl-carousel/css/owl.theme.default.min.css")
         script(src="https://code.jquery.com/jquery-3.6.0.min.js")
         script(src="../vendors/owl-carousel/js/owl.carousel.js")
-
     block styleSheet
       link(rel="stylesheet" href="../style/main.css")
-
   body 
     include ./header/header
     include ./menu/menu-2
     block main
     include ./footer/footer
-  
   block menuScript 
     script(src="../js/menu-2.js")
 

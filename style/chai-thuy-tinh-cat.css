@@ -1,3 +1,39 @@
+.chai-thuy-tinh-slideshow {
+  margin-top: unset;
+  margin-bottom: unset;
+}
 
+.chai-thuy-tinh-question {
+  color: #1a2c75;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.chai-thuy-tinh-question-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+  padding-block: 20px;
+  cursor: pointer;
+}
+.chai-thuy-tinh-question-item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.chai-thuy-tinh-question-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.chai-thuy-tinh-question-title span {
+  color: #1a2c75;
+  font-weight: 700;
+  font-size: 16px;
+}
+.chai-thuy-tinh-question-answer {
+  line-height: 1.5em;
+  padding-left: 20px;
+  max-height: 0px;
+  overflow-y: hidden;
+}
 
 /*# sourceMappingURL=chai-thuy-tinh-cat.css.map */
