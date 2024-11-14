@@ -1,13 +1,13 @@
 @use "../abstracts" as *;
 // CSS Product 01
-.product_item1 {
+.product-item-1 {
   &-wrapper {
     border-radius: $border12;
     box-shadow: $shadow2;
     position: relative;
     overflow: hidden;
     &:hover {
-      .product_item1 {
+      .product-item-1 {
         &-image img {
           transform: scale(1.1);
         }

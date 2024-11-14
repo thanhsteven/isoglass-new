@@ -42,14 +42,14 @@ console.log("Đã hoàn thành menu");
   }
 
   const btnOpenMenu = document.querySelector(".header-right-menu");
-  const modal = document.querySelector(".modal");
+  const modalMenu = document.querySelector(".menu-modal");
   const btnCloseMenu = document.querySelector(".menu-close");
   btnOpenMenu.addEventListener("click", menuMobile);
   btnCloseMenu.addEventListener("click", menuMobile);
-  modal.addEventListener("click", menuMobile);
+  modalMenu.addEventListener("click", menuMobile);
   function menuMobile() {
     navMenu.classList.toggle("menu-nav-show");
-    modal.classList.toggle("modal-show");
+    modalMenu.classList.toggle("modal-show");
     if (document.body.style.overflow === "hidden") {
       document.body.style.removeProperty("overflow");
     } else {
@@ -64,7 +64,7 @@ console.log("Đã hoàn thành menu");
     }
   });
   function resizeMenu() {
-    modal.classList.remove("modal-show");
+    modalMenu.classList.remove("modal-show");
     navMenu.classList.remove("menu-nav-show");
   }
 })();

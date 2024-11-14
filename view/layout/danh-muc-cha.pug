@@ -49,6 +49,7 @@ html(lang="vi")
             block categoryProduct 
           .category-main-wrapper
             .category-main-content
+              block productsList 
               block article 
             .category-main-sidebar
               block sidebarCate 
@@ -57,7 +58,9 @@ html(lang="vi")
         block moreSection
         block answerQuestion 
         block comment 
+      .category-main-modal 
     block footer 
       include ./footer/footer
   block scriptJS
     script(src="../js/menu-2.js")
+    script(src="../js/categories.js") 

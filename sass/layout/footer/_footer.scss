@@ -266,19 +266,3 @@
     }
   }
 }
-
-.modal {
-  background-color: rgba(0, 0, 0, 0.8);
-  visibility: hidden;
-  opacity: 0;
-  transition: all ease-in-out 0.5s;
-  position: fixed;
-  inset: 0;
-  z-index: 700;
-  &-show {
-    @include maxWidth($large) {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-}

@@ -3,6 +3,20 @@
   margin-bottom: unset;
 }
 
+.tem-nhan-chai-ruou {
+  margin-top: 20px;
+}
+
+.cate-chai-thuy-tinh {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.product-chai-thuy-tinh {
+  margin-top: unset;
+  margin-bottom: 20px;
+}
+
 .chai-thuy-tinh-question {
   color: #1a2c75;
   font-weight: 700;
@@ -34,6 +48,32 @@
   padding-left: 20px;
   max-height: 0px;
   overflow-y: hidden;
+}
+.chai-thuy-tinh figcaption {
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  margin-block: 8px;
+}
+
+.bang-san-pham {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin-block: 15px;
+}
+.bang-san-pham th,
+.bang-san-pham td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 8px;
+}
+.bang-san-pham th {
+  background-color: #f0f0f0;
+}
+.bang-san-pham td:first-child {
+  text-align: left;
+  padding-left: 5px;
 }
 
 /*# sourceMappingURL=chai-thuy-tinh-cat.css.map */

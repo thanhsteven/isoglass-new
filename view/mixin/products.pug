@@ -1,14 +1,13 @@
 //- Product Infomation Box - Style 01
 mixin productStyle01(href, image, title)
-  .product_item1-wrapper
-    a.product_item1-link(href=href, target="_blank", rel="noopener noreferrer")
-      .product_item1-image
+  .product-item-1-wrapper
+    a.product-item-1-link(href=href, target="_blank", rel="noopener noreferrer")
+      .product-item-1-image
         img(src=image, alt=title, srcset=`${image} 2x`)
-      .product_item1-hover
-        .product_item1-content
-          h3.product_item1-title=title 
-    +btnProduct("Đọc tiếp")(class="product_item1-button")
-
+      .product-item-1-hover
+        .product-item-1-content
+          h3.product-item-1-title=title 
+    +btnProduct("Đọc tiếp")(class="product-item-1-button")
 //- Product Infomation Box - Style 02
 mixin productStyle02(href, image, title, cats)
   .product-item-2-wrapper 
@@ -21,7 +20,6 @@ mixin productStyle02(href, image, title, cats)
       a(href=href, target="_blank", rel="nofollow noopener noreferrer")=cats 
     .product-item-2-button
       +btnProduct2("Xem thêm")(class="product-item-2-button")
-
 //- Product Infomation Box - Style 03
 mixin productStyle03(href, image1, image2, title, rating, cate, status)
   .product-item-3-wrapper

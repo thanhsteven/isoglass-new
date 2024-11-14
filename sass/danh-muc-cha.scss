@@ -1,6 +1,7 @@
 @use "./abstracts" as *;
-@use "./section/trang-danh-muc";
-@use "./section/block-based/tem-nhan-chai-ruou";
+//- Link CSS dành cho Chai thủy tinh
+@use "./section/trang-danh-muc/chai-thuy-tinh";
+@use "./section/dung-chung/tem-nhan-chai-ruou";
 //- CSS chung dành cho Trang danh mục Cha
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .category-main {
@@ -44,14 +45,21 @@
     color: $textColor;
   }
   &-wrapper {
-    @include flexbox(row, stretch, space-between, 10px);
+    @include flexbox(row, stretch, space-between, 20px);
+    @include maxWidth($large) {
+      position: relative;
+    }
   }
   &-content {
     flex: 0 0 75%;
+    @include maxWidth($large) {
+      flex-basis: 100%;
+    }
     p {
       line-height: 1.5em;
       font-size: 1em;
       color: $textColor;
+      text-align: justify;
     }
     h2 {
       color: $primaryColor;
@@ -66,6 +74,7 @@
       margin-block: 10px;
     }
     img {
+      margin-block: 15px;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -74,16 +83,52 @@
   }
   &-sidebar {
     flex: 0 0 25%;
-    @include flexbox(column, stretch, center, 15px);
+    @include flexbox(column, stretch, flex-start, 15px);
+    background-color: #fff;
+    @include maxWidth($large) {
+      flex-basis: 30vw;
+      box-shadow: $shadow;
+      padding-inline: 20px;
+      padding-top: 70px;
+      padding-left: 25px;
+      overflow-y: auto;
+      z-index: 800;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &-modal {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    min-height: 100vh;
+    position: absolute;
+    inset: 0;
+    z-index: 700;
+    visibility: visible;
+    opacity: 0;
+    display: none;
+    transition: all linear 0.2s;
+    @include maxWidth($large) {
+      &-show {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 }
-
+//- CSS cho Sidebar
 .sidebar {
   @include flexbox(column, stretch, center, 15px);
   &-zalo {
     background-color: $primaryColor;
     padding: 20px;
     border-radius: $border12;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
     p {
       color: #fff;
       font-weight: 600;
@@ -94,8 +139,8 @@
   &-contact {
     border-radius: $border12;
     box-shadow: $shadow;
-    @include flexbox(column, stretch, center, 10px);
-    padding: 15px;
+    @include flexbox(column, stretch, center, 15px);
+    padding: 20px;
     a {
       text-transform: uppercase;
       text-align: center;
@@ -144,8 +189,6 @@
       }
     }
   }
-}
-.sidebar {
   &-title {
     background-color: $primaryColor;
     color: #fff;
@@ -185,6 +228,21 @@
         font-weight: 700;
         font-size: 14px;
       }
+    }
+  }
+  &-close {
+    border: unset;
+    outline: none;
+    @include square(40px);
+    border-radius: $border4;
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    cursor: pointer;
+    box-shadow: $shadow2;
+    @include maxWidth($large) {
+      display: block;
     }
   }
 }
