@@ -14,6 +14,10 @@
 .product-chai-thuy-tinh {
   margin-top: unset;
   margin-bottom: 20px;
+  .product-item-1-title {
+    color: #fff;
+    font-weight: 500;
+  }
 }
 .chai-thuy-tinh {
   &-question {
@@ -43,12 +47,6 @@
       max-height: 0px;
       overflow-y: hidden;
     }
-  }
-  figcaption {
-    font-size: 14px;
-    font-style: italic;
-    text-align: center;
-    margin-block: 8px;
   }
 }
 .bang-san-pham {

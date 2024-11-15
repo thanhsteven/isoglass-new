@@ -16,6 +16,10 @@
   margin-top: unset;
   margin-bottom: 20px;
 }
+.product-chai-thuy-tinh .product-item-1-title {
+  color: #fff;
+  font-weight: 500;
+}
 
 .chai-thuy-tinh-question {
   color: #1a2c75;
@@ -48,12 +52,6 @@
   padding-left: 20px;
   max-height: 0px;
   overflow-y: hidden;
-}
-.chai-thuy-tinh figcaption {
-  font-size: 14px;
-  font-style: italic;
-  text-align: center;
-  margin-block: 8px;
 }
 
 .bang-san-pham {

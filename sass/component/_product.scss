@@ -1,5 +1,5 @@
 @use "../abstracts" as *;
-// CSS Product 01
+//- CSS Product 01
 .product-item-1 {
   &-wrapper {
     border-radius: $border12;
@@ -77,9 +77,6 @@
     }
   }
   &-title {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
     line-height: 24px;
     margin-bottom: 8px;
     text-align: center;
