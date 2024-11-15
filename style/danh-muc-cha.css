@@ -31,9 +31,10 @@
 }
 .cate-item-content {
   background-color: rgba(0, 0, 0, 0.5);
-  padding-inline: 8px;
+  padding-inline: 15px;
   padding-top: 10px;
   padding-bottom: 4px;
+  width: 100%;
   position: absolute;
   bottom: -28px;
   left: 0;
@@ -60,10 +61,16 @@
   bottom: 0;
 }
 
+.product-title {
+  color: #1a2c75;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
 .product-wrapper {
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
-  column-gap: 10px;
+  gap: 10px;
 }
 
 .tem-nhan-chai-ruou .title-wrapper {
@@ -205,22 +212,25 @@
     flex-basis: 100%;
   }
 }
-.category-main-content p {
+.category-main-content-long p {
   line-height: 1.5em;
   font-size: 1em;
   color: #333;
   text-align: justify;
 }
-.category-main-content h2 {
+.category-main-content-long h2 {
   color: #1a2c75;
   font-size: 26px;
   font-weight: 700;
   margin-block: 10px;
 }
-.category-main-content h3 {
+.category-main-content-long h3 {
   margin-block: 10px;
+  color: #1a2c75;
+  font-weight: 700;
+  font-size: 20px;
 }
-.category-main-content figure img {
+.category-main-content-long figure img {
   margin-bottom: unset;
   margin-top: 15px;
   width: 100%;
@@ -228,7 +238,7 @@
   object-fit: cover;
   border-radius: 12px;
 }
-.category-main-content figure figcaption {
+.category-main-content-long figure figcaption {
   font-size: 14px;
   font-style: italic;
   text-align: center;
