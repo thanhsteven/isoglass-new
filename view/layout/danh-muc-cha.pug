@@ -21,45 +21,40 @@ html(lang="vi")
       link(rel="stylesheet" href="../style/main.css")
       link(rel="stylesheet", href="../style/danh-muc-cha.css")
   body 
-    block header 
-      include ./header/header 
-    block menu 
-      include ./menu/menu-2 
-    block main 
-      main.main-wrapper
-        block slideshow 
-        .container 
-          .category-main-breadcrumb
-            ul
-              li Trang chủ 
-              li Chai thủy tinh 
-          block H1 
-            h1.category-main-heading H1 của các danh mục cha 
-          .category-main-rating 
-            span Đánh giá:
-            .category-main-rating-star 
-              i.fa.fa-star(aria-hidden="true")
-              i.fa.fa-star(aria-hidden="true")
-              i.fa.fa-star(aria-hidden="true")
-              i.fa.fa-star(aria-hidden="true")
-              i.fa.fa-star(aria-hidden="true")
-          .category-main-sapo
-            block sapo
-          .category-main-products 
-            block categoryProduct 
-          .category-main-wrapper
-            .category-main-content
-              block productsList 
-              .category-main-content-long
-                block article 
-            .category-main-sidebar
-              block sidebarCate 
-              block sidebar 
-                include ./sidebar
-        block moreSection
-        block answerQuestion 
-        block comment 
-      .category-main-modal 
+    include ./header/header 
+    include ./menu/menu-2 
+    main.main-wrapper
+      block slideshow 
+      .container 
+        .category-main-breadcrumb
+          ul
+            li Trang chủ 
+            li Chai thủy tinh 
+        block H1category 
+          h1.category-main-heading H1 của các danh mục cha 
+        .category-main-rating 
+          span Đánh giá:
+          .category-main-rating-star 
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+        .category-main-sapo
+          block sapo
+        .category-main-products 
+          block categoryProduct 
+        .category-main-wrapper
+          .category-main-content
+            block productsList 
+            block article 
+          .category-main-sidebar
+            block sidebarCate 
+            include ./sidebar
+      block moreSection
+      block answerQuestion 
+      block comment 
+    .category-main-modal 
     block footer 
       include ./footer/footer
   block scriptJS

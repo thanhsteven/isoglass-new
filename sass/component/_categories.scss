@@ -1,27 +1,27 @@
 @use "../abstracts" as *;
-// CSS Category Style 01
-.category_item1 {
+//- CSS Category Style 01
+.category-item-1 {
   &-wrapper {
     display: block;
-    position: relative;
     border-radius: $border12;
+    position: relative;
+    box-shadow: $shadow2;
     overflow: hidden;
     @include maxWidth($large) {
       height: fit-content;
     }
     &:hover {
-      .category_item1 {
+      .category-item-1 {
         &-image img {
           transform: scale(1.1);
         }
-        &-hover {
-          transform: translateY(0%);
+        &-content {
+          bottom: 0px;
         }
       }
     }
   }
   &-image {
-    box-shadow: $shadow2;
     border-radius: $border12;
     overflow: hidden;
     img {
@@ -32,25 +32,17 @@
       transition: $transition;
     }
   }
-  &-hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transform: translateY(30%);
-    transition: $transition;
+  &-content {
+    width: 100%;
+    padding-inline: 15px;
+    padding-top: 8px;
+    background-color: rgba($color: #000000, $alpha: 0.5);
     border-bottom-left-radius: $border12;
     border-bottom-right-radius: $border12;
-    @include maxWidth($small) {
-      position: static;
-      background-color: transparent;
-      transform: unset;
-    }
-  }
-  &-content {
-    padding: 15px;
-    height: var(--heigth-content);
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    transition: all ease 0.1s;
     @include maxWidth($small) {
       padding: 4px 8px;
       @include flexbox(column, center, stretch, 4px);
@@ -60,9 +52,9 @@
   &-title {
     color: #fff;
     font-weight: 600;
-    line-height: 22px;
-    margin-bottom: 4px;
+    line-height: 24px;
     font-size: clamp(16px, 16px, 18px);
+    margin-block: unset;
     @include maxWidth($small) {
       text-align: center;
       color: $primaryColor;
@@ -78,15 +70,17 @@
     }
   }
   &-count {
-    font-size: 14px;
-    font-weight: 400;
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
     color: #fff;
+    line-height: 36px;
     @include maxWidth($small) {
       color: $primaryColor;
     }
   }
 }
-// CSS Category Style 02
+//- CSS Category Style 02
 .category-item-2 {
   &-wrapper {
     &:hover {
@@ -171,4 +165,60 @@
     transition-delay: 0.1s;
   }
 }
-
+//- CSS Category Style 03
+.category-item-3 {
+  &-item {
+    box-shadow: $shadow;
+    border-radius: $border12;
+    overflow: hidden;
+    &-link {
+      position: relative;
+    }
+    &-image {
+      border-radius: $border12;
+      overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: $transition;
+      }
+    }
+    &-content {
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      padding-inline: 15px;
+      padding-top: 10px;
+      padding-bottom: 4px;
+      width: 100%;
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      transition: all ease-in-out 0.2s;
+    }
+    &-title {
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 22px;
+    }
+    &-count {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+  &:hover {
+    .category-item-3 {
+      &-image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      &-content {
+        bottom: 0;
+      }
+    }
+  }
+}

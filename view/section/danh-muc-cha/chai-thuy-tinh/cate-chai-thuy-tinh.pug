@@ -50,14 +50,8 @@
     },
   ]
 //- html thuần
-section.cate-chai-thuy-tinh 
-  h2.cate-title Các loại chai thuỷ tinh thông dụng 
-  .cate-wrapper 
+section.category-chai-thuy-tinh 
+  h2 Các loại chai thuỷ tinh thông dụng 
+  .category-main-cate-wrapper 
     each item in cate_chai_thuy_tinh
-      .cate-item 
-        a.cate-item-link(href=item.href, rel="noopener noreferrer")
-          .cate-item-image 
-            img(src=item.image, alt=item.title, srcset=`${item.image} 2x`)
-          .cate-item-content 
-            h3.cate-item-title=item.title 
-            span.cate-item-count=item.count 
+      +categoryStyle01(item.href, item.image, item.title, item.count)

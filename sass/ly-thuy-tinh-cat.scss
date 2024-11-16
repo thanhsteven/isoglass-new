@@ -1,1 +1,8 @@
-@use "./danh-muc-cha";
+@use "./abstracts" as *;
+
+.cate-ly-thuy-tinh {
+  margin-top: 20px;
+}
+.category-ly-thuy-tinh-product {
+  margin-top: unset;
+}

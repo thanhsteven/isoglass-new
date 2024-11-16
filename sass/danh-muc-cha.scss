@@ -4,6 +4,42 @@
 @use "./section/dung-chung/tem-nhan-chai-ruou";
 //- CSS chung dành cho Trang danh mục Cha
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+//- Basic H2, H3
+p {
+  line-height: 1.5em;
+  font-size: 1em;
+  color: $textColor;
+  text-align: justify;
+}
+h2 {
+  color: $primaryColor;
+  font-size: 26px;
+  font-weight: 700;
+  margin-block: 10px;
+}
+h3 {
+  margin-block: 10px;
+  color: $primaryColor;
+  font-weight: 700;
+  font-size: 20px;
+}
+figure {
+  img {
+    margin-bottom: unset;
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $border12;
+  }
+  figcaption {
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    margin-block: 10px;
+  }
+}
+//- Category main CSS
 .category-main {
   &-breadcrumb {
     text-align: center;
@@ -43,6 +79,9 @@
     line-height: 1.5em;
     text-align: justify;
     color: $textColor;
+    p {
+      margin-top: 10px;
+    }
   }
   &-wrapper {
     @include flexbox(row, stretch, space-between, 20px);
@@ -55,41 +94,21 @@
     @include maxWidth($large) {
       flex-basis: 100%;
     }
-    &-long {
-      p {
-        line-height: 1.5em;
-        font-size: 1em;
-        color: $textColor;
-        text-align: justify;
-      }
-      h2 {
-        color: $primaryColor;
-        font-size: 26px;
-        font-weight: 700;
-        margin-block: 10px;
-      }
-      h3 {
-        margin-block: 10px;
-        color: $primaryColor;
-        font-weight: 700;
-        font-size: 20px;
-      }
-      figure {
-        img {
-          margin-bottom: unset;
-          margin-top: 15px;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: $border12;
-        }
-        figcaption {
-          font-size: 14px;
-          font-style: italic;
-          text-align: center;
-          margin-block: 10px;
-        }
-      }
+  }
+  &-cate {
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+  }
+  &-products {
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
     }
   }
   &-sidebar {
