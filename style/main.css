@@ -250,7 +250,7 @@ body {
   position: absolute;
   left: 0;
   bottom: -30px;
-  transition: all ease 0.1s;
+  transition: all ease 0.3s;
 }
 @media screen and (max-width: 576px) {
   .category-item-1-content {
@@ -265,9 +265,9 @@ body {
 }
 .category-item-1-title {
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 24px;
-  font-size: 16px;
+  font-size: 15px;
   margin-block: unset;
 }
 @media screen and (max-width: 576px) {

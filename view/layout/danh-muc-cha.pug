@@ -19,7 +19,7 @@ html(lang="vi")
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
       link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
-      link(rel="stylesheet", href="../style/danh-muc-cha.css")
+      link(rel="stylesheet" href="../style/danh-muc-cha.css")
   body 
     include ./header/header 
     include ./menu/menu-2 
@@ -40,14 +40,15 @@ html(lang="vi")
             i.fa.fa-star(aria-hidden="true")
             i.fa.fa-star(aria-hidden="true")
             i.fa.fa-star(aria-hidden="true")
-        .category-main-sapo
+        .category-main-short 
           block sapo
         .category-main-products 
           block categoryProduct 
         .category-main-wrapper
           .category-main-content
             block productsList 
-            block article 
+            .category-main-content-extra 
+              block article 
           .category-main-sidebar
             block sidebarCate 
             include ./sidebar

@@ -1,7 +1,6 @@
 extends ./view/layout/danh-muc-cha
 block titleCategory
   title Chai thuỷ tinh cao cấp - giá tốt tại TP.HCM
-block owlCarousel
 append stylesheet
   link(rel="stylesheet", href="../style/chai-thuy-tinh-cat.css")
 block mainHeading
@@ -16,6 +15,12 @@ block categoryProduct
   include ./view/section/danh-muc-cha/chai-thuy-tinh/cate-chai-thuy-tinh.pug
 block productsList 
   include ./view/section/danh-muc-cha/chai-thuy-tinh/pro-chai-thuy-tinh.pug
+block sidebarCate
+  include ./view/section/danh-muc-cha/chai-thuy-tinh/sidebar-chai-thuy-tinh.pug
+block moreSection
+  include ./view/section/dung-chung/tem-nhan-chai-ruou.pug
+block answerQuestion
+  include ./view/section/danh-muc-cha/chai-thuy-tinh/answer-the-question.pug
 block article
   h2 Các loại chai lọ thủy tinh đẹp tại iSOGLASS
   h3 Chai thủy tinh đẹp
@@ -66,9 +71,3 @@ block article
         td Chai đựng rượu thủy tinh
         td Liên hệ để được cung cấp
         td Liên hệ
-block sidebarCate
-  include ./view/section/danh-muc-cha/chai-thuy-tinh/sidebar-chai-thuy-tinh.pug
-block moreSection
-  include ./view/section/dung-chung/tem-nhan-chai-ruou.pug
-block answerQuestion
-  include ./view/section/danh-muc-cha/chai-thuy-tinh/answer-the-question.pug

@@ -42,7 +42,7 @@
     position: absolute;
     left: 0;
     bottom: -30px;
-    transition: all ease 0.1s;
+    transition: all ease 0.3s;
     @include maxWidth($small) {
       padding: 4px 8px;
       @include flexbox(column, center, stretch, 4px);
@@ -51,9 +51,9 @@
   }
   &-title {
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 24px;
-    font-size: clamp(16px, 16px, 18px);
+    font-size: 15px;
     margin-block: unset;
     @include maxWidth($small) {
       text-align: center;
