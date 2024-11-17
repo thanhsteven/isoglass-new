@@ -341,7 +341,8 @@ a {
   text-transform: uppercase;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
-  margin-bottom: 0px;
+  margin-bottom: unset;
+  margin-top: unset;
 }
 .sidebar-list {
   border: 1px solid rgba(0, 0, 0, 0.1019607843);

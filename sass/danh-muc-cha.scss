@@ -235,7 +235,8 @@ a {
     text-transform: uppercase;
     border-top-right-radius: $border12;
     border-top-left-radius: $border12;
-    margin-bottom: 0px;
+    margin-bottom: unset;
+    margin-top: unset;
   }
   &-list {
     border: 1px solid $borderColor;
