@@ -5,7 +5,6 @@ pug gioi-thieu.pug --watch --pretty --out html
 pug lien-he.pug --watch --pretty --out html
 
 pug trang-san-pham.pug --watch --pretty --out html
-
 pug in-logo-ly-thuy-tinh.pug --watch --pretty --out html
 
 pug chai-thuy-tinh.pug --watch --pretty --out html
