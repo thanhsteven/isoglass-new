@@ -32,6 +32,7 @@
     border-top-left-radius: $border12;
     border-top-right-radius: $border12;
     padding: 15px;
+    margin-bottom: 0px;
   }
   &-download {
     @include flexbox(row, stretch, center, 10px);
@@ -77,6 +78,7 @@
       color: #fff;
       font-weight: 600;
       font-size: 15px;
+      margin-bottom: unset;
       @include maxWidth($medium) {
         text-align: center;
         margin-top: 20px;
@@ -86,7 +88,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
-      margin-top: 15px;
+      margin-top: 10px;
       max-width: fit-content;
       @include maxWidth($small) {
         @include flexbox(row, center, flex-start, 10px);
@@ -143,7 +145,7 @@
       }
     }
     &-wrapper {
-      @include flexbox(column, flex-start, center, 10px);
+      @include flexbox(column, flex-start, center, null);
       a {
         border-radius: $border12;
         display: block;

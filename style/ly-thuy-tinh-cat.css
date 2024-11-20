@@ -1,3 +1,136 @@
+.in-logo-ly-thuy-tinh .title-wrapper {
+  gap: 10px;
+}
+@media screen and (max-width: 576px) {
+  .in-logo-ly-thuy-tinh .title-wrapper {
+    gap: 15px;
+  }
+}
+.in-logo-ly-thuy-tinh .title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+}
+.in-logo-ly-thuy-tinh .title-after {
+  color: #fff;
+  font-size: 14px;
+  color: #ddd;
+  font-weight: 500;
+  text-align: center;
+}
+
+.in-logo-container {
+  border-radius: 12px;
+  max-height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .in-logo-container {
+    max-height: 450px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .in-logo-container {
+    margin-inline: unset;
+    max-height: 250px;
+  }
+}
+.in-logo-container:hover .in-logo-background {
+  transform: scale(1.1);
+}
+.in-logo-container::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+}
+.in-logo-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  transform: scale(1);
+  transition: opacity 0.5s cubic-bezier(0.2, 1, 0.2, 1), visibility 0.5s cubic-bezier(0.2, 1, 0.2, 1), transform 0.5s cubic-bezier(0.2, 1, 0.2, 1);
+}
+@media screen and (max-width: 768px) {
+  .in-logo-background {
+    aspect-ratio: unset;
+  }
+}
+.in-logo-link {
+  display: block;
+  padding-inline: 60px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
+@media screen and (max-width: 768px) {
+  .in-logo-link {
+    top: 20px;
+    padding-inline: 30px;
+  }
+}
+.in-logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-block: 20px;
+}
+@media screen and (max-width: 768px) {
+  .in-logo-wrapper {
+    display: none;
+  }
+}
+.in-logo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 1100px) {
+  .in-logo-wrapper img {
+    max-height: 200px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .in-logo-wrapper img {
+    scroll-snap-align: center;
+  }
+}
+.in-logo-button {
+  display: block;
+  margin-inline: auto;
+  background-color: #fff;
+  color: #3e3e3e;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color linear 0.3s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-20px);
+  z-index: 200;
+}
+.in-logo-button:hover {
+  background-color: #dedede;
+}
+.in-logo-button span {
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
 .category-ly-thuy-tinh {
   margin-top: 20px;
 }

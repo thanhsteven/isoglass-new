@@ -1374,6 +1374,7 @@ body {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding: 15px;
+  margin-bottom: 0px;
 }
 .footer-download {
   display: flex;
@@ -1434,6 +1435,7 @@ body {
   color: #fff;
   font-weight: 600;
   font-size: 15px;
+  margin-bottom: unset;
 }
 @media screen and (max-width: 768px) {
   .footer-social-header {
@@ -1445,7 +1447,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 10px;
   max-width: fit-content;
 }
 @media screen and (max-width: 576px) {
@@ -1523,7 +1525,6 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 10px;
 }
 .footer-legal-wrapper a {
   border-radius: 12px;
