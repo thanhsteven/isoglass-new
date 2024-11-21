@@ -86,7 +86,7 @@
 .review-and-rating-wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   gap: 15px;
 }
@@ -104,11 +104,13 @@
   justify-content: space-between;
   gap: 10px;
   margin-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+  padding-top: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
 }
 .review-item-avatar {
   flex: 0 0 12%;
+  max-width: 80px;
 }
 .review-item-avatar img {
   border-radius: 100rem;
@@ -117,6 +119,7 @@
 }
 .review-item-comment {
   flex: 0 0 85%;
+  padding-right: 20px;
 }
 .review-item-info {
   display: flex;
@@ -127,7 +130,8 @@
 }
 .review-item-info-name span {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
+  color: #1a2c75;
 }
 .review-item-info-date span {
   color: rgba(51, 51, 51, 0.5);
@@ -140,6 +144,82 @@
   color: #1a2c75;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.rating-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.rating-title {
+  color: #1a2c75;
+  font-size: 18px;
+  font-weight: 600;
+  margin-block: unset;
+}
+.rating-notes {
+  margin-block: unset;
+}
+.rating-star-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.rating-star-icon {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.rating-comment-title {
+  display: block;
+  margin-bottom: 4px;
+}
+.rating-comment-content {
+  width: 100%;
+  height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: 8px;
+  padding: 15px;
+}
+.rating-author {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.rating-author-input {
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+.rating-email {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.rating-email-input {
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+.rating-submit-button {
+  background-color: #1a2c75;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px 12px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 p {

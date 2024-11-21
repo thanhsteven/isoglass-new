@@ -1,20 +1,75 @@
+- 
+  var cam_nhan_khach_hang = [
+    {
+      name: "Minh Lâm",
+      comment: "Mình vừa đặt in hơn 200 logo thương hiệu lên ly thủy tinh để tặng Khách hàng đến tham gia Event bên Công ty mình, cảm ơn iSOGLASS nhé, bên bạn giao hàng rất nhanh và in logo rất nét.",
+      date: "10/07/2024 lúc 1:52 Chiều",
+    },
+    {
+      name: "Trịnh Hưng Tấn",
+      comment: "Giá in logo lên cốc thủy tinh bên này rất tốt, đóng gói và giao hàng nhanh, nhân viên giao hàng thân thiện.",
+      date: "10/07/2024 lúc 9:26 Chiều",
+    },
+    {
+      name: "Cao Bá Đạt",
+      comment: "Khắc logo lên ly rất sắc nét, sản phẩm ly làm quà tặng in logo rất đẹp, cảm ơn shop.",
+      date: "13/07/2024 lúc 8:41 Sáng",
+    },
+    {
+      name: "Công ty rượu vang Đà Lạt",
+      comment: "Chất lượng in thương hiệu lên ly thủy tinh bên iSOGlass rất tốt nha, bạn tư vấn hỗ trợ nhiệt tình, đánh giá 5 sao nhé iSOGlass.",
+      date: "14/07/2024 lúc 6:34 Chiều",
+    },
+    {
+      name: "An Nhiên Coffee",
+      comment: "Ly thuỷ tinh in logo đúng theo mẫu thiết kế. Đơn vị này quy trình nhận đơn hàng rất ok giao hàng rất nhanh đúng ngày. Tôi cảm ơn iSOGLASS nhiều.",
+      date: "16/07/2024 lúc 7:31 Sáng",
+    },
+  ]
+
 section.review-and-rating 
   .container 
     h2 Đánh giá của khách hàng 
     .review-and-rating-wrapper 
       .review-wrapper 
         ol.review-list 
-          li.review-item 
-            .review-item-avatar 
-              img(src="../../images/menu-icon/user-avatar.png" alt="Tên khách hàng")
-            .review-item-comment
-              .review-item-info
-                .review-item-info-name 
-                  span Minh Lâm 
-                .review-item-info-date 
-                  span 10/07/2024 lúc 9:26 Chiều
-              .review-item-content 
-                p Mình vừa đặt in hơn 200 logo thương hiệu lên ly thủy tinh để tặng Khách hàng đến tham gia Event bên Công ty mình, cảm ơn iSOGLASS nhé, bên bạn giao hàng rất nhanh và in logo rất nét.
-              .review-item-reply
-                a(href="" rel="noopener noreferrer nofollow") Trả lời
+          each item in cam_nhan_khach_hang
+            li.review-item 
+              .review-item-avatar 
+                img(src="../../images/menu-icon/user-avatar.png" alt=item.name)
+              .review-item-comment
+                .review-item-info
+                  .review-item-info-name 
+                    span=item.name  
+                  .review-item-info-date 
+                    span=item.date
+                .review-item-content 
+                  p=item.comment 
+                .review-item-reply
+                  a(href="" rel="noopener noreferrer nofollow") Trả lời
       .rating-wrapper 
+        p.rating-title Hãy nhận xét dịch vụ của iSOGLASS 
+        form.rating-form(action="" method="post")
+          p.rating-notes Email của bạn sẽ không được hiển thị công khai. Các trường bắt buộc được đánh dấu.
+          p.rating-star-wrapper  
+            span Đánh giá của bạn:
+            span.rating-star-icon 
+              each item in [1,2,3,4,5]
+                a(href="#")
+                  i.fa.fa-star-o(aria-hidden="true")
+          p.rating-comment 
+            label(for="comment").rating-comment-title
+              span Nhận xét của bạn:
+            textarea#rating_comment.rating-comment-content(name="comment")
+          p.rating-author 
+            label(for="author").rating-author-title Tên:
+            input(type="text" name="author").rating-author-input
+          p.rating-email 
+            label(for="email").rating-email-title Email:
+            input(type="email" name="email").rating-email-input
+          p.rating-cookies  
+            input(type="checkbox" name="email").rating-cookies-input
+            label(for="checkbox").rating-cookies-title
+              span Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.
+          p.rating-submit
+            input(type="submit", value="Gửi đi").rating-submit-button
