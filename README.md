@@ -10,6 +10,8 @@ pug in-logo-ly-thuy-tinh.pug --watch --pretty --out html
 pug chai-thuy-tinh.pug --watch --pretty --out html
 pug ly-thuy-tinh.pug --watch --pretty --out html
 
+pug chai-thuy-tinh-dung-ruou.pug --watch --pretty --out html
+
 <!-- - Convert to CSS - -->
 
 sass ./sass/main.scss ./style/main.css --watch

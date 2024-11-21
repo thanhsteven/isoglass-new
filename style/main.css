@@ -834,6 +834,41 @@ body {
   text-align: center;
 }
 
+.page-title-child {
+  background-image: url("../../images/hosting/background-title-child-categories.jpg");
+}
+.page-title-child-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  padding-block: 20px;
+}
+.page-title-child-title {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 10px;
+}
+.page-title-child-back {
+  display: inline-block;
+}
+.page-title-child-back a {
+  display: block;
+  line-height: 36px;
+  padding-inline: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+}
+.page-title-child-heading {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
 .topbar {
   height: 30px;
   background-color: #1a2c75;

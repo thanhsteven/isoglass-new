@@ -14,6 +14,22 @@ mixin secTitleBase(title, image)
       p.page-title-entry=title
       .page-title-breadcrumb
 
+//- Page Title for Child Categories
+mixin titleChildCate(title, image, childTitle, count)
+  .page-title-child
+    .container.page-title-child-wrapper
+      .page-title-child-title
+        .page-title-child-back 
+          a(href="#" rel="noopener noreferrer nofollow")
+            i.fa.fa-long-arrow-left(aria-hidden="true")
+        p.page-title-child-heading=title 
+      ul.page-title-child-list
+        li.page-title-child-item 
+          a.page-title-child-item-link(href="#")
+            img(src=image, alt=childTitle, srcset=`${image} 2x`)
+            span.page-title-child-item-name=childTitle 
+            span.page-title-child-item-count=count
+
 //- Button Product Style 01
 mixin btnProduct(text)
   a.btn_product_ver1(class!=attributes.class href="#", target="_blank", rel="nofollow noopener noreferrer")

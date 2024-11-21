@@ -13,3 +13,31 @@
     text-align: center;
   }
 }
+
+.page-title-child {
+  background-image: url("../../images/hosting/background-title-child-categories.jpg");
+  &-wrapper {
+    @include flexbox(column, stretch, space-between, null);
+    padding-block: 20px;
+  }
+  &-title {
+    @include flexbox(row, stretch, center, 10px);
+  }
+  &-back {
+    display: inline-block;
+    a {
+      display: block;
+      line-height: 36px;
+      padding-inline: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+  &-heading {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}

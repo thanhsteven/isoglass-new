@@ -1,28 +1,43 @@
+- 
+  var chai_thuy_tinh_dung_ruou = [
+    {
+      menuChild: "Chai thuỷ tinh đựng nước",
+      image: "../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg",
+      count: "10 sản phẩm",
+    },
+    {
+      menuChild: "Chai thuỷ tinh đựng nước",
+      image: "../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg",
+      count: "10 sản phẩm",
+    },
+    {
+      menuChild: "Chai thuỷ tinh đựng nước",
+      image: "../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg",
+      count: "10 sản phẩm",
+    },
+  ]
+
 include ../mixin/mixins
 include ../mixin/categories
 include ../mixin/products
-
 doctype html
 html(lang="vi")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    
     block titleCategory
       title Layout Danh mục CON cho các trang danh mục
-        
     block stylesheet
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
       link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
       link(rel="stylesheet", href="../style/danh-muc-con.css")
-
   body 
     include ./header/header
     block menu
       include ./menu/menu-2
+    +titleChildCate("Chai thuỷ tinh đựng rượu sản xuất tại TP.HCM")
     block main
     include ./footer/footer
-
   block scriptJS
     script(src="../js/menu-2.js")

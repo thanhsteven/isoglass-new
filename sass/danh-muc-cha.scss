@@ -77,13 +77,13 @@ a {
     }
   }
   &-wrapper {
-    @include flexbox(row, stretch, space-between, 20px);
+    display: grid;
+    grid-template-columns: 75% 25%;
     @include maxWidth($large) {
       position: relative;
     }
   }
   &-content {
-    flex: 0 0 75%;
     @include maxWidth($large) {
       flex-basis: 100%;
     }
@@ -118,9 +118,9 @@ a {
     }
   }
   &-sidebar {
-    flex: 0 0 25%;
     @include flexbox(column, stretch, flex-start, 15px);
     background-color: #fff;
+    padding-left: 15px;
     @include maxWidth($large) {
       flex-basis: 30vw;
       box-shadow: $shadow;

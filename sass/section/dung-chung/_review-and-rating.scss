@@ -8,9 +8,24 @@
 .review {
   &-wrapper {
     flex: 0 0 65%;
+    padding-block: 10px;
   }
   &-list {
     width: 100%;
+    max-height: 650px;
+    overflow-y: auto;
+    padding-right: 14px;
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #1a2c75;
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #f8f8f8;
+    }
   }
   &-item {
     @include flexbox(row, center, space-between, 10px);
@@ -64,15 +79,15 @@
 
 .rating {
   &-wrapper {
-    @include flexbox(column, stretch, flex-start, 10px);
+    @include flexbox(column, stretch, flex-start, null);
+    padding-block: 10px;
   }
   &-title {
     color: $primaryColor;
     font-size: 18px;
     font-weight: 600;
     margin-block: unset;
-  }
-  &-form {
+    line-height: 28px;
   }
   &-notes {
     margin-block: unset;
