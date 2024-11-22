@@ -834,27 +834,31 @@ body {
   text-align: center;
 }
 
-.page-title-child {
+.title-cat {
+  margin-top: unset;
+  margin-bottom: unset;
   background-image: url("../../images/hosting/background-title-child-categories.jpg");
+  background-position: center;
+  background-size: cover;
 }
-.page-title-child-wrapper {
+.title-cat-wrapper {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  padding-block: 20px;
+  padding-block: 40px;
 }
-.page-title-child-title {
+.title-cat-title {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   gap: 10px;
 }
-.page-title-child-back {
+.title-cat-back {
   display: inline-block;
 }
-.page-title-child-back a {
+.title-cat-back a {
   display: block;
   line-height: 36px;
   padding-inline: 10px;
@@ -862,11 +866,53 @@ body {
   font-size: 18px;
   color: #fff;
 }
-.page-title-child-heading {
+.title-cat-heading {
   color: #fff;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 30px;
+}
+.title-cat-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.title-cat-item {
+  flex: 0 0 20%;
+}
+.title-cat-item-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.title-cat-item-image {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.title-cat-item-text {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.title-cat-item-name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.title-cat-item-count {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .topbar {
@@ -1072,7 +1118,7 @@ body {
   }
 }
 .menu-modal {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   visibility: hidden;
   opacity: 0;
   transition: all ease-in-out 0.5s;
@@ -1560,6 +1606,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  gap: 10px;
 }
 .footer-legal-wrapper a {
   border-radius: 12px;

@@ -14,14 +14,18 @@
   }
 }
 
-.page-title-child {
+.title-cat {
+  margin-top: unset;
+  margin-bottom: unset;
   background-image: url("../../images/hosting/background-title-child-categories.jpg");
+  background-position: center;
+  background-size: cover;
   &-wrapper {
     @include flexbox(column, stretch, space-between, null);
-    padding-block: 20px;
+    padding-block: 40px;
   }
   &-title {
-    @include flexbox(row, stretch, center, 10px);
+    @include flexbox(row, center, center, 10px);
   }
   &-back {
     display: inline-block;
@@ -36,8 +40,36 @@
   }
   &-heading {
     color: #fff;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 600;
     line-height: 30px;
+  }
+  &-list {
+    margin-top: 20px;
+    @include flexbox(row, center, center, 20px);
+  }
+  &-item {
+    flex: 0 0 20%;
+    &-link {
+      @include flexbox(row, center, flex-start, 8px);
+    }
+    &-image {
+      @include square(40px);
+      border-radius: $border4;
+      object-fit: cover;
+    }
+    &-text {
+      @include flexbox(column, stretch, flex-start, 4px);
+    }
+    &-name {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &-count {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+    }
   }
 }

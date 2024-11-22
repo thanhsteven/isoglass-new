@@ -17,17 +17,18 @@
     },
   ]
 
-section.page-title-child
-  .container.page-title-child-wrapper
-    .page-title-child-title
-      .page-title-child-back 
+section.title-cat
+  .container.title-cat-wrapper
+    .title-cat-title
+      span.title-cat-back 
         a(href="#" rel="noopener noreferrer nofollow")
           i.fa.fa-long-arrow-left(aria-hidden="true")
-      p.page-title-child-heading Chai thuỷ tinh đựng rượu sản xuất tại TP.HCM 
-    ul.page-title-child-list
+      p.title-cat-heading Chai thuỷ tinh đựng rượu sản xuất tại TP.HCM 
+    ul.title-cat-list
       each item in chai_thuy_tinh_dung_ruou
-        li.page-title-child-item 
-          a.page-title-child-item-link(href="#")
-            img(src=item.image, alt=item.menuChild, srcset=`${item.image} 2x`)
-            span.page-title-child-item-name=item.menuChild 
-            span.page-title-child-item-count=count
+        li.title-cat-item 
+          a.title-cat-item-link(href="#")
+            img.title-cat-item-image(src=item.image, alt=item.menuChild, srcset=`${item.image} 2x`)
+            .title-cat-item-text
+              span.title-cat-item-name=item.menuChild 
+              span.title-cat-item-count=item.count

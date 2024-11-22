@@ -91,13 +91,13 @@ nav.menu-nav
     i.fa.fa-close(aria-hidden="true")
   ul.menu
     each item in menu
-      li.menu-item(data-toggle=item.child ? "sub-menu" : false)
-        .menu-item-wrapper
-          a.menu-item-link(href=item.href rel=`noopener noreferrer ${item.follow}`)
-            span.menu-item-text=item.text
+      li.menu-item(data-toggle=item.child ? "sub-menu" : false) 
+        .menu-item-wrapper 
+          a.menu-item-link(href=item.href rel=`noopener noreferrer ${item.follow}`) 
+            span.menu-item-text=item.text 
           if item.child 
-            span.menu-item-icon
-              i.fa.fa-angle-down.menu-item-arrow(aria-hidden="true")
+            span.menu-item-icon 
+              i.fa.fa-angle-down.menu-item-arrow(aria-hidden="true") 
         if item.child 
           ul.sub-menu 
             each child in item.child

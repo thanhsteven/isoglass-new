@@ -49,7 +49,7 @@ console.log("Đã hoàn thành menu");
   modalMenu.addEventListener("click", menuMobile);
   function menuMobile() {
     navMenu.classList.toggle("menu-nav-show");
-    modalMenu.classList.toggle("modal-show");
+    modalMenu.classList.toggle("menu-modal-show");
     if (document.body.style.overflow === "hidden") {
       document.body.style.removeProperty("overflow");
     } else {

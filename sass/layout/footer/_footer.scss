@@ -145,7 +145,7 @@
       }
     }
     &-wrapper {
-      @include flexbox(column, flex-start, center, null);
+      @include flexbox(column, flex-start, center, 10px);
       a {
         border-radius: $border12;
         display: block;
