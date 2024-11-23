@@ -45,7 +45,7 @@
     line-height: 30px;
   }
   &-list {
-    margin-top: 20px;
+    margin-top: 26px;
     @include flexbox(row, center, center, 20px);
   }
   &-item {
@@ -67,9 +67,9 @@
       font-weight: 600;
     }
     &-count {
-      color: #fff;
+      color: rgba($color: #fff, $alpha: 0.6);
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 400;
     }
   }
 }

@@ -1,0 +1,66 @@
+@use "../../../abstracts" as *;
+.category-main-sidebar {
+  &-title {
+    background-color: $primaryColor;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1em;
+    font-weight: 700;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    border-top-right-radius: $border12;
+    border-top-left-radius: $border12;
+    margin-bottom: unset;
+    margin-top: unset;
+  }
+  &-list {
+    border: 1px solid $borderColor;
+    border-bottom-right-radius: $border12;
+    border-bottom-left-radius: $border12;
+    &-item {
+      border-top: 1px solid $borderColor;
+      &:first-child {
+        border-top: unset;
+      }
+      &:hover {
+        background-color: #f7f7f7;
+      }
+      &-link {
+        @include flexbox(row, center, flex-start, 10px);
+        padding: 10px 15px;
+        width: 100%;
+        cursor: pointer;
+      }
+      &-image {
+        width: 30px;
+        height: 30px;
+        border-radius: $border4;
+        object-fit: cover;
+      }
+      &-text {
+        display: block;
+        width: 100%;
+        color: $textColor;
+        font-weight: 700;
+        font-size: 14px;
+        text-wrap: nowrap;
+      }
+    }
+  }
+  &-close {
+    border: unset;
+    outline: none;
+    @include square(40px);
+    border-radius: $border4;
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    cursor: pointer;
+    box-shadow: $shadow2;
+    @include maxWidth($large) {
+      display: block;
+    }
+  }
+}

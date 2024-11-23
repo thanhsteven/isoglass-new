@@ -873,7 +873,7 @@ body {
   line-height: 30px;
 }
 .title-cat-list {
-  margin-top: 20px;
+  margin-top: 26px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -910,9 +910,9 @@ body {
   font-weight: 600;
 }
 .title-cat-item-count {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .topbar {
@@ -935,12 +935,15 @@ body {
     padding-inline: unset;
   }
 }
-.header-heading {
+.header-heading p,
+.header-heading span,
+.header-heading h1 {
   color: #fff;
   font-size: 14px;
   font-weight: 500;
   text-align: center;
   line-height: 30px;
+  margin-block: unset;
 }
 .header-main {
   display: flex;
