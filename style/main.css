@@ -211,6 +211,33 @@ body {
   color: #1a2c75;
 }
 
+.btn-see-more-products {
+  display: block;
+  margin-top: 20px;
+  margin-inline: auto;
+  width: fit-content;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #e4e4e4;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #333;
+  transition: all linear 0.3s;
+}
+.btn-see-more-products span {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: inherit;
+}
+.btn-see-more-products:hover {
+  background-color: #1a2c75;
+  border-color: #1a2c75;
+  color: #fff;
+}
+
 .category-item-1-wrapper {
   display: block;
   border-radius: 12px;

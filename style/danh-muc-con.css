@@ -172,8 +172,8 @@
   display: grid;
   grid-template-columns: 75% 25%;
 }
-.cate-child-main-content {
-  margin-block: unset;
+.cate-child-main-content a {
+  color: #1a2c75;
 }
 .cate-child-main-sidebar {
   padding-left: 15px;

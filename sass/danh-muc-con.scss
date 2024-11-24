@@ -68,7 +68,9 @@
     display: grid;
     grid-template-columns: 75% 25%;
     &-content {
-      margin-block: unset;
+      a {
+        color: $primaryColor;
+      }
     }
     &-sidebar {
       padding-left: 15px;

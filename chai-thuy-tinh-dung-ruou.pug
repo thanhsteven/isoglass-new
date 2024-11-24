@@ -1,14 +1,18 @@
 extends ./view/layout/danh-muc-con.pug
 block titleCategory
   title Chai thuỷ tinh đựng rượu - giá tốt tại TP.HCM 
+append stylesheet
+  link(rel="stylesheet", href="../style/chai-thuy-tinh-dung-ruou.css")
 block mainHeading
   p Chai thủy tinh đựng rượu
 block cateChildTitle 
   p Chai thuỷ tinh đựng rượu sản xuất tại TP.HCM 
+block galleryImage
+  include ./view/section/danh-muc-con/chai-thuy-tinh-dung-ruou/gallery-chai-thuy-tinhd-dung-ruou.pug
 block cateChildProductsHeader2
-  h2 Các sản phẩm Chai thủy tinh đựng rượu sản xuất tại TP.HCM
+  h2 Các loại Chai thủy tinh đựng rượu
 block cateChildProducts
-  include ./view/section/danh-muc-con/products/pro-chai-thuy-tinh-dung-ruou.pug
+  include ./view/section/danh-muc-con/chai-thuy-tinh-dung-ruou/pro-chai-thuy-tinh-dung-ruou.pug
 block shortDescription
   p Sử dụng 
     a(href="./chai-thuy-tinh-dung-ruou.html" title="Chai thuỷ tinh đựng rượu")
@@ -17,7 +21,10 @@ block shortDescription
   p Bên cạnh hương vị thì thiết kế của chai thủy tinh đựng rượu cũng là một trong những yếu tố quan trọng mà bạn cần quan tâm khi kinh doanh rượu. Khi mang lại giá trị thẩm mỹ và tạo được cảm giác cao cấp cho người thưởng thức rượu. Đồng thời, sử dụng chai thủy tinh cũng là cách để bạn lưu giữ và bảo quản hương vị rượu tốt nhất trong thời gian dài.
 block cateChildExtraDescription
   h2 Mẫu chai rượu thủy đựng rượu
-  p sẽ có nhiều thiết kế kiểu dáng và dung tích khác nhau như: 250ml, 300ml, 350ml, 500ml, 650m p Mẫu chai rượu thủy tinh đẹp Bên cạnh các dạng thiết kế cơ bản, đơn giản phục vụ cho nhu cầu kinh doanh rượu. Thì iSOGLASS còn nhận thiết kế và sản xuất chai rượu thủy tinh đẹp theo yêu cầu, phù hợp làm quà tặng hoặc trưng bày, trang trí…
+  p Tùy thuộc vào nhu cầu sử dụng rượu của bạn mà 
+    a(href="./chai-thuy-tinh.html") 
+      strong Chai thuỷ tinh 
+    | sẽ có nhiều thiết kế kiểu dáng và dung tích khác nhau như: 250ml, 300ml, 350ml, 500ml, 650m p Mẫu chai rượu thủy tinh đẹp Bên cạnh các dạng thiết kế cơ bản, đơn giản phục vụ cho nhu cầu kinh doanh rượu. Thì iSOGLASS còn nhận thiết kế và sản xuất chai rượu thủy tinh đẹp theo yêu cầu, phù hợp làm quà tặng hoặc trưng bày, trang trí…
   img(src="../images/hosting/mau-chai-ruou-thuy-tinh-dep-2.jpg", alt="Mẫu chai rượu thủy tinh đẹp")
   h2 Tại sao sử dụng chai thủy tinh để đựng rượu.
   p Thay vì sử dụng các loại bao bì khác như nhựa, sứ thì việc sử dụng chai thủy tinh để đựng rượu sẽ giúp bảo quản hương vị rượu được tốt hơn cũng như nâng cao giá trị thẩm mỹ của rượu. Vì được xử lý ở nhiệt độ cao nên chai thủy tinh sẽ được loại bỏ hoàn toàn các tạp chất gây hại cho sức khỏe cùng với đó là đặc tính trong suốt giúp bạn dễ dàng giám sát được màu sắc của rượu từ đó đánh giá được chất lượng rượu hiện tại. Ngoài ra, việc dùng chai thủy tinh đựng rượu cũng sẽ mang tính thẩm mỹ hơn nhờ kiểu dáng đa dạng, dễ dàng trưng bày và giúp tôn lên giá trị của rượu.
@@ -82,7 +89,7 @@ block cateChildExtraDescription
   p Vai trò của vỏ hộp trong bảo quản và trình bày sản phẩm rượu không chỉ giới hạn ở việc bảo vệ mà còn mở rộng đến việc tạo ra một trải nghiệm đầy đủ cho người tiêu dùng. Đầu tiên và quan trọng nhất, vỏ hộp là một tấm chắn vững chắc, giúp ngăn chặn ánh sáng mặt trời và tác động của nhiệt độ từ môi trường bên ngoài. Điều này đặc biệt quan trọng đối với rượu, vì ánh sáng và nhiệt độ có thể gây tổn thương hương vị và chất lượng của sản phẩm.
   img(src="../images/hosting/iSOGLASS-23.jpg", alt="Chai thủy tinh iSOGLASS Sản xuất tại TP.HCM")
   p Chai thủy tinh iSOGLASS sản xuất tại TP.HCM Một khía cạnh quan trọng khác của vỏ hộp là khả năng bảo vệ chai khỏi va đập và xước, giúp duy trì vẻ đẹp và sự sang trọng của sản phẩm. Bạn có thể nhìn thấy rõ điều này khi một chiếc chai được trình bày trong một hộp đẹp mắt, nơi mọi chi tiết của sản phẩm đều được làm nổi bật và bảo vệ khỏi các yếu tố tiêu cực từ môi trường xung quanh. 
-  p Ngoài ra, vỏ hộp còn là một cơ hội để thương hiệu rượu thể hiện đặc tính riêng biệt và cá nhân hóa. Thiết kế độc đáo và hấp dẫn của hộp có thể truyền đạt giá trị của sản phẩm và tạo ấn tượng mạnh mẽ trong tâm trí của người tiêu dùng. Đôi khi, hộp trởthành một phần của trải nghiệm mở nắp chai, làm tăng thêm sự hứng thú và kỳ vọng của người sử dụng.
+  p Ngoài ra, vỏ hộp còn là một cơ hội để thương hiệu rượu thể hiện đặc tính riêng biệt và cá nhân hóa. Thiết kế độc đáo và hấp dẫn của hộp có thể truyền đạt giá trị của sản phẩm và tạo ấn tượng mạnh mẽ trong tâm trí của người tiêu dùng. Đôi khi, hộp trở thành một phần của trải nghiệm mở nắp chai, làm tăng thêm sự hứng thú và kỳ vọng của người sử dụng.
   h2 Vỏ hộp độc đáo cho chai thủy tinh đựng rượu từ iSOGLASS.
   img(src="../images/hosting/vo-hop-doc-dao-cho-chai-thuy-tinh-dung-ruou-tu-isoglass.jpg", alt="Vỏ Hộp Độc Đáo Cho Chai Thủy Tinh Đựng Rượu từ iSOGLASS")
   p Vỏ hộp độc đáo cho chai thủy tinh đựng rượu từ iSOGLASS Tại iSOGLASS, chúng tôi không chỉ chú trọng vào chất lượng chai thủy tinh đựng rượu mà còn đặt sự quan trọng vào vỏ hộp, tạo nên bộ sưu tập độc đáo và sang trọng. Dưới đây là những loại vỏ hộp đặc sắc mà chúng tôi cung cấp:
