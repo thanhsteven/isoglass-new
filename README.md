@@ -12,6 +12,8 @@ pug ly-thuy-tinh.pug --watch --pretty --out html
 
 pug chai-thuy-tinh-dung-ruou.pug --watch --pretty --out html
 
+pug tin-tuc-isoglass.pug --watch --pretty --out html
+
 <!-- - Convert to CSS - -->
 
 sass ./sass/main.scss ./style/main.css --watch
@@ -28,3 +30,9 @@ sass ./sass/ly-thuy-tinh-cat.scss ./style/ly-thuy-tinh-cat.css --watch
 sass ./sass/chai-thuy-tinh-cat.scss ./style/chai-thuy-tinh-cat.css --watch
 
 sass ./sass/chai-thuy-tinh-dung-ruou.scss ./style/chai-thuy-tinh-dung-ruou.css --watch
+
+<!-- - Blog CSS - -->
+
+sass ./sass/layout/blog/layout-categories.scss ./style/layout-categories.css --watch
+sass ./sass/layout/blog/layout-post.scss ./style/layout-post.css --watch
+sass ./sass/tin-tuc-isoglass.scss ./style/tin-tuc-isoglass.css --watch
