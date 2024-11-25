@@ -1,0 +1,25 @@
+//- Layout Trang sản phẩm
+include ../mixin/mixins
+doctype html
+html(lang="vi")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block titleProductDetails
+      title Layout Trang chi tiết sản phẩm
+    //- Font Awesome
+    link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
+    link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
+    block styleSheetProduct 
+      link(rel="stylesheet" href="../style/main.css")
+      link(rel="stylesheet" href="../style/products.css")
+  body 
+    include ./header/header
+    include ./menu/menu-2
+    block main 
+      main.main-wrapper
+    include ./footer/prefooter 
+    include ./footer/footer
+    block scriptProductDetails
+      script(src="../js/menu-2.js")
+      script(src="../js/product-details.js")

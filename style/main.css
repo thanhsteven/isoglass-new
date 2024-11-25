@@ -1055,7 +1055,7 @@ body {
   line-height: 40px;
   color: #fff;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   text-transform: initial;
   border-radius: 8px;
@@ -1170,7 +1170,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 15px;
 }
 @media screen and (max-width: 992px) {

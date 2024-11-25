@@ -6,6 +6,7 @@
       background-color: #fff;
       overflow-y: auto;
       width: 40vw;
+
       height: 100vh;
       position: fixed;
       left: -100%;
@@ -61,7 +62,7 @@
   width: $container;
   margin: 0 auto;
   color: #fff;
-  @include flexbox(row, center, space-around, 15px);
+  @include flexbox(row, center, space-evenly, 15px);
   @include maxWidth($large) {
     flex-direction: column;
     align-items: flex-start;

@@ -1,5 +1,7 @@
 @use "./abstracts" as *;
-// - CSS chỉ dành riêng cho Danh mục Chai thủy tinh
+// - CSS các section riêng trong Chai thuỷ tinh
+@use "./section/main-cate/chai-thuy-tinh";
+// - CSS tuỳ chỉnh
 .chai-thuy-tinh-slideshow {
   margin-top: unset;
   margin-bottom: unset;

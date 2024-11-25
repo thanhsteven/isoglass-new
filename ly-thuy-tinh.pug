@@ -1,4 +1,4 @@
-extends ./view/layout/danh-muc-cha
+extends ./view/layout/main-cate
 block titleCategory 
   title Ly thuỷ tinh cao cấp - giá tốt tại TP.HCM 
 append stylesheet 
@@ -6,7 +6,7 @@ append stylesheet
 block mainHeading
   p Ly thuỷ tinh giá tốt tại TP.HCM 
 block slideshow 
-  include ./view/section/danh-muc-cha/ly-thuy-tinh/slide-ly-thuy-tinh.pug
+  include ./view/section/main-cate/ly-thuy-tinh/slide-ly-thuy-tinh.pug
 block H1category 
   h1 Ly thuỷ tinh sản xuất tại TP.HCM
 block sapo
@@ -16,14 +16,14 @@ block sapo
     | là một vật dụng không thể thiếu trong cuộc sống hiện đại. Nó có nhiều công dụng và đóng vai trò quan trọng trong việc phục vụ nhu cầu uống nước, nước trái cây, đồ uống có cồn, cà phê, trà, sữa, sinh tố và các loại thực phẩm khác.
     p Ly thủy tinh có nhiều ưu điểm vượt trội so với các vật liệu khác như nhựa, kim loại hay gốm sứ. Ly thủy tinh không tác động đến hương vị của đồ uống hay thực phẩm, không chứa chất độc hại, dễ dàng vệ sinh và tái sử dụng nhiều lần. Ngoài ra, ly thủy tinh còn mang lại vẻ đẹp thanh lịch, sang trọng và có tính thẩm mỹ cao, tạo sự thích thú cho người sử dụng.
 block categoryProduct
-  include ./view/section/danh-muc-cha/ly-thuy-tinh/cate-ly-thuy-tinh.pug
+  include ./view/section/main-cate/ly-thuy-tinh/cate-ly-thuy-tinh.pug
 block productsList
-  include ./view/section/danh-muc-cha/ly-thuy-tinh/pro-ly-thuy-tinh.pug
+  include ./view/section/main-cate/ly-thuy-tinh/pro-ly-thuy-tinh.pug
 block sidebarCate
-  include ./view/section/danh-muc-cha/ly-thuy-tinh/sidebar-ly-thuy-tinh.pug
+  include ./view/section/main-cate/ly-thuy-tinh/sidebar-ly-thuy-tinh.pug
 block moreSection
-  include ./view/section/trang-chu/in-logo-ly-thuy-tinh.pug
-  include ./view/section/dung-chung/tem-nhan-chai-ruou.pug
+  include ./view/section/home/in-logo-ly-thuy-tinh.pug
+  include ./view/section/common/tem-nhan-chai-ruou.pug
 block article 
   h2 Các loại ly thủy tinh đẹp tại iSOGLASS
   h3 Ly thủy tinh đẹp

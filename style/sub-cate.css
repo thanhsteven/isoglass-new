@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 15px;
+}
+.sidebar-zalo {
+  background-color: #1a2c75;
+  padding: 20px;
+  border-radius: 12px;
+}
+.sidebar-zalo img {
+  width: 100%;
+  object-fit: cover;
+}
+.sidebar-zalo p {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+.sidebar-contact {
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+.sidebar-contact a {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  transition: all linear 0.2s;
+}
+.sidebar-contact-call, .sidebar-contact-more {
+  background-color: #1a2c75;
+  color: #fff;
+}
+.sidebar-contact-call:hover, .sidebar-contact-more:hover {
+  background-color: #b59d78;
+  color: #1a2c75;
+}
+.sidebar-contact-zalo {
+  border: 1px solid #1a2c75;
+  color: #1a2c75;
+}
+.sidebar-contact-zalo:hover {
+  background-color: #1a2c75;
+  color: #fff;
+}
+.sidebar-support p {
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.4em;
+  padding-inline: 20px;
+  margin-bottom: 10px;
+}
+.sidebar-support-avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-inline: 10px;
+}
+.sidebar-support-avatar img {
+  width: 33.3333333333%;
+  max-width: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.sidebar-close {
+  border: unset;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 992px) {
+  .sidebar-close {
+    display: block;
+  }
+}
+
+.cate-child-breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-block: 15px;
+}
+.cate-child-breadcrumb ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.cate-child-breadcrumb li {
+  color: #1a2c75;
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+}
+.cate-child-title {
+  color: #1a2c75;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+.cate-child-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-block: 10px;
+}
+.cate-child-rating span {
+  font-weight: 500;
+}
+.cate-child-rating-star {
+  color: #f7c600;
+  font-size: 20px;
+}
+.cate-child-rating-star i.fa {
+  margin-left: 4px;
+}
+.cate-child-short-description {
+  margin-block: 10px;
+}
+.cate-child-short-description a {
+  color: #1a2c75;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.cate-child-short-description p {
+  color: #333;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  margin-block: 10px;
+}
+.cate-child-gallery-image {
+  margin-block: 10px;
+}
+.cate-child-proudcts-title {
+  color: #1a2c75;
+  font-weight: 700;
+  font-size: 24px;
+  margin-block: 10px;
+}
+.cate-child-main {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+.cate-child-main-content a {
+  color: #1a2c75;
+}
+.cate-child-main-sidebar {
+  padding-left: 15px;
+}
+.cate-child-extra-description h2,
+.cate-child-extra-description h3,
+.cate-child-extra-description h4 {
+  color: #1a2c75;
+  line-height: 28px;
+  font-weight: 700;
+  margin-block: 10px;
+}
+.cate-child-extra-description h2 {
+  font-size: 20px;
+}
+.cate-child-extra-description h3 {
+  font-size: 18px;
+}
+.cate-child-extra-description h4 {
+  font-size: 16px;
+}
+.cate-child-extra-description p {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-block: 10px;
+  text-align: justify;
+}
+.cate-child-extra-description img {
+  border-radius: 12px;
+  object-fit: cover;
+  width: 100%;
+  margin-block: 10px;
+}
+.cate-child-extra-description ul {
+  list-style: circle;
+}
+.cate-child-extra-description li {
+  margin-block: 10px;
+  line-height: 28px;
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=sub-cate.css.map */
