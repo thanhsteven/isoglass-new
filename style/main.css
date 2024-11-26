@@ -1147,21 +1147,6 @@ body {
     display: none;
   }
 }
-.menu-modal {
-  background-color: rgba(0, 0, 0, 0.7);
-  visibility: hidden;
-  opacity: 0;
-  transition: all ease-in-out 0.5s;
-  position: fixed;
-  inset: 0;
-  z-index: 700;
-}
-@media screen and (max-width: 992px) {
-  .menu-modal-show {
-    visibility: visible;
-    opacity: 1;
-  }
-}
 
 .menu {
   width: 1200px;
@@ -1787,6 +1772,22 @@ body {
 @media screen and (max-width: 576px) {
   .footer-column-5 .footer-inner-wrapper {
     grid-template-columns: auto;
+  }
+}
+
+.footer-modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+  position: fixed;
+  inset: 0;
+  z-index: 700;
+}
+@media screen and (max-width: 992px) {
+  .footer-modal-show {
+    visibility: visible;
+    opacity: 1;
   }
 }
 

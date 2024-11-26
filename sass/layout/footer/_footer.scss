@@ -296,3 +296,21 @@
     }
   }
 }
+
+.footer {
+  &-modal {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+    position: fixed;
+    inset: 0;
+    z-index: 700;
+    &-show {
+      @include maxWidth($large) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
