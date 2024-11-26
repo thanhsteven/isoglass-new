@@ -13,6 +13,7 @@ pug in-logo-ly-thuy-tinh.pug --watch --pretty --out html
 pug chai-thuy-tinh-dung-ruou.pug --watch --pretty --out html
 
 pug blog.pug --watch --pretty --out html
+pug bai-viet-mau.pug --watch --pretty --out html
 
 <!-- - Convert to CSS - -->
 

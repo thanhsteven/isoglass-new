@@ -1,7 +1,7 @@
 - 
   var blog_tin_tuc_isoglass = [
     {
-      image: "images/hosting/chai-lo-thuy-tinh-cao-cap.jpg",
+      image: "../../../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg",
       href: "#",
       author: "Minh Châu",
       cate: "Tin tức tổng hợp",
@@ -11,7 +11,7 @@
       cmtCount: 8,
     },
     {
-      image: "images/hosting/chai-lo-thuy-tinh-cao-cap.jpg",
+      image: "../../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-co-nap-cai-size-500ml-iso-07.jpg",
       href: "#",
       author: "Minh Châu",
       cate: "Tin tức tổng hợp",
@@ -21,7 +21,7 @@
       cmtCount: 8,
     },
     {
-      image: "images/hosting/chai-lo-thuy-tinh-cao-cap.jpg",
+      image: "../../../images/chai-thuy-tinh/chai-thuy-tinh-gia-tot-san-xuat-tai-tphcm-02.jpg",
       href: "#",
       author: "Minh Châu",
       cate: "Tin tức tổng hợp",
@@ -31,7 +31,7 @@
       cmtCount: 8,
     },
     {
-      image: "images/hosting/chai-lo-thuy-tinh-cao-cap.jpg",
+      image: "../../../images/chai-thuy-tinh/chai-thuy-tinh-than-tru-tron-dung-ruou-size-750ml-iso-46.jpg",
       href: "#",
       author: "Minh Châu",
       cate: "Tin tức tổng hợp",
@@ -41,7 +41,7 @@
       cmtCount: 8,
     },
     {
-      image: "images/hosting/chai-lo-thuy-tinh-cao-cap.jpg",
+      image: "../../../images/chai-thuy-tinh/chai-thuy-tinh-than-vuong-nap-con-dung-ruou-size-500ml-iso-32.jpg",
       href: "#",
       author: "Minh Châu",
       cate: "Tin tức tổng hợp",
@@ -51,7 +51,7 @@
       cmtCount: 8,
     },
     {
-      image: "images/hosting/chai-lo-thuy-tinh-cao-cap.jpg",
+      image: "../../../images/chai-thuy-tinh/chai-thuy-tinh-dung-ruou-gia-tot-tai-tp-hcm.jpg",
       href: "#",
       author: "Minh Châu",
       cate: "Tin tức tổng hợp",
@@ -61,7 +61,7 @@
       cmtCount: 8,
     },
     {
-      image: "images/hosting/chai-lo-thuy-tinh-cao-cap.jpg",
+      image: "../../../images/chai-thuy-tinh/chai-thuy-tinh-than-tru-vuong-dung-ruou-size-750ml-iso-45.jpg",
       href: "#",
       author: "Minh Châu",
       cate: "Tin tức tổng hợp",
@@ -71,7 +71,7 @@
       cmtCount: 8,
     },
     {
-      image: "images/hosting/chai-lo-thuy-tinh-cao-cap.jpg",
+      image: "../../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-khoang-co-nap-cai-size-1000ml-iso-13.jpg",
       href: "#",
       author: "Minh Châu",
       cate: "Tin tức tổng hợp",
@@ -81,7 +81,7 @@
       cmtCount: 8,
     },
     {
-      image: "images/hosting/chai-lo-thuy-tinh-cao-cap.jpg",
+      image: "../../../images/chai-thuy-tinh/chai-thuy-tinh-gia-tot-san-xuat-tai-tphcm-02.jpg",
       href: "#",
       author: "Minh Châu",
       cate: "Tin tức tổng hợp",
@@ -91,7 +91,7 @@
       cmtCount: 8,
     },
     {
-      image: "images/hosting/chai-lo-thuy-tinh-cao-cap.jpg",
+      image: "../../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-san-xuat-tai-tp-hcm.jpg",
       href: "#",
       author: "Minh Châu",
       cate: "Tin tức tổng hợp",
@@ -103,4 +103,5 @@
   ]
 //- HTML Thuần
 .blog-wrapper 
-  .blog-item 
+  each item in blog_tin_tuc_isoglass
+    +blogDefautl(item.image, item.href, item.author, item.cate, item.date, item.title, item.shortDesc, item.cmtCount)

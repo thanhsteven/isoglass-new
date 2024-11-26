@@ -1,6 +1,7 @@
 //- Layout bài viết
 include ../mixin/mixins
 include ../mixin/categories
+include ../mixin/blogs
 doctype html
 html(lang="vi")
   head
@@ -12,10 +13,32 @@ html(lang="vi")
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
       link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
-      link(rel="stylesheet", href="../style/layout-categories.css")
   body 
-    include ../layout/header/header.pug
-    include ../layout/menu/menu-2.pug
-    include ../layout/footer/footer.pug
+    include ../layout/header/header
+    include ../layout/menu/menu-2
+    +secTitleBase("Tin tức tổng hợp iSOGLASS", "../../images/hosting/background-title-blog.jpg")
+    main.main-post 
+      .container 
+        article.article-main 
+          header 
+            h1 tiêu đề chính h1 
+            p đoạn mô tả ngắn
+          figure 
+            img(src="", alt="")
+            figcaption
+          section 
+            h2 Viết layout bài viết
+            ul
+              li Điểm chính 1
+              li Điểm chính 2
+              li Điểm chính 3
+          footer 
+        aside 
+          h2 Đây là sidebar 
+            ul
+              li bài viết liên quan 1
+              li bài viết liên quan 2
+              li bài viết liên quan 3
+    include ../layout/footer/footer
     block scriptJS 
       script(src="../js/menu-2.js")
