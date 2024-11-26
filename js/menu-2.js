@@ -52,6 +52,7 @@ console.log("Đã hoàn thành menu");
     modalMenu.classList.toggle("menu-modal-show");
     if (document.body.style.overflow === "hidden") {
       document.body.style.removeProperty("overflow");
+      document.body.removeAttribute("style");
     } else {
       document.body.style.setProperty("overflow", "hidden");
     }

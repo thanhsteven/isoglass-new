@@ -37,7 +37,7 @@
   &-download {
     @include flexbox(row, stretch, center, 10px);
     @include maxWidth($medium) {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
     &-btn {
       background-color: #99a8a1;
@@ -62,7 +62,7 @@
       line-height: 1.5;
       font-weight: 500;
       @include maxWidth($small) {
-        text-align: center;
+        text-align: left;
       }
     }
   }
@@ -79,7 +79,7 @@
       font-size: 15px;
       margin-bottom: unset;
       @include maxWidth($medium) {
-        text-align: center;
+        text-align: left;
         margin-top: 20px;
       }
     }
@@ -96,7 +96,6 @@
       }
       @include maxWidth($medium) {
         max-width: unset;
-        padding-inline: 15px;
       }
       &-item {
         @include flexbox(row, center, center, null);
@@ -164,6 +163,7 @@
       color: #fff;
       font-weight: 600;
       font-size: 16px;
+      text-wrap: nowrap;
     }
     &-image {
       margin-top: 8px;
@@ -172,6 +172,10 @@
         object-fit: cover;
         border-radius: $border12;
       }
+    }
+    @include maxWidth($medium) {
+      max-width: 300px;
+      margin-top: 8px;
     }
   }
   &-copy {
@@ -271,7 +275,7 @@
 }
 
 .footer-column-4 {
-  @include flexbox(column, stretch, space-between, null);
+  @include flexbox(column, stretch, space-between, 15px);
 }
 
 .footer-column-5 {

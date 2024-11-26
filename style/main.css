@@ -1496,7 +1496,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .footer-download {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 .footer-download-btn {
@@ -1526,7 +1526,7 @@ body {
 }
 @media screen and (max-width: 576px) {
   .footer-download span {
-    text-align: center;
+    text-align: left;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1547,7 +1547,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .footer-social-header {
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
   }
 }
@@ -1572,7 +1572,6 @@ body {
 @media screen and (max-width: 768px) {
   .footer-social-list {
     max-width: unset;
-    padding-inline: 15px;
   }
 }
 .footer-social-list-item {
@@ -1653,6 +1652,7 @@ body {
   color: #fff;
   font-weight: 600;
   font-size: 16px;
+  text-wrap: nowrap;
 }
 .footer-contact-image {
   margin-top: 8px;
@@ -1661,6 +1661,12 @@ body {
   width: 100%;
   object-fit: cover;
   border-radius: 12px;
+}
+@media screen and (max-width: 768px) {
+  .footer-contact {
+    max-width: 300px;
+    margin-top: 8px;
+  }
 }
 .footer-copy {
   margin-top: 40px;
@@ -1754,6 +1760,7 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .footer-column-5 .footer-inner-wrapper {
