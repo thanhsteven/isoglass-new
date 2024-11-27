@@ -1,5 +1,6 @@
 //- Layout Trang sản phẩm
 include ../mixin/mixins
+include ../mixin/products
 doctype html
 html(lang="vi")
   head
@@ -12,12 +13,41 @@ html(lang="vi")
     link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
     block styleSheetProduct 
       link(rel="stylesheet" href="../style/main.css")
-      link(rel="stylesheet" href="../style/products.css")
+      link(rel="stylesheet" href="../style/product.css")
   body 
     include ./header/header
     include ./menu/menu-2
-    block main 
-      main.main-wrapper
+    main.product-main
+    .container 
+      .product-breadcrumb 
+      article.product-main-wrapper 
+        header.product-header 
+          .product-header-info
+            block h1TitleProduct
+              h1 Tên sản phẩm chính
+            p.product-meta 
+              span Ngày đăng: 
+                time(datetime="2024-11-27") 27/11/2024
+              span Danh mục:
+                a(href="./chai-thuy-tinh.html" title="Chai thuỷ tinh") Chai thuỷ tinh,
+                a(href="./chai-thuy-tinh-dung-ruou.html", rel="noopener noreferrer" title="Chai thuỷ tinh đựng rượu") Chai thuỷ tinh đựng rượu
+            p.product-viewer 
+              span 
+                i.fa.fa-eye(aria-hidden="true")
+                | 99 Khách hàng đang đem sản phẩm này !
+            p.product-sapo Đánh giá:
+              span Chai đựng rượu 750ml nắp gia công iSOGLASS là sản phẩm thủy tinh cao cấp, được thiết kế đẹp mắt, in hoa văn và logo theo yêu cầu khách hàng. Liên hệ: info@isoglass.com.vn hoặc hotline: 0963 181 517.
+            p.product-contact 
+              a(href="https://zalo.me/0963181517", target="_blank", rel="noopener noreferrer nofollow") Liên hệ ngay
+          .product-header-viewer 
+            .product-image
+              figure 
+                img(src="../../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg", alt="Chai thuỷ tinh đựng nước giá tốt tại TP.HCM", srcset="../../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg 2x")
+              .product-image-show 
+                a(href="#", rel="noopener noreferrer nofollow")
+                  i.fa.fa-expand(aria-hidden="true")
+                  span Click để mở rộng
+      include ../section/product/tab-infomation 
     include ./footer/prefooter 
     include ./footer/footer
     block scriptProductDetails

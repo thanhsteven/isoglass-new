@@ -1,1 +1,112 @@
-@use "./section/trang-san-pham";
+@use "../abstracts" as *;
+@use "../section/product";
+.product {
+  &-main-wrapper {
+    margin-top: 30px;
+  }
+  &-header {
+    @include flexbox(row-reverse, stretch, space-between, 20px);
+    &-info {
+      flex: 0 0 50%;
+      @include flexbox(column, stretch, flex-start, 10px);
+      h1 {
+        color: $primaryColor;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 36px;
+      }
+    }
+    &-viewer {
+      flex: 0 0 50%;
+    }
+  }
+  &-meta {
+    span {
+      display: block;
+      font-weight: 700;
+      line-height: 22px;
+      margin-block: 10px;
+      font-size: 20px;
+    }
+    time {
+      font-weight: 400;
+      font-size: 18px;
+      margin-left: 15px;
+    }
+    a {
+      font-size: 18px;
+      margin-left: 20px;
+    }
+  }
+  &-viewer {
+    span {
+      font-size: 18px;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  &-sapo {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 10px;
+    span {
+      display: block;
+      margin-top: 10px;
+      line-height: 28px;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+  &-contact {
+    background-color: $primaryColor;
+    border-radius: $border4;
+    text-align: center;
+    border: 2px solid $primaryColor;
+    a {
+      display: block;
+      color: #fff;
+      padding: 14px 20px;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all linear 0.3s;
+    }
+    &:hover {
+      background-color: #fff;
+      a {
+        color: $primaryColor;
+      }
+    }
+  }
+  &-image {
+    border-radius: $border12;
+    position: relative;
+    figure {
+      img {
+        border-radius: $border12;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-show {
+      background-color: #fff;
+      width: 50px;
+      padding-inline: 20px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 100rem;
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      a {
+        color: $textColor;
+        span {
+          margin-left: 10px;
+          display: none;
+        }
+      }
+    }
+  }
+}

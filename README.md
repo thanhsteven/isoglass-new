@@ -7,7 +7,7 @@ pug chai-thuy-tinh.pug --watch --pretty --out html
 pug ly-thuy-tinh.pug --watch --pretty --out html
 pug chai-thuy-tinh-dung-ruou.pug --watch --pretty --out html
 
-pug product.pug --watch --pretty --out html
+pug bai-san-pham.pug --watch --pretty --out html
 pug in-logo-ly-thuy-tinh.pug --watch --pretty --out html
 
 pug blog.pug --watch --pretty --out html
@@ -19,6 +19,7 @@ sass ./sass/layout/main.scss ./style/main.css --watch
 sass ./sass/layout/main-cate.scss ./style/main-cate.css --watch
 sass ./sass/layout/sub-cate.scss ./style/sub-cate.css --watch
 sass ./sass/layout/post.scss ./style/post.css --watch
+sass ./sass/layout/product.scss ./style/product.css --watch
 
 sass ./sass/home.scss ./style/home.css --watch
 sass ./sass/about-us.scss ./style/about-us.css --watch
