@@ -19,13 +19,16 @@ html(lang="vi")
     +secTitleBase("Tin tức tổng hợp iSOGLASS", "../../images/hosting/background-title-blog.jpg")
     main.main-post 
       .container 
-        article.article-main 
-          header 
-            h1 tiêu đề chính h1 
-            p đoạn mô tả ngắn
-          figure 
-            img(src="", alt="")
-            figcaption
+        article.post-main 
+          header.post-header 
+            block h1 
+              h1 tiêu đề chính h1 
+            block sapo 
+              p đoạn mô tả ngắn
+          figure.post-image 
+            block image 
+              img(src="", alt="")
+              figcaption
           section 
             h2 Viết layout bài viết
             ul
