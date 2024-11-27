@@ -142,7 +142,7 @@ footer#footer.footer
             ul.footer-info-list 
               each item in footer_column_1
                 li.footer-info-list-item 
-                  i.fa(class=item.icon)(aria-hidden="true")
+                  i.fa(class=item.icon, aria-hidden="true")
                   if (item.href)
                     a(href=item.href target="_blank" rel=`noopener noreferrer ${item.follow}`)
                       span=item.text
@@ -189,7 +189,7 @@ footer#footer.footer
               each item in footer_column_5
                 li.footer-social-list-item 
                   a(href=item.href, target="_blank", rel="noopener noreferrer nofollow")
-                    i.fa(class=item.icon)(aria-hidden="true")
+                    i.fa(class=item.icon, aria-hidden="true")
           .footer-legal 
             .footer-legal-wrapper 
               p.footer-legal-header Chứng nhận Bộ công thương
