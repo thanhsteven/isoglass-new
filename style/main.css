@@ -1604,6 +1604,7 @@ body {
   color: #fff;
   font-weight: 600;
   font-size: 15px;
+  margin-block: unset;
 }
 @media screen and (max-width: 992px) {
   .footer-legal-header {
@@ -1638,6 +1639,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   text-wrap: nowrap;
+  padding-left: 6px;
 }
 .footer-contact-image {
   margin-top: 8px;
@@ -1670,7 +1672,7 @@ body {
   margin-block: 6px;
 }
 .footer-inner-wrapper .footer-info-list-item span {
-  font-weight: 500;
+  font-weight: 600;
   color: inherit;
   font-size: inherit;
   line-height: inherit;

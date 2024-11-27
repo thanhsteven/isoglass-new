@@ -18,6 +18,7 @@ pug bai-viet-mau.pug --watch --pretty --out html
 sass ./sass/layout/main.scss ./style/main.css --watch
 sass ./sass/layout/main-cate.scss ./style/main-cate.css --watch
 sass ./sass/layout/sub-cate.scss ./style/sub-cate.css --watch
+sass ./sass/layout/post.scss ./style/post.css --watch
 
 sass ./sass/home.scss ./style/home.css --watch
 sass ./sass/about-us.scss ./style/about-us.css --watch
@@ -30,3 +31,4 @@ sass ./sass/chai-thuy-tinh-dung-ruou.scss ./style/chai-thuy-tinh-dung-ruou.css -
 <!-- - Blog CSS - -->
 
 sass ./sass/layout/blog.scss ./style/blog.css --watch
+sass ./sass/layout/post.scss ./style/post.css --watch
