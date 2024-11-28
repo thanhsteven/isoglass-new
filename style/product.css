@@ -57,10 +57,23 @@
   border-top: 3px solid #1a2c75;
 }
 
+.product-usp {
+  background-image: url("../../images/hosting/isoglass-background.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+}
 .product-usp-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+.product-usp-image {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.product-usp-image img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .sidebar {

@@ -17,13 +17,13 @@
     },
   ]
 
-section.product-usp 
-  h2 Đặc điểm nổi bật từ iSOGLASS 
-  .product-usp-wrapper 
-    each item in product_usp
-      .product-usp-item 
-        .product-usp-image 
-          img(src=item.image, alt=item.textVi, srcset=`${item.image} 2x`)
-        .product-usp-button 
-          p=item.textEng
-          p=item.textVi
+  section.product-usp 
+    h2 Đặc điểm nổi bật từ iSOGLASS 
+    .product-usp-wrapper 
+      each item in product_usp
+        .product-usp-item 
+          .product-usp-image 
+            img(src=item.image, alt=item.textVi, srcset=`${item.image} 2x`)
+          .product-usp-button 
+            p=item.textEng
+            p=item.textVi
