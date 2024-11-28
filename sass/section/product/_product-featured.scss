@@ -24,8 +24,12 @@
   }
   &-button {
     background-color: #1c212c;
+    padding: 25px 30px;
+    margin-top: 20px;
+    border-radius: $border12;
     p {
       color: #f9f1d9;
+      text-align: center;
     }
   }
 }

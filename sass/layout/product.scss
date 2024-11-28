@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
-@use "../section/product";
 @use "../component/sidebar";
+@use "../section/product";
 @use "../section/main-cate/chai-thuy-tinh/sidebar-chai-thuy-tinh";
 .product {
   &-main {

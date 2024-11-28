@@ -1,82 +1,3 @@
-.tab-info-wrapper {
-  width: 100%;
-  margin-top: 20px;
-}
-.tab-info-head {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: #fff;
-  cursor: pointer;
-}
-.tab-info-list span {
-  display: block;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #1a2c75;
-  padding: 20px;
-  pointer-events: none;
-}
-.tab-info-list:nth-child(2) {
-  border-left: 1px solid rgba(0, 0, 0, 0.1019607843);
-  border-right: 1px solid rgba(0, 0, 0, 0.1019607843);
-}
-.tab-info-list:first-child {
-  border-left: 1px solid rgba(0, 0, 0, 0.1019607843);
-}
-.tab-info-list:last-child {
-  border-right: 1px solid rgba(0, 0, 0, 0.1019607843);
-}
-.tab-info-body {
-  margin-top: 20px;
-}
-.tab-info-content {
-  visibility: hidden;
-  opacity: 0;
-  display: none;
-  transition: all linear 0.3s;
-  padding: 20px;
-  background-color: #f8f8f8;
-  border-radius: 12px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-}
-.tab-info-content p {
-  font-size: 14px;
-  color: #333;
-  margin-block: 10px;
-}
-
-.tab-active {
-  display: block;
-  visibility: visible;
-  opacity: 1;
-  background-color: #f8f8f8;
-}
-.tab-active span {
-  border-top: 3px solid #1a2c75;
-}
-
-.product-featured {
-  background-image: url("../../images/hosting/isoglass-background.jpg");
-  background-repeat: repeat;
-  background-size: cover;
-  background-position: center;
-}
-.product-featured-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.product-featured-image {
-  border-radius: 12px;
-  overflow: hidden;
-}
-.product-featured-image img {
-  width: 100%;
-  object-fit: cover;
-}
-
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -175,6 +96,98 @@
   .sidebar-close {
     display: block;
   }
+}
+
+.tab-info-wrapper {
+  width: 100%;
+  margin-top: 20px;
+}
+.tab-info-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  cursor: pointer;
+}
+.tab-info-list span {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1a2c75;
+  padding: 20px;
+  pointer-events: none;
+}
+.tab-info-list:nth-child(2) {
+  border-left: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-right: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.tab-info-list:first-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.tab-info-list:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.tab-info-body {
+  margin-top: 20px;
+}
+.tab-info-content {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  transition: all linear 0.3s;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.tab-info-content p {
+  font-size: 14px;
+  color: #333;
+  margin-block: 10px;
+}
+
+.tab-active {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  background-color: #f8f8f8;
+}
+.tab-active span {
+  border-top: 3px solid #1a2c75;
+}
+
+.product-featured {
+  background-image: url("../../images/hosting/isoglass-background.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+}
+.product-featured-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-block: 40px;
+}
+.product-featured-title {
+  color: #1a2c75;
+  font-size: 22px;
+  text-align: center;
+}
+.product-featured-image {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.product-featured-image img {
+  width: 100%;
+  object-fit: cover;
+}
+.product-featured-button {
+  background-color: #1c212c;
+  padding: 15px 30px;
+  margin-top: 20px;
+}
+.product-featured-button p {
+  color: #f9f1d9;
 }
 
 .category-main-sidebar-title {
