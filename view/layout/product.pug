@@ -47,6 +47,15 @@ html(lang="vi")
                 a(href="#", rel="noopener noreferrer nofollow")
                   i.fa.fa-expand(aria-hidden="true")
                   span Click để mở rộng
+        section.product-content  
+          .product-content-wrapper 
+            .product-content-extra
+              .product-table 
+                block productTable 
+              block productExtraContent 
+            aside.product-content-sidebar 
+              include ../section/main-cate/chai-thuy-tinh/sidebar-chai-thuy-tinh
+              include ./sidebar
       include ../section/product/tab-infomation 
     include ./footer/prefooter 
     include ./footer/footer

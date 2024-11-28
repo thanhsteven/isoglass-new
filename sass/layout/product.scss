@@ -1,13 +1,16 @@
 @use "../abstracts" as *;
 @use "../section/product";
+@use "../component/sidebar";
+@use "../section/main-cate/chai-thuy-tinh/sidebar-chai-thuy-tinh";
 .product {
   &-main-wrapper {
     margin-top: 30px;
   }
   &-header {
-    @include flexbox(row-reverse, stretch, space-between, 20px);
+    @include flexbox(row-reverse, stretch, space-between, null);
     &-info {
       flex: 0 0 50%;
+      padding-left: 20px;
       @include flexbox(column, stretch, flex-start, 10px);
       h1 {
         color: $primaryColor;
@@ -26,7 +29,7 @@
       font-weight: 700;
       line-height: 22px;
       margin-block: 10px;
-      font-size: 20px;
+      font-size: 18px;
     }
     time {
       font-weight: 400;
@@ -92,20 +95,121 @@
     }
     &-show {
       background-color: #fff;
-      width: 50px;
-      padding-inline: 20px;
-      height: 50px;
-      line-height: 50px;
-      border-radius: 100rem;
+      box-shadow: $shadow;
+      border-radius: 30px;
       position: absolute;
       left: 20px;
       bottom: 20px;
       a {
         color: $textColor;
+        @include flexbox(row, center, center, null);
+        flex-wrap: nowrap;
+        min-width: 50px;
+        height: 50px;
+        padding-right: 0px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: padding-right ease 0.4s;
         span {
-          margin-left: 10px;
-          display: none;
+          max-width: 0px;
+          overflow: hidden;
+          font-weight: 600;
+          padding-left: 0px;
+          padding-right: 0px;
+          white-space: nowrap;
+          transition: max-width ease 0.4s;
         }
+        i {
+          display: block;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+        }
+        &:hover {
+          padding-right: 15px;
+          span {
+            max-width: 280px;
+          }
+        }
+      }
+    }
+  }
+  &-content {
+    &-wrapper {
+      @include flexbox(row, stretch, flex-start, null);
+    }
+    &-extra {
+      flex: 0 0 75%;
+      h2,
+      h3 {
+        color: $primaryColor;
+        font-weight: 700;
+        line-height: 28px;
+        margin-block: 10px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: justify;
+        margin-block: 15px;
+      }
+      li {
+        margin-block: 10px;
+      }
+    }
+    &-sidebar {
+      flex: 0 0 25%;
+      padding-left: 20px;
+    }
+  }
+  &-table {
+    border-radius: $border12;
+    background-color: #fff;
+    border: 1px solid $borderColor;
+    overflow: hidden;
+    h2 {
+      padding-left: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      th,
+      td {
+        padding: 10px 15px;
+        text-align: left;
+        border-top: 1px solid $borderColor;
+        border-right: 1px solid $borderColor;
+      }
+      thead {
+        th {
+          color: $primaryColor;
+        }
+      }
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+        td {
+          color: #555;
+        }
+      }
+      th {
+        font-weight: bold;
+        font-size: 16px;
       }
     }
   }
