@@ -57,21 +57,22 @@
   border-top: 3px solid #1a2c75;
 }
 
-.product-usp {
+.product-featured {
   background-image: url("../../images/hosting/isoglass-background.jpg");
   background-repeat: repeat;
   background-size: cover;
+  background-position: center;
 }
-.product-usp-wrapper {
+.product-featured-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.product-usp-image {
+.product-featured-image {
   border-radius: 12px;
   overflow: hidden;
 }
-.product-usp-image img {
+.product-featured-image img {
   width: 100%;
   object-fit: cover;
 }
@@ -512,6 +513,11 @@
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
+  transition: all linear 0.2s;
+}
+.product-banner-button:hover {
+  background-color: #b59d78;
+  color: #1a2c75;
 }
 
 /*# sourceMappingURL=product.css.map */

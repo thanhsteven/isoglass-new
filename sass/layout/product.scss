@@ -3,8 +3,10 @@
 @use "../component/sidebar";
 @use "../section/main-cate/chai-thuy-tinh/sidebar-chai-thuy-tinh";
 .product {
-  &-main-wrapper {
-    margin-top: 30px;
+  &-main {
+    &-wrapper {
+      margin-top: 30px;
+    }
   }
   &-header {
     @include flexbox(row-reverse, stretch, space-between, null);
@@ -263,6 +265,11 @@
       font-weight: 600;
       font-size: 14px;
       text-transform: uppercase;
+      transition: all linear 0.2s;
+      &:hover {
+        background-color: $secondColor;
+        color: $primaryColor;
+      }
     }
   }
 }

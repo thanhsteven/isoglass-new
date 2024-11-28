@@ -1,5 +1,5 @@
 @use "../../abstracts" as *;
-.product-usp {
+.product-featured {
   background-image: url("../../images/hosting/isoglass-background.jpg");
   background-repeat: repeat;
   background-size: cover;
@@ -7,6 +7,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    padding-block: 40px;
+  }
+  &-title {
+    color: $primaryColor;
+    font-size: 22px;
+    text-align: center;
   }
   &-image {
     border-radius: $border12;
@@ -14,6 +20,12 @@
     img {
       width: 100%;
       object-fit: cover;
+    }
+  }
+  &-button {
+    background-color: #1c212c;
+    p {
+      color: #f9f1d9;
     }
   }
 }
