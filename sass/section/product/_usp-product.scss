@@ -1,0 +1,21 @@
+@use "../../abstracts" as *;
+.product-usp {
+  background-image: url("../../images/hosting/isoglass-background.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  &-item {
+  }
+  &-image {
+    border-radius: $border12;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

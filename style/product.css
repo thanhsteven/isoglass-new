@@ -57,6 +57,12 @@
   border-top: 3px solid #1a2c75;
 }
 
+.product-usp-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -365,6 +371,9 @@
 .product-image-show a:hover span {
   max-width: 280px;
 }
+.product-content {
+  margin-bottom: unset;
+}
 .product-content-wrapper {
   display: flex;
   flex-direction: row;
@@ -389,7 +398,7 @@
 }
 .product-content-extra p {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 28px;
   text-align: justify;
   margin-block: 15px;
@@ -437,6 +446,59 @@
 .product-table table th {
   font-weight: bold;
   font-size: 16px;
+}
+.product-banner {
+  margin-bottom: unset;
+  margin-top: unset;
+}
+.product-banner-image {
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.product-banner-image img {
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform ease 0.5s;
+}
+.product-banner-image:hover img {
+  transform: scale(1.07);
+}
+.product-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 15px;
+  max-width: 250px;
+  position: absolute;
+  top: 20%;
+  left: 40px;
+}
+.product-banner-subtitle {
+  color: #fff;
+  font-size: 14px;
+}
+.product-banner-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+.product-banner-desc {
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+}
+.product-banner-button {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  width: fit-content;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=product.css.map */
