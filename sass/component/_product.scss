@@ -1,5 +1,5 @@
 @use "../abstracts" as *;
-//- CSS Product 01
+// CSS Product 01
 .product-item-1 {
   &-wrapper {
     border-radius: $border12;
@@ -320,6 +320,16 @@
       background-color: transparent;
       border: 1px solid $primaryColor;
       color: $primaryColor;
+    }
+  }
+}
+// CSS Product 04
+.product-item-4 {
+  &-item {
+    border-radius: $border12;
+    overflow: hidden;
+    img {
+      border-radius: $border12;
     }
   }
 }

@@ -1,0 +1,30 @@
+- 
+  var product_seen = [
+    {
+      image: "../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-1.jpg",
+      title: "Bình thủy tinh đựng nước cao cấp iSO",
+      href: "#"
+    },
+    {
+      image: "../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-1.jpg",
+      title: "Bình thủy tinh đựng nước cao cấp iSO",
+      href: "#"
+    },
+    {
+      image: "../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-1.jpg",
+      title: "Bình thủy tinh đựng nước cao cấp iSO",
+      href: "#"
+    },
+    {
+      image: "../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-1.jpg",
+      title: "Bình thủy tinh đựng nước cao cấp iSO",
+      href: "#"
+    },
+  ]
+
+section.product-seen 
+  .container 
+    h2.product-seen-title Sản phẩm đã xem
+    .product-seen-wrapper 
+      each item in product_seen
+        +productStyle04(item.href, item.image, item.title)
