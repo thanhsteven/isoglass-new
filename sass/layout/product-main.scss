@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
-@forward "../component/sidebar";
-@forward "../section/product";
+@use "../component/sidebar";
+@use "../section/product-main";
 .product {
   &-main {
     &-wrapper {

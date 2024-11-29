@@ -158,38 +158,50 @@
 }
 
 .product-featured {
+  padding-block: 40px;
   background-image: url("../../images/hosting/isoglass-background.jpg");
-  background-repeat: repeat;
-  background-size: cover;
 }
 .product-featured-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding-block: 40px;
+  padding-block: 20px;
 }
 .product-featured-title {
   color: #1a2c75;
   font-size: 22px;
   text-align: center;
+  font-weight: 700;
 }
 .product-featured-image {
   border-radius: 12px;
   overflow: hidden;
 }
+.product-featured-image:hover img {
+  transform: scale(1.05);
+}
 .product-featured-image img {
   width: 100%;
   object-fit: cover;
+  transform: scale(1);
+  transition: all linear 0.3s;
 }
-.product-featured-button {
+.product-featured-usp {
   background-color: #1c212c;
   padding: 25px 30px;
   margin-top: 20px;
   border-radius: 12px;
 }
-.product-featured-button p {
+.product-featured-usp p {
   color: #f9f1d9;
   text-align: center;
+}
+.product-featured-usp-title {
+  margin-bottom: 8px;
+}
+.product-featured-usp-sub {
+  font-style: italic;
+  letter-spacing: 1px;
 }
 
 .product-main-wrapper {
