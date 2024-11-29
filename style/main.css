@@ -807,6 +807,14 @@ body {
   color: #1a2c75;
 }
 
+.product-item-4-item {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.product-item-4-item img {
+  border-radius: 12px;
+}
+
 .title-wrapper {
   display: flex;
   flex-direction: column;

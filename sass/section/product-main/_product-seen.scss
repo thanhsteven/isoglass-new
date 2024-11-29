@@ -1,0 +1,18 @@
+@use "../../abstracts" as *;
+.product {
+  &-seen {
+    &-title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.4rem;
+      color: $primaryColor;
+      text-transform: uppercase;
+    }
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+  }
+}

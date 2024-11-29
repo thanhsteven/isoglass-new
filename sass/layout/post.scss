@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
-@forward "../component/sidebar";
-@forward "./sidebar/sidebar-post";
+@use "../component/sidebar";
+@use "./sidebar/sidebar-post";
 .main-post {
   &-wrapper {
     display: grid;
