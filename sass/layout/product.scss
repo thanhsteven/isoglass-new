@@ -1,7 +1,6 @@
 @use "../abstracts" as *;
-@use "../component/sidebar";
-@use "../section/product";
-@use "../section/main-cate/chai-thuy-tinh/sidebar-chai-thuy-tinh";
+@forward "../component/sidebar";
+@forward "../section/product";
 .product {
   &-main {
     &-wrapper {

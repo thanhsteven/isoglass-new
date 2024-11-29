@@ -17,15 +17,15 @@
     }
   ]
 //- Html code
-.container-fluid 
-  .product-featured 
-    .container 
-      h2.product-featured-title Đặc điểm nổi bật từ iSOGLASS 
-      .product-featured-wrapper 
-        each item in product_featured
-          .product-featured-item 
-            .product-featured-image 
-              img(src=item.image, alt=item.subtitle, srcset=`${item.image} 2x`)
-            .product-featured-button 
-              p=item.title
-              p=item.subtitle
+
+section.product-featured 
+  .container 
+    h2.product-featured-title Đặc điểm nổi bật từ iSOGLASS 
+    .product-featured-wrapper 
+      each item in product_featured
+        .product-featured-item 
+          .product-featured-image 
+            img(src=item.image, alt=item.subtitle, srcset=`${item.image} 2x`)
+          .product-featured-usp 
+            p.product-featured-usp-title=item.title
+            p.product-featured-usp-sub=item.subtitle

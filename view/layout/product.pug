@@ -1,4 +1,6 @@
-include ../mixin/mixins.pug
+include ../mixin/mixins
+include ../mixin/products
+include ../mixin/categories
 doctype html
 html(lang="vi")
   head
@@ -51,7 +53,6 @@ html(lang="vi")
                   block productTable 
                 block productExtraContent 
               aside.product-content-sidebar 
-                include ../section/main-cate/chai-thuy-tinh/sidebar-chai-thuy-tinh
                 include ./sidebar
         section.product-banner
           .product-banner-image
