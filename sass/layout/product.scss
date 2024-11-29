@@ -34,12 +34,13 @@
     }
     time {
       font-weight: 400;
-      font-size: 18px;
-      margin-left: 15px;
+      font-size: 16px;
+      margin-left: 10px;
     }
     a {
-      font-size: 18px;
-      margin-left: 20px;
+      font-size: 16px;
+      line-height: 1.4rem;
+      margin-left: 12px;
     }
   }
   &-viewer {
@@ -54,12 +55,13 @@
     font-weight: 700;
     font-size: 20px;
     margin-top: 10px;
+    text-align: justify;
     span {
       display: block;
       margin-top: 10px;
       line-height: 28px;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   &-contact {

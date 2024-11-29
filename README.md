@@ -33,5 +33,3 @@ sass ./sass/chai-thuy-tinh-dung-ruou.scss ./style/chai-thuy-tinh-dung-ruou.css -
 
 sass ./sass/layout/blog.scss ./style/blog.css --watch
 sass ./sass/layout/post.scss ./style/post.css --watch
-
-sass ./sass/product-page.scss ./style/product-page.css --watch
