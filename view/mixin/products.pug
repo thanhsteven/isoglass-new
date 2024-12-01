@@ -46,5 +46,6 @@ mixin productStyle04(href, image, title)
     a.product-item-4-link(href=href, target="_blank", rel="noopener noreferrer nofollow")
       .product-item-4-image 
         img(src=image, alt=title, srcset=`${image} 2x`)
-      .product-item-4-title
-        h3=title 
+    .product-item-4-title
+      a.product-item-4-link(href="#", target="_blank", rel="noopener noreferrer nofollow")
+        h3=title
