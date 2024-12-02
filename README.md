@@ -24,7 +24,7 @@ sass ./sass/layout/product.scss ./style/product.css --watch
 
 sass ./sass/home.scss ./style/home.css --watch
 sass ./sass/about-us.scss ./style/about-us.css --watch
-sass ./sass/contact.scss ./style/contact.css --watch
+sass ./sass/contact-us.scss ./style/contact-us.css --watch
 sass ./sass/chai-thuy-tinh-cat.scss ./style/chai-thuy-tinh-cat.css --watch
 sass ./sass/ly-thuy-tinh-cat.scss ./style/ly-thuy-tinh-cat.css --watch
 sass ./sass/chai-thuy-tinh-dung-ruou.scss ./style/chai-thuy-tinh-dung-ruou.css --watch
