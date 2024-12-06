@@ -336,17 +336,18 @@
     color: $textColor;
     font-size: 16px;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 22px;
   }
   &-title {
     h3 {
       font-size: 16px;
       color: $textColor;
       font-weight: 600;
-      line-height: 22px;
+      line-height: inherit;
       text-align: center;
       margin-top: 10px;
       padding-inline: 30px;
     }
   }
 }
+
