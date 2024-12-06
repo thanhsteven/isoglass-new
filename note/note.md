@@ -8,3 +8,4 @@
   => CSS của sidebar này thì nằm trong sass/component vì là cái dùng đi dùng lại
 
 - sidebar list --> chỉ sử dụng ở danh mục cha thôi, còn danh mục con thì không cần sử dụng --> viết thẳng CSS trong file danh-muc-cha là được.
+
