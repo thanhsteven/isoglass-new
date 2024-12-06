@@ -1,0 +1,144 @@
+@use "../../abstracts" as *;
+.review-and-rating {
+  &-wrapper {
+    @include flexbox(row, stretch, space-between, 15px);
+  }
+}
+
+.review {
+  &-wrapper {
+    flex: 0 0 65%;
+    padding-block: 10px;
+  }
+  &-list {
+    width: 100%;
+    max-height: 650px;
+    overflow-y: auto;
+    padding-right: 14px;
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #1a2c75;
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #f8f8f8;
+    }
+  }
+  &-item {
+    @include flexbox(row, center, space-between, 10px);
+    margin-top: 15px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+    border-bottom: 1px solid $borderColor;
+    &-avatar {
+      flex: 0 0 12%;
+      max-width: 80px;
+      img {
+        border-radius: 100rem;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-comment {
+      flex: 0 0 85%;
+      padding-right: 20px;
+    }
+    &-info {
+      @include flexbox(row, center, space-between, 10px);
+      &-name {
+        span {
+          font-weight: 700;
+          font-size: 18px;
+          color: $primaryColor;
+        }
+      }
+      &-date {
+        span {
+          color: rgba($color: $textColor, $alpha: 0.5);
+        }
+      }
+    }
+    &-content {
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &-reply {
+      a {
+        color: $primaryColor;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.rating {
+  &-wrapper {
+    @include flexbox(column, stretch, flex-start, null);
+    padding-block: 10px;
+  }
+  &-title {
+    color: $primaryColor;
+    font-size: 18px;
+    font-weight: 600;
+    margin-block: unset;
+    line-height: 28px;
+  }
+  &-notes {
+    margin-block: unset;
+  }
+  &-star {
+    &-wrapper {
+      @include flexbox(row, center, flex-start, 10px);
+    }
+    &-icon {
+      margin-left: 5px;
+      @include flexbox(row, center, flex-start, 5px);
+    }
+  }
+  &-comment {
+    &-title {
+      display: block;
+      margin-bottom: 4px;
+    }
+    &-content {
+      width: 100%;
+      height: 180px;
+      border: 1px solid $borderColor;
+      border-radius: $border8;
+      padding: 15px;
+    }
+  }
+  &-author {
+    @include flexbox(column, stretch, flex-start, 4px);
+    &-input {
+      border: 1px solid $borderColor;
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: $border8;
+    }
+  }
+  &-email {
+    @include flexbox(column, stretch, flex-start, 4px);
+    &-input {
+      border: 1px solid $borderColor;
+      border-radius: $border8;
+      padding: 10px 15px;
+    }
+  }
+  &-submit {
+    &-button {
+      background-color: $primaryColor;
+      border-radius: $border8;
+      color: #fff;
+      padding: 10px 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}

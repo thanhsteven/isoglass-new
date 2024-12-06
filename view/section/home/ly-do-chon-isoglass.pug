@@ -1,0 +1,18 @@
+mixin featured(icon, title, description)
+  .featured-service 
+    .featured-service-image 
+      img(src=icon, alt=title)
+    h3.featured-service-title=title 
+    p.featured-service-desc=description
+
+section.ly-do-chon-iso
+  .container
+    .ly-do-chon-iso-title
+      +title("Tại sao chọn chúng tôi", "Lý do chọn iSOGLASS", "Từ những phác thảo đầu tiên đến sản phẩm hoàn thiện, chúng tôi mở ra những tiềm năng cho doanh nghiệp bạn qua những sản phẩm thuỷ tinh chất lượng và tinh tế.")
+    .ly-do-chon-iso-convert 
+      .ly-do-chon-iso-wrapper
+        +featured("../../images/icon/icon-03.png", "Một cho tất cả", "Chúng tôi cung cấp đa dịch vụ một cách toàn diện, tinh tế. Từ khâu tư vấn, thiết kế và sản xuất cho đến hoàn thiện sản phẩm để trao đến tay khách hàng")
+        +featured("../../images/icon/icon-01.png", "cá nhân hoá", "Linh hoạt trong khâu sản xuất, cung cấp các mẫu mã theo nhu cầu riêng biệt của khách hàng, mang đến sự độc đáo cho sản phẩm và trải nghiệm mà khách hàng mong muốn")
+        +featured("../../images/icon/icon-02.png", "dịch vụ chuyên nghiệp", "Mang đến dịch vụ chuyên nghiệp thông qua chuyên môn cao từ người thợ tay nghề và sự tận tâm với từng mẫu mã sản phẩm trong từng giai đoạn")
+      .ly-do-chon-iso-banner
+        img(src="../../images/hosting/ly-do-chon-isoglass-vietnam.jpg", alt="Lý do chọn iSOGLASS", srcset="../../images/hosting/ly-do-chon-isoglass-vietnam.jpg 2x")

@@ -1,0 +1,57 @@
+- 
+  var cate_chai_thuy_tinh = [
+    {
+      image: "../../images/chai-thuy-tinh/chai-thuy-tinh-gia-tot-san-xuat-tai-tphcm-02.jpg",
+      title: "Chai thuỷ tinh giá tốt - sản xuất tại TP.HCM",
+      count: "49 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/chai-thuy-tinh/chai-thuy-tinh-dung-ruou-gia-tot-tai-tp-hcm.jpg",
+      title: "Chai thuỷ tinh đựng rượu - sản xuất tại TP.HCM",
+      count: "36 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-san-xuat-tai-tp-hcm.jpg",
+      title: "Chai thuỷ tinh đựng nước - sản xuất tại TP.HCM",
+      count: "11 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/chai-thuy-tinh/bo-binh-ly-thuy-tinh.jpg",
+      title: "Bộ bình ly thuỷ tinh - giá tốt tại TP.HCM",
+      count: "2 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/chai-thuy-tinh/bo-binh-ly-thuy-tinh.jpg",
+      title: "Bộ bình ly thuỷ tinh - giá tốt tại TP.HCM",
+      count: "2 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/chai-thuy-tinh/bo-binh-ly-thuy-tinh.jpg",
+      title: "Bộ bình ly thuỷ tinh - giá tốt tại TP.HCM",
+      count: "2 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/chai-thuy-tinh/bo-binh-ly-thuy-tinh.jpg",
+      title: "Bộ bình ly thuỷ tinh - giá tốt tại TP.HCM",
+      count: "2 sản phẩm",
+      href: "#"
+    },
+    {
+      image: "../../images/chai-thuy-tinh/bo-binh-ly-thuy-tinh.jpg",
+      title: "Bộ bình ly thuỷ tinh - giá tốt tại TP.HCM",
+      count: "2 sản phẩm",
+      href: "#"
+    },
+  ]
+//- html thuần
+section.category-chai-thuy-tinh 
+  h2 Các loại chai thuỷ tinh thông dụng 
+  .category-main-cate-wrapper 
+    each item in cate_chai_thuy_tinh
+      +categoryStyle01(item.href, item.image, item.title, item.count)

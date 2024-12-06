@@ -1,0 +1,206 @@
+- 
+  var footer_column_1 = [
+    {
+      icon: "fa-map-marker",
+      text: "Số 26, Đường 12, Khu dân cư Sông Đà, Khu phố 6, Phường Hiệp Bình Chánh, Tp. Thủ Đức, Tp. Hồ Chí Minh",
+      href: null,
+      follow: null,
+    },
+    {
+      icon: "fa-envelope-o",
+      text: "Email: sales@isoglass.com.vn",
+      href: "mailto:sales@isoglass.com.vn",
+      follow: "nofollow",
+    },
+    {
+      icon: "fa-fax",
+      text: "Điện thoại: 0963 181 517",
+      href: "tel:0963181517",
+      follow: "nofollow",
+    },
+    {
+      icon: "fa-phone-square",
+      text: "Hotline: 0936 181 517",
+      href: "tel:0936181517",
+      follow: "nofollow",
+    },
+    {
+      icon: "fa-qrcode",
+      text: "Mã số thuế: 0315350858",
+      href: null,
+      follow: null,
+    },
+    {
+      icon: "fa-globe",
+      text: "Website: isoglass.com.vn",
+      href: "https://isoglass.com.vn",
+      follow: "dofollow",
+    },
+  ]
+
+- 
+  var footer_column_2 = [
+    {
+      name: "Ly thuỷ tinh",
+      title: "Ly thuỷ tinh sản xuất tại TP.HCM",
+      href: "./ly-thuy-tinh.html",
+    },
+    {
+      name: "Chai thuỷ tinh",
+      title: "Chai thuỷ tinh – Giá tốt tại TP.HCM",
+      href: "./chai-thuy-tinh.html",
+    },
+    {
+      name: "In logo ly thuỷ tinh",
+      title: "In logo ly thuỷ tinh làm quà tặng",
+      href: "#",
+    },
+    {
+      name: "Bình thuỷ tinh",
+      title: "Bình thuỷ tinh sản xuất tại TP.HCM",
+      href: "#",
+    },
+  ]
+
+- 
+  var footer_column_3 = [
+    {
+      name: "Giới thiệu",
+      href: "./gioi-thieu.html",
+    },
+    {
+      name: "Liên hệ",
+      href: "./lien-he.html",
+    },
+    {
+      name: "Hình ảnh nổi bật",
+      href: "#",
+    },
+    {
+      name: "Tin tức tổng hợp",
+      href: "./blog.html",
+    },
+  ]
+
+- 
+  var footer_column_4 = [
+    {
+      name: "Bảo mật",
+      href: "#",
+    },
+    {
+      name: "Bán hàng",
+      href: "#",
+    },
+    {
+      name: "Vận chuyển",
+      href: "#",
+    },
+  ]
+
+- 
+  var footer_column_5 = [
+    {
+      icon: "fa-twitter",
+      href: "#",
+    },
+    {
+      icon: "fa-facebook-square",
+      href: "#",
+    },
+    {
+      icon: "fa-linkedin-square",
+      href: "#",
+    },
+    {
+      icon: "fa-map-marker",
+      href: "#",
+    },
+    {
+      icon: "fa-pinterest",
+      href: "#",
+    },
+    {
+      icon: "fa-instagram",
+      href: "#",
+    },
+    {
+      icon: "fa-youtube-play",
+      href: "#",
+    },
+    {
+      icon: "fa-commenting",
+      href: "#",
+    },
+  ]
+
+//- HTML thuần
+footer#footer.footer 
+  .container 
+    .footer-wrapper 
+      .footer-column-1 
+        .footer-inner-wrapper 
+          a.footer-logo(href="./index.html", target="_blank", rel="noopener noreferrer")
+            img(src="../images/logo/isoglass-logo-footer-ver-2.png", alt="Logo footer iSOGLASS sản xuất và cung cấp chai thuỷ tinh và ly thuỷ tinh theo chuẩn iSO", srcset="../images/logo/isoglass-logo-footer-ver-2.png 2x")
+          .footer-info 
+            ul.footer-info-list 
+              each item in footer_column_1
+                li.footer-info-list-item 
+                  i.fa(class=item.icon, aria-hidden="true")
+                  if (item.href)
+                    a(href=item.href target="_blank" rel=`noopener noreferrer ${item.follow}`)
+                      span=item.text
+                  else 
+                    span=item.text
+      .footer-column-mid
+        .footer-column-2 
+          .footer-inner-list
+            p.footer-header Danh mục
+            ul.footer-info-list 
+              each item in footer_column_2
+                li.footer-info-list-item 
+                  a(href=item.href rel="noopener noreferrer" title=item.title)
+                    span=item.name
+        .footer-column-3 
+          .footer-inner-list
+            p.footer-header Về chúng tôi
+            ul.footer-info-list 
+              each item in footer_column_3
+                li.footer-info-list-item 
+                  a(href=item.href, target="_blank", rel="noopener noreferrer nofollow")
+                    span=item.name 
+        .footer-column-4 
+          .footer-inner-list
+            p.footer-header Chính sách
+            ul.footer-info-list 
+              each item in footer_column_4
+                li.footer-info-list-item 
+                  a(href=item.href, target="_blank", rel="noopener noreferrer nofollow")
+                    span=item.name 
+          .footer-contact 
+            span.footer-contact-text Chat nhanh Zalo
+            .footer-contact-image 
+              img(src="../../images/hosting/QR-code-Zalo.jpg", alt="Liên hệ báo giá qua Zalo")
+      .footer-column-5 
+        .footer-inner-wrapper  
+          .footer-download 
+            button.footer-download-btn(type="button")
+              i.fa.fa-arrow-circle-o-down(aria-hidden="true")
+            span Download Profile iSOGLASS
+          .footer-social 
+            p.footer-social-header Theo dõi chúng tôi 
+            ul.footer-social-list
+              each item in footer_column_5
+                li.footer-social-list-item 
+                  a(href=item.href, target="_blank", rel="noopener noreferrer nofollow")
+                    i.fa(class=item.icon, aria-hidden="true")
+          .footer-legal 
+            .footer-legal-wrapper 
+              p.footer-legal-header Chứng nhận Bộ công thương
+              a(href="", target="_blank", rel="noopener noreferrer nofollow")
+                img(src="../images/hosting/bo-cong-thuong.jpg", alt="Chứng nhận của Bộ công thương")
+  .footer-copy 
+    .container 
+      p Thiết kế bởi iSOGLASS 2023
+  .footer-modal
+include ./call-to-action

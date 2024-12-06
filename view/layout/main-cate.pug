@@ -1,0 +1,65 @@
+//- Layout danh mục sản phẩm chính
+include ../mixin/mixins
+include ../mixin/categories
+include ../mixin/products
+doctype html
+html(lang="vi")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block titleCategory
+      title Layout chính cho Menu chính trong Danh mục sản phẩm
+    block owlCarousel
+      - var useOwlCarousel = true ;
+      if useOwlCarousel
+        link(rel="stylesheet" href="../vendors/owl-carousel/css/owl.carousel.min.css")
+        link(rel="stylesheet" href="../vendors/owl-carousel/css/owl.theme.default.min.css")
+        script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+        script(src="../vendors/owl-carousel/js/owl.carousel.js")
+    block stylesheet
+      link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
+      link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
+      link(rel="stylesheet" href="../style/main.css")
+      link(rel="stylesheet" href="../style/main-cate.css")
+  body 
+    include ./header/header 
+    include ./menu/menu-2 
+    main.main-wrapper
+      block slideshow 
+      .container 
+        .category-main-breadcrumb
+          ul
+            li Trang chủ 
+            li Chai thủy tinh 
+        .category-main-heading
+          block H1category 
+        .category-main-rating 
+          span Đánh giá:
+          .category-main-rating-star 
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+        .category-main-short 
+          block sapo
+        .category-main-products 
+          block categoryProduct 
+        .category-main-wrapper
+          .category-main-content
+            block productsList 
+            .category-main-content-extra 
+              block article 
+          .category-main-sidebar
+            block sidebarCate 
+            include ./sidebar
+      block moreSection
+      block answerQuestion 
+      include ../section/common/review-and-rating
+    .category-main-modal 
+    block footer 
+      include ./footer/prefooter
+      include ./footer/footer
+  block scriptJS
+    script(src="../js/menu-2.js")
+    script(src="../js/categories.js") 

@@ -1,0 +1,35 @@
+- 
+  var team_isoglass = [
+    {
+      name: "Mr. Tiến Lượng",
+      position: "Founder",
+      avatar: "../../images/team-member/sai-tien-luong-tong-giam-doc-isoglass-viet-nam.jpg"
+    },
+    {
+      name: "Ms. Khánh Vy",
+      position: "Quản lý Marketing",
+      avatar: "../../images/team-member/khanh-vy-isoglass-viet-nam.jpg"
+    },
+    {
+      name: "Ms. Thi Mai",
+      position: "Quản lý Logistics",
+      avatar: "../../images/team-member/thi-mai-isoglass-viet-nam.jpg"
+    },
+    {
+      name: "Ms. Bích Ngân",
+      position: "Quản lý Sales",
+      avatar: "../../images/team-member/bich-ngan-isoglass-viet-nam.jpg"
+    },
+  ]
+
+section.doi-ngu-nhan-su 
+  .container 
+    +title(null, "Đội ngũ nhân sự", null)
+    .team-member-wrapper 
+      each item in team_isoglass
+        .team-member-item 
+          .team-member-image 
+            img(src=item.avatar, alt=item.name)
+          .team-member-position 
+            span=item.position
+          h3.team-member-name=item.name

@@ -1,0 +1,107 @@
+@use "../../abstracts" as *;
+.ly-do-chon-iso {
+  background-color: #f8efe0;
+  &-title {
+    .title-after {
+      font-weight: 400;
+    }
+    .subtitle {
+      display: none;
+    }
+  }
+  &-convert {
+    @include maxWidth($medium) {
+      @include flexbox(column-reverse, stretch, space-between, 10px);
+    }
+  }
+  &-wrapper {
+    --columns: 3;
+    --gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: var(--gap);
+    padding-inline: 15px;
+    margin-block: 30px;
+    @include minmax(993px, 1199px) {
+      --gap: 8px;
+      .featured-service {
+        padding-inline: 10px;
+      }
+    }
+    @include maxWidth($large) {
+      --gap: 12px;
+      padding-block: 20px;
+    }
+    @include maxWidth($medium) {
+      grid-template-columns: unset;
+      grid-auto-flow: column;
+      grid-auto-columns: 300px;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      overflow-x: auto;
+      margin-bottom: 15px;
+      &::-webkit-scrollbar {
+        @include square(8px);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $primaryColor;
+        border-radius: $border4;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #f8f8f8;
+      }
+    }
+  }
+  &-banner {
+    border-radius: $border12;
+    box-shadow: $shadow2;
+    overflow: hidden;
+    @include maxWidth($small) {
+      margin-top: 15px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.featured {
+  &-service {
+    border-radius: $border12;
+    background-color: transparent;
+    @include flexbox(column, center, stretch, 15px);
+    padding-inline: 15px;
+    @include maxWidth($large) {
+      padding-inline: 10px;
+    }
+    @include maxWidth($medium) {
+      scroll-snap-align: center;
+      word-break: break-word;
+    }
+    &-image {
+      @include square(150px);
+      border-radius: 100%;
+      @include maxWidth($small) {
+        @include square(140px);
+      }
+    }
+    &-title {
+      color: $primaryColor;
+      text-transform: uppercase;
+      font-size: clamp(18px, 20px, 24px);
+      font-weight: 700;
+    }
+    &-desc {
+      text-align: center;
+      text-align-last: center;
+      line-height: 24px;
+      @include maxWidth($small) {
+        text-align: justify;
+        font-size: 15px;
+      }
+    }
+  }
+}
+

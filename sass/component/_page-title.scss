@@ -1,0 +1,75 @@
+@use "../abstracts" as *;
+.page-title {
+  &-wrapper {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    padding-block: 40px;
+  }
+  &-entry {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.title-cat {
+  margin-top: unset;
+  margin-bottom: unset;
+  background-image: url("../../images/hosting/background-title-child-categories.jpg");
+  background-position: center;
+  background-size: cover;
+  &-wrapper {
+    @include flexbox(column, stretch, space-between, null);
+    padding-block: 40px;
+  }
+  &-title {
+    @include flexbox(row, center, center, 10px);
+  }
+  &-back {
+    display: inline-block;
+    a {
+      display: block;
+      line-height: 36px;
+      padding-inline: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+  &-heading {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  &-list {
+    margin-top: 26px;
+    @include flexbox(row, center, center, 20px);
+  }
+  &-item {
+    flex: 0 0 20%;
+    &-link {
+      @include flexbox(row, center, flex-start, 8px);
+    }
+    &-image {
+      @include square(40px);
+      border-radius: $border4;
+      object-fit: cover;
+    }
+    &-text {
+      @include flexbox(column, stretch, flex-start, 4px);
+    }
+    &-name {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &-count {
+      color: rgba($color: #fff, $alpha: 0.6);
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+}

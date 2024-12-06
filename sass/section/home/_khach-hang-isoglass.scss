@@ -1,0 +1,70 @@
+@use "../../abstracts" as *;
+.khach-hang-isoglass {
+  background-color: #f9f9f9;
+  padding-block: 40px;
+  .title {
+    font-size: 28px;
+  }
+  .title-after {
+    font-weight: 400;
+  }
+  .owl-stage-outer {
+    margin-top: 20px;
+  }
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 20%;
+    z-index: 350;
+    transition: all ease-in-out 0.2s;
+  }
+  .owl-prev {
+    left: -7%;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .owl-next {
+    right: -7%;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .owl-carousel {
+    &::before,
+    &::after {
+      content: "";
+      width: 70px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 300;
+    }
+    &::before {
+      left: -70px;
+    }
+    &::after {
+      right: -70px;
+    }
+  }
+  .owl-carousel:hover {
+    .owl-prev {
+      left: -5%;
+      visibility: visible;
+      opacity: 1;
+    }
+    .owl-next {
+      right: -5%;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+.khach-hang {
+  &-item {
+    cursor: pointer;
+    overflow: hidden;
+  }
+  &-image {
+    border-radius: $border12;
+  }
+}
+

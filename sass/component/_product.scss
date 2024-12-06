@@ -1,0 +1,352 @@
+@use "../abstracts" as *;
+// CSS Product 01
+.product-item-1 {
+  &-wrapper {
+    border-radius: $border12;
+    box-shadow: $shadow2;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .product-item-1 {
+        &-image img {
+          transform: scale(1.1);
+        }
+        &-hover {
+          opacity: 1;
+        }
+        &-content {
+          visibility: visible;
+        }
+        &-button {
+          visibility: visible;
+          opacity: 1;
+          @include maxWidth($large) {
+            transform: unset;
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    @include maxWidth($large) {
+      box-shadow: unset;
+      padding: 5px;
+    }
+  }
+  &-link {
+    display: block;
+    position: relative;
+  }
+  &-image {
+    aspect-ratio: 1/1;
+    border-radius: $border12;
+    overflow: hidden;
+    @include maxWidth($large) {
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: $border12;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1);
+      transition: transform ease 0.3s;
+    }
+  }
+  &-hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    transition: opacity ease-in-out 0.3s;
+    @include flexbox(column, center, center, null);
+    @include maxWidth($large) {
+      background-color: unset;
+      position: static;
+      opacity: unset;
+    }
+  }
+  &-content {
+    height: fit-content;
+    padding: 20px;
+    visibility: hidden;
+    @include maxWidth($large) {
+      padding-inline: 4px;
+      visibility: visible;
+      padding: unset;
+    }
+  }
+  &-title {
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-align: center;
+    padding-inline: 10px;
+    color: #fff;
+    @include maxWidth($large) {
+      color: $primaryColor;
+      margin-top: 10px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      margin-bottom: unset;
+      color: $primaryColor;
+      font-weight: 700;
+      font-size: 15px;
+      padding-inline: 10px;
+      overflow: hidden;
+    }
+  }
+  &-button {
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    padding: 8px 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    span {
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    @include maxWidth($large) {
+      &:hover {
+        background-color: $secondColor;
+      }
+      margin-top: 10px;
+      margin-inline: auto;
+      border: unset;
+      background-color: $primaryColor;
+      opacity: unset;
+      visibility: visible;
+      transform: unset;
+      position: static;
+    }
+  }
+}
+// CSS Product 02
+.product-item-2 {
+  &-wrapper {
+    @include flexbox(column, center, center, 10px);
+    border-radius: $border12;
+  }
+  &-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: $border12;
+    box-shadow: $shadow2;
+    overflow: hidden;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all ease 0.3s;
+    }
+  }
+  &-title {
+    color: $primaryColor;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.3rem;
+    padding-inline: 8px;
+    text-align: center;
+    transition: color ease 0.2s;
+    &:hover {
+      color: $secondColor;
+    }
+    @include maxWidth($medium) {
+      @include webkitBox(2);
+    }
+    @include maxWidth($small) {
+      font-size: 14px;
+    }
+  }
+  &-cats {
+    color: $secondColor;
+    font-size: 12px;
+    font-weight: 500;
+    padding-inline: 8px;
+    text-align: center;
+    width: 100%;
+  }
+}
+// CSS Product 03
+.product-item-3 {
+  &-wrapper {
+    @include flexbox(column, flex-start, space-between, null);
+    background-color: #fff;
+    border-radius: $border12;
+    box-shadow: $shadow;
+    min-width: 300px;
+    overflow: hidden;
+    max-height: 380px;
+    position: relative;
+    @include maxWidth($large) {
+      min-width: unset;
+    }
+    &:hover {
+      .product-item-3 {
+        &-hover {
+          transform: translateY(-60px);
+        }
+        &-image {
+          &-first {
+            visibility: hidden;
+            opacity: 0;
+          }
+          &-last {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+  &-link {
+    display: block;
+    width: 100%;
+  }
+  &-image {
+    border-top-left-radius: $border12;
+    border-top-right-radius: $border12;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+    }
+    &-first {
+      visibility: visible;
+      opacity: 1;
+      transition: all linear 0.3s;
+      position: absolute;
+      inset: 0;
+      z-index: 100;
+    }
+    &-last {
+      transform: scale(1);
+      transition: all linear 3s;
+      transition-duration: 0.5s;
+    }
+  }
+  &-hover {
+    width: 100%;
+    background-color: #fff;
+    border-bottom-left-radius: $border12;
+    border-bottom-right-radius: $border12;
+    padding-top: 10px;
+    transform: translateY(0);
+    z-index: 500;
+    transition: $transition;
+  }
+  &-content {
+    @include flexbox(column, flex-start, space-between, 4px);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  &-title {
+    @include flexbox(row, center, space-between, 15px);
+    a {
+      flex: 0 0 75%;
+      color: $primaryColor;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      @include webkitBox(2);
+    }
+  }
+  &-rating {
+    flex: 1 1 25%;
+    text-align: center;
+    span {
+      font-size: 14px;
+      color: $primaryColor;
+      font-weight: 700;
+    }
+    i.fa-star {
+      color: #eabf12;
+      font-size: 18px;
+      margin-left: 8px;
+    }
+  }
+  &-cate {
+    a {
+      color: $primaryColor;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  &-btn {
+    @include flexbox(row, center, space-between, 4px);
+    width: 100%;
+    margin-top: 10px;
+    &-hotline,
+    &-zalo {
+      color: #fff;
+      border: none;
+      outline: unset;
+      border-radius: $border8;
+      cursor: pointer;
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: all ease 0.2s;
+      @include maxWidth($medium) {
+        font-size: 12px;
+        font-weight: 600;
+      }
+      &:hover {
+        background-color: $primaryColor;
+        color: #fff;
+      }
+    }
+    &-zalo {
+      background-color: #3583f5;
+    }
+    &-hotline {
+      background-color: transparent;
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+    }
+  }
+}
+// CSS Product 04
+.product-item-4 {
+  &-item {
+    border-radius: $border12;
+    overflow: hidden;
+    img {
+      border-radius: $border12;
+    }
+  }
+  &-link {
+    color: $textColor;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+  &-title {
+    h3 {
+      font-size: 16px;
+      color: $textColor;
+      font-weight: 600;
+      line-height: 28px;
+      text-align: center;
+      margin-top: 10px;
+      padding-inline: 30px;
+    }
+  }
+}

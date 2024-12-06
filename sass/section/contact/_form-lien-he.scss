@@ -1,0 +1,43 @@
+@use "../../abstracts" as *;
+.form-contact {
+  &-wrapper {
+    @include flexbox(row, center, space-between, 20px);
+    @include maxWidth($medium) {
+      flex-direction: column-reverse;
+    }
+  }
+  &-info {
+    flex: 0 0 50%;
+  }
+  &-main {
+    flex: 0 0 50%;
+  }
+  &-title {
+    color: $primaryColor;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &-desc {
+    line-height: 26px;
+    margin-block: 10px;
+  }
+  &-list {
+    @include maxWidth($medium) {
+      padding-left: 10px;
+    }
+  }
+  &-item {
+    margin-top: 10px;
+    i.fa {
+      margin-right: 10px;
+      color: $primaryColor;
+      font-size: 20px;
+    }
+    span {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 25px;
+      color: $textColor;
+    }
+  }
+}

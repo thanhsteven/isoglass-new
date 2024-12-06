@@ -1,0 +1,48 @@
+//- Title Style 01
+mixin title(subtitle, title, titleAfter)
+  .title-wrapper 
+    if (subtitle)
+      span.subtitle=subtitle
+    h2.title=title
+    if (titleAfter)
+      p.title-after=titleAfter
+//- Page Title for Page, Categories
+mixin secTitleBase(title, image)
+  .page-title-wrapper(style=`background-image: url(${image})`)
+    .container 
+      p.page-title-entry=title
+      .page-title-breadcrumb
+//- Page Title for Child Categories
+mixin titleChildCate(title, image, childTitle, count)
+  .page-title-child
+    .container.page-title-child-wrapper
+      .page-title-child-title
+        .page-title-child-back 
+          a(href="#" rel="noopener noreferrer nofollow")
+            i.fa.fa-long-arrow-left(aria-hidden="true")
+        p.page-title-child-heading=title 
+      ul.page-title-child-list
+        each item in {}
+          li.page-title-child-item 
+            a.page-title-child-item-link(href="#")
+              img(src=image, alt=childTitle, srcset=`${image} 2x`)
+              span.page-title-child-item-name=childTitle 
+              span.page-title-child-item-count=count
+//- Button Product Style 01
+mixin btnProduct(text)
+  a.btn_product_ver1(class!=attributes.class href="#", target="_blank", rel="nofollow noopener noreferrer")
+    span=text 
+//- Button Product Style 02
+mixin btnProduct2(text)
+  a.btn-product-2(class!=attributes.class href="#", target="_blank", rel="nofollow noopener noreferrer")
+      span=text
+//- Button Zalo for CTA
+mixin btnZalo(text)
+  a.btn-zalo(class!=attributes.class, href="https://-zalo.me/0963181517", target="_blank", rel="noopener noreferrer nofollow")=text
+//- Button Order
+mixin btnOrder(text)
+  a.btn-order(href="", target="_blank", rel="noopener noreferrer nofollow", class!=attributes.class)=text
+//- Button Xem thêm sản phẩm
+mixin btnSeeMorePro(text)
+  a.btn-see-more-products(href="#", target="_blank", rel="noopener noreferrer nofollow")
+    span=text 

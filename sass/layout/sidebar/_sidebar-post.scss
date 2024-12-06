@@ -1,0 +1,40 @@
+@use "../../abstracts" as *;
+.sidebar-post {
+  border: 1px solid $borderColor;
+  border-radius: $border12;
+  margin-bottom: 15px;
+  &-title {
+    color: #fff;
+    background-color: $primaryColor;
+    border-top-left-radius: $border12;
+    border-top-right-radius: $border12;
+    padding: 15px 20px;
+    font-weight: 600;
+  }
+  &-list {
+    border-top: 1px solid $borderColor;
+    list-style: none;
+  }
+  &-item {
+    border-top: 1px solid $borderColor;
+    a {
+      @include flexbox(row, center, flex-start, 8px);
+      padding-block: 10px;
+      padding-inline: 20px;
+      span {
+        color: $textColor;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+      }
+      img {
+        @include square(40px);
+        object-fit: cover;
+        border-radius: $border4;
+      }
+    }
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
+}

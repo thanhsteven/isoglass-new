@@ -1,0 +1,23 @@
+extends ./view/layout/layout
+block titlePage 
+  title iSOGLASS sản xuất và cung cấp thủy tinh đạt chuẩn iSO tại Việt Nam 
+append styleSheet 
+  link(rel="stylesheet" href="../style/home.css")
+append mainHeading
+  h1 Sản xuất Chai thủy tinh và Ly thủy tinh theo tiêu chuẩn iSO tại TP.HCM 
+block main
+  main.main-wrapper
+    include ./view/section/home/banner-slideshow
+    include ./view/section/home/gioi-thieu-isoglass
+    include ./view/section/home/ly-do-chon-isoglass
+    include ./view/section/home/chai-thuy-tinh-cat
+    include ./view/section/home/chai-thuy-tinh-pro
+    include ./view/section/home/vo-hop-dung-ruou
+    include ./view/section/home/ly-thuy-tinh-cat
+    include ./view/section/home/ly-thuy-tinh-pro
+    include ./view/section/home/in-logo-ly-thuy-tinh
+    include ./view/section/common/tem-nhan-chai-ruou
+    include ./view/section/home/binh-thuy-tinh-pro
+    include ./view/section/common/con-so-noi-bat
+    include ./view/section/home/khach-hang-isoglass
+    include ./view/section/home/cam-nhan-khach-hang

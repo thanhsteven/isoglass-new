@@ -1,0 +1,34 @@
+- 
+  var chai_thuy_tinh_dung_ruou = [
+    {
+      menuChild: "Chai thuỷ tinh đựng nước",
+      image: "../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg",
+      count: "10 sản phẩm",
+    },
+    {
+      menuChild: "Chai thuỷ tinh đựng nước",
+      image: "../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg",
+      count: "10 sản phẩm",
+    },
+    {
+      menuChild: "Chai thuỷ tinh đựng nước",
+      image: "../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg",
+      count: "10 sản phẩm",
+    },
+  ]
+
+section.title-cat
+  .container.title-cat-wrapper
+    .title-cat-title
+      span.title-cat-back 
+        a(href="#" rel="noopener noreferrer nofollow")
+          i.fa.fa-long-arrow-left(aria-hidden="true")
+      p.title-cat-heading Chai thuỷ tinh đựng rượu sản xuất tại TP.HCM 
+    ul.title-cat-list
+      each item in chai_thuy_tinh_dung_ruou
+        li.title-cat-item 
+          a.title-cat-item-link(href="#")
+            img.title-cat-item-image(src=item.image, alt=item.menuChild, srcset=`${item.image} 2x`)
+            .title-cat-item-text
+              span.title-cat-item-name=item.menuChild 
+              span.title-cat-item-count=item.count

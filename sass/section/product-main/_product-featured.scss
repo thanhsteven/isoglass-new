@@ -1,0 +1,51 @@
+@use "../../abstracts" as *;
+.product {
+  &-featured {
+    padding-block: 40px;
+    background-image: url("../../images/hosting/isoglass-background.jpg");
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding-block: 20px;
+    }
+    &-title {
+      color: $primaryColor;
+      font-size: 22px;
+      text-align: center;
+      font-weight: 700;
+    }
+    &-image {
+      border-radius: $border12;
+      overflow: hidden;
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: all linear 0.3s;
+      }
+    }
+    &-usp {
+      background-color: #1c212c;
+      padding: 25px 30px;
+      margin-top: 20px;
+      border-radius: $border12;
+      p {
+        color: #f9f1d9;
+        text-align: center;
+      }
+      &-title {
+        margin-bottom: 8px;
+      }
+      &-sub {
+        font-style: italic;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

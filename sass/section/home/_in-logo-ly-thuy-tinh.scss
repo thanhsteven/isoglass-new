@@ -1,0 +1,119 @@
+@use "../../abstracts" as *;
+.in-logo-ly-thuy-tinh {
+  .title-wrapper {
+    gap: 10px;
+    @include maxWidth($small) {
+      gap: 15px;
+    }
+  }
+  .title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+  }
+  .title-after {
+    color: #fff;
+    font-size: 14px;
+    color: #ddd;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+// - CSS thành phần bên trong
+.in-logo {
+  &-container {
+    border-radius: 12px;
+    max-height: 550px;
+    position: relative;
+    overflow: hidden;
+    @include minmax($large, $extra-large) {
+      max-height: 450px;
+    }
+    @include maxWidth($medium) {
+      margin-inline: unset;
+      max-height: 250px;
+    }
+    &:hover {
+      .in-logo-background {
+        transform: scale(1.1);
+      }
+    }
+    &::after {
+      content: "";
+      background-color: rgba($color: #000, $alpha: 0.5);
+      position: absolute;
+      inset: 0;
+      z-index: 100;
+    }
+  }
+  &-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    transform: scale(1);
+    transition: $transition;
+    @include maxWidth($medium) {
+      aspect-ratio: unset;
+    }
+  }
+  &-link {
+    display: block;
+    padding-inline: 60px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    @include maxWidth($medium) {
+      top: 20px;
+      padding-inline: 30px;
+    }
+  }
+  &-wrapper {
+    @include flexbox(row, center, space-between, 15px);
+    margin-block: 20px;
+    @include maxWidth($medium) {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: 300px;
+      border-radius: $border12;
+      box-shadow: $shadow;
+      @include maxWidth(1100px) {
+        max-height: 200px;
+      }
+      @include maxWidth($small) {
+        scroll-snap-align: center;
+      }
+    }
+  }
+  &-button {
+    display: block;
+    margin-inline: auto;
+    background-color: #fff;
+    color: #3e3e3e;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color linear 0.3s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-20px);
+    z-index: 200;
+    &:hover {
+      background-color: #dedede;
+    }
+    span {
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.form-contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .form-contact-wrapper {
+    flex-direction: column-reverse;
+  }
+}
+.form-contact-info {
+  flex: 0 0 50%;
+}
+.form-contact-main {
+  flex: 0 0 50%;
+}
+.form-contact-title {
+  color: #1a2c75;
+  font-weight: 700;
+  font-size: 20px;
+}
+.form-contact-desc {
+  line-height: 26px;
+  margin-block: 10px;
+}
+@media screen and (max-width: 768px) {
+  .form-contact-list {
+    padding-left: 10px;
+  }
+}
+.form-contact-item {
+  margin-top: 10px;
+}
+.form-contact-item i.fa {
+  margin-right: 10px;
+  color: #1a2c75;
+  font-size: 20px;
+}
+.form-contact-item span {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #333;
+}
+
+.google-map {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=contact-us.css.map */

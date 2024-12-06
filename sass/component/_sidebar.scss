@@ -1,0 +1,88 @@
+@use "../abstracts" as *;
+//- CSS cho Sidebar liên hệ
+.sidebar {
+  @include flexbox(column, stretch, center, 15px);
+  &-zalo {
+    background-color: $primaryColor;
+    padding: 20px;
+    border-radius: $border12;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    p {
+      color: #fff;
+      font-weight: 600;
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+  &-contact {
+    border-radius: $border12;
+    box-shadow: $shadow;
+    @include flexbox(column, stretch, center, 15px);
+    padding: 20px;
+    a {
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: $border6;
+      padding: 10px;
+      text-align: center;
+      transition: all linear 0.2s;
+    }
+    &-call,
+    &-more {
+      background-color: $primaryColor;
+      color: #fff;
+      &:hover {
+        background-color: $secondColor;
+        color: $primaryColor;
+      }
+    }
+    &-zalo {
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+      &:hover {
+        background-color: $primaryColor;
+        color: #fff;
+      }
+    }
+  }
+  &-support {
+    p {
+      color: $textColor;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.4em;
+      padding-inline: 20px;
+      margin-bottom: 10px;
+    }
+    &-avatar {
+      @include flexbox(row, center, center, 8px);
+      padding-inline: 10px;
+      img {
+        width: calc(100% / 3);
+        max-width: 90px;
+        object-fit: cover;
+        border-radius: $border8;
+      }
+    }
+  }
+  &-close {
+    border: unset;
+    outline: none;
+    @include square(40px);
+    border-radius: $border4;
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    cursor: pointer;
+    box-shadow: $shadow2;
+    @include maxWidth($large) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+// * Font Typography
+$font-primary: "Inter", sans-serif;
+
+// * Font size
+
+// * Size Base
+$container: 1200px;
+$topbarHeight: 30px;
+$headerHeight: 90px;
+$heightMenuChildItem: 45px;
+
+// * Color
+$primaryColor: #1a2c75;
+$hoverColor: #c1a887;
+$secondColor: #b59d78;
+$textColor: #333;
+$borderColor: #0000001a;
+
+// * Base
+$border4: 4px;
+$border6: 6px;
+$border8: 8px;
+$border12: 12px;
+$shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+$shadow2: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+// * Transition
+$transition: opacity 0.5s cubic-bezier(0.2, 1, 0.2, 1),
+  visibility 0.5s cubic-bezier(0.2, 1, 0.2, 1),
+  transform 0.5s cubic-bezier(0.2, 1, 0.2, 1);
+
+// * Responsive
+$extra-large: 1200px;
+$large: 992px;
+$medium: 768px;
+$small: 576px;

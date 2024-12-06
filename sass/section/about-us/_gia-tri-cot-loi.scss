@@ -1,0 +1,56 @@
+@use "../../abstracts" as *;
+.about-isoglass {
+  &-wrapper-core {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @include maxWidth($large) {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    @include maxWidth($medium) {
+      grid-auto-flow: column;
+      grid-auto-columns: 320px;
+      padding-bottom: 20px;
+      @include scrollHorizontalBar;
+    }
+  }
+  &-core {
+    box-shadow: $shadow;
+    background-color: #f8f8f8;
+    border-radius: $border12;
+    @include flexbox(column, center, flex-start, 10px);
+    padding: 20px;
+    @include maxWidth($medium) {
+      scroll-snap-align: center;
+      width: 100%;
+    }
+    &-image {
+      @include square(150px);
+      border-radius: 100rem;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+      }
+    }
+    &-content {
+      @include flexbox(column, center, center, 15px);
+    }
+    &-subtitle {
+      color: $primaryColor;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    &-title {
+      font-weight: 700;
+    }
+    &-text {
+      font-size: 16px;
+      line-height: 28px;
+      text-align: justify;
+      text-align-last: center;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../../../abstracts" as *;
+.product {
+  &-title {
+    color: $primaryColor;
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 10px;
+  }
+}

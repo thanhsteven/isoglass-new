@@ -1,0 +1,276 @@
+@use "../abstracts" as *;
+@use "../component/sidebar";
+@use "../section/product-main";
+.product {
+  &-main {
+    &-wrapper {
+      margin-top: 30px;
+    }
+  }
+  &-header {
+    @include flexbox(row-reverse, stretch, space-between, null);
+    &-info {
+      flex: 0 0 50%;
+      padding-left: 20px;
+      @include flexbox(column, stretch, flex-start, 10px);
+      h1 {
+        color: $primaryColor;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 36px;
+      }
+    }
+    &-viewer {
+      flex: 0 0 50%;
+    }
+  }
+  &-meta {
+    span {
+      display: block;
+      font-weight: 700;
+      line-height: 22px;
+      margin-block: 10px;
+      font-size: 18px;
+    }
+    time {
+      font-weight: 400;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    a {
+      font-size: 16px;
+      line-height: 1.4rem;
+      margin-left: 12px;
+    }
+  }
+  &-viewer {
+    span {
+      font-size: inherit;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  &-sapo {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: justify;
+    span {
+      display: block;
+      margin-top: 10px;
+      line-height: 28px;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+  &-contact {
+    background-color: $primaryColor;
+    border-radius: $border4;
+    text-align: center;
+    border: 2px solid $primaryColor;
+    a {
+      display: block;
+      color: #fff;
+      padding: 14px 20px;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all linear 0.3s;
+    }
+    &:hover {
+      background-color: #fff;
+      a {
+        color: $primaryColor;
+      }
+    }
+  }
+  &-image {
+    border-radius: $border12;
+    position: relative;
+    figure {
+      img {
+        border-radius: $border12;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-show {
+      background-color: #fff;
+      box-shadow: $shadow;
+      border-radius: 30px;
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      a {
+        color: $textColor;
+        @include flexbox(row, center, center, null);
+        flex-wrap: nowrap;
+        min-width: 50px;
+        height: 50px;
+        padding-right: 0px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: padding-right ease 0.4s;
+        span {
+          max-width: 0px;
+          overflow: hidden;
+          font-weight: 600;
+          padding-left: 0px;
+          padding-right: 0px;
+          white-space: nowrap;
+          transition: max-width ease 0.4s;
+        }
+        i {
+          display: block;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+        }
+        &:hover {
+          padding-right: 15px;
+          span {
+            max-width: 280px;
+          }
+        }
+      }
+    }
+  }
+  &-content {
+    margin-bottom: unset;
+    &-wrapper {
+      @include flexbox(row, stretch, flex-start, null);
+    }
+    &-extra {
+      flex: 0 0 75%;
+      h2,
+      h3 {
+        color: $primaryColor;
+        font-weight: 700;
+        line-height: 28px;
+        margin-block: 10px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: justify;
+        margin-block: 15px;
+      }
+      li {
+        margin-block: 10px;
+      }
+    }
+    &-sidebar {
+      flex: 0 0 25%;
+      padding-left: 20px;
+    }
+  }
+  &-table {
+    border-radius: $border12;
+    background-color: #fff;
+    border: 1px solid $borderColor;
+    overflow: hidden;
+    h2 {
+      padding-left: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      th,
+      td {
+        padding: 10px 15px;
+        text-align: left;
+        border-top: 1px solid $borderColor;
+        border-right: 1px solid $borderColor;
+      }
+      thead {
+        th {
+          color: $primaryColor;
+        }
+      }
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+        td {
+          color: #555;
+        }
+      }
+      th {
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+  }
+  &-banner {
+    margin-bottom: unset;
+    margin-top: unset;
+    &-image {
+      border-radius: $border12;
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform ease 0.5s;
+      }
+      &:hover {
+        img {
+          transform: scale(1.07);
+        }
+      }
+    }
+    &-content {
+      @include flexbox(column, stretch, flex-start, 15px);
+      max-width: 250px;
+      position: absolute;
+      top: 20%;
+      left: 40px;
+    }
+    &-subtitle {
+      color: #fff;
+      font-size: 14px;
+    }
+    &-title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    &-desc {
+      color: #fff;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &-button {
+      background-color: #fff;
+      border-radius: $border8;
+      padding: 10px;
+      width: fit-content;
+      color: $textColor;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: all linear 0.2s;
+      &:hover {
+        background-color: $secondColor;
+        color: $primaryColor;
+      }
+    }
+  }
+}

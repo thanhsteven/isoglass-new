@@ -1,0 +1,26 @@
+@use "../../abstracts" as *;
+.about-isoglass {
+  &-history {
+    p {
+      line-height: 26px;
+      text-align: justify;
+      text-align-last: center;
+      margin-block: 15px;
+    }
+  }
+  &-heading {
+    color: #b59d79;
+    font-size: 3em;
+    font-weight: 700;
+    @include maxWidth($medium) {
+      font-size: 2em;
+    }
+    &-out {
+      color: $primaryColor;
+      font-size: 18px;
+      font-weight: 700;
+      margin-block: 20px;
+      text-align: center;
+    }
+  }
+}

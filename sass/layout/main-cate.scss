@@ -1,0 +1,206 @@
+@use "../abstracts" as *;
+@use "../component/sidebar";
+@use "../section/common";
+//- CSS chung dành cho Product Main Category
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+//- Basic H2, H3
+p {
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  color: $textColor;
+  text-align: justify;
+  margin-block: 10px;
+}
+h2 {
+  color: $primaryColor;
+  font-size: 26px;
+  font-weight: 700;
+  margin-block: 10px;
+}
+h3 {
+  margin-block: 10px;
+  color: $primaryColor;
+  font-weight: 700;
+  font-size: 20px;
+}
+figcaption {
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  margin-block: 10px;
+}
+a {
+  color: $primaryColor;
+}
+//- Category main CSS
+.category-main {
+  &-breadcrumb {
+    text-align: center;
+    ul {
+      @include flexbox(row, center, center, 10px);
+    }
+    li {
+      color: $primaryColor;
+      font-size: 15px;
+      font-weight: 600;
+      position: relative;
+    }
+  }
+  &-short {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $textColor;
+  }
+  &-heading {
+    color: $primaryColor;
+    font-size: 1.6em;
+    line-height: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+  &-rating {
+    @include flexbox(row, center, center, 8px);
+    margin-bottom: 10px;
+    span {
+      font-weight: 600;
+    }
+    &-star {
+      color: #f7c600;
+      font-size: 20px;
+      i.fa {
+        margin-left: 4px;
+      }
+    }
+  }
+  &-wrapper {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    @include maxWidth($large) {
+      position: relative;
+    }
+  }
+  &-content {
+    @include maxWidth($large) {
+      flex-basis: 100%;
+    }
+    &-extra {
+      img {
+        margin-block: 10px;
+        margin-top: 15px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: $border12;
+      }
+    }
+  }
+  &-cate {
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+  }
+  &-products {
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+      .product-item-1-title {
+        font-size: 15px;
+      }
+    }
+  }
+  &-sidebar {
+    @include flexbox(column, stretch, flex-start, 15px);
+    background-color: #fff;
+    padding-left: 15px;
+    @include maxWidth($large) {
+      flex-basis: 30vw;
+      box-shadow: $shadow;
+      padding-inline: 20px;
+      padding-top: 70px;
+      padding-left: 25px;
+      overflow-y: auto;
+      z-index: 800;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &-modal {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    min-height: 100vh;
+    position: absolute;
+    inset: 0;
+    z-index: 700;
+    visibility: visible;
+    opacity: 0;
+    display: none;
+    transition: all linear 0.2s;
+    @include maxWidth($large) {
+      &-show {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//- CSS cho Sidebar Menu
+.sidebar {
+  &-title {
+    background-color: $primaryColor;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1em;
+    font-weight: 700;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    border-top-right-radius: $border12;
+    border-top-left-radius: $border12;
+    margin-bottom: unset;
+    margin-top: unset;
+  }
+  &-list {
+    border: 1px solid $borderColor;
+    border-bottom-right-radius: $border12;
+    border-bottom-left-radius: $border12;
+    &-item {
+      border-top: 1px solid $borderColor;
+      &:first-child {
+        border-top: unset;
+      }
+      &:hover {
+        background-color: #f7f7f7;
+      }
+      &-link {
+        @include flexbox(row, center, flex-start, 10px);
+        padding: 10px 15px;
+        width: 100%;
+        cursor: pointer;
+      }
+      &-image {
+        width: 30px;
+        height: 30px;
+        border-radius: $border4;
+        object-fit: cover;
+      }
+      &-text {
+        display: block;
+        width: 100%;
+        color: $textColor;
+        font-weight: 700;
+        font-size: 14px;
+        text-wrap: nowrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+@use "../abstracts" as *;
+// - Button Zalo
+.btn-zalo {
+  border-radius: $border4;
+  background-color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: $primaryColor;
+  padding: 8px 10px;
+}
+// - Button Product 01
+.btn_product_ver1 {
+  --width: 90px;
+  --height: 40px;
+  @include flexbox(row, center, center, null);
+  color: #fff;
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  &::before {
+    content: "Liên hệ";
+    @include flexbox(row, center, center, null);
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    transform: translateY(calc(var(--height) - 10px));
+    transition: transform ease-in-out 0.2s;
+  }
+  span {
+    transform: translateY(0);
+    transition: transform ease-in-out 0.2s;
+  }
+  &:hover {
+    span {
+      transform: translateY(calc(-1 * var(--height)));
+    }
+    &::before {
+      transform: translateY(0);
+    }
+  }
+}
+// - Button Product 02
+.btn-product-2 {
+  @include flexbox(row, center, center, null);
+  padding: 8px 12px;
+  background-color: $primaryColor;
+  color: #fff;
+  border-radius: $border4;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  span {
+    transform: translateY(0);
+    transition: transform ease 0.2s;
+  }
+  &::before {
+    content: "Liên hệ";
+    position: absolute;
+    inset: 0;
+    @include flexbox(row, center, center, null);
+    transform: translateY(120%);
+    transition: all ease 0.2s;
+  }
+  &:hover {
+    span {
+      transform: translateY(-150%);
+    }
+    &::before {
+      transform: translateY(0%);
+    }
+  }
+}
+
+// - Button Owl Carousel
+.owl-carousel {
+  .owl-nav {
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+    .owl-prev,
+    .owl-next {
+      background-color: #fff !important;
+      @include square(40px);
+      border: 1px solid #ddd !important;
+      border-radius: 100rem;
+      color: $primaryColor !important;
+      transition: all linear 0.3s;
+      &:hover {
+        background-color: $primaryColor !important;
+        color: #fff !important;
+      }
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+  .owl-dots {
+    .owl-dot.active {
+      span {
+        background-color: $primaryColor;
+      }
+    }
+  }
+}
+
+// - Button Order
+.btn-order {
+  background-color: $primaryColor;
+  border-radius: $border4;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all linear 0.1s;
+  &:hover {
+    background-color: $secondColor;
+    color: $primaryColor;
+  }
+}
+// - Button See More PRoducts
+.btn-see-more-products {
+  display: block;
+  margin-top: 20px;
+  margin-inline: auto;
+  width: fit-content;
+  background-color: #fff;
+  border-radius: $border8;
+  border: 2px solid #e4e4e4;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #333;
+  transition: all linear 0.3s;
+  span {
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: inherit;
+  }
+  &:hover {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    color: #fff;
+  }
+}

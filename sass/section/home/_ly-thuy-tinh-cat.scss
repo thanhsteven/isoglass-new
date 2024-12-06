@@ -1,0 +1,27 @@
+@use "../../abstracts" as *;
+.ly-thuy-tinh-cat {
+  background-color: #c0d1d6;
+  &-wrapper {
+    --gap: 15px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: var(--gap);
+    @include maxWidth($large) {
+      grid-template-rows: repeat(2, 1fr);
+    }
+    @include maxWidth($medium) {
+      --gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: unset;
+    }
+    .category-item-1-wrapper:first-child {
+      grid-column: 1/3;
+      grid-row: 1/3;
+    }
+    .category-item-1-hover {
+      transform: unset;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+section.prefooter 
+  .container 
+    +title("Đăng ký Email", "ĐĂNG KÝ NHẬN THÔNG TIN", null)
+    p.title-after Công ty iSOGLASS chuyên cung cấp ly thuỷ tinh. Sản xuất Gia công ly thuỷ tinh uy tín tại TP.HCM.
+      br
+      | Hotline: 0963 181 517 - Website: isoglass.com.vn
+      br
+      | Địa chỉ: Số 26, Đường 12, Khu dân cư Sông Đà, Khu phố 6, Phường Hiệp Bình Chánh, Tp. Thủ Đức, Tp. Hồ Chí Minh
+    form.prefooter-mail(action="/submit-form" method="post" autocomplete="on")
+      input.prefooter-input(type="email" name="email" required placeholder="Nhập email của bạn")
+      button.prefooter-submit(type="submit") Đăng ký

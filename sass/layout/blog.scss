@@ -1,0 +1,144 @@
+@use "../abstracts" as *;
+// - CSS blog
+@use "../section/blog";
+// - Google Font: Inter
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.blog {
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+  }
+  &-article {
+    max-width: calc(100% - 4%);
+    margin: 0 auto;
+    h2 {
+      color: $primaryColor;
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+.blog-default {
+  &-item {
+    border-radius: $border12;
+    border: 1px solid $borderColor;
+    box-shadow: $shadow;
+  }
+  &-thumbnail {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .blog-default {
+        &-image {
+          img {
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+  }
+  &-image {
+    border-top-left-radius: $border12;
+    border-top-right-radius: $border12;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      transform: scale(1);
+      transition: transform ease-in-out 0.2s;
+    }
+  }
+  &-link {
+    position: absolute;
+    inset: 0;
+    z-index: 400;
+  }
+  &-info {
+    @include flexbox(row, center, space-between, 15px);
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+  }
+  &-author {
+    @include flexbox(row, center, space-between, 8px);
+    &-avatar {
+      @include square(30px);
+      border-radius: 100rem;
+    }
+    &-name {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+  &-comment {
+    @include flexbox(row, center, center, 15px);
+    &-icon {
+      color: #fff;
+      font-size: 20px;
+      position: relative;
+      i.fa {
+        font-size: inherit;
+      }
+      &-count {
+        background-color: $primaryColor;
+        border-radius: 100rem;
+        @include square(15px);
+        font-size: 10px;
+        text-align: center;
+        font-weight: 500;
+        position: absolute;
+        right: -4px;
+        top: -4px;
+      }
+    }
+  }
+  &-content {
+    padding: 20px;
+    @include flexbox(column, stretch, flex-start, 10px);
+  }
+  &-date {
+    @include flexbox(row, center, space-between, 20px);
+    span {
+      color: #a5a5a5;
+      font-size: 16px;
+    }
+  }
+  &-title {
+    h3 {
+      color: $primaryColor;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      @include webkitBox(2);
+    }
+  }
+  &-short {
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      text-align: left;
+      @include webkitBox(3);
+    }
+  }
+  &-button {
+    display: block;
+    padding: 20px;
+    margin-top: -20px;
+    span {
+      color: $primaryColor;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+}

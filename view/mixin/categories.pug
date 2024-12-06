@@ -1,0 +1,26 @@
+//- Category Infomation Box - Style 01
+mixin categoryStyle01(href, image, title, count)
+  a.category-item-1-wrapper(href=href, rel="noopener noreferrer")
+    .category-item-1-image
+      img(src=image, alt=title)
+    .category-item-1-content
+      h3.category-item-1-title=title
+      span.category-item-1-count=count
+//- Category Infomation Box - Style 02
+mixin categoryStyle02(href, image, title, countNumber)
+  .category-item-2-wrapper 
+    a.category-item-2-link(href=href, rel="noopener noreferrer") 
+      .category-item-2-image 
+        img(src=image, alt=title, srcset=`${image} 2x`) 
+      .category-item-2-title 
+        h3.category-item-2-title-text=title 
+        .category-item-2-count=countNumber 
+//- Category Infomation Box - Style 03
+mixin categoryStyle03(href, image, title, count)
+  .category-item-3
+    a.category-item-3-link(href=href, rel="noopener noreferrer")
+      .category-item-3-image 
+        img(src=image, alt=title, srcset=`${image} 2x`)
+      .category-item-3-content 
+        h3.category-item-3-title=title 
+        span.category-item-3-count=count 

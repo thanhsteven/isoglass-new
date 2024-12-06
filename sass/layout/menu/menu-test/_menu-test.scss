@@ -1,0 +1,136 @@
+@use "../../abstracts" as *;
+.menu {
+  background-color: $primaryColor;
+  color: #fff;
+  @include maxWidth($large) {
+    color: $primaryColor;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+  }
+  &-wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    @include maxWidth($large) {
+      min-height: 100vh;
+      width: 50vw;
+      background-color: #fff;
+    }
+  }
+  &-list {
+    @include flexbox(row, center, space-around, 10px);
+    height: 40px;
+    @include maxWidth($large) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-left: 20px;
+    }
+    &-item {
+      display: block;
+      color: inherit;
+      height: 100%;
+      position: relative;
+      @include maxWidth($large) {
+        width: 100%;
+      }
+      &:hover {
+        .menu-child-wrapper {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+      &-link {
+        display: block;
+        height: 100%;
+        color: inherit;
+        line-height: 40px;
+        &:hover {
+          i.fa {
+            transform: rotateX(180deg);
+          }
+          span {
+            color: #ddd;
+          }
+        }
+        @include maxWidth($large) {
+          line-height: unset;
+          &:hover {
+            i.fa {
+              transform: unset;
+            }
+            span {
+              color: unset;
+            }
+          }
+        }
+        span {
+          color: inherit;
+          font-weight: 600;
+          font-size: 16px;
+          margin-right: 6px;
+          transition: color ease 0.3s;
+        }
+        i.fa {
+          transition: transform ease 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.menu-child {
+  background-color: #fff;
+  height: 100%;
+  &-wrapper {
+    background-color: #fff;
+    border-radius: $border12;
+    box-shadow: $shadow;
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: $transition;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    @include maxWidth($large) {
+      visibility: initial;
+      transform: initial;
+      opacity: initial;
+      transition: initial;
+    }
+  }
+  &-list {
+    width: fit-content;
+    padding-block: 10px;
+  }
+  &-item {
+    color: #848484;
+    width: 100%;
+    &-link {
+      display: block;
+      width: 100%;
+      padding-block: 10px;
+      padding-inline: 25px;
+      color: inherit;
+      cursor: pointer;
+      transition: color ease 0.3s;
+      &:hover {
+        color: $primaryColor;
+      }
+      span {
+        font-size: 15px;
+        text-wrap: nowrap;
+        font-weight: 500;
+        color: inherit;
+      }
+    }
+  }
+}
+

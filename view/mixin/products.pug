@@ -1,0 +1,51 @@
+//- Product Infomation Box - Style 01
+mixin productStyle01(href, image, title)
+  .product-item-1-wrapper
+    a.product-item-1-link(href=href, target="_blank", rel="noopener noreferrer")
+      .product-item-1-image
+        img(src=image, alt=title, srcset=`${image} 2x`)
+      .product-item-1-hover
+        .product-item-1-content
+          h3.product-item-1-title=title
+    +btnProduct("Đọc tiếp")(class="product-item-1-button")
+//- Product Infomation Box - Style 02
+mixin productStyle02(href, image, title, cats)
+  .product-item-2-wrapper 
+    a.product-item-2-link(href=href, target="_blank", rel="nofollow noopener noreferrer")
+      .product-item-2-image
+        img(src=image, alt=title, srcset=`${image} 2x`)
+    a(href=href, target="_blank", rel="noopener noreferrer")
+      h3.product-item-2-title=title
+    .product-item-2-cats
+      a(href=href, target="_blank", rel="nofollow noopener noreferrer")=cats 
+    .product-item-2-button
+      +btnProduct2("Xem thêm")(class="product-item-2-button")
+//- Product Infomation Box - Style 03
+mixin productStyle03(href, image1, image2, title, rating, cate, status)
+  .product-item-3-wrapper
+    a.product-item-3-link(href=href, rel="noopener noreferrer nofollow")
+      .product-item-3-image 
+        img.product-item-3-image-first(src=image1, alt=title, srcset=`${image1} 2x`)
+        img.product-item-3-image-last(src=image2, alt=title, srcset=`${image2} 2x`)
+    .product-item-3-hover 
+      .product-item-3-content 
+        .product-item-3-title 
+          a(href=href, rel="noopener noreferrer nofollow")
+            h3=title
+          .product-item-3-rating
+            span=rating 
+            i.fa.fa-star 
+        .product-item-3-cate 
+          a(href="#", target="_blank", rel="noopener noreferrer")=cate
+        .product-item-3-btn
+          button.product-item-3-btn-hotline Liên hệ Hotline 
+          button.product-item-3-btn-zalo Báo giá Zalo
+//- Product Infomation Box - Style 04
+mixin productStyle04(href, image, title)
+  .product-item-4-item 
+    a.product-item-4-link(href=href, target="_blank", rel="noopener noreferrer nofollow")
+      .product-item-4-image 
+        img(src=image, alt=title, srcset=`${image} 2x`)
+    .product-item-4-title
+      a.product-item-4-link(href="#", target="_blank", rel="noopener noreferrer nofollow")
+        h3=title

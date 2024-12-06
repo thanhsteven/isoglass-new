@@ -1,0 +1,137 @@
+@use "../../abstracts" as *;
+.gioi-thieu {
+  background-color: $secondColor;
+  &-title {
+    color: #333;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    @include maxWidth($small) {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+  &-subtitle {
+    text-align: center;
+    margin-block: 20px;
+  }
+  &-wrapper {
+    @include flexbox(row, stretch, stretch, null);
+    margin-bottom: 20px;
+    @include maxWidth($large) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    @include maxWidth($small) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+  &-image {
+    flex: 1 1 50%;
+    max-width: 50%;
+    height: 585px;
+    border-top-left-radius: $border12;
+    border-bottom-left-radius: $border12;
+    overflow: hidden;
+    @include maxWidth($large) {
+      max-width: 100%;
+      border-top-left-radius: $border12;
+      border-top-right-radius: $border12;
+      border-bottom-left-radius: unset;
+    }
+    @include maxWidth($small) {
+      border-radius: unset;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include maxWidth($large) {
+        height: auto;
+      }
+    }
+  }
+  &-content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 585px;
+    background-color: $primaryColor;
+    border-top-right-radius: $border12;
+    border-bottom-right-radius: $border12;
+    @include maxWidth($large) {
+      max-width: 100%;
+      border-bottom-left-radius: $border12;
+      border-top-right-radius: unset;
+    }
+    @include maxWidth($small) {
+      border-radius: unset;
+    }
+    &-wrapper {
+      padding: 8%;
+      @include flexbox(column, stretch, space-between, 10px);
+      @include maxWidth($large) {
+        padding: 15px;
+      }
+    }
+    &-subtitle {
+      color: #fff;
+      font-weight: 700;
+      font-size: 22px;
+      @include maxWidth($large) {
+        font-size: 22px;
+      }
+      @include maxWidth($small) {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+    &-title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.5;
+      @include maxWidth($large) {
+        font-size: 24px;
+      }
+      @include maxWidth($small) {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+    &-paragraph {
+      color: #fff;
+      line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: 400;
+      @include maxWidth($large) {
+        line-height: 1.5;
+      }
+    }
+    blockquote {
+      color: #fff;
+      line-height: 1.6;
+      font-size: 17px;
+      text-align: justify;
+    }
+    &-btn {
+      display: block;
+      width: fit-content;
+      background-color: #fff;
+      color: $primaryColor;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      border: unset;
+      padding: 12px 20px;
+      border-radius: $border8;
+      margin-top: 20px;
+      &:hover {
+        box-shadow: $shadow;
+      }
+    }
+  }
+}
+

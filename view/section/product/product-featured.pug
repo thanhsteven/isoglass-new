@@ -1,0 +1,30 @@
+- 
+  var product_featured = [
+    {
+      image: "../../images/hosting/tinh-hien-dai-cua-isoglass.jpg",
+      title: "MODERN",
+      subtitle: "Hiện đại",
+    },
+    {
+      image: "../../images/hosting/tinh-thanh-lich-cua-isoglass.jpg",
+      title: "ELEGANT",
+      subtitle: "Thanh lịch",
+    },
+    {
+      image: "../../images/hosting/tinh-tinh-xao-cua-isoglass.jpg",
+      title: "SOPHISTICATED",
+      subtitle: "Tinh xảo",
+    }
+  ]
+//- Html code
+section.product-featured 
+  .container 
+    h2.product-featured-title Đặc điểm nổi bật từ iSOGLASS 
+    .product-featured-wrapper 
+      each item in product_featured
+        .product-featured-item 
+          .product-featured-image 
+            img(src=item.image, alt=item.subtitle, srcset=`${item.image} 2x`)
+          .product-featured-usp 
+            p.product-featured-usp-title=item.title
+            p.product-featured-usp-sub=item.subtitle

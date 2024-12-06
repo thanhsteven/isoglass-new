@@ -1,0 +1,54 @@
+@use "./abstracts" as *;
+// - CSS các section dành riêng cho Ly thuỷ tinh
+@use "./section/main-cate/ly-thuy-tinh";
+// - CSS tuỳ chỉnh
+.slideshow-ly-thuy-tinh {
+  margin-block: unset;
+}
+.category-ly-thuy-tinh {
+  margin-top: 20px;
+}
+.category-ly-thuy-tinh-product {
+  margin-top: unset;
+  margin-bottom: 20px;
+  h2 {
+    margin-top: unset;
+  }
+}
+.tem-nhan-chai-ruou {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .title-wrapper {
+    margin-bottom: unset;
+    gap: unset;
+  }
+  .title {
+    margin-top: unset;
+    margin-bottom: unset;
+  }
+}
+.bang-san-pham {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin-block: 15px;
+  th,
+  td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 8px;
+  }
+  th {
+    background-color: #f0f0f0;
+  }
+  td:first-child {
+    text-align: left;
+    padding-left: 5px;
+  }
+}
+// - CSS cho sidebar Menu
+.sidebar {
+  &-ly-thuy-tinh {
+    margin-block: unset;
+  }
+}

@@ -1,0 +1,120 @@
+@use "../abstracts" as *;
+@use "../component/sidebar";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+// - Basic Tag
+// - Cate Child
+.cate-child {
+  &-breadcrumb {
+    @include flexbox(row, center, flex-start, null);
+    margin-block: 15px;
+    ul {
+      @include flexbox(row, center, center, 10px);
+    }
+    li {
+      color: $primaryColor;
+      font-size: 15px;
+      font-weight: 600;
+      position: relative;
+    }
+  }
+  &-title {
+    color: $primaryColor;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  &-rating {
+    @include flexbox(row, center, flex-start, 8px);
+    margin-block: 10px;
+    span {
+      font-weight: 500;
+    }
+    &-star {
+      color: #f7c600;
+      font-size: 20px;
+      i.fa {
+        margin-left: 4px;
+      }
+    }
+  }
+  &-short-description {
+    margin-block: 10px;
+    a {
+      color: $primaryColor;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+    p {
+      color: $textColor;
+      line-height: 28px;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: justify;
+      margin-block: 10px;
+    }
+  }
+  &-gallery-image {
+    margin-block: 10px;
+  }
+  &-proudcts {
+    &-title {
+      color: $primaryColor;
+      font-weight: 700;
+      font-size: 24px;
+      margin-block: 10px;
+    }
+  }
+  &-main {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    &-content {
+      a {
+        color: $primaryColor;
+      }
+    }
+    &-sidebar {
+      padding-left: 15px;
+    }
+  }
+  &-extra-description {
+    h2,
+    h3,
+    h4 {
+      color: $primaryColor;
+      line-height: 28px;
+      font-weight: 700;
+      margin-block: 10px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+    p {
+      color: $textColor;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      margin-block: 10px;
+      text-align: justify;
+    }
+    img {
+      border-radius: $border12;
+      object-fit: cover;
+      width: 100%;
+      margin-block: 10px;
+    }
+    ul {
+      list-style: circle;
+    }
+    li {
+      margin-block: 10px;
+      line-height: 28px;
+      margin-left: 20px;
+    }
+  }
+}

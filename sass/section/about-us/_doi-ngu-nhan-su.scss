@@ -1,0 +1,42 @@
+@use "../../abstracts" as *;
+.team-member {
+  &-wrapper {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    @include maxWidth($large) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    @include maxWidth($medium) {
+      grid-auto-flow: column;
+      grid-auto-columns: 250px;
+      padding-bottom: 20px;
+      @include scrollHorizontalBar;
+    }
+  }
+  &-item {
+    @include flexbox(column, center, flex-start, 10px);
+    @include maxWidth($medium) {
+      scroll-snap-align: center;
+      width: 100%;
+    }
+  }
+  &-image {
+    border-radius: $border12;
+    box-shadow: $shadow;
+    img {
+      border-radius: $border12;
+    }
+  }
+  &-position {
+    span {
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+  &-name {
+    color: $primaryColor;
+    font-weight: 700;
+  }
+}

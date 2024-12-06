@@ -1,0 +1,224 @@
+@use "../abstracts" as *;
+//- CSS Category Style 01
+.category-item-1 {
+  &-wrapper {
+    display: block;
+    border-radius: $border12;
+    position: relative;
+    box-shadow: $shadow2;
+    overflow: hidden;
+    @include maxWidth($large) {
+      height: fit-content;
+    }
+    &:hover {
+      .category-item-1 {
+        &-image img {
+          transform: scale(1.1);
+        }
+        &-content {
+          bottom: 0px;
+        }
+      }
+    }
+  }
+  &-image {
+    border-radius: $border12;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1);
+      transition: $transition;
+    }
+  }
+  &-content {
+    width: 100%;
+    padding-inline: 15px;
+    padding-top: 8px;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    border-bottom-left-radius: $border12;
+    border-bottom-right-radius: $border12;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    transition: all ease 0.3s;
+    @include maxWidth($small) {
+      padding: 4px 8px;
+      @include flexbox(column, center, stretch, 4px);
+      height: auto;
+    }
+  }
+  &-title {
+    color: #fff;
+    font-weight: 600;
+    line-height: 24px;
+    font-size: 15px;
+    margin-block: unset;
+    @include maxWidth($small) {
+      text-align: center;
+      color: $primaryColor;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: unset;
+    }
+    @include maxWidth($small) {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  &-count {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 36px;
+    @include maxWidth($small) {
+      color: $primaryColor;
+    }
+  }
+}
+//- CSS Category Style 02
+.category-item-2 {
+  &-wrapper {
+    &:hover {
+      .category-item-2 {
+        &-image img {
+          transform: scale(1);
+        }
+        &-image::before {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        &-count {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+        &-title {
+          &-text {
+            transform: translateY(0px);
+          }
+        }
+      }
+    }
+  }
+  &-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &-image {
+    box-shadow: $shadow2;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      inset: 0;
+      z-index: 200;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: transparent;
+      z-index: 300;
+      transition: all ease 0.3s;
+    }
+    img {
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.1);
+      transition: all ease 0.3s;
+    }
+  }
+  &-title {
+    @include flexbox(column, center, center, null);
+    position: absolute;
+    inset: 0;
+    z-index: 500;
+    &-text {
+      padding: 12px 15px;
+      border-radius: 100rem;
+      background-color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      color: $primaryColor;
+      transform: translateY(15px);
+      transition: all ease 0.3s;
+    }
+  }
+  &-count {
+    color: #fff;
+    font-size: 14px;
+    height: fit-content;
+    margin-top: 10px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all ease 0.2s;
+    transition-delay: 0.1s;
+  }
+}
+//- CSS Category Style 03
+.category-item-3 {
+  &-item {
+    box-shadow: $shadow;
+    border-radius: $border12;
+    overflow: hidden;
+    &-link {
+      position: relative;
+    }
+    &-image {
+      border-radius: $border12;
+      overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: $transition;
+      }
+    }
+    &-content {
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      padding-inline: 15px;
+      padding-top: 10px;
+      padding-bottom: 4px;
+      width: 100%;
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      transition: all ease-in-out 0.2s;
+    }
+    &-title {
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 22px;
+    }
+    &-count {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+  &:hover {
+    .category-item-3 {
+      &-image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      &-content {
+        bottom: 0;
+      }
+    }
+  }
+}

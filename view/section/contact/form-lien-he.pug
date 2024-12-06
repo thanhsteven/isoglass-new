@@ -1,0 +1,58 @@
+- 
+  var form_contact = [
+    {
+      icon: "fa-map-marker",
+      text: "Số 26, Đường 12, Khu dân cư Sông Đà, Khu phố 6, Phường Hiệp Bình Chánh, Tp. Thủ Đức, Tp. Hồ Chí Minh",
+      href: null,
+      follow: "nofollow"
+    },
+    {
+      icon: "fa-envelope",
+      text: "Email: info@isoglass.com.vn",
+      href: "mailto:info@isoglass.com.vn",
+      follow: "nofollow"
+    },
+    {
+      icon: "fa-phone",
+      text: "Điện thoại: 0936.181.517",
+      href: "tel:0936181517",
+      follow: "nofollow"
+    },
+    {
+      icon: "fa-phone-square",
+      text: "Hotline: 0936.181.517",
+      href: "tel:0936181517",
+      follow: "nofollow"
+    },
+    {
+      icon: "fa-qrcode",
+      text: "Mã số thuế: 0315350858",
+      href: null,
+      follow: "nofollow"
+    },
+    {
+      icon: "fa-globe",
+      text: "Website: isoglass.com.vn",
+      href: "https://isoglass.com.vn/",
+      follow: "dofollow"
+    },
+  ]
+
+section.form-lien-he 
+  .container 
+    .form-contact-wrapper 
+      .form-contact-info 
+        h2.form-contact-title CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ iSOGLASS
+        p.form-contact-desc Sản xuất và cung cấp Chai thủy tinh, Ly thủy tinh chuẩn ISO quốc tế.
+        ul.form-contact-list 
+          each item in form_contact
+            li.form-contact-item 
+              if (item.href)
+                a(href=item.href, target="_blank", rel=`noopener noreferrer ${item.follow}`)
+                  i.fa(class=item.icon, aria-hidden="true")
+                  span=item.text
+              else 
+                i.fa(class=item.icon, aria-hidden="true")
+                span=item.text
+      .form-contact-main
+        h2.form-contact-title THÔNG TIN LIÊN HỆ

@@ -1,0 +1,68 @@
+//- Layout bài viết
+include ../mixin/mixins
+include ../mixin/categories
+include ../mixin/blogs
+doctype html
+html(lang="vi")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block titlePage 
+      title Layout bài viết chuẩn SEO 
+    block stylesheet 
+      link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
+      link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
+      link(rel="stylesheet" href="../style/main.css")
+      link(rel="stylesheet", href="../style/post.css")
+  body 
+    include ../layout/header/header
+    include ../layout/menu/menu-2
+    +secTitleBase("Tin tức tổng hợp iSOGLASS", "../../images/hosting/background-title-blog.jpg")
+    main.main-post 
+      .container.main-post-wrapper 
+        article.post-main 
+          header.post-header 
+            block h1 
+              h1 tiêu đề chính h1 
+            .post-date-update 
+              block postDate 
+            .post-rating-wrapper 
+              .post-rating-icon 
+                a(href="http://" title="poor")
+                  i.fa.fa-star(aria-hidden="true")
+                a(href="http://" title="average")
+                  i.fa.fa-star(aria-hidden="true")
+                a(href="http://" title="good")
+                  i.fa.fa-star(aria-hidden="true")
+                a(href="http://" title="very good")
+                  i.fa.fa-star(aria-hidden="true")
+                a(href="http://" title="excellent")
+                  i.fa.fa-star(aria-hidden="true")
+              .post-review 
+                block postReview 
+              .post-view 
+                block postView 
+            .post-short-desc
+              block sapo 
+                p đoạn mô tả ngắn
+            figure.post-image 
+              block imageThumbnail 
+                img(src="", alt="")
+                figcaption
+          main.post-content 
+            h2 Viết layout bài viết
+            ul
+              li Điểm chính 1
+              li Điểm chính 2
+              li Điểm chính 3
+          .post-extra-desc 
+            block extraDescription
+          footer.post-footer 
+            p Tham khảo các bài viết cùng chuyên mục
+            block postFooter 
+        aside.post-sidebar 
+          include ./sidebar/sidebar-post
+          include ./sidebar
+    include ../layout/footer/footer
+    block scriptJS 
+      script(src="../js/menu-2.js")

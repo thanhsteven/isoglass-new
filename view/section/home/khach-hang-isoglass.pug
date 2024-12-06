@@ -1,0 +1,68 @@
+- 
+  var khach_hang_isoglass = [
+    {
+      title: "Hợp tác giữa iSOGLASS với Gành Hào",
+      image: "../../images/doi-tac/hop-tac-giua-isoglass-va-ganh-hao.jpg"
+    },
+    {
+      title: "Hợp tác giữa iSOGLASS với Gem Center",
+      image: "../../images/doi-tac/hop-tac-giua-isoglass-va-gem-center.jpg"
+    },
+    {
+      title: "Hợp tác giữa iSOGLASS với Làng Ngon",
+      image: "../../images/doi-tac/hop-tac-giua-isoglass-va-lang-ngon.jpg"
+    },
+    {
+      title: "Hợp tác giữa iSOGLASS với Nova FNB",
+      image: "../../images/doi-tac/hop-tac-giua-isoglass-va-nova-fnb.jpg"
+    },
+    {
+      title: "Hợp tác giữa iSOGLASS với Sabeco",
+      image: "../../images/doi-tac/hop-tac-giua-isoglass-va-sabeco.jpg"
+    },
+    {
+      title: "Hợp tác giữa iSOGLASS với Sâm Ngọc Linh",
+      image: "../../images/doi-tac/hop-tac-giua-isoglass-va-sam-ngoc-linh.jpg"
+    },
+    {
+      title: "Hợp tác giữa iSOGLASS với Saporro",
+      image: "../../images/doi-tac/hop-tac-giua-isoglass-va-saporro.jpg"
+    },
+    {
+      title: "Hợp tác giữa iSOGLASS với Suối Tiên",
+      image: "../../images/doi-tac/hop-tac-giua-isoglass-va-suoi-tien.jpg"
+    },
+    {
+      title: "Hợp tác giữa iSOGLASS với Trung Nguyên Legend",
+      image: "../../images/doi-tac/hop-tac-giua-isoglass-va-trung-nguyen-legend.jpg"
+    },
+  ]
+
+section.khach-hang-isoglass 
+  .container
+    +title("Khách hàng của chúng tôi", "CÁC THƯƠNG HIỆU CỦA iSOGLASS", "Cảm ơn Quý khách đã tin tưởng và lựa chọn sản phẩm của chúng tôi, với ngành hàng thủy tinh chuyên sâu đã chọn, chúng tôi không ngừng cải tiến và sẵn sàng đáp ứng mọi yêu cầu của Quý khách hàng giao phó.")
+    #khach_hang_isoglass.owl-carousel.owl-theme.owl-loaded
+      .owl-stage-outer
+        .owl-stage
+          each item in khach_hang_isoglass
+            .owl-item
+              .khach-hang-item 
+                img.khach-hang-image(src=item.image, alt=item.title, srcset=`${item.image} 2x`)
+
+script.
+  $('#khach_hang_isoglass').owlCarousel({
+      loop:true,
+      margin:15,
+      nav:true,
+      responsive:{
+          0:{
+              items:2
+          },
+          600:{
+              items:4
+          },
+          1000:{
+              items:5
+          }
+      }
+  })
