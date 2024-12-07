@@ -1,6 +1,6 @@
-@use "../abstracts" as *;
-@use "../component/sidebar";
-@use "../section/product-main";
+@use "./abstracts" as *;
+@use "./component/sidebar";
+@use "./section/product-main";
 .product {
   &-main {
     &-wrapper {
@@ -41,6 +41,7 @@
       font-size: 16px;
       line-height: 1.4rem;
       margin-left: 12px;
+      color: $primaryColor;
     }
   }
   &-viewer {
@@ -274,4 +275,3 @@
     }
   }
 }
-

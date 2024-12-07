@@ -41,11 +41,15 @@ mixin productStyle03(href, image1, image2, title, rating, cate, status)
           button.product-item-3-btn-hotline Liên hệ Hotline 
           button.product-item-3-btn-zalo Báo giá Zalo
 //- Product Infomation Box - Style 04
-mixin productStyle04(href, image, title)
+mixin productStyle04(href, image, image2, title)
   .product-item-4-item 
-    a.product-item-4-link(href=href, target="_blank", rel="noopener noreferrer nofollow")
-      .product-item-4-image 
-        img(src=image, alt=title, srcset=`${image} 2x`)
+    .product-item-4-wrapper 
+      .product-item-4-image
+        a(href=href, target="_blank", rel="noopener noreferrer nofollow")
+          img.product-item-4-image-main(src=image, alt=title, srcset=`${image} 2x`)
+          img.product-item-4-image-hover(src=image2, alt=title, srcset=`${image2} 2x`)
+      a.product-item-4-button(href="#", target="_blank", rel="noopener noreferrer nofollow")
+        span Đọc tiếp
     .product-item-4-title
-      a.product-item-4-link(href="#", target="_blank", rel="noopener noreferrer nofollow")
-        h3=title
+      h3
+        a(href="#", target="_blank", rel="noopener noreferrer nofollow")=title

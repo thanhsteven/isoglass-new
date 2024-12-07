@@ -8,12 +8,14 @@
     font-size: 20px;
     font-weight: 600;
   }
-  .title {
-    color: #fff;
-    font-size: 28px;
-    font-weight: 700;
-    @include maxWidth($small) {
-      font-size: 20px;
+  .title-wrapper {
+    .title {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 700;
+      @include maxWidth($small) {
+        font-size: 20px;
+      }
     }
   }
   .title-after {
@@ -63,4 +65,3 @@
     }
   }
 }
-
