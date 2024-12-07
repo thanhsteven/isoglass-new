@@ -2049,13 +2049,22 @@ body {
 .product-item-4-item {
   overflow: hidden;
 }
-.product-item-4-item:hover .product-item-4-button {
-  bottom: 0;
-}
 .product-item-4-wrapper {
   border-radius: 12px;
   position: relative;
   overflow: hidden;
+}
+.product-item-4-wrapper:hover .product-item-4-button {
+  bottom: 0;
+}
+.product-item-4-wrapper:hover .product-item-4-image-main {
+  visibility: hidden;
+  opacity: 0;
+}
+.product-item-4-wrapper:hover .product-item-4-image-hover {
+  transform: scale(1.1);
+  visibility: visible;
+  opacity: 1;
 }
 .product-item-4-image a {
   display: block;
@@ -2070,14 +2079,25 @@ body {
   aspect-ratio: 1/1;
 }
 .product-item-4-image-main {
+  visibility: visible;
+  opacity: 1;
   position: relative;
   inset: 0;
-  z-index: 100;
+  z-index: 200;
+  transition-property: visibility, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }
 .product-item-4-image-hover {
+  transform: scale(1);
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   inset: 0;
-  z-index: 200;
+  z-index: 100;
+  transition-property: transform, visibility, opacity;
+  transition-duration: 1.2s;
+  transition-timing-function: ease;
 }
 .product-item-4-button {
   display: block;
@@ -2097,21 +2117,33 @@ body {
   color: inherit;
   font-size: 13px;
   font-weight: 500;
+  position: relative;
+}
+.product-item-4-button span::before {
+  content: "Liên hệ";
+  display: block;
+  text-align: center;
+  position: absolute;
+  inset: 0;
 }
 .product-item-4-title h3 {
-  font-size: 16px;
-  color: #333;
-  font-weight: 600;
-  line-height: 24px;
   text-align: center;
-  margin-top: 10px;
-  padding-inline: 30px;
+  margin-top: 8px;
+  cursor: pointer;
 }
 .product-item-4-title h3 a {
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
+  display: inline-block;
+  width: 100%;
+  padding-inline: 20px;
+  color: #333;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  vertical-align: baseline;
+  text-wrap: wrap;
+}
+.product-item-4-title h3 a:hover {
+  color: #1e73be;
 }
 
 /*# sourceMappingURL=main.css.map */
