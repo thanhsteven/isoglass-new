@@ -370,9 +370,9 @@
       position: relative;
       inset: 0;
       z-index: 200;
-      transition-property: visibility, opacity;
-      transition-duration: 0.3s;
+      transition-property: all;
       transition-timing-function: ease;
+      transition-duration: 0.3s;
     }
     &-hover {
       transform: scale(1);
@@ -381,9 +381,9 @@
       position: absolute;
       inset: 0;
       z-index: 100;
-      transition-property: transform, visibility, opacity;
-      transition-duration: 1.2s;
+      transition-property: all;
       transition-timing-function: ease;
+      transition-duration: 1.2s;
     }
   }
   &-button {
