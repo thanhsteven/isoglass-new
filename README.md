@@ -1,18 +1,16 @@
 <!-- - Convert to HTML - -->
 
 pug index.pug --watch --pretty --out html
-pug gioi-thieu.pug --watch --pretty --out html
-pug lien-he.pug --watch --pretty --out html
-pug chai-thuy-tinh.pug --watch --pretty --out html
-pug ly-thuy-tinh.pug --watch --pretty --out html
-pug chai-thuy-tinh-dung-ruou.pug --watch --pretty --out html
+pug ./page/gioi-thieu.pug --watch --pretty --out html
+pug ./page/lien-he.pug --watch --pretty --out html
+pug ./page/chai-thuy-tinh.pug --watch --pretty --out html
+pug ./page/ly-thuy-tinh.pug --watch --pretty --out html
+pug ./page/chai-thuy-tinh-dung-ruou.pug --watch --pretty --out html
 
-pug bai-san-pham.pug --watch --pretty --out html
+pug ./page/bai-san-pham.pug --watch --pretty --out html
 
-pug in-logo-ly-thuy-tinh.pug --watch --pretty --out html
-
-pug blog.pug --watch --pretty --out html
-pug bai-viet-mau.pug --watch --pretty --out html
+pug ./page/blog.pug --watch --pretty --out html
+pug ./page/bai-viet-mau.pug --watch --pretty --out html
 
 <!-- - Convert to CSS - -->
 
@@ -22,14 +20,14 @@ sass ./sass/sub-cate.scss ./style/sub-cate.css --watch
 sass ./sass/post.scss ./style/post.css --watch
 sass ./sass/product.scss ./style/product.css --watch
 
-sass ./sass/home.scss ./style/home.css --watch
-sass ./sass/about-us.scss ./style/about-us.css --watch
-sass ./sass/contact-us.scss ./style/contact-us.css --watch
-sass ./sass/chai-thuy-tinh-cat.scss ./style/chai-thuy-tinh-cat.css --watch
-sass ./sass/ly-thuy-tinh-cat.scss ./style/ly-thuy-tinh-cat.css --watch
-sass ./sass/chai-thuy-tinh-dung-ruou.scss ./style/chai-thuy-tinh-dung-ruou.css --watch
+sass ./sass/page/home.scss ./style/home.css --watch
+sass ./sass/page/about-us.scss ./style/about-us.css --watch
+sass ./sass/page/contact-us.scss ./style/contact-us.css --watch
+sass ./sass/page/chai-thuy-tinh-cat.scss ./style/chai-thuy-tinh-cat.css --watch
+sass ./sass/page/ly-thuy-tinh-cat.scss ./style/ly-thuy-tinh-cat.css --watch
+sass ./sass/page/chai-thuy-tinh-dung-ruou.scss ./style/chai-thuy-tinh-dung-ruou.css --watch
 
 <!-- - Blog CSS - -->
 
-sass ./sass/layout/blog.scss ./style/blog.css --watch
-sass ./sass/layout/post.scss ./style/post.css --watch
+sass ./sass/blog.scss ./style/blog.css --watch
+sass ./sass/post.scss ./style/post.css --watch

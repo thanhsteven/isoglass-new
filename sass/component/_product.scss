@@ -314,7 +314,7 @@
       }
     }
     &-zalo {
-      background-color: #3583f5;
+      background-color: #1e73be;
     }
     &-hotline {
       background-color: transparent;
@@ -345,7 +345,6 @@
           &-hover {
             transform: scale(1.1);
             visibility: visible;
-            opacity: 1;
           }
         }
       }
@@ -370,20 +369,19 @@
       position: relative;
       inset: 0;
       z-index: 200;
-      transition-property: all;
+      transition-property: visibility, opacity;
+      transition-duration: 1s;
       transition-timing-function: ease;
-      transition-duration: 0.3s;
     }
     &-hover {
       transform: scale(1);
       visibility: hidden;
-      opacity: 0;
       position: absolute;
       inset: 0;
       z-index: 100;
-      transition-property: all;
+      transition-property: transform, visibility;
+      transition-duration: 1.5s;
       transition-timing-function: ease;
-      transition-duration: 1.2s;
     }
   }
   &-button {
@@ -391,25 +389,43 @@
     width: 100%;
     color: #fff;
     text-align: center;
-    line-height: 36px;
+    line-height: 40px;
     background-color: rgba($color: $primaryColor, $alpha: 0.9);
     position: absolute;
     left: 0;
-    bottom: -37px;
+    bottom: -45px;
     z-index: 300;
     transition: all ease 0.2s;
+    overflow: hidden;
+    &:hover {
+      background-color: #3583f5;
+      span {
+        transform: translateY(-30px);
+        &::before {
+          transform: translateY(30px);
+        }
+      }
+    }
     span {
+      display: inline-block;
+      line-height: 40px;
       text-transform: uppercase;
       color: inherit;
+      font-family: $font-primary;
       font-size: 13px;
       font-weight: 500;
       position: relative;
+      transform: translateY(0);
+      transition: all ease 0.3s;
       &::before {
         content: "Liên hệ";
         display: block;
+        font-weight: 600;
         text-align: center;
         position: absolute;
         inset: 0;
+        transform: translateY(30px);
+        transition: transform ease 0.3s;
       }
     }
   }
@@ -422,10 +438,11 @@
         display: inline-block;
         width: 100%;
         padding-inline: 20px;
+        font-family: $font-primary;
         color: $textColor;
         font-size: 16px;
         line-height: 22px;
-        font-weight: 600;
+        font-weight: 700;
         vertical-align: baseline;
         text-wrap: wrap;
         &:hover {

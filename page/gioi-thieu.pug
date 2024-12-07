@@ -1,4 +1,4 @@
-extends ./view/layout/layout
+extends ../view/layout/layout
 block titlePage 
   title Công ty TNHH TMDV iSOGLASS | Thủy tinh iSOGLASS
 append styleSheet 
@@ -8,8 +8,8 @@ append mainHeading
 block main
   +secTitleBase("Về chúng tôi", "../images/hosting/background-title-about-us.jpg")
   main.main-wrapper
-    include ./view/section/about-us/ve-chung-toi
-    include ./view/section/about-us/lich-su-hinh-thanh
-    include ./view/section/about-us/gia-tri-cot-loi
-    include ./view/section/common/con-so-noi-bat
-    include ./view/section/about-us/doi-ngu-nhan-su
+    include ../view/section/about-us/ve-chung-toi
+    include ../view/section/about-us/lich-su-hinh-thanh
+    include ../view/section/about-us/gia-tri-cot-loi
+    include ../view/section/common/con-so-noi-bat
+    include ../view/section/about-us/doi-ngu-nhan-su

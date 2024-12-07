@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -287,6 +288,7 @@
   border-radius: 4px;
   text-align: center;
   border: 2px solid #1a2c75;
+  transition: background-color ease 0.3s;
 }
 .product-contact a {
   display: block;
@@ -333,7 +335,7 @@
   padding-right: 0px;
   overflow: hidden;
   cursor: pointer;
-  transition: padding-right ease 0.4s;
+  transition: padding-right ease-in-out 0.5s;
 }
 .product-image-show a span {
   max-width: 0px;
@@ -342,7 +344,7 @@
   padding-left: 0px;
   padding-right: 0px;
   white-space: nowrap;
-  transition: max-width ease 0.4s;
+  transition: max-width ease-in-out 0.5s;
 }
 .product-image-show a i {
   display: block;

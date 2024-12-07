@@ -1,6 +1,6 @@
-@use "./abstracts" as *;
+@use "../abstracts" as *;
 // - CSS các section riêng trong Chai thuỷ tinh
-@use "./section/main-cate/chai-thuy-tinh";
+@use "../section/main-cate/chai-thuy-tinh";
 // - CSS tuỳ chỉnh
 .chai-thuy-tinh-slideshow {
   margin-top: unset;
@@ -71,4 +71,3 @@
     margin-block: unset;
   }
 }
-
