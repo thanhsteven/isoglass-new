@@ -97,11 +97,14 @@
       text-transform: initial;
       border-radius: $border8;
       background-color: $primaryColor;
+      &-text {
+        margin-right: 8px;
+        @include maxWidth($medium) {
+          display: none;
+        }
+      }
       i {
         display: none;
-      }
-      span {
-        margin-right: 8px;
       }
       @include maxWidth($medium) {
         background-color: unset;
@@ -109,9 +112,6 @@
         font-weight: 600;
         font-size: 18px;
         text-align: right;
-        span {
-          display: none;
-        }
         i {
           display: inline-block;
           margin-right: 8px;
@@ -133,4 +133,3 @@
     }
   }
 }
-

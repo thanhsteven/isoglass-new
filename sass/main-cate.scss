@@ -1,6 +1,6 @@
 @use "./abstracts" as *;
-@use "./component/sidebar";
 @use "./section/common";
+@use "./layout/sidebar/sidebar";
 //- CSS chung dành cho Product Main Category
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 //- Basic H2, H3
@@ -79,12 +79,10 @@ a {
     grid-template-columns: 75% 25%;
     @include maxWidth($large) {
       position: relative;
+      grid-template-columns: 100% 0%;
     }
   }
   &-content {
-    @include maxWidth($large) {
-      flex-basis: 100%;
-    }
     &-extra {
       img {
         margin-block: 10px;
@@ -116,21 +114,73 @@ a {
     }
   }
   &-sidebar {
-    @include flexbox(column, stretch, flex-start, 15px);
-    background-color: #fff;
-    padding-left: 15px;
     @include maxWidth($large) {
-      flex-basis: 30vw;
       box-shadow: $shadow;
-      padding-inline: 20px;
-      padding-top: 70px;
-      padding-left: 25px;
-      overflow-y: auto;
-      z-index: 800;
+    }
+    &-wrapper {
+      @include flexbox(column, stretch, flex-start, 15px);
+      background-color: #fff;
+      padding: 20px;
+      padding-top: unset;
+      @include maxWidth($large) {
+        width: 40vw;
+        min-height: 100vh;
+        overflow-y: scroll;
+        overflow-x: visible;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 800;
+      }
+      @include maxWidth($medium) {
+        width: 50vw;
+      }
+      @include maxWidth($small) {
+        width: 70vw;
+      }
+    }
+    &-open {
+      --width: 50px;
+      display: block;
+      text-align: center;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border-right: unset;
+      color: $textColor;
+      cursor: pointer;
+      @include square(var(--width));
+      line-height: calc(var(--width) + 3px);
+      background-color: rgba($color: #fff, $alpha: 0.8);
+      box-shadow: -4px 0px 7px rgba(0, 0, 0, 0.1);
       position: fixed;
-      top: 0;
-      bottom: 0;
-      right: 0;
+      left: 0;
+      top: 25vh;
+      z-index: 500;
+      display: none;
+      @include maxWidth($large) {
+        display: block;
+      }
+    }
+    &-close {
+      border: unset;
+      outline: none;
+      background-color: unset;
+      width: 100%;
+      padding: 20px;
+      padding-bottom: 0px;
+      text-align: left;
+      display: none;
+      font-size: 16px;
+      font-weight: 700;
+      color: #333;
+      cursor: pointer;
+      @include maxWidth($large) {
+        display: block;
+      }
+      span {
+        margin-left: 6px;
+      }
     }
   }
   &-modal {
@@ -148,58 +198,6 @@ a {
         display: block;
         visibility: visible;
         opacity: 1;
-      }
-    }
-  }
-}
-
-//- CSS cho Sidebar Menu
-.sidebar {
-  &-title {
-    background-color: $primaryColor;
-    color: #fff;
-    font-size: 15px;
-    line-height: 1em;
-    font-weight: 700;
-    padding: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    border-top-right-radius: $border12;
-    border-top-left-radius: $border12;
-    margin-bottom: unset;
-    margin-top: unset;
-  }
-  &-list {
-    border: 1px solid $borderColor;
-    border-bottom-right-radius: $border12;
-    border-bottom-left-radius: $border12;
-    &-item {
-      border-top: 1px solid $borderColor;
-      &:first-child {
-        border-top: unset;
-      }
-      &:hover {
-        background-color: #f7f7f7;
-      }
-      &-link {
-        @include flexbox(row, center, flex-start, 10px);
-        padding: 10px 15px;
-        width: 100%;
-        cursor: pointer;
-      }
-      &-image {
-        width: 30px;
-        height: 30px;
-        border-radius: $border4;
-        object-fit: cover;
-      }
-      &-text {
-        display: block;
-        width: 100%;
-        color: $textColor;
-        font-weight: 700;
-        font-size: 14px;
-        text-wrap: nowrap;
       }
     }
   }

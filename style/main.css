@@ -582,106 +582,6 @@ section {
   }
 }
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  gap: 15px;
-}
-.sidebar-zalo {
-  background-color: #1a2c75;
-  padding: 20px;
-  border-radius: 12px;
-}
-.sidebar-zalo img {
-  width: 100%;
-  object-fit: cover;
-}
-.sidebar-zalo p {
-  color: #fff;
-  font-weight: 600;
-  margin-top: 10px;
-  text-align: center;
-}
-.sidebar-contact {
-  border-radius: 12px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  gap: 15px;
-  padding: 20px;
-}
-.sidebar-contact a {
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: 6px;
-  padding: 10px;
-  text-align: center;
-  transition: all linear 0.2s;
-}
-.sidebar-contact-call, .sidebar-contact-more {
-  background-color: #1a2c75;
-  color: #fff;
-}
-.sidebar-contact-call:hover, .sidebar-contact-more:hover {
-  background-color: #b59d78;
-  color: #1a2c75;
-}
-.sidebar-contact-zalo {
-  border: 1px solid #1a2c75;
-  color: #1a2c75;
-}
-.sidebar-contact-zalo:hover {
-  background-color: #1a2c75;
-  color: #fff;
-}
-.sidebar-support p {
-  color: #333;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1.4em;
-  padding-inline: 20px;
-  margin-bottom: 10px;
-}
-.sidebar-support-avatar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding-inline: 10px;
-}
-.sidebar-support-avatar img {
-  width: 33.3333333333%;
-  max-width: 90px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.sidebar-close {
-  border: unset;
-  outline: none;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 4px;
-  display: none;
-  position: absolute;
-  top: 10px;
-  left: 25px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-@media screen and (max-width: 992px) {
-  .sidebar-close {
-    display: block;
-  }
-}
-
 .product-item-1-wrapper {
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -1279,11 +1179,16 @@ body {
   border-radius: 8px;
   background-color: #1a2c75;
 }
+.header-right-hotline-text {
+  margin-right: 8px;
+}
+@media screen and (max-width: 768px) {
+  .header-right-hotline-text {
+    display: none;
+  }
+}
 .header-right-hotline i {
   display: none;
-}
-.header-right-hotline span {
-  margin-right: 8px;
 }
 @media screen and (max-width: 768px) {
   .header-right-hotline {
@@ -1292,9 +1197,6 @@ body {
     font-weight: 600;
     font-size: 18px;
     text-align: right;
-  }
-  .header-right-hotline span {
-    display: none;
   }
   .header-right-hotline i {
     display: inline-block;

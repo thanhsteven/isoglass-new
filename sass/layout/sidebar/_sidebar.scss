@@ -1,5 +1,5 @@
-@use "../abstracts" as *;
-//- CSS cho Sidebar liên hệ
+@use "../../abstracts" as *;
+//- CSS cho Sidebar tổng quan
 .sidebar {
   @include flexbox(column, stretch, center, 15px);
   &-zalo {
