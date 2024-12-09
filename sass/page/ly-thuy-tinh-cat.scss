@@ -1,6 +1,8 @@
 @use "../abstracts" as *;
 // - CSS các section dành riêng cho Ly thuỷ tinh
 @use "../section/main-cate/ly-thuy-tinh";
+// - CSS Sidebar của chai thuỷ tinh
+@use "../section/main-cate/ly-thuy-tinh/sidebar-chai-thuy-tinh";
 // - CSS tuỳ chỉnh
 .slideshow-ly-thuy-tinh {
   margin-block: unset;

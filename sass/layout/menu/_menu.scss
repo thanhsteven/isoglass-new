@@ -57,6 +57,7 @@
   }
   &-item {
     position: relative;
+    cursor: pointer;
     @include maxWidth($large) {
       width: 100%;
       cursor: pointer;
@@ -69,17 +70,16 @@
       }
     }
     &-wrapper {
-      @include flexbox(row, center, space-between, 10px);
+      @include flexbox(row, center, space-between, null);
       @include maxWidth($large) {
         align-items: unset;
         border-top: 1px solid $borderColor;
         padding-left: 15px;
-        pointer-events: none;
       }
     }
     &-link {
       flex: 0 0 auto;
-      padding-block: 10px;
+      padding: 10px;
       display: inline-block;
       @include maxWidth($large) {
         display: block;

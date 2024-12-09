@@ -2,7 +2,7 @@ console.log("Lỗi mới: Không click vào thẻ a được");
 (function () {
   const navMenu = document.querySelector(".menu-nav");
   navMenu.addEventListener("click", function (event) {
-    let menuHasChild = event.target;
+    let menuHasChild = event.target.parentElement;
     if (menuHasChild.hasAttribute("data-toggle")) {
       let subMenu = menuHasChild.querySelector(".sub-menu");
       let icon = menuHasChild.querySelector(".menu-item-icon");
@@ -65,7 +65,7 @@ console.log("Lỗi mới: Không click vào thẻ a được");
     }
   });
   function resizeMenu() {
-    modalFooter.classList.remove("modal-show");
+    modalFooter.classList.remove("footer-modal-show");
     navMenu.classList.remove("menu-nav-show");
   }
 })();
