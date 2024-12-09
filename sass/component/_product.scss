@@ -42,7 +42,7 @@
     border-radius: $border12;
     overflow: hidden;
     @include maxWidth($large) {
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: $shadow2;
     }
     img {
       width: 100%;
@@ -84,7 +84,6 @@
     padding-inline: 10px;
     color: #fff;
     @include maxWidth($large) {
-      color: $primaryColor;
       margin-top: 10px;
       display: -webkit-box;
       -webkit-box-orient: vertical;

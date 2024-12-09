@@ -9,16 +9,24 @@
     font-weight: 600;
   }
   .title-wrapper {
+    @include maxWidth($small) {
+      gap: unset;
+    }
     .title {
       color: #fff;
       font-size: 28px;
       font-weight: 700;
       @include maxWidth($small) {
         font-size: 20px;
+        margin-block: 10px;
       }
     }
     .subtitle {
       padding: 10px 18px;
+      @include maxWidth($small) {
+        padding-block: unset;
+        font-size: 16px;
+      }
     }
   }
   .title-after {
@@ -26,6 +34,11 @@
     text-align: center;
     margin-top: 20px;
     line-height: 28px;
+    @include maxWidth($small) {
+      margin-top: unset;
+      text-align: justify;
+      text-align-last: center;
+    }
   }
   &-mail {
     color: #fff;

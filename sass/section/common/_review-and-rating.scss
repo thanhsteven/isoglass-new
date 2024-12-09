@@ -1,7 +1,13 @@
 @use "../../abstracts" as *;
 .review-and-rating {
+  @include maxWidth($large) {
+    margin-top: unset;
+  }
   &-wrapper {
     @include flexbox(row, stretch, space-between, 15px);
+    @include maxWidth($large) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -9,6 +15,12 @@
   &-wrapper {
     flex: 0 0 65%;
     padding-block: 10px;
+    @include maxWidth($large) {
+      padding-top: 10px;
+    }
+    @include maxWidth($small) {
+      padding-block: unset;
+    }
   }
   &-list {
     width: 100%;
@@ -16,8 +28,8 @@
     overflow-y: auto;
     padding-right: 14px;
     &::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
+      width: 4px;
+      height: 4px;
     }
     &::-webkit-scrollbar-thumb {
       background-color: #1a2c75;
@@ -33,6 +45,11 @@
     padding-bottom: 30px;
     padding-top: 15px;
     border-bottom: 1px solid $borderColor;
+    @include maxWidth($small) {
+      margin-top: unset;
+      flex-direction: column;
+      align-items: flex-start;
+    }
     &-avatar {
       flex: 0 0 12%;
       max-width: 80px;
@@ -48,11 +65,21 @@
     }
     &-info {
       @include flexbox(row, center, space-between, 10px);
+      @include maxWidth($small) {
+        gap: unset;
+        span {
+          font-size: 14px !important;
+        }
+      }
       &-name {
         span {
           font-weight: 700;
           font-size: 18px;
           color: $primaryColor;
+          @include maxWidth($small) {
+            max-width: 120px;
+            @include webkitBox(1);
+          }
         }
       }
       &-date {

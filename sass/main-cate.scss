@@ -17,12 +17,19 @@ h2 {
   font-size: 26px;
   font-weight: 700;
   margin-block: 10px;
+  @include maxWidth($small) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 h3 {
   margin-block: 10px;
   color: $primaryColor;
   font-weight: 700;
   font-size: 20px;
+  @include maxWidth($small) {
+    line-height: 28px;
+  }
 }
 figcaption {
   font-size: 14px;
@@ -59,6 +66,12 @@ a {
     line-height: 2em;
     font-weight: 600;
     text-align: center;
+    @include maxWidth($small) {
+      padding-inline: 15px;
+      font-size: 22px;
+      line-height: 36px;
+      margin-block: 10px;
+    }
   }
   &-rating {
     @include flexbox(row, center, center, 8px);
@@ -95,21 +108,44 @@ a {
     }
   }
   &-cate {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include maxWidth($medium) {
+      .category-item-1-title {
+        text-align: left;
+      }
+    }
+    @include maxWidth($small) {
+      .category-item-1-content {
+        align-items: flex-start;
+        padding-inline: 12px;
+      }
+    }
     &-wrapper {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
       margin-top: 20px;
+      @include maxWidth($small) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
     }
   }
-  &-products {
+  &-product {
+    margin-top: unset;
+    margin-bottom: 20px;
     &-wrapper {
       display: grid;
       grid-template-columns: repeat(3, minmax(200px, 1fr));
       gap: 15px;
       margin-top: 20px;
-      .product-item-1-title {
-        font-size: 15px;
+      @include maxWidth($medium) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      @include maxWidth($small) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
       }
     }
   }
@@ -123,7 +159,7 @@ a {
       bottom: 0;
       right: 0;
       z-index: 800;
-      // transform: translateX(100%);
+      transform: translateX(100%);
     }
     @include maxWidth($medium) {
       width: 50vw;
@@ -156,6 +192,58 @@ a {
       @include flexbox(column, stretch, flex-start, 15px);
       padding: 20px;
       padding-top: unset;
+    }
+    &-cate {
+      .sidebar {
+        &-title {
+          background-color: $primaryColor;
+          color: #fff;
+          font-size: 15px;
+          line-height: 1em;
+          font-weight: 700;
+          padding: 15px;
+          text-align: center;
+          text-transform: uppercase;
+          border-top-right-radius: $border12;
+          border-top-left-radius: $border12;
+          margin-bottom: unset;
+          margin-top: unset;
+        }
+        &-list {
+          border: 1px solid $borderColor;
+          border-bottom-right-radius: $border12;
+          border-bottom-left-radius: $border12;
+          &-item {
+            border-top: 1px solid $borderColor;
+            &:first-child {
+              border-top: unset;
+            }
+            &:hover {
+              background-color: #f7f7f7;
+            }
+            &-link {
+              @include flexbox(row, center, flex-start, 10px);
+              padding: 10px 15px;
+              width: 100%;
+              cursor: pointer;
+            }
+            &-image {
+              width: 30px;
+              height: 30px;
+              border-radius: $border4;
+              object-fit: cover;
+            }
+            &-text {
+              display: block;
+              width: 100%;
+              color: $textColor;
+              font-weight: 700;
+              font-size: 14px;
+              text-wrap: nowrap;
+            }
+          }
+        }
+      }
     }
     &-open {
       display: block;
@@ -216,6 +304,48 @@ a {
         visibility: visible;
         opacity: 1;
       }
+    }
+  }
+  &-support {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    &-wrapper {
+      @include maxWidth($large) {
+        max-width: 90%;
+        padding: 15px;
+      }
+      @include maxWidth($medium) {
+        max-width: 100%;
+      }
+    }
+    &-item {
+      border-bottom: 1px solid $borderColor;
+      padding-block: 20px;
+      cursor: pointer;
+      &:first-child {
+        border-top: 1px solid $borderColor;
+      }
+    }
+    &-title {
+      @include flexbox(row, center, flex-start, 15px);
+      cursor: pointer;
+      span {
+        color: $primaryColor;
+        font-size: 26px;
+        font-weight: 700;
+        font-size: 16px;
+        text-wrap: wrap;
+        line-height: 28px;
+        @include maxWidth($medium) {
+          line-height: 26px;
+        }
+      }
+    }
+    &-answer {
+      line-height: 1.5em;
+      padding-left: 20px;
+      max-height: 0px;
+      overflow-y: hidden;
     }
   }
 }

@@ -47,8 +47,7 @@
     }
   ]
 //- HTML thuần
-section.category-chai-thuy-tinh-product
-  h2 Sản phẩm chai thuỷ tinh 
-  .category-main-products-wrapper 
-    each item in chai_thuy_tinh_product
-      +productStyle01(item.href, item.image, item.title)
+h2 Sản phẩm chai thuỷ tinh 
+.category-main-product-wrapper 
+  each item in chai_thuy_tinh_product
+    +productStyle01(item.href, item.image, item.title)

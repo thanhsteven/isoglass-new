@@ -17,14 +17,13 @@
       answer: "Có nhiều dạng chai thuỷ tinh phổ biến trong ngành công nghiệp thực phẩm và đồ uống, chẳng hạn như chai thủy tinh lọ, chai thủy tinh nắp nhựa, chai thủy tinh ly, chai thủy tinh tia UV, chai thủy tinh hình dáng đặc biệt, v.v. Mỗi dạng chai thuỷ tinh có đặc điểm và ứng dụng riêng, phù hợp với từng loại sản phẩm và nhu cầu sử dụng khác nhau."
     },
   ]
-
-section.chai-thuy-tinh-answer-the-question
-  .container 
-    h3.chai-thuy-tinh-question Câu hỏi thường gặp về Chai thuỷ tinh 
-    each item in chai_thuy_tinh_answer_the_question
-      .chai-thuy-tinh-question-item 
-        .chai-thuy-tinh-question-title 
-          i.fa.fa-angle-down(aria-hidden="true")
-          span=item.question
-        .chai-thuy-tinh-question-answer 
-          p=item.answer 
+//- HTML thuần 
+h2 Câu hỏi thường gặp về Chai thuỷ tinh 
+.category-main-support-wrapper
+  each item in chai_thuy_tinh_answer_the_question
+    .category-main-support-item 
+      .category-main-support-title
+        i.fa.fa-angle-down(aria-hidden="true")
+        span=item.question
+      .category-main-support-answer 
+        p=item.answer 

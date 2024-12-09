@@ -31,15 +31,14 @@
       href: "#"
     },
     {
-      image: "../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-5.jpg",
+      image: "../../images/ly-thuy-tinh/ly-thuy-tinh-lam-tach-cafe-gia-re.jpg",
       title : "Ly thuỷ tinh nhập khẩu",
       count: "19 sản phẩm",
       href: "#"
     },
   ]
 //- html thuần
-section.category-ly-thuy-tinh 
-  h2 Các loại ly thuỷ tinh thông dụng 
-  .category-main-cate-wrapper 
-    each item in cate_ly_thuy_tinh
-      +categoryStyle01(item.href, item.image, item.title, item.count)
+h2 Các loại ly thuỷ tinh thông dụng 
+.category-main-cate-wrapper 
+  each item in cate_ly_thuy_tinh
+    +categoryStyle01(item.href, item.image, item.title, item.count)

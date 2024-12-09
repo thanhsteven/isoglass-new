@@ -1,68 +1,3 @@
-.product-title {
-  color: #1a2c75;
-  font-weight: 700;
-  font-size: 26px;
-  margin-bottom: 20px;
-}
-.product-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  gap: 10px;
-}
-
-.sidebar-chai-thuy-tinh .sidebar-title {
-  background-color: #1a2c75;
-  color: #fff;
-  font-size: 15px;
-  line-height: 1em;
-  font-weight: 700;
-  padding: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
-  margin-bottom: unset;
-  margin-top: unset;
-}
-.sidebar-chai-thuy-tinh .sidebar-list {
-  border: 1px solid rgba(0, 0, 0, 0.1019607843);
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
-}
-.sidebar-chai-thuy-tinh .sidebar-list-item {
-  border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
-}
-.sidebar-chai-thuy-tinh .sidebar-list-item:first-child {
-  border-top: unset;
-}
-.sidebar-chai-thuy-tinh .sidebar-list-item:hover {
-  background-color: #f7f7f7;
-}
-.sidebar-chai-thuy-tinh .sidebar-list-item-link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  padding: 10px 15px;
-  width: 100%;
-  cursor: pointer;
-}
-.sidebar-chai-thuy-tinh .sidebar-list-item-image {
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
-  object-fit: cover;
-}
-.sidebar-chai-thuy-tinh .sidebar-list-item-text {
-  display: block;
-  width: 100%;
-  color: #333;
-  font-weight: 700;
-  font-size: 14px;
-  text-wrap: nowrap;
-}
-
 .chai-thuy-tinh-slideshow {
   margin-top: unset;
   margin-bottom: unset;
@@ -71,48 +6,22 @@
 .tem-nhan-chai-ruou {
   margin-top: 20px;
 }
-
-.category-chai-thuy-tinh {
-  margin-bottom: 20px;
-  margin-top: unset;
+.tem-nhan-chai-ruou .title-wrapper {
+  gap: unset;
+  margin-bottom: unset;
+  max-width: 80%;
+  margin: 0 auto;
 }
-
-.category-chai-thuy-tinh-product {
-  margin-top: unset;
-  margin-bottom: 20px;
+@media screen and (max-width: 576px) {
+  .tem-nhan-chai-ruou .title-wrapper {
+    max-width: unset;
+  }
 }
-
-.chai-thuy-tinh-question {
-  color: #1a2c75;
-  font-weight: 700;
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-.chai-thuy-tinh-question-item {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
-  padding-block: 20px;
-  cursor: pointer;
-}
-.chai-thuy-tinh-question-item:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
-}
-.chai-thuy-tinh-question-title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 15px;
-}
-.chai-thuy-tinh-question-title span {
-  color: #1a2c75;
-  font-weight: 700;
-  font-size: 16px;
-}
-.chai-thuy-tinh-question-answer {
-  line-height: 1.5em;
-  padding-left: 20px;
-  max-height: 0px;
-  overflow-y: hidden;
+@media screen and (max-width: 576px) {
+  .tem-nhan-chai-ruou .title-after {
+    text-align: justify;
+    text-align-last: center;
+  }
 }
 
 .bang-san-pham {

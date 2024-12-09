@@ -1,8 +1,4 @@
 @use "../abstracts" as *;
-// - CSS các section riêng trong Chai thuỷ tinh
-@use "../section/main-cate/chai-thuy-tinh";
-// - CSS Sidebar của chai thuỷ tinh
-@use "../section/main-cate/chai-thuy-tinh/sidebar-chai-thuy-tinh";
 // - CSS tuỳ chỉnh
 .chai-thuy-tinh-slideshow {
   margin-top: unset;
@@ -10,45 +6,23 @@
 }
 .tem-nhan-chai-ruou {
   margin-top: 20px;
-}
-.category-chai-thuy-tinh {
-  margin-bottom: 20px;
-  margin-top: unset;
-}
-.category-chai-thuy-tinh-product {
-  margin-top: unset;
-  margin-bottom: 20px;
-}
-.chai-thuy-tinh {
-  &-question {
-    color: $primaryColor;
-    font-weight: 700;
-    font-size: 26px;
-    margin-bottom: 10px;
-    &-item {
-      border-bottom: 1px solid $borderColor;
-      padding-block: 20px;
-      cursor: pointer;
-      &:first-child {
-        border-top: 1px solid $borderColor;
-      }
+  .title-wrapper {
+    gap: unset;
+    margin-bottom: unset;
+    max-width: 80%;
+    margin: 0 auto;
+    @include maxWidth($small) {
+      max-width: unset;
     }
-    &-title {
-      @include flexbox(row, center, flex-start, 15px);
-      span {
-        color: $primaryColor;
-        font-weight: 700;
-        font-size: 16px;
-      }
-    }
-    &-answer {
-      line-height: 1.5em;
-      padding-left: 20px;
-      max-height: 0px;
-      overflow-y: hidden;
+  }
+  .title-after {
+    @include maxWidth($small) {
+      text-align: justify;
+      text-align-last: center;
     }
   }
 }
+
 .bang-san-pham {
   width: 100%;
   border-collapse: collapse;

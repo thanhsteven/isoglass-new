@@ -1,7 +1,7 @@
 //- Layout danh mục sản phẩm chính
-include ../mixin/mixins
-include ../mixin/categories
-include ../mixin/products
+include ../mixin/mixins.pug
+include ../mixin/categories.pug
+include ../mixin/products.pug
 doctype html
 html(lang="vi")
   head
@@ -22,8 +22,8 @@ html(lang="vi")
       link(rel="stylesheet" href="../style/main.css")
       link(rel="stylesheet" href="../style/main-cate.css")
   body 
-    include ./header/header 
-    include ./menu/menu-2 
+    include ./header/header.pug
+    include ./menu/menu-2.pug
     main.main-wrapper
       block slideshow 
       .container 
@@ -43,11 +43,12 @@ html(lang="vi")
             i.fa.fa-star(aria-hidden="true")
         .category-main-short 
           block sapo
-        .category-main-products 
+        section.category-main-cate 
           block categoryProduct 
         .category-main-wrapper
           .category-main-content
-            block productsList 
+            section.category-main-product
+              block productsList 
             .category-main-content-extra 
               block article 
           .category-main-sidebar
@@ -58,15 +59,18 @@ html(lang="vi")
                 button.category-main-sidebar-close 
                   i.fa.fa-close(aria-hidden="true")
                   span Đóng
-                block sidebarCate 
+                aside.category-main-sidebar-cate 
+                  block sidebarCate 
                 include ./sidebar/sidebar.pug
       block moreSection
-      block answerQuestion 
-      include ../section/common/review-and-rating
+      .container 
+        section.category-main-support 
+          block answerQuestion 
+        include ../section/common/review-and-rating.pug
     .category-main-modal 
     block footer 
-      include ./footer/prefooter
-      include ./footer/footer
+      include ./footer/prefooter.pug
+      include ./footer/footer.pug
   block scriptJS
     script(src="../js/menu-2.js")
     script(src="../js/categories.js") 

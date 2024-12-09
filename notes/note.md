@@ -10,3 +10,18 @@
 - sidebar list --> chỉ sử dụng ở danh mục cha thôi, còn danh mục con thì không cần sử dụng --> viết thẳng CSS trong file danh-muc-cha là được.
 
 - Nghiên cứu custome sitemap wordpress
+
+- Ngày 9/12/204
+- Trang quà tặng doanh nghiệp --> Gỡ xuống hết tất cả các hình trên url --> Xoá hẳn đi trong hosting -> xoá luôn
+- Chỉ áp dụng các từ khoá này:
+
+* quà tặng doanh nghiệp
+* qua tang doanh nghiep
+
+- Title, keyword: Quà tặng doanh nghiệp --> Ưu tiên: quà tặng doanh nghiệp, qua tang doanh nghiep, quà tặng doanh nghiệp bộ ly thuỷ tinh.
+- Dscription: Quà tặng doanh nghiệp là bộ ly thuỷ tinh iSGOIFT, Địa chỉ 26 Số 12, Hiệp Bình Chánh, Thủ Đức, Hồ Chí Minh, Việt Nam, Hotline: 0963187517, website: isogift.vn
+- comment : y chang description
+- Tag: quatangdoanhnghiep
+- Author: isogift.vn
+- Copywrite: isogift.vn
+- Tên hình (url hình): qua-tang-doanh-nghiep-1,...

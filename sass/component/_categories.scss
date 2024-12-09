@@ -44,8 +44,9 @@
     bottom: -30px;
     transition: all ease 0.3s;
     @include maxWidth($small) {
-      padding: 4px 8px;
-      @include flexbox(column, center, stretch, 4px);
+      bottom: -22px;
+      @include flexbox(column, center, stretch, null);
+      padding: 0px 8px;
       height: auto;
     }
   }
@@ -55,14 +56,14 @@
     line-height: 24px;
     font-size: 15px;
     margin-block: unset;
-    @include maxWidth($small) {
+    @include maxWidth($medium) {
       text-align: center;
-      color: $primaryColor;
       font-size: 14px;
       font-weight: 700;
       margin-bottom: unset;
     }
     @include maxWidth($small) {
+      line-height: 22px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -76,7 +77,8 @@
     color: #fff;
     line-height: 36px;
     @include maxWidth($small) {
-      color: $primaryColor;
+      font-size: 14px;
+      line-height: 24px;
     }
   }
 }
