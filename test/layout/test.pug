@@ -21,18 +21,17 @@ html(lang="vi")
       if useOwlCarousel
         link(rel="stylesheet" href="../vendors/owl-carousel/css/owl.carousel.min.css")
         link(rel="stylesheet" href="../vendors/owl-carousel/css/owl.theme.default.min.css")
-    block styleSheet
+    block styleSheet 
       link(rel="stylesheet" href="./style/main.css")
     block testMenuCSS 
   body 
-    include ../../view/layout/header/header
+    include ../../view/layout/header/header.pug
     block testMenuPug 
-    block main
-    include ../../view/layout/footer/prefooter
-    include ../../view/layout/footer/footer
-  block menuScript 
-    script(src="../js/menu-2.js")
-  block jqueryScript 
-    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
-    script(src="../vendors/owl-carousel/js/owl.carousel.js")
+    block main 
+    include ../../view/layout/footer/prefooter.pug
+    include ../../view/layout/footer/footer.pug
+    block menuScript 
+    block jqueryScript 
+      script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+      script(src="../vendors/owl-carousel/js/owl.carousel.js")
 

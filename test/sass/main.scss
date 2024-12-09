@@ -1,10 +1,15 @@
+// - Basic
 @use "../../sass/base/reset";
 @use "../../sass/base/general";
 @use "../../sass/component";
 @use "../../sass/base/typography";
-
+// - Header
 @use "../../sass/layout/header/header";
-
+// - Footer
 @use "../../sass/layout/footer/call-to-action";
 @use "../../sass/layout/footer/footer";
 @use "../../sass/layout/footer/prefooter";
+// - Customer
+.prefooter {
+  margin-top: 15px;
+}
