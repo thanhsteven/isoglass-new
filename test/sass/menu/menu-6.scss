@@ -68,14 +68,22 @@
         }
       }
     }
-    &-link {
+    &-wrapper {
       @include flexbox(row, center, space-between, 10px);
-      padding-block: 10px;
       @include maxWidth($large) {
         align-items: unset;
         border-top: 1px solid $borderColor;
         padding-left: 15px;
-        // pointer-events: none;
+        pointer-events: none;
+      }
+    }
+    &-link {
+      flex: 0 0 auto;
+      padding-block: 10px;
+      display: inline-block;
+      @include maxWidth($large) {
+        display: block;
+        padding-block: unset;
         line-height: $heightMenuChildItem;
       }
     }
