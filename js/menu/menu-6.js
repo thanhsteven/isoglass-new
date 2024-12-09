@@ -1,3 +1,4 @@
+console.log("Đây là file menu 6");
 console.log("Lỗi mới: Không click vào thẻ a được");
 (function () {
   const navMenu = document.querySelector(".menu-nav");

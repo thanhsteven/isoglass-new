@@ -1,0 +1,11 @@
+extends ./layout/test.pug
+block titlePage
+  title Test fix lỗi menu không click được menu chính 
+append mainHeading
+  h1 Fix lỗi menu không click được trong tablet 
+block menuScript 
+  script(src="../js/menu/menu-6.js")
+append testMenuCSS
+  link(rel="stylesheet", href="./style/menu-6.css")
+block testMenuPug
+  include ./menu/menu-6.pug

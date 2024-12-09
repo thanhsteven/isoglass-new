@@ -1,38 +1,42 @@
 - 
   var menu = [
     {
-      href: "#",
+      href: "index.html",
       follow: "dofollow",
       text: "iSOGLASS",
       child: false,
       active: true
     },
     {
-      href: "#",
+      href: "./chai-thuy-tinh.html",
       follow: "dofollow",
       text: "Chai thuỷ tinh",
       child: [
         {
           icon02: "../../images/menu-icon/chai-thuy-tinh-dung-ruou.jpg",
-          text02: "Chai thuỷ tinh đựng rượu"
+          text02: "Chai thuỷ tinh đựng rượu",
+          href02: "./chai-thuy-tinh-dung-ruou.html",
         },
         {
           icon02: "../../images/menu-icon/chai-thuy-tinh-dung-nuoc.jpg",
-          text02: "Chai thuỷ tinh đựng nước"
+          text02: "Chai thuỷ tinh đựng nước",
+          href02: "#",
         },
         {
           icon02: "../../images/menu-icon/bo-binh-ly-thuy-tinh.jpg",
-          text02: "Bộ bình ly thuỷ tinh"
+          text02: "Bộ bình ly thuỷ tinh",
+          href02: "#",
         },
         {
           icon02: "../../images/menu-icon/chai-gom-dung-ruou.jpg",
-          text02: "Chai gốm đựng rượu"
+          text02: "Chai gốm đựng rượu",
+          href02: "#",
         }
       ],
       active: true 
     },
     {
-      href: "#",
+      href: "./ly-thuy-tinh.html",
       follow: "dofollow",
       text: "Ly thuỷ tinh",
       child: [
@@ -65,20 +69,27 @@
     },
     {
       href: "#",
-      follow: "nofollow",
+      follow: "dofollow",
+      text: "Bình thuỷ tinh",
+      child: false,
+      active: false
+    },
+    {
+      href: "#",
+      follow: "dofollow",
       text: "In thương hiệu ly thủy tinh",
       child: false,
       active: false
     },
     {
-      href: "#",
+      href: "./gioi-thieu.html",
       follow: "nofollow",
-      text: "Về chúng tôi",
+      text: "Giới thiệu",
       child: false,
       active: false
     },
     {
-      href: "#",
+      href: "./lien-he.html",
       follow: "nofollow",
       text: "Liên hệ",
       child: false,
@@ -86,25 +97,21 @@
     }
   ];
 
-nav.menu 
-  .menu-wrapper
-    button.menu-btn-close(type="button")
-      i.fa.fa-close(aria-hidden="true")
-    ul.menu-list
-      each item in menu
-        li.menu-list-item 
-          .menu-list-item-wrapper
-            a.menu-list-item-link(href=item.href, target="_blank", rel=`noopener noreferrer ${item.follow}`)
-              span=item.text
-            if item.child
-              span.menu-list-item-icon
-                i.fa.fa-angle-down.menu-list-item-arrow(aria-hidden="true")
-          if item.child
-            nav.menu-child
-              .menu-child-wrapper 
-                ul.menu-child-list 
-                  each text in item.child 
-                    li.menu-child-item 
-                      a.menu-child-item-link(href="#", target="_blank", rel="noopener noreferrer")
-                        img.menu-child-item-icon(src=text.icon02, alt=text.text02)
-                        span=text.text02
+nav.menu-nav 
+  button.menu-close
+    i.fa.fa-close(aria-hidden="true")
+  ul.menu
+    each item in menu
+      li.menu-item(data-toggle=item.child ? "sub-menu" : false) 
+        a.menu-item-link(href=item.href rel=`noopener noreferrer ${item.follow}`)
+          span.menu-item-text=item.text 
+          if item.child 
+            span.menu-item-icon 
+              i.fa.fa-angle-down.menu-item-arrow(aria-hidden="true") 
+        if item.child 
+          ul.sub-menu 
+            each child in item.child
+              li.sub-menu-item
+                a.sub-menu-item-link(href=child.href02 rel="noopener noreferrer")
+                  img.sub-menu-item-image(src=child.icon02, alt=child.text02, srcset=`${child.icon02} 2x`)
+                  span.sub-menu-item-text=child.text02

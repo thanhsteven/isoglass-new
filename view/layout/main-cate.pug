@@ -51,14 +51,15 @@ html(lang="vi")
             .category-main-content-extra 
               block article 
           .category-main-sidebar
-            .category-main-sidebar-open
+            button.category-main-sidebar-open
               i.fa.fa-ellipsis-h(aria-hidden="true")
-            .category-main-sidebar-wrapper 
-              button.category-main-sidebar-close 
-                i.fa.fa-close(aria-hidden="true")
-                span Đóng
-              block sidebarCate 
-              include ./sidebar/sidebar.pug
+            .category-main-sidebar-scroll
+              .category-main-sidebar-wrapper 
+                button.category-main-sidebar-close 
+                  i.fa.fa-close(aria-hidden="true")
+                  span Đóng
+                block sidebarCate 
+                include ./sidebar/sidebar.pug
       block moreSection
       block answerQuestion 
       include ../section/common/review-and-rating
