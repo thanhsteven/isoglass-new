@@ -1,9 +1,9 @@
 @use "./abstracts" as *;
-// - CSS Sidebar
+// * CSS Sidebar
 @use "./layout/sidebar/sidebar";
-// - CSS Page Title
+// * CSS Page Title
 @use "./component/page-title";
-// - Import Google Font
+// * Import Google Font
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 // - Cate Child
 .cate-child {
@@ -59,17 +59,32 @@
   &-gallery-image {
     margin-block: 10px;
   }
-  &-proudcts {
+  &-product {
+    margin-bottom: 20px;
     &-title {
       color: $primaryColor;
       font-weight: 700;
       font-size: 24px;
       margin-block: 10px;
     }
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      @include maxWidth($medium) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      @include maxWidth($small) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
   &-main {
     display: grid;
     grid-template-columns: 75% 25%;
+    @include maxWidth($large) {
+      grid-template-columns: unset;
+    }
     &-content {
       a {
         color: $primaryColor;
@@ -77,6 +92,45 @@
     }
     &-sidebar {
       padding-left: 15px;
+      background-color: #fff;
+      &-close {
+        background-color: unset;
+        border: none;
+        outline: none;
+        margin-bottom: 10px;
+        padding: 10px;
+        cursor: pointer;
+        display: none;
+        span {
+          margin-left: 6px;
+          color: rgba($color: #333, $alpha: 0.9);
+        }
+        @include maxWidth($large) {
+          display: block;
+        }
+      }
+      &-open {
+        border: none;
+        outline: none;
+        background-color: rgba($color: #fff, $alpha: 0.9);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        color: rgba($color: #333, $alpha: 0.8);
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        line-height: 40px;
+        box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 25vh;
+        left: 0;
+        transform: translateX(-50px);
+        cursor: pointer;
+        display: none;
+        @include maxWidth($large) {
+          display: block;
+        }
+      }
     }
   }
   &-extra-description {
@@ -118,6 +172,30 @@
       margin-block: 10px;
       line-height: 28px;
       margin-left: 20px;
+    }
+  }
+}
+
+.cate-child-main {
+  &-sidebar {
+    @include maxWidth($large) {
+      width: 30vw;
+      max-width: 300px;
+      padding-top: 20px;
+      padding-inline: 20px;
+      box-shadow: $shadow2;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      transform: translateX(100%);
+      z-index: 900;
+    }
+    @include maxWidth($medium) {
+      width: 50vw;
+    }
+    @include maxWidth($small) {
+      width: 70vw;
     }
   }
 }

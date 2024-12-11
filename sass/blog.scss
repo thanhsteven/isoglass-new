@@ -1,13 +1,22 @@
 @use "./abstracts" as *;
-// - CSS blog
-@use "./section/blog";
+// - CSS Title
 // - Google Font: Inter
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .blog {
   &-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    @include maxWidth($large) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    @include maxWidth($medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include maxWidth($small) {
+      gap: 10px;
+    }
   }
   &-article {
     max-width: calc(100% - 4%);
@@ -105,12 +114,32 @@
   &-content {
     padding: 20px;
     @include flexbox(column, stretch, flex-start, 10px);
+    @include maxWidth($large) {
+      gap: 6px;
+    }
+    @include maxWidth($small) {
+      font-size: 14px;
+      gap: 8px;
+    }
+    @include maxWidth($small) {
+      padding: 15px;
+      gap: 4px;
+    }
   }
   &-date {
     @include flexbox(row, center, space-between, 20px);
     span {
       color: #a5a5a5;
       font-size: 16px;
+      font-weight: 500;
+      @include maxWidth($extra-large) {
+        font-size: 14px;
+      }
+    }
+    @include maxWidth(920px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
     }
   }
   &-title {
@@ -120,6 +149,16 @@
       font-weight: 700;
       line-height: 28px;
       @include webkitBox(2);
+      @include maxWidth($large) {
+        line-height: 26px;
+      }
+      @include maxWidth($medium) {
+        line-height: 28px;
+      }
+      @include maxWidth($small) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
   }
   &-short {
@@ -129,6 +168,16 @@
       line-height: 26px;
       text-align: left;
       @include webkitBox(3);
+      @include maxWidth($large) {
+        line-height: 22px;
+      }
+      @include maxWidth($medium) {
+        line-height: 24px;
+      }
+      @include maxWidth($small) {
+        font-size: 12px;
+        line-height: 20px;
+      }
     }
   }
   &-button {
@@ -139,6 +188,17 @@
       color: $primaryColor;
       font-weight: 700;
       font-size: 18px;
+    }
+    @include maxWidth($large) {
+      padding: 15px;
+    }
+    @include maxWidth($small) {
+      padding-inline: 20px;
+      span {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+      }
     }
   }
 }

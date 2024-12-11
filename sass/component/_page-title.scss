@@ -84,6 +84,7 @@
     }
   }
   &-list {
+    margin-top: 10px;
     @include flexbox(row, center, center, 20px);
     @include maxWidth($medium) {
       display: block;
@@ -94,7 +95,10 @@
     }
   }
   &-item {
-    flex: 0 0 25%;
+    flex: 0 0 20%;
+    @include maxWidth($extra-large) {
+      flex: 0 0 25%;
+    }
     @include maxWidth($medium) {
       width: 100%;
       padding-inline: 20px;
