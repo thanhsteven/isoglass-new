@@ -17,18 +17,22 @@
     },
   ]
 
-section.title-cat
-  .container.title-cat-wrapper
-    .title-cat-title
-      span.title-cat-back 
-        a(href="#" rel="noopener noreferrer nofollow")
-          i.fa.fa-long-arrow-left(aria-hidden="true")
-      p.title-cat-heading Chai thuỷ tinh đựng rượu sản xuất tại TP.HCM 
-    ul.title-cat-list
-      each item in chai_thuy_tinh_dung_ruou
-        li.title-cat-item 
-          a.title-cat-item-link(href="#")
-            img.title-cat-item-image(src=item.image, alt=item.menuChild, srcset=`${item.image} 2x`)
-            .title-cat-item-text
-              span.title-cat-item-name=item.menuChild 
-              span.title-cat-item-count=item.count
+section.title-child
+  .container
+    .title-child-wrapper
+      .title-child-title
+        span.title-child-back 
+          a(href="#" rel="noopener noreferrer nofollow")
+            i.fa.fa-long-arrow-left(aria-hidden="true")
+        p.title-child-heading Chai thuỷ tinh đựng rượu sản xuất tại TP.HCM 
+      .title-child-menu
+        button.title-child-menu-btn Danh mục sản phẩm
+          i.fa.fa-angle-down(aria-hidden="true")
+        ul.title-child-list
+          each item in chai_thuy_tinh_dung_ruou
+            li.title-child-item 
+              a.title-child-item-link(href="#")
+                img.title-child-item-image(src=item.image, alt=item.menuChild, srcset=`${item.image} 2x`)
+                .title-child-item-text
+                  span.title-child-item-name=item.menuChild 
+                  span.title-child-item-count=item.count

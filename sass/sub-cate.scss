@@ -1,7 +1,10 @@
 @use "./abstracts" as *;
+// - CSS Sidebar
 @use "./layout/sidebar/sidebar";
+// - CSS Page Title
+@use "./component/page-title";
+// - Import Google Font
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-// - Basic Tag
 // - Cate Child
 .cate-child {
   &-breadcrumb {

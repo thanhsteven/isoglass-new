@@ -1,7 +1,7 @@
 //- Layout Danh mục sản phẩm phụ
-include ../mixin/mixins
-include ../mixin/categories
-include ../mixin/products
+include ../mixin/mixins.pug
+include ../mixin/categories.pug
+include ../mixin/products.pug
 doctype html
 html(lang="vi")
   head
@@ -15,10 +15,9 @@ html(lang="vi")
       link(rel="stylesheet" href="../style/main.css")
       link(rel="stylesheet" href="../style/sub-cate.css")
   body 
-    include ./header/header
-    block menu
-      include ./menu/menu-2
-    include ./child-title
+    include ./header/header.pug
+    include ./menu/menu-2.pug
+    include ./child-title.pug
     .container
       .cate-child-breadcrumb
         ul
@@ -49,8 +48,9 @@ html(lang="vi")
           .cate-child-extra-description
             block cateChildExtraDescription 
         aside.cate-child-main-sidebar 
-          include ./sidebar
-    include ./footer/prefooter
-    include ./footer/footer
+          include ./sidebar/sidebar.pug
+    include ./footer/prefooter.pug
+    include ./footer/footer.pug
   block scriptJS
     script(src="../js/menu-2.js")
+    script(src="../js/sub-categories.js") 

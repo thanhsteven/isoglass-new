@@ -3,3 +3,4 @@ console.log("Đã kết nối được với categories.js");
   const cateModal = document.querySelector(".category-main-modal");
   console.log(cateModal);
 })();
+

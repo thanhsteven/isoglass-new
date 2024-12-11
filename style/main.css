@@ -81,6 +81,14 @@ section {
   margin-bottom: 40px;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word;
+}
+
 .btn-zalo {
   border-radius: 4px;
   background-color: #fff;
@@ -446,100 +454,6 @@ section {
 }
 .category-item-3:hover .category-item-3-content {
   bottom: 0;
-}
-
-.page-title-wrapper {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: inherit;
-  padding-block: 40px;
-}
-.page-title-entry {
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.title-cat {
-  margin-top: unset;
-  margin-bottom: unset;
-  background-image: url("../../images/hosting/background-title-child-categories.jpg");
-  background-position: center;
-  background-size: cover;
-}
-.title-cat-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
-  padding-block: 40px;
-}
-.title-cat-title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.title-cat-back {
-  display: inline-block;
-}
-.title-cat-back a {
-  display: block;
-  line-height: 36px;
-  padding-inline: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  color: #fff;
-}
-.title-cat-heading {
-  color: #fff;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 30px;
-}
-.title-cat-list {
-  margin-top: 26px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-.title-cat-item {
-  flex: 0 0 20%;
-}
-.title-cat-item-link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-}
-.title-cat-item-image {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 4px;
-  object-fit: cover;
-}
-.title-cat-item-text {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  gap: 4px;
-}
-.title-cat-item-name {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-}
-.title-cat-item-count {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 12px;
-  font-weight: 400;
 }
 
 .title-wrapper {
@@ -1052,14 +966,6 @@ section {
   color: #1e73be;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  word-wrap: break-word;
-}
-
 .topbar {
   height: 30px;
   background-color: #1a2c75;
@@ -1270,6 +1176,7 @@ body {
 
 .menu {
   width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   color: #fff;
   display: flex;

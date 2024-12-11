@@ -14,7 +14,7 @@
   }
 }
 
-.title-cat {
+.title-child {
   margin-top: unset;
   margin-bottom: unset;
   background-image: url("../../images/hosting/background-title-child-categories.jpg");
@@ -23,12 +23,26 @@
   &-wrapper {
     @include flexbox(column, stretch, space-between, null);
     padding-block: 40px;
+    @include maxWidth($large) {
+    }
+    @include maxWidth($medium) {
+      padding-block: 20px;
+    }
+    @include maxWidth($small) {
+      padding-inline: 10px;
+    }
   }
   &-title {
     @include flexbox(row, center, center, 10px);
+    @include maxWidth($medium) {
+      padding-inline: 10px;
+    }
   }
   &-back {
     display: inline-block;
+    @include maxWidth($large) {
+      display: none;
+    }
     a {
       display: block;
       line-height: 36px;
@@ -40,36 +54,97 @@
   }
   &-heading {
     color: #fff;
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+    font-size: clamp(1.6rem, 4.5vw, 2.5rem);
+    line-height: clamp(2.3rem, 7vw, 4rem);
+  }
+  &-menu {
+    margin-top: 15px;
+    text-align: center;
+    &-btn {
+      background-color: unset;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: clamp(1.3rem, 2vw, 2rem);
+      cursor: pointer;
+      @include minWidth($medium) {
+        display: none;
+      }
+      i.fa {
+        margin-left: 10px;
+        transform: rotateX(0deg);
+        transition: transform ease 0.3s;
+        &-show {
+          transform: rotateX(180deg);
+        }
+      }
+    }
   }
   &-list {
-    margin-top: 26px;
     @include flexbox(row, center, center, 20px);
+    @include maxWidth($medium) {
+      display: block;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      max-height: 0px;
+      transition: all linear 0.3s;
+      overflow: hidden;
+    }
   }
   &-item {
-    flex: 0 0 20%;
+    flex: 0 0 25%;
+    @include maxWidth($medium) {
+      width: 100%;
+      padding-inline: 20px;
+      padding-block: 15px;
+      &:first-child {
+        padding-top: 20px;
+      }
+      &:last-child {
+        padding-bottom: 20px;
+      }
+    }
     &-link {
+      text-align: left;
       @include flexbox(row, center, flex-start, 8px);
+      @include maxWidth($medium) {
+        align-items: stretch;
+        width: 100%;
+      }
     }
     &-image {
       @include square(40px);
       border-radius: $border4;
       object-fit: cover;
+      @include maxWidth($medium) {
+        @include square(50px);
+      }
     }
     &-text {
       @include flexbox(column, stretch, flex-start, 4px);
+      @include maxWidth($medium) {
+        justify-content: space-between;
+      }
     }
     &-name {
       color: #fff;
       font-size: 14px;
       font-weight: 600;
+      line-height: 1.2rem;
+      @include maxWidth($medium) {
+        font-size: 16px;
+      }
     }
     &-count {
       color: rgba($color: #fff, $alpha: 0.6);
       font-size: 12px;
       font-weight: 400;
+      @include maxWidth($medium) {
+        font-size: 16px;
+      }
     }
   }
 }
+
