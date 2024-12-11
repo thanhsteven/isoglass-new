@@ -1,7 +1,7 @@
 //- Layout bài viết
-include ../mixin/mixins
-include ../mixin/categories
-include ../mixin/blogs
+include ../mixin/mixins.pug
+include ../mixin/categories.pug
+include ../mixin/blogs.pug
 doctype html
 html(lang="vi")
   head
@@ -15,8 +15,8 @@ html(lang="vi")
       link(rel="stylesheet" href="../style/main.css")
       link(rel="stylesheet", href="../style/post.css")
   body 
-    include ../layout/header/header
-    include ../layout/menu/menu-2
+    include ../layout/header/header.pug
+    include ../layout/menu/menu-2.pug
     +secTitleBase("Tin tức tổng hợp iSOGLASS", "../../images/hosting/background-title-blog.jpg")
     main.main-post 
       .container.main-post-wrapper 
@@ -27,6 +27,7 @@ html(lang="vi")
             .post-date-update 
               block postDate 
             .post-rating-wrapper 
+              span Được đánh giá:
               .post-rating-icon 
                 a(href="http://" title="poor")
                   i.fa.fa-star(aria-hidden="true")
@@ -39,8 +40,10 @@ html(lang="vi")
                 a(href="http://" title="excellent")
                   i.fa.fa-star(aria-hidden="true")
               .post-review 
+                span từ
                 block postReview 
               .post-view 
+                span với
                 block postView 
             .post-short-desc
               block sapo 
@@ -61,8 +64,8 @@ html(lang="vi")
             p Tham khảo các bài viết cùng chuyên mục
             block postFooter 
         aside.post-sidebar 
-          include ./sidebar/sidebar-post
-          include ./sidebar
-    include ../layout/footer/footer
+          include ./sidebar/sidebar-post.pug
+          include ./sidebar/sidebar.pug
+    include ../layout/footer/footer.pug
     block scriptJS 
       script(src="../js/menu-2.js")

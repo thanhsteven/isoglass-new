@@ -1,5 +1,5 @@
 @use "./abstracts" as *;
-@use "./component/sidebar";
+@use "./layout/sidebar/sidebar";
 @use "./layout/sidebar/sidebar-post";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .main-post {
@@ -35,11 +35,17 @@
     font-size: 15px;
     font-weight: 500;
     line-height: 22px;
-    margin-block: 10px;
+    margin-top: 10px;
   }
   &-rating {
     &-wrapper {
-      @include flexbox(row, center, flex-start, 20px);
+      margin-top: 10px;
+      @include flexbox(row, center, flex-start, 10px);
+      span {
+        color: $primaryColor;
+        font-size: 16px;
+        margin-right: 10px;
+      }
     }
     &-icon {
       @include flexbox(row, center, flex-start, 4px);
