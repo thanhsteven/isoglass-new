@@ -1,6 +1,6 @@
-include ../mixin/mixins
-include ../mixin/products
-include ../mixin/categories
+include ../mixin/mixins.pug
+include ../mixin/products.pug
+include ../mixin/categories.pug
 doctype html
 html(lang="vi")
   head
@@ -14,8 +14,8 @@ html(lang="vi")
     link(rel="stylesheet" href="../style/main.css" type="text/css")
     link(rel="stylesheet" href="../style/product.css" type="text/css")
   body 
-    include ./header/header
-    include ./menu/menu-2
+    include ./header/header.pug
+    include ./menu/menu-2.pug
     main.product-main
       .container 
         .product-breadcrumb 
@@ -38,6 +38,24 @@ html(lang="vi")
                 span Chai đựng rượu 750ml nắp gia công iSOGLASS là sản phẩm thủy tinh cao cấp, được thiết kế đẹp mắt, in hoa văn và logo theo yêu cầu khách hàng. Liên hệ: info@isoglass.com.vn hoặc hotline: 0963 181 517.
               p.product-contact 
                 a(href="https://zalo.me/0963181517", target="_blank", rel="noopener noreferrer nofollow") Liên hệ ngay
+              .product-share 
+                span Chia sẻ:
+                ul.product-share-social
+                  li.product-share-social-item
+                    a.product-share-facebook(href="#", target="_blank", rel="noopener noreferrer nofollow")
+                      i.fa.fa-facebook-f(aria-hidden="true")
+                  li.product-share-social-item
+                    a.product-share-twitter(href="#", target="_blank", rel="noopener noreferrer nofollow") 
+                      i.fa.fa-twitter(aria-hidden="true")
+                  li.product-share-social-item
+                    a.product-share-pinterest(href="#", target="_blank", rel="noopener noreferrer nofollow") 
+                      i.fa.fa-pinterest-p(aria-hidden="true")
+                  li.product-share-social-item
+                    a.product-share-linkedin(href="#", target="_blank", rel="noopener noreferrer nofollow") 
+                      i.fa.fa-linkedin(aria-hidden="true")
+                  li.product-share-social-item
+                    a.product-share-telegram(href="#", target="_blank", rel="noopener noreferrer nofollow") 
+                      i.fa.fa-telegram(aria-hidden="true")
             .product-header-viewer 
               .product-image
                 figure 
@@ -48,12 +66,14 @@ html(lang="vi")
                     span Click để mở rộng
           section.product-content  
             .product-content-wrapper 
-              .product-content-extra
+              article.product-content-extra
                 .product-table 
                   block productTable 
                 block productExtraContent 
               aside.product-content-sidebar 
-                include ./sidebar
+                .sidebar-product-categories
+                  include ../section/main-cate/chai-thuy-tinh/sidebar-chai-thuy-tinh.pug
+                include ./sidebar/sidebar.pug
         section.product-banner
           .product-banner-image
             img(src="../../images/hosting/ly-thuy-tinh-gia-tot-tai-tphcm.jpg", alt="Sản xuất chai thủy tinh và ly thủy tinh giá tốt tại TP.HCM", srcset="../../images/hosting/ly-thuy-tinh-gia-tot-tai-tphcm.jpg 2x")

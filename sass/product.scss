@@ -1,6 +1,10 @@
 @use "./abstracts" as *;
-@use "./component/sidebar";
+// * CSS Sidebar
+@use "./layout/sidebar/sidebar";
+@use "./layout/sidebar/sidebar-product";
+// * CSS Section product
 @use "./section/product-main";
+// * Import Google font
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .product {
   &-main {
@@ -17,8 +21,8 @@
       h1 {
         color: $primaryColor;
         font-weight: 700;
-        font-size: 26px;
-        line-height: 36px;
+        font-size: clamp(1.5rem, 2.2vw, 2rem);
+        line-height: clamp(2rem, 2.5vw, 3rem);
       }
     }
     &-viewer {
@@ -89,6 +93,51 @@
       }
     }
   }
+  &-share {
+    span {
+      color: $primaryColor;
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+    &-social {
+      margin-top: 4px;
+      @include flexbox(row, center, flex-start, 10px);
+      &-item {
+        a {
+          display: block;
+          width: 40px;
+          height: 40px;
+          line-height: 41px;
+          border-radius: 100rem;
+          color: #fff;
+          text-align: center;
+          i.fa {
+            font-size: 18px;
+          }
+          &:hover {
+            background-color: $secondColor;
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+    &-facebook {
+      background-color: #365493;
+    }
+    &-twitter {
+      background-color: #3cf;
+    }
+    &-pinterest {
+      background-color: #cb2027;
+    }
+    &-telegram {
+      background-color: #37aee2;
+    }
+    &-linkedin {
+      background-color: #0274b3;
+    }
+  }
   &-image {
     border-radius: $border12;
     position: relative;
@@ -144,10 +193,13 @@
   &-content {
     margin-bottom: unset;
     &-wrapper {
-      @include flexbox(row, stretch, flex-start, null);
+      display: grid;
+      grid-template-columns: 75% 25%;
+      @include maxWidth($large) {
+        grid-template-columns: unset;
+      }
     }
     &-extra {
-      flex: 0 0 75%;
       h2,
       h3 {
         color: $primaryColor;
@@ -173,8 +225,8 @@
       }
     }
     &-sidebar {
-      flex: 0 0 25%;
       padding-left: 20px;
+      background-color: #fff;
     }
   }
   &-table {
