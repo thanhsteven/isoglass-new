@@ -54,11 +54,22 @@ html(lang="vi")
                 img(src="", alt="")
                 figcaption
           main.post-content 
-            h2 Viết layout bài viết
-            ul
-              li Điểm chính 1
-              li Điểm chính 2
-              li Điểm chính 3
+            .post-layout 
+              p Mục lục bài viết 
+              ol(type="1").post-layout-list 
+                li 
+                  a(href="#") Điểm chính 1
+                  ul.post-layout-list-child 
+                    li 
+                      a(href="#") Tiêu điểm con 2
+                    li 
+                      a(href="#") Tiêu điểm con 2
+                    li 
+                      a(href="#") Tiêu điểm con 2
+                li 
+                  a(href="#") Điểm chính 2
+                li 
+                  a(href="#") Điểm chính 3
             .post-extra-desc 
               block extraDescription
           footer.post-footer 

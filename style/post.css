@@ -181,11 +181,11 @@
   font-weight: inherit;
 }
 .post-date-update {
-  color: #333;
-  font-size: 15px;
+  color: #969696;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 22px;
-  margin-top: 10px;
+  line-height: 20px;
+  margin-top: 8px;
 }
 .post-overview {
   display: flex;
@@ -194,8 +194,7 @@
   justify-content: flex-start;
   gap: 25px;
   margin-bottom: 10px;
-  margin-top: 8px;
-  height: 30px;
+  max-height: 30px;
 }
 .post-overview span {
   color: #1a2c75;
@@ -204,6 +203,7 @@
 }
 @media screen and (max-width: 576px) {
   .post-overview {
+    max-height: unset;
     flex-direction: column;
     align-items: flex-start;
     gap: unset;
@@ -211,6 +211,11 @@
 }
 .post-comment, .post-rating, .post-viewed {
   position: relative;
+}
+@media screen and (max-width: 576px) {
+  .post-comment, .post-rating, .post-viewed {
+    max-height: 30px;
+  }
 }
 .post-comment i.fa, .post-rating i.fa, .post-viewed i.fa {
   font-size: 16px;
@@ -253,6 +258,44 @@
   margin-top: 4px;
   text-align: center;
   color: #5c5c5c;
+}
+.post-layout {
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: 12px;
+}
+.post-layout p {
+  background-color: #b59d78;
+  padding: 10px 20px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  color: #1a2c75;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+.post-layout-list {
+  margin-top: 10px;
+  list-style-type: decimal;
+  padding-inline: 40px;
+  padding-bottom: 20px;
+}
+.post-layout-list li {
+  padding-top: 10px;
+}
+.post-layout-list li:hover > a {
+  text-decoration: underline;
+  color: #b59d78;
+}
+.post-layout-list li a {
+  color: #1a2c75;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+.post-layout-list-child {
+  list-style: circle;
+  padding-left: 15px;
 }
 .post-extra-desc h2,
 .post-extra-desc h3 {
@@ -319,6 +362,7 @@
     bottom: 0;
     right: 0;
     z-index: 900;
+    transform: translateX(100%);
   }
 }
 @media screen and (max-width: 576px) {
@@ -354,7 +398,6 @@
   background-color: unset;
   border: none;
   outline: none;
-  margin-bottom: 10px;
   padding: 10px;
   cursor: pointer;
   display: none;
@@ -372,13 +415,14 @@
 }
 .post-sidebar-wrapper {
   width: 100%;
-  height: fit-content;
-  min-height: 100vh;
+  height: calc(100% - 40px);
 }
 @media screen and (max-width: 992px) {
   .post-sidebar-wrapper {
     padding-inline: 10px;
-    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    overflow-y: scroll;
     overflow-x: visible;
     scroll-behavior: smooth;
   }

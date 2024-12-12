@@ -42,23 +42,23 @@
     }
   }
   &-date-update {
-    color: $textColor;
-    font-size: 15px;
+    color: #969696;
+    font-size: 13px;
     font-weight: 500;
-    line-height: 22px;
-    margin-top: 10px;
+    line-height: 20px;
+    margin-top: 8px;
   }
   &-overview {
     @include flexbox(row, center, flex-start, 25px);
     margin-bottom: 10px;
-    margin-top: 8px;
-    height: 30px;
+    max-height: 30px;
     span {
       color: $primaryColor;
       font-size: 15px;
       font-weight: 700;
     }
     @include maxWidth($small) {
+      max-height: unset;
       flex-direction: column;
       align-items: flex-start;
       gap: unset;
@@ -68,6 +68,9 @@
   &-rating,
   &-viewed {
     position: relative;
+    @include maxWidth($small) {
+      max-height: 30px;
+    }
     i.fa {
       font-size: 16px;
       font-weight: 400;
@@ -111,6 +114,46 @@
       margin-top: 4px;
       text-align: center;
       color: #5c5c5c;
+    }
+  }
+  &-layout {
+    border: 1px solid $borderColor;
+    border-radius: $border12;
+    p {
+      background-color: $secondColor;
+      padding: 10px 20px;
+      border-top-left-radius: $border12;
+      border-top-right-radius: $border12;
+      color: $primaryColor;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    &-list {
+      margin-top: 10px;
+      list-style-type: decimal;
+      padding-inline: 40px;
+      padding-bottom: 20px;
+      li {
+        padding-top: 10px;
+        &:hover {
+          & > a {
+            text-decoration: underline;
+            color: $secondColor;
+          }
+        }
+        a {
+          color: $primaryColor;
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 1.5rem;
+          cursor: pointer;
+        }
+      }
+      &-child {
+        list-style: circle;
+        padding-left: 15px;
+      }
     }
   }
   &-extra-desc {
@@ -180,6 +223,7 @@
       bottom: 0;
       right: 0;
       z-index: 900;
+      transform: translateX(100%);
     }
     @include maxWidth($small) {
       width: 70vw;
@@ -210,7 +254,6 @@
       background-color: unset;
       border: none;
       outline: none;
-      margin-bottom: 10px;
       padding: 10px;
       cursor: pointer;
       display: none;
@@ -226,11 +269,12 @@
     }
     &-wrapper {
       width: 100%;
-      height: fit-content;
-      min-height: 100vh;
+      height: calc(100% - 40px);
       @include maxWidth($large) {
         padding-inline: 10px;
-        overflow-y: auto;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        overflow-y: scroll;
         overflow-x: visible;
         scroll-behavior: smooth;
         &::-webkit-scrollbar {
