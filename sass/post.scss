@@ -2,8 +2,6 @@
 // - CSS Sidebar
 @use "./layout/sidebar/sidebar";
 @use "./layout/sidebar/sidebar-post";
-// - Google Fonts
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .page {
   &-title {
     &-entry {
@@ -16,8 +14,7 @@
 .main-post {
   &-wrapper {
     display: grid;
-    grid-auto-columns: 2;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 70% 30%;
     @include maxWidth($large) {
       grid-template-columns: unset;
     }
@@ -51,21 +48,33 @@
     line-height: 22px;
     margin-top: 10px;
   }
-  &-rating {
+  &-overview {
     @include flexbox(row, center, flex-start, 25px);
     margin-bottom: 10px;
     margin-top: 8px;
-    @include maxWidth($small) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: unset;
-    }
+    height: 30px;
     span {
       color: $primaryColor;
       font-size: 15px;
       font-weight: 700;
     }
-    &-icon {
+    @include maxWidth($small) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: unset;
+    }
+  }
+  &-comment,
+  &-rating,
+  &-viewed {
+    position: relative;
+    i.fa {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  &-rating {
+    &-star {
       display: inline-flex;
       align-items: center;
       justify-content: flex-start;
@@ -75,14 +84,6 @@
         color: #fd9530;
         font-size: 18px;
       }
-    }
-  }
-  &-review,
-  &-view {
-    i.fa {
-      font-size: 16px;
-      font-weight: 400;
-      margin-right: 6px;
     }
   }
   &-short-desc {
@@ -167,26 +168,98 @@
     }
   }
   &-sidebar {
-    padding-top: 15px;
+    padding: 20px;
+    background-color: #fff;
+    @include maxWidth($large) {
+      padding-inline: 10px;
+      width: 40vw;
+      min-height: 100vh;
+      box-shadow: $shadow2;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 900;
+    }
+    @include maxWidth($small) {
+      width: 70vw;
+    }
+    &-open {
+      border: none;
+      outline: none;
+      background-color: rgba($color: #fff, $alpha: 0.9);
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      color: rgba($color: #333, $alpha: 0.8);
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      line-height: 40px;
+      box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 25vh;
+      left: 0;
+      transform: translateX(-50px);
+      cursor: pointer;
+      display: none;
+      @include maxWidth($large) {
+        display: block;
+      }
+    }
+    &-close {
+      background-color: unset;
+      border: none;
+      outline: none;
+      margin-bottom: 10px;
+      padding: 10px;
+      cursor: pointer;
+      display: none;
+      width: 100%;
+      text-align: left;
+      span {
+        margin-left: 6px;
+        color: rgba($color: #333, $alpha: 0.9);
+      }
+      @include maxWidth($large) {
+        display: block;
+      }
+    }
+    &-wrapper {
+      width: 100%;
+      height: fit-content;
+      min-height: 100vh;
+      @include maxWidth($large) {
+        padding-inline: 10px;
+        overflow-y: auto;
+        overflow-x: visible;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $primaryColor;
+          border-radius: $border8;
+        }
+      }
+    }
   }
 }
 
 .post {
-  &-rating-wrapper,
-  &-review {
-    position: relative;
+  &-comment,
+  &-viewed {
+    i.fa {
+      margin-right: 6px;
+    }
   }
-  &-rating-wrapper::before,
-  &-review::before {
+  &-rating::before,
+  &-comment::before {
     content: "";
-    display: block;
     width: 10px;
     height: 1px;
-    margin-top: 18px;
     border-top: 1px solid #333;
-    font-weight: 400;
     position: absolute;
-    top: 0;
+    top: calc(50% + 2px);
     right: 0;
     transform: translateX(18px);
     @include maxWidth($small) {
