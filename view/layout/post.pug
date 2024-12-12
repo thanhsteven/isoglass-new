@@ -26,24 +26,25 @@ html(lang="vi")
               h1 tiêu đề chính h1 
             .post-date-update 
               block postDate 
-            .post-rating-wrapper 
-              span Được đánh giá:
-              .post-rating-icon 
-                a(href="http://" title="poor")
-                  i.fa.fa-star(aria-hidden="true")
-                a(href="http://" title="average")
-                  i.fa.fa-star(aria-hidden="true")
-                a(href="http://" title="good")
-                  i.fa.fa-star(aria-hidden="true")
-                a(href="http://" title="very good")
-                  i.fa.fa-star(aria-hidden="true")
-                a(href="http://" title="excellent")
-                  i.fa.fa-star(aria-hidden="true")
+            .post-rating
+              .post-rating-wrapper
+                span Đánh giá:
+                .post-rating-icon 
+                  a(href="http://" title="poor")
+                    i.fa.fa-star(aria-hidden="true")
+                  a(href="http://" title="average")
+                    i.fa.fa-star(aria-hidden="true")
+                  a(href="http://" title="good")
+                    i.fa.fa-star(aria-hidden="true")
+                  a(href="http://" title="very good")
+                    i.fa.fa-star(aria-hidden="true")
+                  a(href="http://" title="excellent")
+                    i.fa.fa-star(aria-hidden="true")
               .post-review 
-                span từ
+                i.fa.fa-comment-o(aria-hidden="true")
                 block postReview 
               .post-view 
-                span với
+                i.fa.fa-eye(aria-hidden="true")
                 block postView 
             .post-short-desc
               block sapo 
