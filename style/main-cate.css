@@ -663,6 +663,9 @@ a {
     gap: 5px;
   }
 }
+.category-main-product-wrapper .product-item-1-title {
+  font-size: 1rem;
+}
 @media screen and (max-width: 992px) {
   .category-main-sidebar {
     width: 40vw;
