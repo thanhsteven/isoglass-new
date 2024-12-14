@@ -1,7 +1,9 @@
 @use "./abstracts" as *;
-// - CSS Sidebar
+// * CSS Sidebar
 @use "./layout/sidebar/sidebar";
 @use "./layout/sidebar/sidebar-post";
+// * Import Google font
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .page {
   &-title {
     &-entry {

@@ -10,19 +10,29 @@
   &-main {
     &-wrapper {
       margin-top: 30px;
+      @include maxWidth($medium) {
+        margin-top: 10px;
+      }
     }
   }
   &-header {
     @include flexbox(row-reverse, stretch, space-between, null);
+    @include maxWidth($medium) {
+      flex-direction: column-reverse;
+      gap: 15px;
+    }
     &-info {
       flex: 0 0 50%;
       padding-left: 20px;
       @include flexbox(column, stretch, flex-start, 10px);
+      @include maxWidth($medium) {
+        padding-left: unset;
+      }
       h1 {
         color: $primaryColor;
         font-weight: 700;
         font-size: clamp(1.5rem, 2.2vw, 2rem);
-        line-height: clamp(2rem, 2.5vw, 3rem);
+        line-height: clamp(2rem, 3vw, 4rem);
       }
     }
     &-viewer {
@@ -32,10 +42,10 @@
   &-meta {
     span {
       display: block;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 22px;
       margin-block: 10px;
-      font-size: 18px;
+      font-size: 16px;
     }
     time {
       font-weight: 400;
@@ -192,6 +202,9 @@
   }
   &-content {
     margin-bottom: unset;
+    @include maxWidth($medium) {
+      margin-top: 20px;
+    }
     &-wrapper {
       display: grid;
       grid-template-columns: 75% 25%;
@@ -204,8 +217,8 @@
       h3 {
         color: $primaryColor;
         font-weight: 700;
-        line-height: 28px;
-        margin-block: 10px;
+        line-height: 2rem;
+        margin-top: 10px;
       }
       h2 {
         font-size: 22px;
@@ -214,11 +227,11 @@
         font-size: 20px;
       }
       p {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
-        line-height: 28px;
+        line-height: 1.5rem;
         text-align: justify;
-        margin-block: 15px;
+        margin-block: 10px;
       }
       li {
         margin-block: 10px;
@@ -227,6 +240,86 @@
     &-sidebar {
       padding-left: 20px;
       background-color: #fff;
+      @include maxWidth($large) {
+        width: 40vw;
+        box-shadow: $shadow;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        padding-right: 10px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 900;
+        transform: translateX(100%);
+      }
+      @include maxWidth($medium) {
+        width: 45vw;
+      }
+      @include maxWidth($small) {
+        width: 70vw;
+      }
+      &-open {
+        display: block;
+        @include square(50px);
+        background-color: rgba($color: #fff, $alpha: 0.8);
+        box-shadow: -4px 0px 7px rgba(0, 0, 0, 0.1);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        outline: none;
+        border: none;
+        text-align: center;
+        color: $textColor;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 25vh;
+        z-index: 500;
+        transform: translateX(-50px);
+        display: none;
+        @include maxWidth($large) {
+          display: block;
+        }
+      }
+      &-close {
+        border: unset;
+        outline: none;
+        background-color: unset;
+        width: 100%;
+        padding-block: 10px;
+        padding-left: 10px;
+        text-align: left;
+        display: none;
+        cursor: pointer;
+        @include maxWidth($large) {
+          display: block;
+        }
+        span {
+          color: #333;
+          font-size: 16px;
+          font-weight: 500;
+          margin-left: 6px;
+        }
+      }
+      &-wrapper {
+        width: 100%;
+        height: calc(100% - 30px);
+        @include maxWidth($large) {
+          margin-bottom: 20px;
+          padding-bottom: 20px;
+          padding-inline: 10px;
+          overflow-y: auto;
+          overflow-x: visible;
+          scroll-behavior: smooth;
+          &::-webkit-scrollbar {
+            width: 4px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: $primaryColor;
+            border-radius: $border8;
+          }
+        }
+      }
     }
   }
   &-table {
@@ -273,17 +366,34 @@
     }
   }
   &-banner {
-    margin-bottom: unset;
-    margin-top: unset;
+    margin-bottom: 15px;
+    margin-top: 15px;
     &-image {
       border-radius: $border12;
       position: relative;
       overflow: hidden;
+      @include maxWidth($small) {
+        &::before {
+          content: "";
+          display: block;
+          background-color: rgba($color: #000000, $alpha: 0.5);
+          position: absolute;
+          inset: 0;
+          z-index: 700;
+        }
+      }
       img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
         transform: scale(1);
         transition: transform ease 0.5s;
+        @include maxWidth($medium) {
+          min-height: 220px;
+        }
+        @include maxWidth($small) {
+          min-height: 200px;
+        }
       }
       &:hover {
         img {
@@ -297,6 +407,11 @@
       position: absolute;
       top: 20%;
       left: 40px;
+      z-index: 800;
+      @include maxWidth($medium) {
+        gap: 10px;
+        top: 10%;
+      }
     }
     &-subtitle {
       color: #fff;

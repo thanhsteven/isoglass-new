@@ -8,6 +8,33 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       padding-block: 20px;
+      @include maxWidth($medium) {
+        padding-inline: 20px;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(3, 350px);
+        overflow-x: auto;
+        overflow-y: visible;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        &::-webkit-scrollbar {
+          @include square(8px);
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $primaryColor;
+          border-radius: $border4;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: #f8f8f8;
+        }
+      }
+      @include maxWidth($small) {
+        grid-template-columns: repeat(3, 300px);
+      }
+    }
+    &-item {
+      @include maxWidth($medium) {
+        scroll-snap-align: center;
+      }
     }
     &-title {
       color: $primaryColor;
