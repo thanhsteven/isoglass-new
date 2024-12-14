@@ -11,7 +11,8 @@
 
 - Nghiên cứu custome sitemap wordpress
 
-- Ngày 9/12/204
+# Ngày 9/12/204
+
 - Trang quà tặng doanh nghiệp --> Gỡ xuống hết tất cả các hình trên url --> Xoá hẳn đi trong hosting -> xoá luôn
 - Chỉ áp dụng các từ khoá này:
 
@@ -25,3 +26,31 @@
 - Author: isogift.vn
 - Copywrite: isogift.vn
 - Tên hình (url hình): qua-tang-doanh-nghiep-1,...
+
+# Ngày 14/12/2024
+
+- Url: qua-tang-doanh-nghiep.html
+- Layout trang sản phẩm isogift giống với sản phẩm isoglass
+- H1 của sản phẩm và title y chang nhau trong trang sản phẩm. Phần mô tả sản phẩm phải có chứa từ khoá "quà tặng doanh nghiệp" đầu tiên. Phần sapo cũng vậy, phần content dài -> đoạn text đầu tiên phải có từ khoá quà tặng doanh nghiệp đầu tiên vào luôn.
+- Phần hình ảnh bên dưới Bộ ly thuỷ tinh làm quà tặng --> thay thành block SKU của sản phẩm (cần 20 SKU).
+- Hình SKU sản phẩm là hình thumbnail của chính sản phẩm đó. Trong hình thumbnail sản phẩm phải có đủ 3 thành phần: url hình (tên file hình), alt, title -> hiện tại đang thiếu "title" trong hình.
+- Trong url quà tặng doanh nghiệp --> trong thẻ head --> chèn thêm 20 dòng code hình thumbnail tương ứng với hình thumbnail của 20 SKU trên.
+- Ví dụ: chèn đoạn code này vào thẻ head:
+<meta property="og:image" content="https://isogift.vn/wp-content/uploads/2024/09/qua-tang-doanh-nghiep-isogift.vn_.jpg" />
+<meta property="og:image" content="https://isogift.vn/wp-content/uploads/2024/09/qua-tang-doanh-nghiep-2.jpg" />
+
+# lưu ý: Tên hình ảnh trong thumbnail phải có từ khoá "qua-tang-doanh-nghiep" đứng đầu --> tấm hình thumbnail của sản phẩm cũng phải có từ đó --> và phải là 1 hình duy nhất --> không tách ra làm 2 hình khác nhau nhé !
+
+# Lưu ý: khi đặt url cho SKU --> phải có từ khoá "qua-tang-doanh-nghiep" đứng đầu tiên.
+
+- ví dụ: Tên sản phẩm (h1) phải có từ khoá đứng đầu, vd: Quà tặng doanh nghiệp - Bộ ly thuỷ tinh 6 cái
+
+- SKU cho những sản phẩm như sau:
+
+* Quà tặng doanh nghiệp cuối năm - Bộ ly ....
+* Quà tặn doanh nghiệp 20/10 - Bộ ly...
+* Quà tặn doanh nghiệp Year end Party - Bộ ly...
+* Quà tặn doanh nghiệp cho khách hàng - Bộ ly...
+* Quà tặn doanh nghiệp VIP - Bộ ly...
+
+* Lấy lại các h2 của tab quà tặng cũ --> đem vô đặt làm tên sản phẩm
