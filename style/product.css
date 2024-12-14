@@ -338,7 +338,8 @@
   }
 }
 .product-header-info {
-  flex: 0 0 50%;
+  flex: 0 0 40%;
+  max-width: 40%;
   padding-left: 20px;
   display: flex;
   flex-direction: column;
@@ -358,7 +359,8 @@
   line-height: clamp(2rem, 3vw, 4rem);
 }
 .product-header-viewer {
-  flex: 0 0 50%;
+  flex: 0 0 60%;
+  max-width: 60%;
 }
 .product-meta span {
   display: block;
@@ -465,13 +467,58 @@
 .product-share-linkedin {
   background-color: #0274b3;
 }
-.product-image {
+.product-image-wrapper {
   border-radius: 12px;
   position: relative;
 }
-.product-image figure img {
-  border-radius: 12px;
+.product-image-carousel {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.product-image-carousel-vertical {
+  flex: 0 0 20%;
+  max-width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+.product-image-carousel-thumb {
+  flex: 0 0 90%;
+  max-height: 500px;
+  overflow: hidden;
+}
+.product-image-carousel-main {
+  flex: 0 0 80%;
+  max-width: 80%;
   width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.product-image-carousel-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  transition: transform linear 0.3s;
+}
+.product-image-carousel-main:hover img {
+  transform: scale(1.08);
+}
+.product-image-carousel-image {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.product-image-carousel-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .product-image-show {
@@ -517,6 +564,25 @@
 }
 .product-image-show a:hover span {
   max-width: 280px;
+}
+.product-image-button {
+  flex: 0 0 auto;
+  max-height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 10px;
+}
+.product-image-button button {
+  flex: 1 1 50%;
+  max-width: 50%;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding-block: 6px;
+  cursor: pointer;
 }
 .product-content {
   margin-bottom: unset;

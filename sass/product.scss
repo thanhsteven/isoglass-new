@@ -22,7 +22,8 @@
       gap: 15px;
     }
     &-info {
-      flex: 0 0 50%;
+      flex: 0 0 40%;
+      max-width: 40%;
       padding-left: 20px;
       @include flexbox(column, stretch, flex-start, 10px);
       @include maxWidth($medium) {
@@ -36,7 +37,8 @@
       }
     }
     &-viewer {
-      flex: 0 0 50%;
+      flex: 0 0 60%;
+      max-width: 60%;
     }
   }
   &-meta {
@@ -149,13 +151,54 @@
     }
   }
   &-image {
-    border-radius: $border12;
-    position: relative;
-    figure {
-      img {
-        border-radius: $border12;
+    &-wrapper {
+      border-radius: $border12;
+      position: relative;
+    }
+    &-carousel {
+      @include flexbox(row, stretch, space-between, null);
+      &-vertical {
+        flex: 0 0 20%;
+        max-width: 20%;
+        @include flexbox(column, stretch, space-between, null);
+        padding-right: 10px;
+      }
+      &-thumb {
+        flex: 0 0 90%;
+        max-height: 500px;
+        overflow: hidden;
+      }
+      &-main {
+        flex: 0 0 80%;
+        max-width: 80%;
         width: 100%;
-        object-fit: cover;
+        height: 100%;
+        aspect-ratio: 1/1;
+        border-radius: $border12;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transform: scale(1);
+          transition: transform linear 0.3s;
+        }
+        &:hover {
+          img {
+            transform: scale(1.08);
+          }
+        }
+      }
+      &-image {
+        border-radius: $border8;
+        overflow: hidden;
+        margin-bottom: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
     &-show {
@@ -197,6 +240,21 @@
             max-width: 280px;
           }
         }
+      }
+    }
+    &-button {
+      flex: 0 0 auto;
+      max-height: 10%;
+      @include flexbox(row, stretch, space-between, 10px);
+      button {
+        flex: 1 1 50%;
+        max-width: 50%;
+        background-color: #f7f7f7;
+        border-radius: $border8;
+        border: none;
+        outline: none;
+        padding-block: 6px;
+        cursor: pointer;
       }
     }
   }

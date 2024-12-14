@@ -27,6 +27,29 @@
 - Copywrite: isogift.vn
 - Tên hình (url hình): qua-tang-doanh-nghiep-1,...
 
+- Bổ sung thêm trong sitemap-images tất cả các hình trong url qua-tang-doanh-nghiep đó
+- url: https://isogift.vn/images-sitemap.xml
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+  <loc>https://isogift.vn/qua-tang-doanh-nghiep.html</loc>
+  <image:image>
+  <image:loc>https://isogift.vn/wp-content/uploads/2024/10/bo-qua-tang-ly-thuy-tinh-1.jpg</image:loc>
+  <image:caption>Quà tặng doanh nghiệp</image:caption>
+  <image:title>Quà tặng doanh nghiệp</image:title>
+  <image:license>https://isogift.vn</image:license>
+  <image:geo_location>26 Số 12, Hiệp Bình Chánh, Thủ Đức, Hồ Chí Minh, Việt Nam</image:geo_location>
+  </image:image>
+
+  <image:image>
+  <image:loc>https://isogift.vn/wp-content/uploads/2024/10/bo-qua-tang-ly-thuy-tinh-1.jpg</image:loc>
+  <image:caption>Quà tặng doanh nghiệp</image:caption>
+  <image:title>Quà tặng doanh nghiệp</image:title>
+  <image:license>https://isogift.vn</image:license>
+  <image:geo_location>26 Số 12, Hiệp Bình Chánh, Thủ Đức, Hồ Chí Minh, Việt Nam</image:geo_location>
+  </image:image>  
+  </url>
+  </urlset>
+
 # Ngày 14/12/2024
 
 - Url: qua-tang-doanh-nghiep.html

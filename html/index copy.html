@@ -29,9 +29,10 @@
       rel="stylesheet"
       href="../vendors/owl-carousel/css/owl.theme.default.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../vendors/owl-carousel/js/owl.carousel.js"></script>
     <link rel="stylesheet" href="../style/main.css" />
     <link rel="stylesheet" href="../style/home.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <div class="topbar">
@@ -327,7 +328,28 @@
           </div>
         </div>
       </section>
-
+      <script>
+        $("#slideshowHomePage").owlCarousel({
+          loop: true,
+          nav: true,
+          lazyLoad: false,
+          rtl: false,
+          autoplay: false,
+          autoplayTimeout: 5000,
+          autoplaySpeed: 3000,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 1,
+            },
+            1000: {
+              items: 1,
+            },
+          },
+        });
+      </script>
       <section class="gioi-thieu">
         <div class="container">
           <h2 class="gioi-thieu-title">
@@ -2632,30 +2654,6 @@
         ></a>
       </li>
     </ul>
-
-    <script src="../vendors/owl-carousel/js/owl.carousel.js"></script>
-    <script>
-      $("#slideshowHomePage").owlCarousel({
-        loop: true,
-        nav: true,
-        lazyLoad: false,
-        rtl: false,
-        autoplay: false,
-        autoplayTimeout: 5000,
-        autoplaySpeed: 3000,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 1,
-          },
-          1000: {
-            items: 1,
-          },
-        },
-      });
-    </script>
   </body>
   <script src="../js/menu-2.js"></script>
 </html>
