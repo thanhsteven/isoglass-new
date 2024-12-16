@@ -469,13 +469,12 @@
 }
 .product-image-wrapper {
   border-radius: 12px;
-  position: relative;
 }
 .product-image-carousel {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .product-image-carousel-vertical {
   flex: 0 0 20%;
@@ -487,20 +486,23 @@
   padding-right: 10px;
 }
 .product-image-carousel-thumb {
-  flex: 0 0 90%;
-  max-height: 500px;
+  flex: 0 0 93%;
+  max-height: 530px;
   overflow: hidden;
 }
 .product-image-carousel-main {
   flex: 0 0 80%;
   max-width: 80%;
+  position: relative;
+}
+.product-image-carousel-main-item {
   width: 100%;
   height: 100%;
   aspect-ratio: 1/1;
   border-radius: 12px;
   overflow: hidden;
 }
-.product-image-carousel-main img {
+.product-image-carousel-main-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -508,7 +510,7 @@
   transform: scale(1);
   transition: transform linear 0.3s;
 }
-.product-image-carousel-main:hover img {
+.product-image-carousel-main-item:hover img {
   transform: scale(1.08);
 }
 .product-image-carousel-image {
@@ -520,6 +522,25 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.product-image-button {
+  flex: 0 0 7%;
+  max-height: 7%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 10px;
+}
+.product-image-button button {
+  flex: 1 1 50%;
+  max-width: 50%;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding-block: 6px;
+  cursor: pointer;
 }
 .product-image-show {
   background-color: #fff;
@@ -564,25 +585,6 @@
 }
 .product-image-show a:hover span {
   max-width: 280px;
-}
-.product-image-button {
-  flex: 0 0 auto;
-  max-height: 10%;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 10px;
-}
-.product-image-button button {
-  flex: 1 1 50%;
-  max-width: 50%;
-  background-color: #f7f7f7;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  padding-block: 6px;
-  cursor: pointer;
 }
 .product-content {
   margin-bottom: unset;
