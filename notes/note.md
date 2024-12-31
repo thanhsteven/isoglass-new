@@ -19,7 +19,8 @@
 * quà tặng doanh nghiệp
 * qua tang doanh nghiep
 
-- Title, keyword: Quà tặng doanh nghiệp --> Ưu tiên: quà tặng doanh nghiệp, qua tang doanh nghiep, quà tặng doanh nghiệp bộ ly thuỷ tinh.
+- Title: Quà tặng doanh nghiệp, qua tang doanh nghiep, quà tặng doanh nghiệp bộ ly thuỷ tinh.
+- keyword: Quà tặng doanh nghiệp
 - Dscription: Quà tặng doanh nghiệp là bộ ly thuỷ tinh iSGOIFT, Địa chỉ 26 Số 12, Hiệp Bình Chánh, Thủ Đức, Hồ Chí Minh, Việt Nam, Hotline: 0963187517, website: isogift.vn
 - comment : y chang description
 - Tag: quatangdoanhnghiep
