@@ -44,8 +44,14 @@
 }
 .slideshow .owl-dots {
   display: flex;
+}
+.slideshow .owl-dots {
   flex-direction: row;
+}
+.slideshow .owl-dots {
   align-items: center;
+}
+.slideshow .owl-dots {
   justify-content: center;
 }
 .slideshow .owl-dots {
@@ -91,8 +97,14 @@
 }
 .gioi-thieu-wrapper {
   display: flex;
+}
+.gioi-thieu-wrapper {
   flex-direction: row;
+}
+.gioi-thieu-wrapper {
   align-items: stretch;
+}
+.gioi-thieu-wrapper {
   justify-content: stretch;
 }
 @media screen and (max-width: 992px) {
@@ -163,9 +175,17 @@
 }
 .gioi-thieu-content-wrapper {
   display: flex;
+}
+.gioi-thieu-content-wrapper {
   flex-direction: column;
+}
+.gioi-thieu-content-wrapper {
   align-items: stretch;
+}
+.gioi-thieu-content-wrapper {
   justify-content: space-between;
+}
+.gioi-thieu-content-wrapper {
   gap: 10px;
 }
 @media screen and (max-width: 992px) {
@@ -324,9 +344,17 @@
 }
 .in-logo-wrapper {
   display: flex;
+}
+.in-logo-wrapper {
   flex-direction: row;
+}
+.in-logo-wrapper {
   align-items: center;
+}
+.in-logo-wrapper {
   justify-content: space-between;
+}
+.in-logo-wrapper {
   gap: 15px;
 }
 @media screen and (max-width: 768px) {
@@ -389,9 +417,17 @@
 @media screen and (max-width: 768px) {
   .ly-do-chon-iso-convert {
     display: flex;
+  }
+  .ly-do-chon-iso-convert {
     flex-direction: column-reverse;
+  }
+  .ly-do-chon-iso-convert {
     align-items: stretch;
+  }
+  .ly-do-chon-iso-convert {
     justify-content: space-between;
+  }
+  .ly-do-chon-iso-convert {
     gap: 10px;
   }
 }
@@ -464,9 +500,17 @@
 }
 .featured-service {
   display: flex;
+}
+.featured-service {
   flex-direction: column;
+}
+.featured-service {
   align-items: center;
+}
+.featured-service {
   justify-content: stretch;
+}
+.featured-service {
   gap: 15px;
 }
 @media screen and (max-width: 992px) {
@@ -990,9 +1034,17 @@
 
 .con-so-wrapper {
   display: flex;
+}
+.con-so-wrapper {
   flex-direction: row;
+}
+.con-so-wrapper {
   align-items: center;
+}
+.con-so-wrapper {
   justify-content: space-between;
+}
+.con-so-wrapper {
   gap: 10px;
 }
 .con-so-wrapper {

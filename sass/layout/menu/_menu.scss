@@ -195,10 +195,10 @@
       border-bottom: unset;
     }
     &-link {
-      @include flexbox(row, center, flex-start, 8px);
       & {
         padding: 10px 16px;
       }
+      @include flexbox(row, center, flex-start, 8px);
       @include maxWidth($large) {
         padding-right: 15px;
         padding-top: 10px;

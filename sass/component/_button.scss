@@ -21,9 +21,9 @@
     overflow: hidden;
   }
   &::before {
-    content: "Liên hệ";
     @include flexbox(row, center, center, null);
     & {
+      content: "Liên hệ";
       color: #fff;
       font-size: 14px;
       font-weight: 600;

@@ -1,16 +1,24 @@
 @mixin flexbox($direction: row, $align: center, $justify: center, $gap: 0) {
   & {
     display: flex;
-    @if $direction {
+  }
+  @if $direction {
+    & {
       flex-direction: $direction;
     }
-    @if $align {
+  }
+  @if $align {
+    & {
       align-items: $align;
     }
-    @if $justify {
+  }
+  @if $justify {
+    & {
       justify-content: $justify;
     }
-    @if $gap {
+  }
+  @if $gap {
+    & {
       gap: $gap;
     }
   }
@@ -26,20 +34,17 @@
     color: $color;
   }
 }
-
 // * Button basic
 @mixin linkButton() {
-  & {
-    display: flex;
-    color: #fff;
-    background-color: transparent;
-    text-wrap: nowrap;
-    border: unset;
-    padding-block: 15px;
-    border-bottom: 2px solid;
-    border-bottom-color: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-  }
+  display: flex;
+  color: #fff;
+  background-color: transparent;
+  text-wrap: nowrap;
+  border: unset;
+  padding-block: 15px;
+  border-bottom: 2px solid;
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
   &:hover {
     border-color: #fff;
   }
@@ -62,24 +67,20 @@
 
 // * Under Line Menu Item
 @mixin underline($color, $transition) {
-  & {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 0;
-    background-color: $color;
-    transition: $transition;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-13px);
-  }
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  background-color: $color;
+  transition: $transition;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-13px);
 }
 // When hover
 @mixin hoverUnderline($width) {
-  & {
-    width: $width;
-  }
+  width: $width;
 }
 
 // * Responsive
@@ -100,36 +101,30 @@
 }
 
 @mixin virtualBridge($height) {
-  & {
-    content: "";
-    display: block;
-    width: 100%;
-    height: $height;
-    background-color: transparent;
-    position: absolute;
-    bottom: 100%;
-    z-index: 120;
-  }
+  content: "";
+  display: block;
+  width: 100%;
+  height: $height;
+  background-color: transparent;
+  position: absolute;
+  bottom: 100%;
+  z-index: 120;
 }
 
 // * Hiện tiêu đề chỉ 2 dòng
 @mixin webkitBox($row) {
-  & {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: $row;
-    overflow: hidden;
-  }
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+  overflow: hidden;
 }
 
 // * Hiện thanh scroll ngang trên mobile
 @mixin scrollHorizontalBar() {
-  & {
-    scroll-snap-type: x mandatory;
-    scroll-snap-stop: always;
-    overflow-x: auto;
-    margin-bottom: 15px;
-  }
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+  overflow-x: auto;
+  margin-bottom: 15px;
   &::-webkit-scrollbar {
     width: 8px;
     height: 8px;

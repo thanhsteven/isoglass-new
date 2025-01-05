@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .sidebar {
   display: flex;
+}
+.sidebar {
   flex-direction: column;
+}
+.sidebar {
   align-items: stretch;
+}
+.sidebar {
   justify-content: center;
+}
+.sidebar {
   gap: 15px;
 }
 .sidebar-zalo {
@@ -28,9 +36,17 @@
 }
 .sidebar-contact {
   display: flex;
+}
+.sidebar-contact {
   flex-direction: column;
+}
+.sidebar-contact {
   align-items: stretch;
+}
+.sidebar-contact {
   justify-content: center;
+}
+.sidebar-contact {
   gap: 15px;
 }
 .sidebar-contact a {
@@ -72,9 +88,17 @@
 }
 .sidebar-support-avatar {
   display: flex;
+}
+.sidebar-support-avatar {
   flex-direction: row;
+}
+.sidebar-support-avatar {
   align-items: center;
+}
+.sidebar-support-avatar {
   justify-content: center;
+}
+.sidebar-support-avatar {
   gap: 8px;
 }
 .sidebar-support-avatar img {
@@ -127,9 +151,17 @@
 }
 .sidebar-post-item a {
   display: flex;
+}
+.sidebar-post-item a {
   flex-direction: row;
+}
+.sidebar-post-item a {
   align-items: center;
+}
+.sidebar-post-item a {
   justify-content: flex-start;
+}
+.sidebar-post-item a {
   gap: 8px;
 }
 .sidebar-post-item a {
@@ -200,9 +232,17 @@
 }
 .post-overview {
   display: flex;
+}
+.post-overview {
   flex-direction: row;
+}
+.post-overview {
   align-items: center;
+}
+.post-overview {
   justify-content: flex-start;
+}
+.post-overview {
   gap: 25px;
 }
 .post-overview {

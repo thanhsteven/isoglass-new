@@ -95,6 +95,10 @@
       padding-inline: 10px;
       overflow: hidden;
     }
+    @include maxWidth($small) {
+      padding-inline: unset;
+      text-align: left;
+    }
   }
   &-button {
     background-color: transparent;
