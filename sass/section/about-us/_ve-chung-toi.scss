@@ -1,8 +1,10 @@
 @use "../../abstracts" as *;
 .about-isoglass {
   &-wrapper {
+    & {
+      padding-block: 40px;
+    }
     @include flexbox(row, stretch, space-between, 20px);
-    padding-block: 40px;
     @include maxWidth($large) {
       flex-direction: column;
     }
@@ -132,3 +134,4 @@
     }
   }
 }
+

@@ -1,10 +1,12 @@
 .about-isoglass-wrapper {
+  padding-block: 40px;
+}
+.about-isoglass-wrapper {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between;
   gap: 20px;
-  padding-block: 40px;
 }
 @media screen and (max-width: 992px) {
   .about-isoglass-wrapper {
@@ -23,6 +25,8 @@
 }
 .about-isoglass-info {
   flex: 1 1 50%;
+}
+.about-isoglass-info {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -171,6 +175,8 @@
     grid-auto-flow: column;
     grid-auto-columns: 320px;
     padding-bottom: 20px;
+  }
+  .about-isoglass-wrapper-core {
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
     overflow-x: auto;
@@ -192,12 +198,14 @@
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   background-color: #f8f8f8;
   border-radius: 12px;
+  padding: 20px;
+}
+.about-isoglass-core {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  padding: 20px;
 }
 @media screen and (max-width: 768px) {
   .about-isoglass-core {
@@ -209,6 +217,8 @@
   width: 150px;
   height: 150px;
   line-height: 150px;
+}
+.about-isoglass-core-image {
   border-radius: 100rem;
 }
 .about-isoglass-core-image img {
@@ -253,6 +263,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+.con-so-wrapper {
   padding-inline: 15px;
 }
 @media screen and (max-width: 768px) {
@@ -369,6 +381,8 @@
     grid-auto-flow: column;
     grid-auto-columns: 250px;
     padding-bottom: 20px;
+  }
+  .team-member-wrapper {
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
     overflow-x: auto;

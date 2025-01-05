@@ -69,18 +69,22 @@
   }
   &-info {
     @include flexbox(row, center, space-between, 15px);
-    padding: 20px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 500;
+    & {
+      padding: 20px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 500;
+    }
   }
   &-author {
     @include flexbox(row, center, space-between, 8px);
     &-avatar {
       @include square(30px);
-      border-radius: 100rem;
+      & {
+        border-radius: 100rem;
+      }
     }
     &-name {
       color: #fff;
@@ -99,15 +103,17 @@
         font-size: inherit;
       }
       &-count {
-        background-color: $primaryColor;
-        border-radius: 100rem;
         @include square(15px);
-        font-size: 10px;
-        text-align: center;
-        font-weight: 500;
-        position: absolute;
-        right: -4px;
-        top: -4px;
+        & {
+          background-color: $primaryColor;
+          border-radius: 100rem;
+          font-size: 10px;
+          text-align: center;
+          font-weight: 500;
+          position: absolute;
+          right: -4px;
+          top: -4px;
+        }
       }
     }
   }

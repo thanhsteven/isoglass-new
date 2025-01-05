@@ -9,7 +9,9 @@
 .cate-child {
   &-breadcrumb {
     @include flexbox(row, center, flex-start, null);
-    margin-block: 15px;
+    & {
+      margin-block: 15px;
+    }
     ul {
       @include flexbox(row, center, center, 10px);
     }
@@ -28,7 +30,9 @@
   }
   &-rating {
     @include flexbox(row, center, flex-start, 8px);
-    margin-block: 10px;
+    & {
+      margin-block: 10px;
+    }
     span {
       font-weight: 500;
     }

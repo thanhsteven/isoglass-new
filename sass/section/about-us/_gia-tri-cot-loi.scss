@@ -15,18 +15,22 @@
     }
   }
   &-core {
-    box-shadow: $shadow;
-    background-color: #f8f8f8;
-    border-radius: $border12;
+    & {
+      box-shadow: $shadow;
+      background-color: #f8f8f8;
+      border-radius: $border12;
+      padding: 20px;
+    }
     @include flexbox(column, center, flex-start, 10px);
-    padding: 20px;
     @include maxWidth($medium) {
       scroll-snap-align: center;
       width: 100%;
     }
     &-image {
       @include square(150px);
-      border-radius: 100rem;
+      & {
+        border-radius: 100rem;
+      }
       img {
         display: block;
         width: 100%;
@@ -54,3 +58,4 @@
     }
   }
 }
+

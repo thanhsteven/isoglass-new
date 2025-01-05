@@ -52,8 +52,10 @@
   }
   &-overview {
     @include flexbox(row, center, flex-start, 25px);
-    margin-bottom: 10px;
-    max-height: 30px;
+    & {
+      margin-bottom: 10px;
+      max-height: 30px;
+    }
     span {
       color: $primaryColor;
       font-size: 15px;

@@ -90,89 +90,168 @@ body {
 }
 
 .btn-zalo {
-  background-color: #1b91ff;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: #1a2c75;
+  padding: 8px 10px;
+}
+
+.btn_product_ver1 {
+  --width: 90px;
+  --height: 40px;
+}
+.btn_product_ver1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.btn_product_ver1 {
   color: #fff;
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.btn_product_ver1::before {
+  content: "Liên hệ";
+}
+.btn_product_ver1::before {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.btn_product_ver1::before {
+  color: #fff;
+  font-size: 14px;
   font-weight: 600;
-  border-radius: 10px;
-  padding: 10px 15px;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-}
-.btn-zalo:hover {
-  background-color: #147adc;
-}
-
-.product-btn {
-  padding: 10px 15px;
-  background-color: #f8f8f8;
-  color: #333;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.product-btn:hover {
-  background-color: #ffffff;
-  border-color: #bbb;
-}
-
-.carousel-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(calc(var(--height) - 10px));
+  transition: transform ease-in-out 0.2s;
+}
+.btn_product_ver1 span {
+  transform: translateY(0);
+  transition: transform ease-in-out 0.2s;
+}
+.btn_product_ver1:hover span {
+  transform: translateY(calc(-1 * var(--height)));
+}
+.btn_product_ver1:hover::before {
+  transform: translateY(0);
+}
+
+.btn-product-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.btn-product-2 {
+  padding: 8px 12px;
+  background-color: #1a2c75;
   color: #fff;
-  border: none;
-  border-radius: 50%;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+.btn-product-2 span {
+  transform: translateY(0);
+  transition: transform ease 0.2s;
+}
+.btn-product-2::before {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.btn-product-2::before {
+  content: "Liên hệ";
+  position: absolute;
+  inset: 0;
+  transform: translateY(120%);
+  transition: all ease 0.2s;
+}
+.btn-product-2:hover span {
+  transform: translateY(-150%);
+}
+.btn-product-2:hover::before {
+  transform: translateY(0%);
+}
+
+.owl-carousel .owl-nav {
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+}
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
   width: 40px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  line-height: 40px;
 }
-.carousel-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+  background-color: #fff !important;
+  border: 1px solid #ddd !important;
+  border-radius: 100rem;
+  color: #1a2c75 !important;
+  transition: all linear 0.3s;
+}
+.owl-carousel .owl-nav .owl-prev:hover,
+.owl-carousel .owl-nav .owl-next:hover {
+  background-color: #1a2c75 !important;
+  color: #fff !important;
+}
+.owl-carousel .owl-nav .owl-prev span,
+.owl-carousel .owl-nav .owl-next span {
+  font-size: 20px;
+}
+.owl-carousel .owl-dots .owl-dot.active span {
+  background-color: #1a2c75;
 }
 
-.load-more-btn {
-  background-color: #0066cc;
-  color: #fff;
-  padding: 12px 20px;
+.btn-order {
+  background-color: #1a2c75;
+  border-radius: 4px;
+  outline: none;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
+  transition: all linear 0.1s;
 }
-.load-more-btn:hover {
-  background-color: #004c99;
+.btn-order:hover {
+  background-color: #b59d78;
+  color: #1a2c75;
 }
 
-.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
+.btn-see-more-products {
+  display: block;
+  margin-top: 20px;
+  margin-inline: auto;
+  width: fit-content;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #e4e4e4;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #333;
+  transition: all linear 0.3s;
+}
+.btn-see-more-products span {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
   font-size: 14px;
+  color: inherit;
 }
-.btn--large {
-  padding: 15px 30px;
-  font-size: 18px;
-}
-.btn--small {
-  padding: 5px 10px;
-  font-size: 12px;
-}
-.btn--primary {
-  background-color: #007bff;
+.btn-see-more-products:hover {
+  background-color: #1a2c75;
+  border-color: #1a2c75;
   color: #fff;
-  border: 1px solid #007bff;
-}
-.btn--secondary {
-  background-color: #6c757d;
-  color: #fff;
-  border: 1px solid #6c757d;
 }
 
 .category-item-1-wrapper {
@@ -511,11 +590,11 @@ body {
   padding: 8px 12px;
   opacity: 0;
   visibility: hidden;
-  transition: all ease 0.3s;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 100%);
+  transition: all ease 0.3s;
 }
 .product-item-1-button span {
   color: #fff;

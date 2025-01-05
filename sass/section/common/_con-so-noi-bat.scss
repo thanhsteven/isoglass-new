@@ -9,7 +9,9 @@
 .con-so {
   &-wrapper {
     @include flexbox(row, center, space-between, 10px);
-    padding-inline: 15px;
+    & {
+      padding-inline: 15px;
+    }
     @include maxWidth($medium) {
       flex-direction: column;
       padding-inline: unset;
@@ -95,3 +97,4 @@
     }
   }
 }
+

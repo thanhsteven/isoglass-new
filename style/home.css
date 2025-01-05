@@ -20,9 +20,6 @@
   margin-bottom: unset !important;
 }
 .slideshow .owl-nav button[type=button][class*=owl-] {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
   border-radius: 100rem;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #eee;
@@ -30,6 +27,11 @@
   font-size: 30px;
   position: absolute;
   top: 40%;
+}
+.slideshow .owl-nav button[type=button][class*=owl-] {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
 }
 .slideshow .owl-nav button[type=button][class*=owl-]:hover {
   color: inherit;
@@ -45,6 +47,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.slideshow .owl-dots {
   background-color: #fff;
   border-radius: 100rem;
   padding: 4px;
@@ -58,6 +62,8 @@
   width: 14px;
   height: 14px;
   line-height: 14px;
+}
+.slideshow .owl-dots .owl-dot span {
   margin: 4px 8px;
 }
 
@@ -81,11 +87,13 @@
   margin-block: 20px;
 }
 .gioi-thieu-wrapper {
+  margin-bottom: 20px;
+}
+.gioi-thieu-wrapper {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: stretch;
-  margin-bottom: 20px;
 }
 @media screen and (max-width: 992px) {
   .gioi-thieu-wrapper {
@@ -152,6 +160,8 @@
 }
 .gioi-thieu-content-wrapper {
   padding: 8%;
+}
+.gioi-thieu-content-wrapper {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -310,12 +320,14 @@
   }
 }
 .in-logo-wrapper {
+  margin-block: 20px;
+}
+.in-logo-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  margin-block: 20px;
 }
 @media screen and (max-width: 768px) {
   .in-logo-wrapper {
@@ -448,12 +460,14 @@
 .featured-service {
   border-radius: 12px;
   background-color: transparent;
+  padding-inline: 15px;
+}
+.featured-service {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: stretch;
   gap: 15px;
-  padding-inline: 15px;
 }
 @media screen and (max-width: 992px) {
   .featured-service {
@@ -467,10 +481,12 @@
   }
 }
 .featured-service-image {
+  border-radius: 100%;
+}
+.featured-service-image {
   width: 150px;
   height: 150px;
   line-height: 150px;
-  border-radius: 100%;
 }
 @media screen and (max-width: 576px) {
   .featured-service-image {
@@ -631,6 +647,8 @@
   width: 40px;
   height: 40px;
   line-height: 40px;
+}
+#vohopdungruou .owl-prev, #vohopdungruou .owl-next {
   border-radius: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 24px;
@@ -857,10 +875,12 @@
   padding: 20px;
 }
 .cam-nhan-avatar {
-  border-radius: 100rem;
   width: 70px;
   height: 70px;
   line-height: 70px;
+}
+.cam-nhan-avatar {
+  border-radius: 100rem;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -974,6 +994,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+.con-so-wrapper {
   padding-inline: 15px;
 }
 @media screen and (max-width: 768px) {

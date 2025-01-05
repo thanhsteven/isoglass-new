@@ -6,8 +6,10 @@
   }
   &-head {
     @include flexbox(row, center, flex-start, null);
-    background-color: #fff;
-    cursor: pointer;
+    & {
+      background-color: #fff;
+      cursor: pointer;
+    }
   }
   &-list {
     span {
@@ -58,3 +60,4 @@
     border-top: 3px solid $primaryColor;
   }
 }
+

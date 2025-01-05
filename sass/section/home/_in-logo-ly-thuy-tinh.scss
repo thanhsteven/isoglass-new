@@ -72,8 +72,10 @@
     }
   }
   &-wrapper {
+    & {
+      margin-block: 20px;
+    }
     @include flexbox(row, center, space-between, 15px);
-    margin-block: 20px;
     @include maxWidth($medium) {
       display: none;
     }

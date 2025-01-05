@@ -17,8 +17,8 @@ sass ./sass/page/chai-thuy-tinh-cat.scss ./style/chai-thuy-tinh-cat.css --watch
 
 # Trang danh mục con
 
-pug ./view/page/chai-thuy-tinh-dung-ruou.pug --watch --pretty --out html
 sass ./sass/sub-cate.scss ./style/sub-cate.css --watch
+pug ./view/page/chai-thuy-tinh-dung-ruou.pug --watch --pretty --out html
 sass ./sass/page/chai-thuy-tinh-dung-ruou.scss ./style/chai-thuy-tinh-dung-ruou.css --watch
 
 # Trang danh mục blog

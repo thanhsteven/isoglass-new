@@ -69,10 +69,12 @@
 
 .featured {
   &-service {
-    border-radius: $border12;
-    background-color: transparent;
+    & {
+      border-radius: $border12;
+      background-color: transparent;
+      padding-inline: 15px;
+    }
     @include flexbox(column, center, stretch, 15px);
-    padding-inline: 15px;
     @include maxWidth($large) {
       padding-inline: 10px;
     }
@@ -81,8 +83,10 @@
       word-break: break-word;
     }
     &-image {
+      & {
+        border-radius: 100%;
+      }
       @include square(150px);
-      border-radius: 100%;
       @include maxWidth($small) {
         @include square(140px);
       }

@@ -103,20 +103,17 @@
     padding: 8px 12px;
     opacity: 0;
     visibility: hidden;
-    transition: all ease 0.3s;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 100%);
+    transition: all ease 0.3s;
     span {
       color: #fff;
       font-weight: 600;
       font-size: 14px;
     }
     @include maxWidth($large) {
-      &:hover {
-        background-color: $secondColor;
-      }
       margin-top: 10px;
       margin-inline: auto;
       border: unset;
@@ -125,6 +122,9 @@
       visibility: visible;
       transform: unset;
       position: static;
+      &:hover {
+        background-color: $secondColor;
+      }
     }
   }
 }

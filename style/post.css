@@ -24,12 +24,14 @@
 .sidebar-contact {
   border-radius: 12px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.sidebar-contact {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
   gap: 15px;
-  padding: 20px;
 }
 .sidebar-contact a {
   text-transform: uppercase;
@@ -66,12 +68,14 @@
   margin-bottom: 10px;
 }
 .sidebar-support-avatar {
+  padding-inline: 10px;
+}
+.sidebar-support-avatar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding-inline: 10px;
 }
 .sidebar-support-avatar img {
   width: 33.3333333333%;
@@ -82,9 +86,6 @@
 .sidebar-close {
   border: unset;
   outline: none;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
   border-radius: 4px;
   display: none;
   position: absolute;
@@ -92,6 +93,11 @@
   left: 25px;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.sidebar-close {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
 }
 @media screen and (max-width: 992px) {
   .sidebar-close {
@@ -125,6 +131,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: 8px;
+}
+.sidebar-post-item a {
   padding-block: 10px;
   padding-inline: 20px;
 }
@@ -138,6 +146,8 @@
   width: 40px;
   height: 40px;
   line-height: 40px;
+}
+.sidebar-post-item a img {
   object-fit: cover;
   border-radius: 4px;
 }
@@ -194,6 +204,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: 25px;
+}
+.post-overview {
   margin-bottom: 10px;
   max-height: 30px;
 }

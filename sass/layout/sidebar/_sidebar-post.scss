@@ -19,8 +19,10 @@
     border-top: 1px solid $borderColor;
     a {
       @include flexbox(row, center, flex-start, 8px);
-      padding-block: 10px;
-      padding-inline: 20px;
+      & {
+        padding-block: 10px;
+        padding-inline: 20px;
+      }
       span {
         color: $textColor;
         font-weight: 600;
@@ -29,8 +31,10 @@
       }
       img {
         @include square(40px);
-        object-fit: cover;
-        border-radius: $border4;
+        & {
+          object-fit: cover;
+          border-radius: $border4;
+        }
       }
     }
     &:hover {
@@ -38,3 +42,4 @@
     }
   }
 }
+

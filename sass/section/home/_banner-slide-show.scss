@@ -21,7 +21,6 @@
     margin-top: unset !important;
     margin-bottom: unset !important;
     button[type="button"][class*="owl-"] {
-      @include square(60px);
       border-radius: 100rem;
       box-shadow: $shadow;
       border: 1px solid #eee;
@@ -29,6 +28,7 @@
       font-size: 30px;
       position: absolute;
       top: 40%;
+      @include square(60px);
       &:hover {
         color: inherit;
       }
@@ -42,18 +42,22 @@
   }
   .owl-dots {
     @include flexbox(row, center, center, null);
-    background-color: #fff;
-    border-radius: 100rem;
-    padding: 4px;
-    bottom: 10px;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 48%;
-    bottom: 20px;
+    & {
+      background-color: #fff;
+      border-radius: 100rem;
+      padding: 4px;
+      bottom: 10px;
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      left: 48%;
+      bottom: 20px;
+    }
     .owl-dot {
       span {
         @include square(14px);
-        margin: 4px 8px;
+        & {
+          margin: 4px 8px;
+        }
       }
     }
   }

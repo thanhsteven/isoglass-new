@@ -41,10 +41,12 @@
   }
   &-item {
     @include flexbox(row, center, space-between, 10px);
-    margin-top: 15px;
-    padding-bottom: 30px;
-    padding-top: 15px;
-    border-bottom: 1px solid $borderColor;
+    & {
+      margin-top: 15px;
+      padding-bottom: 30px;
+      padding-top: 15px;
+      border-bottom: 1px solid $borderColor;
+    }
     @include maxWidth($small) {
       margin-top: unset;
       flex-direction: column;
@@ -107,7 +109,9 @@
 .rating {
   &-wrapper {
     @include flexbox(column, stretch, flex-start, null);
-    padding-block: 10px;
+    & {
+      padding-block: 10px;
+    }
   }
   &-title {
     color: $primaryColor;

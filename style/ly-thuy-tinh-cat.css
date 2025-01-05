@@ -76,12 +76,14 @@
   }
 }
 .in-logo-wrapper {
+  margin-block: 20px;
+}
+.in-logo-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  margin-block: 20px;
 }
 @media screen and (max-width: 768px) {
   .in-logo-wrapper {

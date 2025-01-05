@@ -157,10 +157,12 @@
     &-carousel {
       @include flexbox(row, stretch, flex-start, null);
       &-vertical {
-        flex: 0 0 20%;
-        max-width: 20%;
         @include flexbox(column, stretch, space-between, null);
-        padding-right: 10px;
+        & {
+          flex: 0 0 20%;
+          max-width: 20%;
+          padding-right: 10px;
+        }
       }
       &-thumb {
         flex: 0 0 93%;
@@ -226,15 +228,17 @@
       left: 20px;
       bottom: 20px;
       a {
-        color: $textColor;
         @include flexbox(row, center, center, null);
-        flex-wrap: nowrap;
-        min-width: 50px;
-        height: 50px;
-        padding-right: 0px;
-        overflow: hidden;
-        cursor: pointer;
-        transition: padding-right ease-in-out 0.5s;
+        & {
+          color: $textColor;
+          flex-wrap: nowrap;
+          min-width: 50px;
+          height: 50px;
+          padding-right: 0px;
+          overflow: hidden;
+          cursor: pointer;
+          transition: padding-right ease-in-out 0.5s;
+        }
         span {
           max-width: 0px;
           overflow: hidden;
@@ -320,23 +324,25 @@
         width: 70vw;
       }
       &-open {
-        display: block;
         @include square(50px);
-        background-color: rgba($color: #fff, $alpha: 0.8);
-        box-shadow: -4px 0px 7px rgba(0, 0, 0, 0.1);
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-        outline: none;
-        border: none;
-        text-align: center;
-        color: $textColor;
-        cursor: pointer;
-        position: absolute;
-        left: 0;
-        top: 25vh;
-        z-index: 500;
-        transform: translateX(-50px);
-        display: none;
+        & {
+          display: block;
+          background-color: rgba($color: #fff, $alpha: 0.8);
+          box-shadow: -4px 0px 7px rgba(0, 0, 0, 0.1);
+          border-top-left-radius: 30px;
+          border-bottom-left-radius: 30px;
+          outline: none;
+          border: none;
+          text-align: center;
+          color: $textColor;
+          cursor: pointer;
+          position: absolute;
+          left: 0;
+          top: 25vh;
+          z-index: 500;
+          transform: translateX(-50px);
+          display: none;
+        }
         @include maxWidth($large) {
           display: block;
         }
@@ -463,11 +469,13 @@
     }
     &-content {
       @include flexbox(column, stretch, flex-start, 15px);
-      max-width: 250px;
-      position: absolute;
-      top: 20%;
-      left: 40px;
-      z-index: 800;
+      & {
+        max-width: 250px;
+        position: absolute;
+        top: 20%;
+        left: 40px;
+        z-index: 800;
+      }
       @include maxWidth($medium) {
         gap: 10px;
         top: 10%;

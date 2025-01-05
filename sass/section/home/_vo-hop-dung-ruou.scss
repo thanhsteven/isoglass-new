@@ -95,13 +95,15 @@
     &-prev,
     &-next {
       @include square(40px);
-      border-radius: 100%;
-      box-shadow: $shadow2;
-      font-size: 24px;
-      color: $primaryColor;
-      background-color: #fff;
-      border: 2px solid #fff;
-      transition: all linear 0.2s;
+      & {
+        border-radius: 100%;
+        box-shadow: $shadow2;
+        font-size: 24px;
+        color: $primaryColor;
+        background-color: #fff;
+        border: 2px solid #fff;
+        transition: all linear 0.2s;
+      }
       &:hover {
         background-color: $primaryColor;
         color: #fff;

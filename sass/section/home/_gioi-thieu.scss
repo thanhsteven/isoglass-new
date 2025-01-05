@@ -16,8 +16,10 @@
     margin-block: 20px;
   }
   &-wrapper {
+    & {
+      margin-bottom: 20px;
+    }
     @include flexbox(row, stretch, stretch, null);
-    margin-bottom: 20px;
     @include maxWidth($large) {
       flex-direction: column;
       align-items: stretch;

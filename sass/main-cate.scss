@@ -74,8 +74,10 @@ a {
     }
   }
   &-rating {
+    & {
+      margin-bottom: 10px;
+    }
     @include flexbox(row, center, center, 8px);
-    margin-bottom: 10px;
     span {
       font-weight: 600;
     }
@@ -192,9 +194,11 @@ a {
       }
     }
     &-wrapper {
+      & {
+        padding: 20px;
+        padding-top: unset;
+      }
       @include flexbox(column, stretch, flex-start, 15px);
-      padding: 20px;
-      padding-top: unset;
     }
     &-cate {
       .sidebar {
@@ -226,9 +230,11 @@ a {
             }
             &-link {
               @include flexbox(row, center, flex-start, 10px);
-              padding: 10px 15px;
-              width: 100%;
-              cursor: pointer;
+              & {
+                padding: 10px 15px;
+                width: 100%;
+                cursor: pointer;
+              }
             }
             &-image {
               width: 30px;
@@ -249,23 +255,24 @@ a {
       }
     }
     &-open {
-      display: block;
       @include square(50px);
-      background-color: rgba($color: #fff, $alpha: 0.8);
-      box-shadow: -4px 0px 7px rgba(0, 0, 0, 0.1);
-      border-top-left-radius: 30px;
-      border-bottom-left-radius: 30px;
-      outline: none;
-      border: none;
-      text-align: center;
-      color: $textColor;
-      cursor: pointer;
-      position: absolute;
-      left: 0;
-      top: 25vh;
-      z-index: 500;
-      transform: translateX(-50px);
-      display: none;
+      & {
+        background-color: rgba($color: #fff, $alpha: 0.8);
+        box-shadow: -4px 0px 7px rgba(0, 0, 0, 0.1);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        outline: none;
+        border: none;
+        text-align: center;
+        color: $textColor;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 25vh;
+        z-index: 500;
+        transform: translateX(-50px);
+        display: none;
+      }
       @include maxWidth($large) {
         display: block;
       }
@@ -331,7 +338,9 @@ a {
     }
     &-title {
       @include flexbox(row, center, flex-start, 15px);
-      cursor: pointer;
+      & {
+        cursor: pointer;
+      }
       span {
         color: $primaryColor;
         font-size: 26px;
