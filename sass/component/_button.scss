@@ -1,148 +1,101 @@
-@use "../abstracts" as *;
-// - Button Zalo
+// Button Zalo
 .btn-zalo {
-  border-radius: $border4;
-  background-color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  color: $primaryColor;
-  padding: 8px 10px;
-}
-// - Button Product 01
-.btn_product_ver1 {
-  --width: 90px;
-  --height: 40px;
-  @include flexbox(row, center, center, null);
-  color: #fff;
-  width: var(--width);
-  height: var(--height);
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  &::before {
-    content: "Liên hệ";
-    @include flexbox(row, center, center, null);
+  & {
+    background-color: #1b91ff;
     color: #fff;
-    font-size: 14px;
     font-weight: 600;
-    position: absolute;
-    transform: translateY(calc(var(--height) - 10px));
-    transition: transform ease-in-out 0.2s;
-  }
-  span {
-    transform: translateY(0);
-    transition: transform ease-in-out 0.2s;
-  }
-  &:hover {
-    span {
-      transform: translateY(calc(-1 * var(--height)));
-    }
-    &::before {
-      transform: translateY(0);
-    }
-  }
-}
-// - Button Product 02
-.btn-product-2 {
-  @include flexbox(row, center, center, null);
-  padding: 8px 12px;
-  background-color: $primaryColor;
-  color: #fff;
-  border-radius: $border4;
-  font-size: 14px;
-  font-weight: 500;
-  position: relative;
-  overflow: hidden;
-  span {
-    transform: translateY(0);
-    transition: transform ease 0.2s;
-  }
-  &::before {
-    content: "Liên hệ";
-    position: absolute;
-    inset: 0;
-    @include flexbox(row, center, center, null);
-    transform: translateY(120%);
-    transition: all ease 0.2s;
-  }
-  &:hover {
-    span {
-      transform: translateY(-150%);
-    }
-    &::before {
-      transform: translateY(0%);
-    }
-  }
-}
-
-// - Button Owl Carousel
-.owl-carousel {
-  .owl-nav {
-    margin-top: 20px !important;
-    margin-bottom: 10px !important;
-    .owl-prev,
-    .owl-next {
-      background-color: #fff !important;
-      @include square(40px);
-      border: 1px solid #ddd !important;
-      border-radius: 100rem;
-      color: $primaryColor !important;
-      transition: all linear 0.3s;
-      &:hover {
-        background-color: $primaryColor !important;
-        color: #fff !important;
-      }
-      span {
-        font-size: 20px;
-      }
-    }
-  }
-  .owl-dots {
-    .owl-dot.active {
-      span {
-        background-color: $primaryColor;
-      }
-    }
-  }
-}
-
-// - Button Order
-.btn-order {
-  background-color: $primaryColor;
-  border-radius: $border4;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all linear 0.1s;
-  &:hover {
-    background-color: $secondColor;
-    color: $primaryColor;
-  }
-}
-// - Button See More PRoducts
-.btn-see-more-products {
-  display: block;
-  margin-top: 20px;
-  margin-inline: auto;
-  width: fit-content;
-  background-color: #fff;
-  border-radius: $border8;
-  border: 2px solid #e4e4e4;
-  padding: 10px 20px;
-  text-align: center;
-  cursor: pointer;
-  color: #333;
-  transition: all linear 0.3s;
-  span {
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
     display: inline-block;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: inherit;
+    text-align: center;
   }
   &:hover {
-    background-color: $primaryColor;
-    border-color: $primaryColor;
+    background-color: #147adc;
+  }
+}
+
+// Product Button
+.product-btn {
+  & {
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  &:hover {
+    background-color: #ffffff;
+    border-color: #bbb;
+  }
+}
+
+// Carousel Button
+.carousel-btn {
+  & {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+// Load More Button
+.load-more-btn {
+  & {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &:hover {
+    background-color: #004c99;
+  }
+}
+
+// Shared Utility Classes
+.btn {
+  & {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  &--large {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+  &--small {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  &--primary {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+  }
+  &--secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: 1px solid #6c757d;
   }
 }
 

@@ -91,8 +91,10 @@
       max-width: fit-content;
       @include maxWidth($small) {
         @include flexbox(row, center, flex-start, 10px);
-        flex-wrap: wrap;
-        max-width: 300px;
+        & {
+          flex-wrap: wrap;
+          max-width: 300px;
+        }
       }
       @include maxWidth($medium) {
         max-width: unset;
@@ -100,11 +102,13 @@
       &-item {
         @include flexbox(row, center, center, null);
         @include square(40px);
-        border-radius: 100rem;
-        border: 1px solid #fff;
-        background-color: $primaryColor;
-        transition: all linear 0.3s;
-        cursor: pointer;
+        & {
+          border-radius: 100rem;
+          border: 1px solid #fff;
+          background-color: $primaryColor;
+          transition: all linear 0.3s;
+          cursor: pointer;
+        }
         a {
           color: #fff;
         }
@@ -316,3 +320,4 @@
     }
   }
 }
+

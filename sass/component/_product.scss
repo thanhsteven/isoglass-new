@@ -131,8 +131,10 @@
 // CSS Product 02
 .product-item-2 {
   &-wrapper {
+    & {
+      border-radius: $border12;
+    }
     @include flexbox(column, center, center, 10px);
-    border-radius: $border12;
   }
   &-image {
     width: 100%;
@@ -183,13 +185,15 @@
 .product-item-3 {
   &-wrapper {
     @include flexbox(column, flex-start, space-between, null);
-    background-color: #fff;
-    border-radius: $border12;
-    box-shadow: $shadow;
-    min-width: 300px;
-    overflow: hidden;
-    max-height: 380px;
-    position: relative;
+    & {
+      background-color: #fff;
+      border-radius: $border12;
+      box-shadow: $shadow;
+      min-width: 300px;
+      overflow: hidden;
+      max-height: 380px;
+      position: relative;
+    }
     @include maxWidth($large) {
       min-width: unset;
     }
@@ -252,9 +256,11 @@
   }
   &-content {
     @include flexbox(column, flex-start, space-between, 4px);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    & {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    }
   }
   &-title {
     @include flexbox(row, center, space-between, 15px);
@@ -290,8 +296,10 @@
   }
   &-btn {
     @include flexbox(row, center, space-between, 4px);
-    width: 100%;
-    margin-top: 10px;
+    & {
+      width: 100%;
+      margin-top: 10px;
+    }
     &-hotline,
     &-zalo {
       color: #fff;

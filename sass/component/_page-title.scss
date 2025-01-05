@@ -22,7 +22,9 @@
   background-size: cover;
   &-wrapper {
     @include flexbox(column, stretch, space-between, null);
-    padding-block: 40px;
+    & {
+      padding-block: 40px;
+    }
     @include maxWidth($large) {
     }
     @include maxWidth($medium) {
@@ -120,8 +122,10 @@
     }
     &-image {
       @include square(40px);
-      border-radius: $border4;
-      object-fit: cover;
+      & {
+        border-radius: $border4;
+        object-fit: cover;
+      }
       @include maxWidth($medium) {
         @include square(50px);
       }
