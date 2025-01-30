@@ -2503,6 +2503,21 @@ body {
   }
 }
 .noti {
+  display: flex;
+}
+.noti {
+  flex-direction: row;
+}
+.noti {
+  align-items: stretch;
+}
+.noti {
+  justify-content: space-between;
+}
+.noti {
+  gap: 8px;
+}
+.noti {
   max-width: 300px;
   background-color: #fff;
   border-radius: 12px;
@@ -2519,21 +2534,6 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
-}
-.noti {
-  display: flex;
-}
-.noti {
-  flex-direction: row;
-}
-.noti {
-  align-items: stretch;
-}
-.noti {
-  justify-content: space-between;
-}
-.noti {
-  gap: 8px;
 }
 .noti-avatar {
   flex: 0 0 20%;

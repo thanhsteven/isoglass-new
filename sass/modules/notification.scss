@@ -10,23 +10,25 @@
 }
 .noti {
   @include flexbox(row, stretch, space-between, 8px);
-  max-width: 300px;
-  background-color: #fff;
-  border-radius: $border12;
-  box-shadow: $shadow2;
-  padding: 10px;
-  position: fixed;
-  top: 15px;
-  left: 20px;
-  transform: translateY(-120px);
-  z-index: 900;
-  // - Animation
-  animation-name: notification;
-  animation-delay: 1s;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+  & {
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: $border12;
+    box-shadow: $shadow2;
+    padding: 10px;
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    transform: translateY(-120px);
+    z-index: 900;
+    // - Animation
+    animation-name: notification;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
   &-avatar {
     flex: 0 0 20%;
     img {
