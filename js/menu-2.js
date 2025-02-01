@@ -1,4 +1,3 @@
-console.log("Lỗi mới: Không click vào thẻ a được");
 (function () {
   const navMenu = document.querySelector(".menu-nav");
   navMenu.addEventListener("click", function (event) {

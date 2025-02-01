@@ -2323,7 +2323,7 @@ body {
   transition: all ease-in-out 0.5s;
   position: fixed;
   inset: 0;
-  z-index: 700;
+  z-index: 900;
 }
 @media screen and (max-width: 992px) {
   .footer-modal-show {

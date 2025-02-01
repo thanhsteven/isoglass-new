@@ -23,6 +23,9 @@
       box-shadow: $shadow;
       padding: 20px;
     }
+    @include minmax($large, 1120px) {
+      gap: 10px;
+    }
     @include flexbox(column, stretch, center, 15px);
     a {
       text-transform: uppercase;
@@ -60,6 +63,9 @@
       line-height: 1.4em;
       padding-inline: 20px;
       margin-bottom: 10px;
+      @include minmax($large, 1120px) {
+        padding-inline: unset;
+      }
     }
     &-avatar {
       & {
