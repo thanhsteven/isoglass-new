@@ -1,4 +1,4 @@
-console.log("Đã kết nối được với file product details js");
+// - Tab Sản phẩm
 const tabLists = document.querySelectorAll(".tab-info-list");
 const tabContents = document.querySelectorAll(".tab-info-content");
 [...tabLists].forEach((tablist) => {
@@ -16,9 +16,32 @@ function handleTagClick(event) {
     if (tabNumber === content.getAttribute("data-tab")) {
       content.classList.add("tab-active");
     }
-    // else {
-    //   console.log("sai logic rồi");
-    //   return false;
-    // }
   });
 }
+
+// - Sidebar Sản phẩm
+const btnOpenSidebar = document.querySelector(".product-content-sidebar-open");
+const productSidebar = document.querySelector(".product-content-sidebar");
+const productModal = document.querySelector(".product-modal");
+const btnCloseSidebar = document.querySelector(
+  ".product-content-sidebar-close"
+);
+btnOpenSidebar.addEventListener("click", function (e) {
+  productSidebar.classList.toggle("product-content-sidebar-active");
+  productModal.classList.toggle("product-modal-show");
+  if (productSidebar.classList.contains("product-content-sidebar-active")) {
+    document.documentElement.style.overflow = "hidden";
+  } else {
+    collapseProductSidebar();
+  }
+});
+
+productModal.addEventListener("click", collapseProductSidebar);
+btnCloseSidebar.addEventListener("click", collapseProductSidebar);
+
+function collapseProductSidebar() {
+  productSidebar.classList.remove("product-content-sidebar-active");
+  productModal.classList.remove("product-modal-show");
+  document.documentElement.removeAttribute("style");
+}
+

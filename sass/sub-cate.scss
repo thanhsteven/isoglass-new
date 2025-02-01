@@ -98,6 +98,7 @@
       padding-left: 15px;
       background-color: #fff;
       &-close {
+        width: 100%;
         background-color: unset;
         border: none;
         outline: none;
@@ -133,6 +134,9 @@
         display: none;
         @include maxWidth($large) {
           display: block;
+        }
+        & * {
+          pointer-events: none;
         }
       }
     }
@@ -178,6 +182,22 @@
       margin-left: 20px;
     }
   }
+  &-modal {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    position: fixed;
+    inset: 0;
+    z-index: 700;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.3s;
+    cursor: pointer;
+    @include maxWidth($large) {
+      &-show {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .cate-child-main {
@@ -194,12 +214,16 @@
       right: 0;
       transform: translateX(100%);
       z-index: 900;
+      transition: all linear 0.3s;
     }
     @include maxWidth($medium) {
       width: 50vw;
     }
     @include maxWidth($small) {
       width: 70vw;
+    }
+    &-active {
+      transform: translateX(0%);
     }
   }
 }
