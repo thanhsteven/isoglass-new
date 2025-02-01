@@ -80,9 +80,17 @@
 }
 .in-logo-wrapper {
   display: flex;
+}
+.in-logo-wrapper {
   flex-direction: row;
+}
+.in-logo-wrapper {
   align-items: center;
+}
+.in-logo-wrapper {
   justify-content: space-between;
+}
+.in-logo-wrapper {
   gap: 15px;
 }
 @media screen and (max-width: 768px) {

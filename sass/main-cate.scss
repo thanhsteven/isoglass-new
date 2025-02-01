@@ -354,10 +354,14 @@ a {
       }
     }
     &-answer {
-      line-height: 1.5em;
-      padding-left: 20px;
       max-height: 0px;
       overflow-y: hidden;
+      &-inner {
+        padding-left: 20px;
+        line-height: 1.5em;
+        color: inherit;
+        font-size: inherit;
+      }
     }
   }
 }

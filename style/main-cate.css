@@ -1049,10 +1049,14 @@ a {
   }
 }
 .category-main-support-answer {
-  line-height: 1.5em;
-  padding-left: 20px;
   max-height: 0px;
   overflow-y: hidden;
+}
+.category-main-support-answer-inner {
+  padding-left: 20px;
+  line-height: 1.5em;
+  color: inherit;
+  font-size: inherit;
 }
 
 /*# sourceMappingURL=main-cate.css.map */
