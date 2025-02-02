@@ -25,6 +25,7 @@
       object-fit: cover;
       transform: scale(1);
       transition: $transition;
+      cursor: pointer;
     }
     &:hover {
       img {
@@ -33,9 +34,15 @@
     }
   }
   &-lightbox {
+    @include flexbox(row, center, center, null);
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     inset: 0;
     z-index: 999;
+    transition: all linear 0.2s;
+    img {
+      max-width: 50%;
+      max-height: 500px;
+    }
   }
 }

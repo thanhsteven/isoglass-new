@@ -30,15 +30,35 @@
   object-fit: cover;
   transform: scale(1);
   transition: opacity 0.5s cubic-bezier(0.2, 1, 0.2, 1), visibility 0.5s cubic-bezier(0.2, 1, 0.2, 1), transform 0.5s cubic-bezier(0.2, 1, 0.2, 1);
+  cursor: pointer;
 }
 .images-gallery-item:hover img {
   transform: scale(1.07);
 }
 .images-gallery-lightbox {
   background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1;
+  visibility: visible;
   position: fixed;
   inset: 0;
   z-index: 999;
+  transition: all linear 0.3s;
+}
+.images-gallery-lightbox {
+  display: flex;
+}
+.images-gallery-lightbox {
+  flex-direction: row;
+}
+.images-gallery-lightbox {
+  align-items: center;
+}
+.images-gallery-lightbox {
+  justify-content: center;
+}
+.images-gallery-lightbox img {
+  max-width: 50%;
+  max-height: 500px;
 }
 
 /*# sourceMappingURL=chai-thuy-tinh-dung-ruou.css.map */
