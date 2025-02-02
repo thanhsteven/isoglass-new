@@ -45,3 +45,7 @@ sass ./sass/page/about-us.scss ./style/about-us.css --watch
 
 pug ./view/page/lien-he.pug --watch --pretty --out html
 sass ./sass/page/contact-us.scss ./style/contact-us.css --watch
+
+# Nếu là HTML dạng thành phần (Section) thì để trong inc/elements/
+
+# File của nó thì include file scss của nó vào, file scss cũng nằm trong sass/inc/elements

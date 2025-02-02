@@ -60,8 +60,9 @@
       margin-block: 10px;
     }
   }
-  &-gallery-image {
-    margin-block: 10px;
+  &-gallery-images {
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
   &-product {
     margin-bottom: 20px;
@@ -69,7 +70,7 @@
       color: $primaryColor;
       font-weight: 700;
       font-size: 24px;
-      margin-block: 10px;
+      margin-block: 15px;
     }
     &-wrapper {
       display: grid;

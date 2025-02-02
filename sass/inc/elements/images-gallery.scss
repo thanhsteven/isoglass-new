@@ -1,0 +1,41 @@
+@use "../../abstracts" as *;
+.images-gallery {
+  &-wrapper {
+    --columns: 5;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: 15px;
+    @include maxWidth($large) {
+      --columns: 4;
+    }
+    @include maxWidth($medium) {
+      --columns: 3;
+    }
+    @include maxWidth($small) {
+      --columns: 2;
+    }
+  }
+  &-item {
+    border-radius: $border12;
+    box-shadow: $shadow2;
+    overflow: hidden;
+    img {
+      width: 100%;
+      border-radius: $border12;
+      object-fit: cover;
+      transform: scale(1);
+      transition: $transition;
+    }
+    &:hover {
+      img {
+        transform: scale(1.07);
+      }
+    }
+  }
+  &-lightbox {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+  }
+}
