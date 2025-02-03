@@ -35,30 +35,120 @@
 .images-gallery-item:hover img {
   transform: scale(1.07);
 }
-.images-gallery-lightbox {
+
+.lightbox {
   background-color: rgba(0, 0, 0, 0.9);
-  opacity: 1;
-  visibility: visible;
   position: fixed;
   inset: 0;
   z-index: 999;
-  transition: all linear 0.3s;
+  padding-inline: 20px;
+  height: 100%;
 }
-.images-gallery-lightbox {
+.lightbox-header {
   display: flex;
 }
-.images-gallery-lightbox {
+.lightbox-header {
   flex-direction: row;
 }
-.images-gallery-lightbox {
+.lightbox-header {
   align-items: center;
 }
-.images-gallery-lightbox {
+.lightbox-header {
+  justify-content: space-between;
+}
+.lightbox-header {
+  gap: 15px;
+}
+.lightbox-header {
+  padding-top: 15px;
+  cursor: pointer;
+}
+.lightbox-left span {
+  color: #fff;
+}
+.lightbox-right {
+  display: flex;
+}
+.lightbox-right {
+  flex-direction: row;
+}
+.lightbox-right {
+  align-items: center;
+}
+.lightbox-right {
+  justify-content: space-around;
+}
+.lightbox-right {
+  gap: 10px;
+}
+.lightbox-right button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: #eee;
+  cursor: pointer;
+}
+.lightbox-right button i.fa {
+  font-size: 20px;
+  pointer-events: none;
+}
+.lightbox-body {
+  display: flex;
+}
+.lightbox-body {
+  flex-direction: row;
+}
+.lightbox-body {
+  align-items: center;
+}
+.lightbox-body {
+  justify-content: space-between;
+}
+.lightbox-body {
+  gap: 20px;
+}
+.lightbox-body {
+  height: 100%;
+  padding: 20px;
+  cursor: pointer;
+}
+.lightbox-body i.fa {
+  color: #fff;
+}
+.lightbox-body button {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+.lightbox-body button {
+  display: flex;
+}
+.lightbox-body button {
+  flex-direction: row;
+}
+.lightbox-body button {
+  align-items: center;
+}
+.lightbox-body button {
   justify-content: center;
 }
-.images-gallery-lightbox img {
-  max-width: 50%;
-  max-height: 500px;
+.lightbox-image {
+  flex: 0 0 70%;
+  max-width: 600px;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 50px;
+  pointer-events: none;
+  transition: all linear 0.3s;
+}
+.lightbox-pre, .lightbox-next {
+  background-color: transparent;
+  border-radius: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=chai-thuy-tinh-dung-ruou.css.map */

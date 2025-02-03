@@ -33,16 +33,73 @@
       }
     }
   }
-  &-lightbox {
-    @include flexbox(row, center, center, null);
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    inset: 0;
-    z-index: 999;
-    transition: all linear 0.2s;
-    img {
-      max-width: 50%;
-      max-height: 500px;
+}
+
+.lightbox {
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  padding-inline: 20px;
+  height: 100%;
+  &-header {
+    @include flexbox(row, center, space-between, 15px);
+    & {
+      padding-top: 15px;
+      cursor: pointer;
     }
+  }
+  &-left {
+    span {
+      color: #fff;
+    }
+  }
+  &-right {
+    @include flexbox(row, center, space-around, 10px);
+    & button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 10px;
+      color: #eee;
+      cursor: pointer;
+      i.fa {
+        font-size: 20px;
+        pointer-events: none;
+      }
+    }
+  }
+  &-body {
+    @include flexbox(row, center, space-between, 20px);
+    & {
+      height: 100%;
+      padding: 20px;
+      cursor: pointer;
+    }
+    i.fa {
+      color: #fff;
+    }
+    & button {
+      @include square(50px);
+      @include flexbox(row, center, center, null);
+    }
+  }
+  &-image {
+    flex: 0 0 70%;
+    max-width: 600px;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: $border12;
+    margin-bottom: 50px;
+    pointer-events: none;
+    transition: all linear 0.3s;
+  }
+  &-pre,
+  &-next {
+    background-color: transparent;
+    border-radius: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
   }
 }
