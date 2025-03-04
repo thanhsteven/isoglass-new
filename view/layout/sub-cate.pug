@@ -34,9 +34,9 @@ html(lang="vi")
           i.fa.fa-star(aria-hidden="true")
           i.fa.fa-star(aria-hidden="true")
           i.fa.fa-star(aria-hidden="true")
-      .sub-cat-short-description
+      .sub-cat-short_description
         block shortDescription 
-      .sub-cat-gallery-images
+      .sub-cat-gallery
         block galleryImage
       main.sub-cat-main 
         article.sub-cat-main-content 
@@ -45,15 +45,10 @@ html(lang="vi")
               block cateChildProductsHeader2 
             .sub-cat-product
               block cateChildProducts 
-          .sub-cat-extra-description
+          .sub-cat-long_description
             block cateChildExtraDescription 
-        aside.sub-cat-main-sidebar 
-          button.sub-cat-main-sidebar-close 
-            i.fa.fa-close(aria-hidden="true")
-            span Đóng
-          button.sub-cat-main-sidebar-open
-            i.fa.fa-ellipsis-h(aria-hidden="true")
-          include ./sidebar/sidebar.pug
+        aside.sub-cat-sidebar 
+          include ./sidebar/sidebar-cat.pug
     include ./footer/prefooter.pug
     include ./footer/footer.pug
   block scriptJS

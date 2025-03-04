@@ -14,9 +14,14 @@ h2 {
   font-size: 1.75rem;
   font-weight: 700;
   margin-block: 10px;
+  @include maxWidth($medium) {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
   @include maxWidth($small) {
     font-size: 1.3rem;
     line-height: 1.8rem;
+    margin-block: unset;
   }
 }
 
@@ -33,12 +38,15 @@ h3 {
 }
 
 p {
-  line-height: 1.5rem;
   font-size: 1rem;
+  line-height: 1.6rem;
   font-weight: 400;
   color: $textColor;
-  text-align: justify;
   margin-block: 10px;
+  text-align: left;
+  @include maxWidth($small) {
+    text-align: justify;
+  }
 }
 
 figcaption {

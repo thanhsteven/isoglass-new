@@ -28,9 +28,11 @@ html(lang="vi")
       block slideshow 
       .container 
         .main-cat-breadcrumb
-          ul
-            li Trang chủ 
-            li Chai thủy tinh 
+          ul.breadcrumb-list 
+            li.breadcrumb-item 
+              a(href="/") Trang chủ
+            li.breadcrumb-item 
+              a(href="./chai-thuy-tinh.html") Chai thủy tinh 
         .main-cat-heading
           block H1category 
         .main-cat-rating 
@@ -41,32 +43,23 @@ html(lang="vi")
             i.fa.fa-star(aria-hidden="true")
             i.fa.fa-star(aria-hidden="true")
             i.fa.fa-star(aria-hidden="true")
-        .main-cat-short 
+        .main-cat-short_description
           block sapo
-        section.main-cat-cate 
+        section.main-cat-categories
           block categoryProduct 
         .main-cat-wrapper
-          .main-cat-content
+          article.main-cat-content
             section.main-cat-product
               block productsList 
-            .main-cat-content-extra 
+            .main-cat-long_description
               block article
-          .main-cat-sidebar
-            button.main-cat-sidebar-open
-              i.fa.fa-ellipsis-h(aria-hidden="true")
-            .main-cat-sidebar-scroll
-              .main-cat-sidebar-wrapper 
-                button.main-cat-sidebar-close 
-                  i.fa.fa-close(aria-hidden="true")
-                  span Đóng
-                aside.main-cat-sidebar-cate 
-                  block sidebarCate 
-                include ./sidebar/sidebar-cta.pug
+          aside.main-cat-sidebar
+            include ./sidebar/sidebar-cat.pug
       block moreSection
-      .container 
-        section.main-cat-support 
+      section.main-cat-support 
+        .container 
           block answerTheQuestion 
-        include ../section/common/review-and-rating.pug
+      include ../section/common/review-and-rating.pug
     block footer 
       include ./footer/prefooter.pug
       include ./footer/footer.pug

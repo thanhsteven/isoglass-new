@@ -1,4 +1,4 @@
-//- Title Style 01
+//- - Title Style 01
 mixin title(subtitle, title, titleAfter)
   .title-wrapper 
     if (subtitle)
@@ -6,13 +6,13 @@ mixin title(subtitle, title, titleAfter)
     h2.title=title
     if (titleAfter)
       p.title-after=titleAfter
-//- Page Title for Page, Categories
+//- - Page Title for Page, Categories
 mixin secTitleBase(title, image)
   .page-title-wrapper(style=`background-image: url(${image})`)
     .container 
       p.page-title-entry=title
       .page-title-breadcrumb
-//- Page Title for Child Categories
+//- - Page Title for Child Categories
 mixin titleChildCate(title, image, childTitle, count)
   .page-title-child
     .container.page-title-child-wrapper
@@ -28,21 +28,37 @@ mixin titleChildCate(title, image, childTitle, count)
               img(src=image, alt=childTitle, srcset=`${image} 2x`)
               span.page-title-child-item-name=childTitle 
               span.page-title-child-item-count=count
-//- Button Product Style 01
+//- - Button Product Style 01
 mixin btnProduct(text)
   a.btn_product_ver1(class!=attributes.class href="#", target="_blank", rel="nofollow noopener noreferrer")
     span=text 
-//- Button Product Style 02
+//- - Button Product Style 02
 mixin btnProduct2(text)
   a.btn-product-2(class!=attributes.class href="#", target="_blank", rel="nofollow noopener noreferrer")
       span=text
-//- Button Zalo for CTA
+//- - Button Zalo for CTA
 mixin btnZalo(text)
-  a.btn-zalo(class!=attributes.class, href="https://-zalo.me/0963181517", target="_blank", rel="noopener noreferrer nofollow")=text
-//- Button Order
+  a.btn-zalo(class!=attributes.class, href="https://zalo.me/0963181517", target="_blank", rel="noopener noreferrer nofollow")=text
+//- - Button Order
 mixin btnOrder(text)
   a.btn-order(href="", target="_blank", rel="noopener noreferrer nofollow", class!=attributes.class)=text
-//- Button Xem thêm sản phẩm
+//- - Button Xem thêm sản phẩm
 mixin btnSeeMorePro(text)
   a.btn-see-more-products(href="#", target="_blank", rel="noopener noreferrer nofollow")
     span=text 
+//- - Sidebar For Each Main Categories
+mixin sidebar4cate(var_sidebar)
+  .sidebar-cate
+    p.sidebar-cate-title=var_sidebar.heading
+    ul.sidebar-cate-list
+      each item in var_sidebar.items
+        li.sidebar-cate-item
+          a.sidebar-cate-link(href=item.link, rel="noopener noreferrer" title=item.title)
+            img.sidebar-cate-image(src=item.image, alt=item.name, srcset=`${item.image} 2x`)
+            span.sidebar-cate-text=item.name
+//- - Categories Details For Each Main Categories
+mixin category4maincat(var_categories)
+  h2=var_categories.heading
+  .categories-wrapper 
+    each item in var_categories.items
+      +categoryStyle01(item.href, item.image, item.title, item.count)
