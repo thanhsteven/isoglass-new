@@ -62,4 +62,3 @@ window.addEventListener("resize", function () {
 function resizeSidebar() {
   collapseSidebar();
 }
-

@@ -1,8 +1,10 @@
 @use "../abstracts" as *;
 body {
   font-family: $font-primary;
+  font-style: normal;
+  word-wrap: break-word;
+  font-optical-sizing: auto;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  word-wrap: break-word;
 }

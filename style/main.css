@@ -1,36 +1,5 @@
 @charset "UTF-8";
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-body {
-  overflow-x: hidden;
-  scroll-margin-top: 50px;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1200px;
-}
-@media screen and (max-width: 1200px) {
-  .container {
-    padding-inline: 15px;
-  }
-}
-
-.container-fluid {
-  width: 100%;
-  padding-inline: 15px;
-}
-
-section {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 *,
 *:before,
 *:after {
@@ -81,12 +50,46 @@ b {
   font-weight: bold;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-margin-top: 50px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-inline: 15px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-inline: 15px;
+}
+
+section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 body {
   font-family: "Inter", sans-serif;
+  font-style: normal;
+  word-wrap: break-word;
+  font-optical-sizing: auto;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  word-wrap: break-word;
 }
 
 .btn-zalo {
@@ -1466,7 +1469,8 @@ body {
   justify-content: center;
 }
 .header-right-hotline {
-  width: 200px;
+  width: fit-content;
+  padding-left: 10px;
   height: 40px;
   line-height: 40px;
   color: #fff;

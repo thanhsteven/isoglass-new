@@ -308,22 +308,22 @@ a {
       }
     }
   }
-  &-modal {
-    background-color: rgba($color: #000000, $alpha: 0.7);
-    position: fixed;
-    inset: 0;
-    z-index: 700;
-    visibility: hidden;
-    opacity: 0;
-    transition: all linear 0.3s;
-    cursor: pointer;
-    @include maxWidth($large) {
-      &-show {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-  }
+  // &-modal {
+  //   background-color: rgba($color: #000000, $alpha: 0.7);
+  //   position: fixed;
+  //   inset: 0;
+  //   z-index: 700;
+  //   visibility: hidden;
+  //   opacity: 0;
+  //   transition: all linear 0.3s;
+  //   cursor: pointer;
+  //   @include maxWidth($large) {
+  //     &-show {
+  //       visibility: visible;
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
   &-support {
     margin-top: 10px;
     margin-bottom: 20px;
