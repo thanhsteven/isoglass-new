@@ -100,8 +100,8 @@ h2 {
 }
 @media screen and (max-width: 576px) {
   h2 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
   }
 }
 
@@ -110,10 +110,12 @@ h3 {
   margin-block: 10px;
   font-weight: 600;
   font-size: 1.5rem;
+  line-height: 1.8rem;
 }
 @media screen and (max-width: 576px) {
   h3 {
-    line-height: 1.75rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
   }
 }
 

@@ -15,19 +15,23 @@ h2 {
   font-weight: 700;
   margin-block: 10px;
   @include maxWidth($small) {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
   }
 }
+
 h3 {
   color: $primaryColor;
   margin-block: 10px;
   font-weight: 600;
   font-size: 1.5rem;
+  line-height: 1.8rem;
   @include maxWidth($small) {
-    line-height: 1.75rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
   }
 }
+
 p {
   line-height: 1.5rem;
   font-size: 1rem;
@@ -36,6 +40,7 @@ p {
   text-align: justify;
   margin-block: 10px;
 }
+
 figcaption {
   font-size: 1rem;
   font-style: italic;
@@ -45,6 +50,7 @@ figcaption {
   width: 80%;
   margin-inline: auto;
 }
+
 a {
   color: $primaryColor;
 }
