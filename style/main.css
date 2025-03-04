@@ -92,6 +92,54 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h2 {
+  color: #1a2c75;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-block: 10px;
+}
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+h3 {
+  color: #1a2c75;
+  margin-block: 10px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 576px) {
+  h3 {
+    line-height: 1.75rem;
+  }
+}
+
+p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  text-align: justify;
+  margin-block: 10px;
+}
+
+figcaption {
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  margin-block: 10px;
+  line-height: 1.6rem;
+  width: 80%;
+  margin-inline: auto;
+}
+
+a {
+  color: #1a2c75;
+}
+
 .btn-zalo {
   border-radius: 4px;
   background-color: #fff;
@@ -1469,8 +1517,7 @@ body {
   justify-content: center;
 }
 .header-right-hotline {
-  width: fit-content;
-  padding-left: 10px;
+  width: 200px;
   height: 40px;
   line-height: 40px;
   color: #fff;
@@ -1500,6 +1547,8 @@ body {
     font-weight: 600;
     font-size: 18px;
     text-align: right;
+    width: fit-content;
+    padding-left: 10px;
   }
   .header-right-hotline i {
     display: inline-block;

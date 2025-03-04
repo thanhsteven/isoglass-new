@@ -9,7 +9,7 @@ sass ./sass/page/home.scss ./style/home.css --watch
 
 # Trang danh mục chính
 
-sass ./sass/main-cate.scss ./style/main-cate.css --watch
+sass ./sass/main-cat.scss ./style/main-cat.css --watch
 pug ./view/page/chai-thuy-tinh.pug --watch --pretty --out html
 pug ./view/page/ly-thuy-tinh.pug --watch --pretty --out html
 sass ./sass/page/ly-thuy-tinh-cat.scss ./style/ly-thuy-tinh-cat.css --watch

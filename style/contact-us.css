@@ -1,8 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .form-contact-wrapper {
   display: flex;
+}
+.form-contact-wrapper {
   flex-direction: row;
+}
+.form-contact-wrapper {
   align-items: center;
+}
+.form-contact-wrapper {
   justify-content: space-between;
+}
+.form-contact-wrapper {
   gap: 20px;
 }
 @media screen and (max-width: 768px) {

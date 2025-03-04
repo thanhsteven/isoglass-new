@@ -12,64 +12,64 @@ html(lang="vi")
     block owlCarousel
       - var useOwlCarousel = true ;
       if useOwlCarousel
-        link(rel="stylesheet" href="../vendors/owl-carousel/css/owl.carousel.min.css")
-        link(rel="stylesheet" href="../vendors/owl-carousel/css/owl.theme.default.min.css")
+        link(rel="stylesheet" href="../vendor/owl-carousel/css/owl.carousel.min.css")
+        link(rel="stylesheet" href="../vendor/owl-carousel/css/owl.theme.default.min.css")
         script(src="https://code.jquery.com/jquery-3.6.0.min.js")
-        script(src="../vendors/owl-carousel/js/owl.carousel.js")
+        script(src="../vendor/owl-carousel/js/owl.carousel.js")
     block stylesheet
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
-      link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
+      link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
-      link(rel="stylesheet" href="../style/main-cate.css")
+      link(rel="stylesheet" href="../style/main-cat.css")
   body 
     include ./header/header.pug
     include ./menu/menu-2.pug
     main.main-wrapper
       block slideshow 
       .container 
-        .category-main-breadcrumb
+        .main-cat-breadcrumb
           ul
             li Trang chủ 
             li Chai thủy tinh 
-        .category-main-heading
+        .main-cat-heading
           block H1category 
-        .category-main-rating 
+        .main-cat-rating 
           span Đánh giá:
-          .category-main-rating-star 
+          .main-cat-rating-star 
             i.fa.fa-star(aria-hidden="true")
             i.fa.fa-star(aria-hidden="true")
             i.fa.fa-star(aria-hidden="true")
             i.fa.fa-star(aria-hidden="true")
             i.fa.fa-star(aria-hidden="true")
-        .category-main-short 
+        .main-cat-short 
           block sapo
-        section.category-main-cate 
+        section.main-cat-cate 
           block categoryProduct 
-        .category-main-wrapper
-          .category-main-content
-            section.category-main-product
+        .main-cat-wrapper
+          .main-cat-content
+            section.main-cat-product
               block productsList 
-            .category-main-content-extra 
+            .main-cat-content-extra 
               block article 
-          .category-main-sidebar
-            button.category-main-sidebar-open
+          .main-cat-sidebar
+            button.main-cat-sidebar-open
               i.fa.fa-ellipsis-h(aria-hidden="true")
-            .category-main-sidebar-scroll
-              .category-main-sidebar-wrapper 
-                button.category-main-sidebar-close 
+            .main-cat-sidebar-scroll
+              .main-cat-sidebar-wrapper 
+                button.main-cat-sidebar-close 
                   i.fa.fa-close(aria-hidden="true")
                   span Đóng
-                aside.category-main-sidebar-cate 
+                aside.main-cat-sidebar-cate 
                   block sidebarCate 
                 include ./sidebar/sidebar.pug
       block moreSection
       .container 
-        section.category-main-support 
+        section.main-cat-support 
           block answerTheQuestion 
         include ../section/common/review-and-rating.pug
-    //- .category-main-modal 
     block footer 
       include ./footer/prefooter.pug
       include ./footer/footer.pug
   block scriptJS
-    script(src="../js/main.js") 
+    script(src="../js/main.js")
+    script(src="../js/main-cat.js")

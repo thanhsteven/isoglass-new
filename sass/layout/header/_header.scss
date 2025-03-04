@@ -92,8 +92,7 @@
     &-hotline {
       @include flexbox(row, center, center, null);
       & {
-        width: fit-content;
-        padding-left: 10px;
+        width: 200px;
         height: 40px;
         line-height: 40px;
         color: #fff;
@@ -120,6 +119,8 @@
         font-weight: 600;
         font-size: 18px;
         text-align: right;
+        width: fit-content;
+        padding-left: 10px;
         i {
           display: inline-block;
           margin-right: 8px;

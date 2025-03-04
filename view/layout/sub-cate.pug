@@ -11,7 +11,7 @@ html(lang="vi")
       title Layout Danh mục CON cho các trang danh mục
     block stylesheet
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
-      link(rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css")
+      link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
       link(rel="stylesheet" href="../style/sub-cate.css")
   body 
@@ -19,42 +19,41 @@ html(lang="vi")
     include ./menu/menu-2.pug
     include ./child-title.pug
     .container
-      .cate-child-breadcrumb
+      .sub-cat-breadcrumb
         ul
           li Trang chủ 
           li Chai thủy tinh 
           li Chai thuỷ tinh đựng rượu
-      .cate-child-title 
+      .sub-cat-title 
         block cateChildTitle 
-      .cate-child-rating 
+      .sub-cat-rating 
         span Đánh giá:
-        .cate-child-rating-star 
+        .sub-cat-rating-star 
           i.fa.fa-star(aria-hidden="true")
           i.fa.fa-star(aria-hidden="true")
           i.fa.fa-star(aria-hidden="true")
           i.fa.fa-star(aria-hidden="true")
           i.fa.fa-star(aria-hidden="true")
-      .cate-child-short-description
+      .sub-cat-short-description
         block shortDescription 
-      .cate-child-gallery-images
+      .sub-cat-gallery-images
         block galleryImage
-      main.cate-child-main 
-        article.cate-child-main-content 
-          .cate-child-product
-            h2.cate-child-product-title 
+      main.sub-cat-main 
+        article.sub-cat-main-content 
+          .sub-cat-product
+            h2.sub-cat-product-title 
               block cateChildProductsHeader2 
-            .cate-child-product
+            .sub-cat-product
               block cateChildProducts 
-          .cate-child-extra-description
+          .sub-cat-extra-description
             block cateChildExtraDescription 
-        aside.cate-child-main-sidebar 
-          button.cate-child-main-sidebar-close 
+        aside.sub-cat-main-sidebar 
+          button.sub-cat-main-sidebar-close 
             i.fa.fa-close(aria-hidden="true")
             span Đóng
-          button.cate-child-main-sidebar-open
+          button.sub-cat-main-sidebar-open
             i.fa.fa-ellipsis-h(aria-hidden="true")
           include ./sidebar/sidebar.pug
-    .cate-child-modal 
     include ./footer/prefooter.pug
     include ./footer/footer.pug
   block scriptJS

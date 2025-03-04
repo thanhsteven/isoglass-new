@@ -8,3 +8,43 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+h2 {
+  color: $primaryColor;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-block: 10px;
+  @include maxWidth($small) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+h3 {
+  color: $primaryColor;
+  margin-block: 10px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  @include maxWidth($small) {
+    line-height: 1.75rem;
+  }
+}
+p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $textColor;
+  text-align: justify;
+  margin-block: 10px;
+}
+figcaption {
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  margin-block: 10px;
+  line-height: 1.6rem;
+  width: 80%;
+  margin-inline: auto;
+}
+a {
+  color: $primaryColor;
+}

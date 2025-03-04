@@ -1,11 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .about-isoglass-wrapper {
   padding-block: 40px;
 }
 .about-isoglass-wrapper {
   display: flex;
+}
+.about-isoglass-wrapper {
   flex-direction: row;
+}
+.about-isoglass-wrapper {
   align-items: stretch;
+}
+.about-isoglass-wrapper {
   justify-content: space-between;
+}
+.about-isoglass-wrapper {
   gap: 20px;
 }
 @media screen and (max-width: 992px) {
@@ -28,9 +37,17 @@
 }
 .about-isoglass-info {
   display: flex;
+}
+.about-isoglass-info {
   flex-direction: column;
+}
+.about-isoglass-info {
   align-items: stretch;
+}
+.about-isoglass-info {
   justify-content: flex-start;
+}
+.about-isoglass-info {
   gap: 15px;
 }
 @media screen and (max-width: 768px) {
@@ -175,8 +192,6 @@
     grid-auto-flow: column;
     grid-auto-columns: 320px;
     padding-bottom: 20px;
-  }
-  .about-isoglass-wrapper-core {
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
     overflow-x: auto;
@@ -202,9 +217,17 @@
 }
 .about-isoglass-core {
   display: flex;
+}
+.about-isoglass-core {
   flex-direction: column;
+}
+.about-isoglass-core {
   align-items: center;
+}
+.about-isoglass-core {
   justify-content: flex-start;
+}
+.about-isoglass-core {
   gap: 10px;
 }
 @media screen and (max-width: 768px) {
@@ -230,9 +253,17 @@
 }
 .about-isoglass-core-content {
   display: flex;
+}
+.about-isoglass-core-content {
   flex-direction: column;
+}
+.about-isoglass-core-content {
   align-items: center;
+}
+.about-isoglass-core-content {
   justify-content: center;
+}
+.about-isoglass-core-content {
   gap: 15px;
 }
 .about-isoglass-core-subtitle {
@@ -259,9 +290,17 @@
 
 .con-so-wrapper {
   display: flex;
+}
+.con-so-wrapper {
   flex-direction: row;
+}
+.con-so-wrapper {
   align-items: center;
+}
+.con-so-wrapper {
   justify-content: space-between;
+}
+.con-so-wrapper {
   gap: 10px;
 }
 .con-so-wrapper {
@@ -381,8 +420,6 @@
     grid-auto-flow: column;
     grid-auto-columns: 250px;
     padding-bottom: 20px;
-  }
-  .team-member-wrapper {
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
     overflow-x: auto;
@@ -402,9 +439,17 @@
 }
 .team-member-item {
   display: flex;
+}
+.team-member-item {
   flex-direction: column;
+}
+.team-member-item {
   align-items: center;
+}
+.team-member-item {
   justify-content: flex-start;
+}
+.team-member-item {
   gap: 10px;
 }
 @media screen and (max-width: 768px) {

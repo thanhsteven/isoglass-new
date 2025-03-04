@@ -1,47 +1,8 @@
 @use "./abstracts" as *;
 @use "./section/common";
 @use "./layout/sidebar/sidebar";
-//- CSS chung dành cho Product Main Category
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-//- Basic H2, H3
-p {
-  line-height: 26px;
-  font-size: 16px;
-  font-weight: 400;
-  color: $textColor;
-  text-align: justify;
-  margin-block: 10px;
-}
-h2 {
-  color: $primaryColor;
-  font-size: 26px;
-  font-weight: 700;
-  margin-block: 10px;
-  @include maxWidth($small) {
-    font-size: 20px;
-    line-height: 28px;
-  }
-}
-h3 {
-  margin-block: 10px;
-  color: $primaryColor;
-  font-weight: 700;
-  font-size: 20px;
-  @include maxWidth($small) {
-    line-height: 28px;
-  }
-}
-figcaption {
-  font-size: 14px;
-  font-style: italic;
-  text-align: center;
-  margin-block: 10px;
-}
-a {
-  color: $primaryColor;
-}
 //- Category main CSS
-.category-main {
+.main-cat {
   &-breadcrumb {
     text-align: center;
     ul {
@@ -308,22 +269,6 @@ a {
       }
     }
   }
-  // &-modal {
-  //   background-color: rgba($color: #000000, $alpha: 0.7);
-  //   position: fixed;
-  //   inset: 0;
-  //   z-index: 700;
-  //   visibility: hidden;
-  //   opacity: 0;
-  //   transition: all linear 0.3s;
-  //   cursor: pointer;
-  //   @include maxWidth($large) {
-  //     &-show {
-  //       visibility: visible;
-  //       opacity: 1;
-  //     }
-  //   }
-  // }
   &-support {
     margin-top: 10px;
     margin-bottom: 20px;

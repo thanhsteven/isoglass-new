@@ -3,10 +3,8 @@
 @use "./layout/sidebar/sidebar";
 // * CSS Page Title
 @use "./component/page-title";
-// * Import Google Font
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 // - Cate Child
-.cate-child {
+.sub-cat {
   &-breadcrumb {
     @include flexbox(row, center, flex-start, null);
     & {
@@ -143,31 +141,6 @@
     }
   }
   &-extra-description {
-    h2,
-    h3,
-    h4 {
-      color: $primaryColor;
-      line-height: 28px;
-      font-weight: 700;
-      margin-block: 10px;
-    }
-    h2 {
-      font-size: 20px;
-    }
-    h3 {
-      font-size: 18px;
-    }
-    h4 {
-      font-size: 16px;
-    }
-    p {
-      color: $textColor;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 28px;
-      margin-block: 10px;
-      text-align: justify;
-    }
     img {
       border-radius: $border12;
       object-fit: cover;
@@ -183,25 +156,9 @@
       margin-left: 20px;
     }
   }
-  &-modal {
-    background-color: rgba($color: #000000, $alpha: 0.7);
-    position: fixed;
-    inset: 0;
-    z-index: 700;
-    visibility: hidden;
-    opacity: 0;
-    transition: all linear 0.3s;
-    cursor: pointer;
-    @include maxWidth($large) {
-      &-show {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-  }
 }
 
-.cate-child-main {
+.sub-cat-main {
   &-sidebar {
     @include maxWidth($large) {
       width: 30vw;

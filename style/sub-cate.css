@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .sidebar {
   display: flex;
 }
@@ -384,85 +383,85 @@
   }
 }
 
-.cate-child-breadcrumb {
+.sub-cat-breadcrumb {
   display: flex;
 }
-.cate-child-breadcrumb {
+.sub-cat-breadcrumb {
   flex-direction: row;
 }
-.cate-child-breadcrumb {
+.sub-cat-breadcrumb {
   align-items: center;
 }
-.cate-child-breadcrumb {
+.sub-cat-breadcrumb {
   justify-content: flex-start;
 }
-.cate-child-breadcrumb {
+.sub-cat-breadcrumb {
   margin-block: 15px;
 }
-.cate-child-breadcrumb ul {
+.sub-cat-breadcrumb ul {
   display: flex;
 }
-.cate-child-breadcrumb ul {
+.sub-cat-breadcrumb ul {
   flex-direction: row;
 }
-.cate-child-breadcrumb ul {
+.sub-cat-breadcrumb ul {
   align-items: center;
 }
-.cate-child-breadcrumb ul {
+.sub-cat-breadcrumb ul {
   justify-content: center;
 }
-.cate-child-breadcrumb ul {
+.sub-cat-breadcrumb ul {
   gap: 10px;
 }
-.cate-child-breadcrumb li {
+.sub-cat-breadcrumb li {
   color: #1a2c75;
   font-size: 15px;
   font-weight: 600;
   position: relative;
 }
-.cate-child-title {
+.sub-cat-title {
   color: #1a2c75;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
 }
-.cate-child-rating {
+.sub-cat-rating {
   display: flex;
 }
-.cate-child-rating {
+.sub-cat-rating {
   flex-direction: row;
 }
-.cate-child-rating {
+.sub-cat-rating {
   align-items: center;
 }
-.cate-child-rating {
+.sub-cat-rating {
   justify-content: flex-start;
 }
-.cate-child-rating {
+.sub-cat-rating {
   gap: 8px;
 }
-.cate-child-rating {
+.sub-cat-rating {
   margin-block: 10px;
 }
-.cate-child-rating span {
+.sub-cat-rating span {
   font-weight: 500;
 }
-.cate-child-rating-star {
+.sub-cat-rating-star {
   color: #f7c600;
   font-size: 20px;
 }
-.cate-child-rating-star i.fa {
+.sub-cat-rating-star i.fa {
   margin-left: 4px;
 }
-.cate-child-short-description {
+.sub-cat-short-description {
   margin-block: 10px;
 }
-.cate-child-short-description a {
+.sub-cat-short-description a {
   color: #1a2c75;
   font-size: inherit;
   font-weight: inherit;
 }
-.cate-child-short-description p {
+.sub-cat-short-description p {
   color: #333;
   line-height: 28px;
   font-size: 16px;
@@ -470,51 +469,51 @@
   text-align: justify;
   margin-block: 10px;
 }
-.cate-child-gallery-images {
+.sub-cat-gallery-images {
   margin-top: 15px;
   margin-bottom: 25px;
 }
-.cate-child-product {
+.sub-cat-product {
   margin-bottom: 20px;
 }
-.cate-child-product-title {
+.sub-cat-product-title {
   color: #1a2c75;
   font-weight: 700;
   font-size: 24px;
   margin-block: 15px;
 }
-.cate-child-product-wrapper {
+.sub-cat-product-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 @media screen and (max-width: 768px) {
-  .cate-child-product-wrapper {
+  .sub-cat-product-wrapper {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 @media screen and (max-width: 576px) {
-  .cate-child-product-wrapper {
+  .sub-cat-product-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.cate-child-main {
+.sub-cat-main {
   display: grid;
   grid-template-columns: 75% 25%;
 }
 @media screen and (max-width: 992px) {
-  .cate-child-main {
+  .sub-cat-main {
     grid-template-columns: unset;
   }
 }
-.cate-child-main-content a {
+.sub-cat-main-content a {
   color: #1a2c75;
 }
-.cate-child-main-sidebar {
+.sub-cat-main-sidebar {
   padding-left: 15px;
   background-color: #fff;
 }
-.cate-child-main-sidebar-close {
+.sub-cat-main-sidebar-close {
   width: 100%;
   background-color: unset;
   border: none;
@@ -524,16 +523,16 @@
   cursor: pointer;
   display: none;
 }
-.cate-child-main-sidebar-close span {
+.sub-cat-main-sidebar-close span {
   margin-left: 6px;
   color: rgba(51, 51, 51, 0.9);
 }
 @media screen and (max-width: 992px) {
-  .cate-child-main-sidebar-close {
+  .sub-cat-main-sidebar-close {
     display: block;
   }
 }
-.cate-child-main-sidebar-open {
+.sub-cat-main-sidebar-open {
   border: none;
   outline: none;
   background-color: rgba(255, 255, 255, 0.9);
@@ -553,71 +552,30 @@
   display: none;
 }
 @media screen and (max-width: 992px) {
-  .cate-child-main-sidebar-open {
+  .sub-cat-main-sidebar-open {
     display: block;
   }
 }
-.cate-child-main-sidebar-open * {
+.sub-cat-main-sidebar-open * {
   pointer-events: none;
 }
-.cate-child-extra-description h2,
-.cate-child-extra-description h3,
-.cate-child-extra-description h4 {
-  color: #1a2c75;
-  line-height: 28px;
-  font-weight: 700;
-  margin-block: 10px;
-}
-.cate-child-extra-description h2 {
-  font-size: 20px;
-}
-.cate-child-extra-description h3 {
-  font-size: 18px;
-}
-.cate-child-extra-description h4 {
-  font-size: 16px;
-}
-.cate-child-extra-description p {
-  color: #333;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
-  margin-block: 10px;
-  text-align: justify;
-}
-.cate-child-extra-description img {
+.sub-cat-extra-description img {
   border-radius: 12px;
   object-fit: cover;
   width: 100%;
   margin-block: 10px;
 }
-.cate-child-extra-description ul {
+.sub-cat-extra-description ul {
   list-style: circle;
 }
-.cate-child-extra-description li {
+.sub-cat-extra-description li {
   margin-block: 10px;
   line-height: 28px;
   margin-left: 20px;
 }
-.cate-child-modal {
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  inset: 0;
-  z-index: 700;
-  visibility: hidden;
-  opacity: 0;
-  transition: all linear 0.3s;
-  cursor: pointer;
-}
-@media screen and (max-width: 992px) {
-  .cate-child-modal-show {
-    visibility: visible;
-    opacity: 1;
-  }
-}
 
 @media screen and (max-width: 992px) {
-  .cate-child-main-sidebar {
+  .sub-cat-main-sidebar {
     width: 30vw;
     max-width: 300px;
     padding-top: 20px;
@@ -633,16 +591,16 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .cate-child-main-sidebar {
+  .sub-cat-main-sidebar {
     width: 50vw;
   }
 }
 @media screen and (max-width: 576px) {
-  .cate-child-main-sidebar {
+  .sub-cat-main-sidebar {
     width: 70vw;
   }
 }
-.cate-child-main-sidebar-active {
+.sub-cat-main-sidebar-active {
   transform: translateX(0%);
 }
 
