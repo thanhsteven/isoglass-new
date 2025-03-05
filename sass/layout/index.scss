@@ -1,4 +1,4 @@
-@forward "./header/header";
-@forward "./menu/menu";
-@forward "./footer/footer";
-@forward "./footer/call-to-action";
+@use "./header";
+@use "./menu";
+@use "./categories";
+@use "./footer";

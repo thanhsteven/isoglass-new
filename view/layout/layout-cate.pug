@@ -1,0 +1,104 @@
+include ../mixin/mixin.pug
+include ../mixin/mixin-cate.pug
+include ../mixin/mixin-product.pug
+
+//- * Breadcrumbs For Each Page
+mixin breadcrumbForEachPage()
+  .cate-breadcrumb
+    ul.breadcrumb-list
+      li.breadcrumb-item
+        a(href="/") Trang chủ
+      li.breadcrumb-item
+        a(href="./chai-thuy-tinh.html") Chai thủy tinh
+
+//- * Categories Details For Each Main Categories
+mixin category4maincat(var_categories)
+  h2=var_categories.heading
+  .cate-group-wrapper 
+    each item in var_categories.items
+      +categoryStyle01(item.href, item.image, item.title, item.count)
+
+//- * Sidebar For Each Main Categories
+mixin sidebar4cate(var_sidebar)
+  .sidebar-cate
+    p.sidebar-cate-title=var_sidebar.heading
+    ul.sidebar-cate-list
+      each item in var_sidebar.items
+        li.sidebar-cate-item
+          a.sidebar-cate-link(href=item.link, rel="noopener noreferrer" title=item.title)
+            img.sidebar-cate-image(src=item.image, alt=item.name, srcset=`${item.image} 2x`)
+            span.sidebar-cate-text=item.name
+
+doctype html
+html(lang="vi")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block title_of_category
+      title Tiêu đề chính cho trang danh mục
+    block owlCarousel
+      - var useOwlCarousel = true ;
+      if useOwlCarousel
+        link(rel="stylesheet" href="../vendor/owl-carousel/css/owl.carousel.min.css")
+        link(rel="stylesheet" href="../vendor/owl-carousel/css/owl.theme.default.min.css")
+        script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+        script(src="../vendor/owl-carousel/js/owl.carousel.js")
+
+    block CSS_for_categories 
+      link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
+      link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
+      link(rel="stylesheet" href="../style/main.css")
+
+  body 
+    //- - Header & Menu
+    include ./header/header.pug
+    include ./menu/menu-2.pug
+    //- - Section tùy chỉnh cho từng danh mục
+    block section_for_each_category_pages 
+    main.cate-main
+      .container
+        //- - Breadcrumb
+        block breadcrumb_for_each_categories
+        //- - H1
+        .cate-heading
+          block category_h1
+        //- - Rating Star
+        .cate-rating
+          span Đánh giá:
+          .cate-rating-star
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+            i.fa.fa-star(aria-hidden="true")
+        //- - Short Description
+        .cate-short_description
+          block short_description 
+        //- - Section tùy chỉnh cho từng trang danh mục cha/con (nếu có)
+        section.cate-group
+          //- - Section các danh mục con (nếu có)
+          block child_categories_of_main_categories
+        //- - Phần bài viết dài
+        .cate-article 
+          article.cate-article-content
+            //- - Section các sản phẩm trong danh mục
+            section.cate-product
+              block products_of_category
+            .cate-long_description
+              block article_long_description
+          //- - Phần Sidebar
+          aside.cate-sidebar
+            include ./sidebar/sidebar-cat.pug
+      block section_custom_for_each_categories 
+      //- - Section Answer The Question
+      section.cate-support 
+        .container 
+          block answer_the_question_for_each_categories  
+      include ../section/common/review-and-rating.pug
+    //- - Footer
+    block footer 
+      include ./footer/prefooter.pug
+      include ./footer/footer.pug
+  block scriptJS
+    script(src="../js/main.js")
+    script(src="../js/main-cat.js")

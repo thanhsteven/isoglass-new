@@ -1,31 +1,58 @@
 //- Layout Danh mục sản phẩm phụ
-include ../mixin/mixins.pug
-include ../mixin/categories.pug
-include ../mixin/products.pug
+include ../mixin/mixin.pug
+include ../mixin/mixin-cate.pug
+include ../mixin/mixin-product.pug
+
+
 doctype html
 html(lang="vi")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    block titleCategory
+    
+    
+    block title_of_category
       title Layout Danh mục CON cho các trang danh mục
+    
+    
+    
     block stylesheet
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
       link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
       link(rel="stylesheet" href="../style/sub-cate.css")
+  
+  
+  
+  
   body 
     include ./header/header.pug
     include ./menu/menu-2.pug
+  
+  
+    //- - Section tùy chỉnh cho từng danh mục
     include ./child-title.pug
+  
+  
+  
+  
     .container
-      .sub-cat-breadcrumb
-        ul
-          li Trang chủ 
-          li Chai thủy tinh 
-          li Chai thuỷ tinh đựng rượu
+      block breadcrumbCategories
+        .sub-cat-breadcrumb
+          ul
+            li Trang chủ 
+            li Chai thủy tinh 
+            li Chai thuỷ tinh đựng rượu
+      
+      
+      
       .sub-cat-title 
         block cateChildTitle 
+      
+      
+      
+      
+      
       .sub-cat-rating 
         span Đánh giá:
         .sub-cat-rating-star 
@@ -34,10 +61,19 @@ html(lang="vi")
           i.fa.fa-star(aria-hidden="true")
           i.fa.fa-star(aria-hidden="true")
           i.fa.fa-star(aria-hidden="true")
+      
+      
+      
       .sub-cat-short_description
         block shortDescription 
+      
+      
       .sub-cat-gallery
         block galleryImage
+      
+      
+      
+      
       main.sub-cat-main 
         article.sub-cat-main-content 
           .sub-cat-product
@@ -49,6 +85,10 @@ html(lang="vi")
             block cateChildExtraDescription 
         aside.sub-cat-sidebar 
           include ./sidebar/sidebar-cat.pug
+    
+    
+    
+    
     include ./footer/prefooter.pug
     include ./footer/footer.pug
   block scriptJS

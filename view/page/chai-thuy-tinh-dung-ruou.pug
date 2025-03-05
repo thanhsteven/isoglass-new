@@ -1,25 +1,42 @@
-extends ../layout/sub-cate.pug
-block titleCategory
+//- - Layout file
+extends ../layout/layout-cate.pug
+//- - Title
+block title_of_category
   title Chai thuỷ tinh đựng rượu - giá tốt tại TP.HCM 
-append stylesheet
+//- - CSS
+append CSS_for_categories
   link(rel="stylesheet", href="../style/chai-thuy-tinh-dung-ruou.css")
-block mainHeading
+//- - Topbar
+block topbarText
   p Chai thủy tinh đựng rượu
-block cateChildTitle
+//- - Breadcrumb
+block breadcrumb_for_each_categories
+  +breadcrumbForEachPage()
+//- - H1 Heading
+block category_h1
   h1 Chai thuỷ tinh đựng rượu sản xuất tại TP.HCM 
-block galleryImage
-  //- include ../section/sub-cate/ctt-dung-ruou/images-gallery.pug
-block cateChildProductsHeader2
+
+//- - Section Page title cho danh mục con
+block section_for_each_category_pages 
+  include ../layout/child-title.pug
+
+
+//- - Sản phẩm chai thủy tinh đựng rượu
+block products_of_category
   span Các loại Chai thủy tinh đựng rượu
-block cateChildProducts
-  include ../section/sub-cate/ctt-dung-ruou/products.pug
-block shortDescription
+  include ../section/sub-cate/ctt-dung-ruou/cttdr-products.pug
+
+
+
+//- - Mô tả ngắn Chai thủy tinh đựng rượu
+block short_description
   p Sử dụng 
     a(href="./chai-thuy-tinh-dung-ruou.html" title="Chai thuỷ tinh đựng rượu")
       strong chai thủy tinh đựng rượu 
     |không chỉ giúp nâng cao giá trị thẩm mỹ mà còn giúp giữ trọn vẹn hương vị và chất lượng rượu trong thời gian dài.
   p Bên cạnh hương vị thì thiết kế của chai thủy tinh đựng rượu cũng là một trong những yếu tố quan trọng mà bạn cần quan tâm khi kinh doanh rượu. Khi mang lại giá trị thẩm mỹ và tạo được cảm giác cao cấp cho người thưởng thức rượu. Đồng thời, sử dụng chai thủy tinh cũng là cách để bạn lưu giữ và bảo quản hương vị rượu tốt nhất trong thời gian dài.
-block cateChildExtraDescription
+//- - Bài viết dài Chai thủy tinh đựng rượu
+block article_long_description
   h2 Mẫu chai rượu thủy đựng rượu
   p Tùy thuộc vào nhu cầu sử dụng rượu của bạn mà 
     a(href="./chai-thuy-tinh.html") 

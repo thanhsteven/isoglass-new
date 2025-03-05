@@ -1,27 +1,42 @@
-extends ../layout/main-cate.pug
-block titleCategory
+extends ../layout/layout-cate.pug
+//- - Title
+block title_of_category
   title Chai thuỷ tinh cao cấp - giá tốt tại TP.HCM
-append stylesheet
+//- - CSS
+append CSS_for_categories
   link(rel="stylesheet", href="../style/chai-thuy-tinh-cat.css")
-block mainHeading
+//- - Topbar
+block topbarText
   p Chai thuỷ tinh cao cấp
-block slideshow
+//- - Banner SlideShow
+block section_for_each_category_pages
   include ../section/main-cate/chai-thuy-tinh/ctt-slideshow.pug
-block H1category
+//- - Breadcrumb
+block breadcrumb_for_each_categories
+  +breadcrumbForEachPage()
+//- - H1 Heading
+block category_h1
   h1 Chai thuỷ tinh giá tốt sản xuất tại TP.HCM
-block categoryProduct
+//- - Danh mục chai thủy tinh con
+block child_categories_of_main_categories 
   include ../section/main-cate/chai-thuy-tinh/ctt-categories.pug
-block productsList 
+//- - Sản phẩm chai thủy tinh
+block products_of_category
   include ../section/main-cate/chai-thuy-tinh/ctt-products.pug
+//- - Sidebar chai thủy tinh
 block sidebarCate
-    include ../section/main-cate/chai-thuy-tinh/ctt-sidebar.pug
-block moreSection
+  include ../section/main-cate/chai-thuy-tinh/ctt-sidebar.pug
+//- - Section tùy chỉnh thêm sau Nội dung dài
+block section_custom_for_each_categories
   include ../section/common/tem-nhan-chai-ruou.pug
-block answerTheQuestion
+//- - Hỏi đáp chai thủy tinh
+block answer_the_question_for_each_categories
   include ../section/main-cate/chai-thuy-tinh/ctt-Q&A.pug
-block sapo
+//- - Mô tả ngắn Chai thủy tinh
+block short_description
   p Đến với iSOGLASS, chúng tôi cung cấp cho Quý khách hàng nhiều sự lựa chọn nhất về các chai lọ thủy tinh để phục vụ nhu cầu sản xuất của Quý khách. Chúng tôi chuyên về sản xuất và cung cấp cho nhiều ngành công nghiệp những loại chai thủy tinh bền nhất, chất lượng nhất, cùng đang dạng mẫu mã với nhiều kích cỡ khác nhau, từ những chai thủy tinh đựng nước, chai thủy tinh đựng rượu cho đến các loại bộ bình dành riêng cho ly thuỷ tinh và các loại bình xịt làm bằng thủy thủy tinh như chai chiết tinh dầu, chai chiết nước hoa,… Đến với iSOGLASS, Quý khách sẽ tìm được những loại chai thủy tinh phù hợp với ngân sách của mình.
-block article
+//- - Bài viết dài Chai thủy tinh
+block article_long_description
   h2 Các loại chai lọ thủy tinh đẹp tại iSOGLASS
   h3 Chai thủy tinh đẹp
   p iSOGLASS cung cấp hơn 120 mẫu chai thủy tinh đẹp, không chỉ những mẫu chai trong nước mà còn những loại vỏ chai được thiết kế theo phong cách phương tây, phù hợp cho các quán cafe, nhà hàng hay các quán bar phục vụ rượu pha cho Khách hàng.

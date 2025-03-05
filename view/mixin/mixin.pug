@@ -46,19 +46,3 @@ mixin btnOrder(text)
 mixin btnSeeMorePro(text)
   a.btn-see-more-products(href="#", target="_blank", rel="noopener noreferrer nofollow")
     span=text 
-//- - Sidebar For Each Main Categories
-mixin sidebar4cate(var_sidebar)
-  .sidebar-cate
-    p.sidebar-cate-title=var_sidebar.heading
-    ul.sidebar-cate-list
-      each item in var_sidebar.items
-        li.sidebar-cate-item
-          a.sidebar-cate-link(href=item.link, rel="noopener noreferrer" title=item.title)
-            img.sidebar-cate-image(src=item.image, alt=item.name, srcset=`${item.image} 2x`)
-            span.sidebar-cate-text=item.name
-//- - Categories Details For Each Main Categories
-mixin category4maincat(var_categories)
-  h2=var_categories.heading
-  .categories-wrapper 
-    each item in var_categories.items
-      +categoryStyle01(item.href, item.image, item.title, item.count)
