@@ -6,6 +6,7 @@ mixin categoryStyle01(href, image, title, count)
     .category-item-1-content
       h3.category-item-1-title=title
       span.category-item-1-count=count
+
 //- - Category Infomation Box - Style 02
 mixin categoryStyle02(href, image, title, countNumber)
   .category-item-2-wrapper 
@@ -15,6 +16,7 @@ mixin categoryStyle02(href, image, title, countNumber)
       .category-item-2-title 
         h3.category-item-2-title-text=title 
         .category-item-2-count=countNumber 
+
 //- - Category Infomation Box - Style 03
 mixin categoryStyle03(href, image, title, count)
   .category-item-3
@@ -24,3 +26,48 @@ mixin categoryStyle03(href, image, title, count)
       .category-item-3-content 
         h3.category-item-3-title=title 
         span.category-item-3-count=count 
+
+//- * Breadcrumbs For Each Page
+mixin breadcrumbForEachPage(var_breadcrumb)
+  .cate-breadcrumb
+    ul.breadcrumb-list
+      each item in var_breadcrumb
+        li.breadcrumb-item
+          a(href=`${item.href}`)=item.name 
+
+//- * Categories Details For Each Main Categories
+mixin category4maincat(var_categories)
+  h2=var_categories.heading
+  .cate-group-wrapper 
+    each item in var_categories.items
+      +categoryStyle01(item.href, item.image, item.title, item.count)
+
+//- * Sidebar For Each Main Categories
+mixin sidebar4cate(var_sidebar)
+  .sidebar-main-cate
+    p.sidebar-main-title=var_sidebar.heading
+    ul.sidebar-main-list
+      each item in var_sidebar.items
+        li.sidebar-main-item
+          a.sidebar-main-link(href=item.link, rel="noopener noreferrer" title=item.title)
+            img.sidebar-main-image(src=item.image, alt=item.name, srcset=`${item.image} 2x`)
+            span.sidebar-main-text=item.name
+
+//- * Products For Categories
+mixin products4cate(var_products)
+  h2=var_products.heading 
+  .cate-product-wrapper 
+    each item in var_products.items 
+      +productStyle01(item.href, item.image, item.title)
+
+//- * Q&A For Categories
+mixin answerthequestion4cate(var_QA)
+  h2=var_QA.heading 
+  .cate-support-wrapper
+    each item in var_QA.items 
+      .cate-support-item 
+        .cate-support-title
+          i.fa.fa-angle-down(aria-hidden="true")
+          span=item.question
+        .cate-support-answer 
+          p.cate-support-answer-inner=item.answer 

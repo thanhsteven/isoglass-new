@@ -11,23 +11,16 @@ block topbarText
   p Chai thủy tinh đựng rượu
 //- - Breadcrumb
 block breadcrumb_for_each_categories
-  +breadcrumbForEachPage()
+  include ../section/sub-cate/ctt-dung-ruou/cttdr-breadcrumb.pug
 //- - H1 Heading
 block category_h1
   h1 Chai thuỷ tinh đựng rượu sản xuất tại TP.HCM 
-
 //- - Section Page title cho danh mục con
 block section_page_title_for_child_categories 
   include ../layout/child-title.pug
-
-
 //- - Sản phẩm chai thủy tinh đựng rượu
 block products_of_category
-  span Các loại Chai thủy tinh đựng rượu
   include ../section/sub-cate/ctt-dung-ruou/cttdr-products.pug
-
-
-
 //- - Mô tả ngắn Chai thủy tinh đựng rượu
 block short_description
   p Sử dụng 
