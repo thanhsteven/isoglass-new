@@ -20,14 +20,14 @@ mixin category4maincat(var_categories)
 
 //- * Sidebar For Each Main Categories
 mixin sidebar4cate(var_sidebar)
-  .sidebar-cate
-    p.sidebar-cate-title=var_sidebar.heading
-    ul.sidebar-cate-list
+  .sidebar-main-cate
+    p.sidebar-main-title=var_sidebar.heading
+    ul.sidebar-main-list
       each item in var_sidebar.items
-        li.sidebar-cate-item
-          a.sidebar-cate-link(href=item.link, rel="noopener noreferrer" title=item.title)
-            img.sidebar-cate-image(src=item.image, alt=item.name, srcset=`${item.image} 2x`)
-            span.sidebar-cate-text=item.name
+        li.sidebar-main-item
+          a.sidebar-main-link(href=item.link, rel="noopener noreferrer" title=item.title)
+            img.sidebar-main-image(src=item.image, alt=item.name, srcset=`${item.image} 2x`)
+            span.sidebar-main-text=item.name
 
 doctype html
 html(lang="vi")
@@ -43,18 +43,19 @@ html(lang="vi")
         link(rel="stylesheet" href="../vendor/owl-carousel/css/owl.theme.default.min.css")
         script(src="https://code.jquery.com/jquery-3.6.0.min.js")
         script(src="../vendor/owl-carousel/js/owl.carousel.js")
-
     block CSS_for_categories 
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
       link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
-
   body 
     //- - Header & Menu
     include ./header/header.pug
     include ./menu/menu-2.pug
-    //- - Section tùy chỉnh cho từng danh mục
-    block section_for_each_category_pages 
+    //- ! Banner Slideshow cho Danh mục cha
+    block section_banner_slideshow
+    //- ! Page title cho danh mục con
+    block section_page_title_for_child_categories
+    //- - Main Body
     main.cate-main
       .container
         //- - Breadcrumb
@@ -88,7 +89,17 @@ html(lang="vi")
               block article_long_description
           //- - Phần Sidebar
           aside.cate-sidebar
-            include ./sidebar/sidebar-cat.pug
+            button.cate-sidebar-open
+              i.fa.fa-ellipsis-h(aria-hidden="true")
+            .cate-sidebar-scroll
+              .cate-sidebar-wrapper
+                button.cate-sidebar-close 
+                  i.fa.fa-close(aria-hidden="true")
+                  span Đóng
+                block sidebar_for_categories
+                include ./sidebar/sidebar-cta.pug
+            include ./sidebar/sidebar-cate.pug
+      //- - Section tùy chỉnh
       block section_custom_for_each_categories 
       //- - Section Answer The Question
       section.cate-support 

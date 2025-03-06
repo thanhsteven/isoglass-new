@@ -13,12 +13,12 @@ sass ./sass/main-cat.scss ./style/main-cat.css --watch
 
 pug ./view/page/chai-thuy-tinh.pug --watch --pretty --out html
 pug ./view/page/ly-thuy-tinh.pug --watch --pretty --out html
+
 sass ./sass/page/ly-thuy-tinh-cat.scss ./style/ly-thuy-tinh-cat.css --watch
 sass ./sass/page/chai-thuy-tinh-cat.scss ./style/chai-thuy-tinh-cat.css --watch
 
 # TRang danh mục con
 
-sass ./sass/sub-cate.scss ./style/sub-cate.css --watch
 pug ./view/page/chai-thuy-tinh-dung-ruou.pug --watch --pretty --out html
 sass ./sass/page/chai-thuy-tinh-dung-ruou.scss ./style/chai-thuy-tinh-dung-ruou.css --watch
 
@@ -47,6 +47,6 @@ sass ./sass/page/about-us.scss ./style/about-us.css --watch
 pug ./view/page/lien-he.pug --watch --pretty --out html
 sass ./sass/page/contact-us.scss ./style/contact-us.css --watch
 
-# Nếu là HTML dạng thành phần (Section) thì để trong inc/elements/
+# không sử dụng nữa
 
-# File của nó thì include file scss của nó vào, file scss cũng nằm trong sass/inc/elements
+sass ./sass/sub-cate.scss ./style/sub-cate.css --watch
