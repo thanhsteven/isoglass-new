@@ -27,14 +27,6 @@ mixin categoryStyle03(href, image, title, count)
         h3.category-item-3-title=title 
         span.category-item-3-count=count 
 
-//- * Breadcrumbs For Each Page
-mixin breadcrumbForEachPage(var_breadcrumb)
-  .cate-breadcrumb
-    ul.breadcrumb-list
-      each item in var_breadcrumb
-        li.breadcrumb-item
-          a(href=`${item.href}`)=item.name 
-
 //- * Categories Details For Each Main Categories
 mixin category4maincat(var_categories)
   h2=var_categories.heading
@@ -71,3 +63,15 @@ mixin answerthequestion4cate(var_QA)
           span=item.question
         .cate-support-answer 
           p.cate-support-answer-inner=item.answer 
+
+//- * Rating for Categories
+mixin rating4cate(var_rating)
+  - var fullStars = var_rating.rating.length;
+  - var emptyStars = 5 - fullStars;
+  .cate-rating
+    span Đánh giá:
+    .cate-rating-star
+      each star in Array(fullStars)
+        i.fa.fa-star(aria-hidden="true")
+      each star in Array(emptyStars)
+        i.fa.fa-star-o(aria-hidden="true")

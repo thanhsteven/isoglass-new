@@ -31,19 +31,13 @@ html(lang="vi")
     main.cate-main
       .container
         //- - Breadcrumb
-        block breadcrumb_for_each_categories
+        .cate-breadcrumb
+          block breadcrumb_for_each_categories
         //- - H1
         .cate-heading
           block category_h1
         //- - Rating Star
-        .cate-rating
-          span Đánh giá:
-          .cate-rating-star
-            i.fa.fa-star(aria-hidden="true")
-            i.fa.fa-star(aria-hidden="true")
-            i.fa.fa-star(aria-hidden="true")
-            i.fa.fa-star(aria-hidden="true")
-            i.fa.fa-star(aria-hidden="true")
+        block rating_of_categories 
         //- - Short Description
         .cate-short_description
           block short_description 

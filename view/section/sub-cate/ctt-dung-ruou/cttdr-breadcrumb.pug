@@ -1,17 +1,20 @@
 - 
-  var cttdr_breadcrumb = [
-    {
-      name: "Trang chủ",
-      href: "/"
-    },
-    {
-      name: "Chai thủy tinh",
-      href: "./chai-thuy-tinh.html"
-    },
-    {
-      name: "Chai thủy tinh đựng rượu",
-      href: "./chai-thuy-tinh-dung-ruou.html",
-    }
-  ];
+  var cttdr_breadcrumb = {
+    rating: [1,2],
+    breadcrumb: [
+      {
+        name: "Trang chủ",
+        href: "/"
+      },
+      {
+        name: "Chai thủy tinh",
+        href: "./chai-thuy-tinh.html"
+      },
+      {
+        name: "Chai thủy tinh đựng rượu",
+        href: "./chai-thuy-tinh-dung-ruou.html",
+      }
+    ]
+  };
 //- - Breadcrumb cho Chai thủy tinh đựng rượu
 +breadcrumbForEachPage(cttdr_breadcrumb)

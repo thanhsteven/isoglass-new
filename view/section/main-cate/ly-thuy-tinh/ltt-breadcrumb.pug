@@ -1,13 +1,16 @@
 - 
-  var ltt_breadcrumb = [
-    {
-      name: "Trang chủ",
-      href: "/"
-    },
-    {
-      name: "Ly thủy tinh",
-      href: "./ly-thuy-tinh.html"
-    }
-  ];
+  var ltt_breadcrumb = {
+    rating: [1,2,3],
+    breadcrumb: [
+      {
+        name: "Trang chủ",
+        href: "/"
+      },
+      {
+        name: "Ly thủy tinh",
+        href: "./ly-thuy-tinh.html"
+      }
+    ]
+  };
 //- - Breadcrumb cho Ly thủy tinh
 +breadcrumbForEachPage(ltt_breadcrumb)
