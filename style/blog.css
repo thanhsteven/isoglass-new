@@ -32,6 +32,19 @@
   margin-bottom: 20px;
 }
 
+.page-title-entry {
+  color: #fff;
+}
+.page-title-breadcrumb {
+  margin-top: 10px;
+}
+.page-title-breadcrumb .breadcrumb-list .breadcrumb-item a {
+  color: #fff;
+}
+.page-title-breadcrumb .breadcrumb-list .breadcrumb-item::after {
+  color: #fff;
+}
+
 .blog-default-item {
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.1019607843);

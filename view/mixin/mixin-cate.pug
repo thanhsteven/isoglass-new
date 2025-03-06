@@ -1,3 +1,15 @@
+//- * Rating for Categories
+mixin rating4cate(var_rating)
+  - var fullStars = var_rating.rating.length;
+  - var emptyStars = 5 - fullStars;
+  .rating
+    span.rating-text Đánh giá:
+    .rating-star
+      each star in Array(fullStars)
+        i.fa.fa-star(aria-hidden="true")
+      each star in Array(emptyStars)
+        i.fa.fa-star-o(aria-hidden="true")
+
 //- - Category Infomation Box - Style 01
 mixin categoryStyle01(href, image, title, count)
   a.category-item-1-wrapper(href=href, rel="noopener noreferrer")
@@ -47,31 +59,19 @@ mixin sidebar4cate(var_sidebar)
 
 //- * Products For Categories
 mixin products4cate(var_products)
-  h2=var_products.heading 
-  .cate-product-wrapper 
-    each item in var_products.items 
+  h2=var_products.heading
+  .cate-product-wrapper
+    each item in var_products.items
       +productStyle01(item.href, item.image, item.title)
 
 //- * Q&A For Categories
 mixin answerthequestion4cate(var_QA)
   h2=var_QA.heading 
-  .cate-support-wrapper
+  .support-wrapper
     each item in var_QA.items 
-      .cate-support-item 
-        .cate-support-title
+      .support-item 
+        .support-title
           i.fa.fa-angle-down(aria-hidden="true")
           span=item.question
-        .cate-support-answer 
-          p.cate-support-answer-inner=item.answer 
-
-//- * Rating for Categories
-mixin rating4cate(var_rating)
-  - var fullStars = var_rating.rating.length;
-  - var emptyStars = 5 - fullStars;
-  .cate-rating
-    span Đánh giá:
-    .cate-rating-star
-      each star in Array(fullStars)
-        i.fa.fa-star(aria-hidden="true")
-      each star in Array(emptyStars)
-        i.fa.fa-star-o(aria-hidden="true")
+        .support-answer 
+          p.support-answer-inner=item.answer 

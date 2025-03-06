@@ -8,9 +8,27 @@
     padding-block: 40px;
   }
   &-entry {
-    font-size: 24px;
+    font-size: 2.5rem;
+    line-height: 3rem;
     font-weight: 700;
     text-align: center;
+    @include maxWidth($large) {
+      font-size: 2rem;
+    }
+  }
+  &-breadcrumb {
+    .breadcrumb-list {
+      .breadcrumb-item {
+        a {
+          font-size: 1.5rem;
+          line-height: 2rem;
+          @include maxWidth($medium) {
+            font-size: 1.2rem;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -152,6 +170,27 @@
       @include maxWidth($medium) {
         font-size: 16px;
       }
+    }
+  }
+}
+
+.breadcrumb {
+  &-list {
+    @include flexbox(row, center, center, null);
+  }
+  &-item {
+    color: $primaryColor;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    &::after {
+      font-family: FontAwesome;
+      content: "\f105";
+      margin-inline: 10px;
+    }
+    &:last-child::after {
+      content: "";
     }
   }
 }

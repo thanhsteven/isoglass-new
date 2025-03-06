@@ -1,4 +1,3 @@
-//- Layout tổng
 include ../mixin/mixin.pug
 include ../mixin/mixin-cate.pug
 include ../mixin/mixin-product.pug
@@ -7,7 +6,7 @@ html(lang="vi")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    block titlePage 
+    block title_page  
       title iSOGLASS sản xuất và cung cấp thủy tinh đạt chuẩn iSO tại Việt Nam 
     //- Favicon
     link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
@@ -24,11 +23,10 @@ html(lang="vi")
       script(src="https://code.jquery.com/jquery-3.6.0.min.js")
       script(src="../vendor/owl-carousel/js/owl.carousel.js")
   body 
-    include ./header/header
-    include ./menu/menu-2
+    include ./header/header.pug
+    include ./menu/menu-2.pug
     block main
-    include ./footer/prefooter
-    include ./footer/footer
-  block modules 
+    include ./footer/prefooter.pug
+    include ./footer/footer.pug
   block menuScript 
     script(src="../js/main.js") 

@@ -1,7 +1,6 @@
-//- Danh mục Blog
-include ../mixin/mixins
-include ../mixin/categories
-include ../mixin/blogs
+include ../mixin/mixin.pug
+include ../mixin/mixin-cate.pug
+include ../mixin/mixin-blog.pug
 doctype html
 html(lang="vi")
   head
@@ -20,7 +19,7 @@ html(lang="vi")
       block blogHeading 
       section.blog-title 
         .container 
-          block blogTitle  
+          block blogTitle
       article.blog-article 
         h2 Tin tức iSOGLASS 
         block blogMain

@@ -1,10 +1,10 @@
-extends ../layout/blog-cate.pug
+extends ../layout/layout-blog.pug
 block titlePage
   title Blog bài viết tin tức iSOGLASS 
 block topbarText
   p Tin tức tổng hợp iSOGLASS 
 block blogHeading 
-  +secTitleBase("Tin tức nổi bật của iSOGLASS", "../../images/hosting/background-title-blog.jpg")
+  +secTitleBase("Tin tức nổi bật của iSOGLASS", "../../images/hosting/background-title-blog.jpg", [{name: "Trang chủ", href: "/"},{name: "Tin tức", href: "./blog.html"}])
 block blogTitle 
   +title(null, "Tổng hợp tin tức nổi bật tại iSOGLASS", "Tổng hợp các tin tức nổi bật tại iSOGLASS, công ty hàng đầu trong lĩnh vực sản xuất và cung cấp các sản phẩm thủy tinh chất lượng cao. Với hơn nhiều năm kinh nghiệm và sự cam kết với chất lượng và đổi mới, iSOGLASS đã khẳng định vị thế của mình trong ngành công nghiệp.")
 block blogMain

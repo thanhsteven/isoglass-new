@@ -1,3 +1,10 @@
+//- * Breadcrumbs For Each Page
+mixin breadcrumbForEachPage(var_breadcrumb)
+  ul.breadcrumb-list
+    each item in var_breadcrumb.breadcrumb
+      li.breadcrumb-item
+        a(href=`${item.href}`)=item.name 
+
 //- - Title Style 01
 mixin title(subtitle, title, titleAfter)
   .title-wrapper 
@@ -6,12 +13,19 @@ mixin title(subtitle, title, titleAfter)
     h2.title=title
     if (titleAfter)
       p.title-after=titleAfter
+
 //- - Page Title for Page, Categories
-mixin secTitleBase(title, image)
+mixin secTitleBase(title, image, var_breadcrumb)
   .page-title-wrapper(style=`background-image: url(${image})`)
     .container 
       p.page-title-entry=title
       .page-title-breadcrumb
+        ul.breadcrumb-list
+          each item in var_breadcrumb
+            li.breadcrumb-item
+              a(href=`${item.href}`)=item.name
+
+
 //- - Page Title for Child Categories
 mixin titleChildCate(title, image, childTitle, count)
   .page-title-child
@@ -52,9 +66,3 @@ mixin btnSeeMorePro(text)
   a.btn-see-more-products(href="#", target="_blank", rel="noopener noreferrer nofollow")
     span=text 
 
-//- * Breadcrumbs For Each Page
-mixin breadcrumbForEachPage(var_breadcrumb)
-  ul.breadcrumb-list
-    each item in var_breadcrumb.breadcrumb
-      li.breadcrumb-item
-        a(href=`${item.href}`)=item.name 

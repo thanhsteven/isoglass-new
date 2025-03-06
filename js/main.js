@@ -1,5 +1,4 @@
-console.log("Đã kết nối với file main.js");
-
+// ! Start Menu
 (function () {
   const navMenu = document.querySelector(".menu-nav");
   navMenu.addEventListener("click", function (event) {
@@ -56,7 +55,7 @@ console.log("Đã kết nối với file main.js");
       document.documentElement.style.setProperty("overflow", "hidden");
     }
   }
-  const mediaSize = 991;
+  var mediaSize = 991;
   window.addEventListener("resize", function () {
     if (this.innerWidth <= mediaSize) {
       resizeMenu();
@@ -67,30 +66,41 @@ console.log("Đã kết nối với file main.js");
     navMenu.classList.remove("menu-nav-show");
   }
 })();
+// ! End Menu
 
-// - Khai báo biến trong Main categories
-const modal = document.querySelector(".footer-modal");
-const btnSidebar = document.querySelector(".category-main-sidebar-open");
-const sidebar = document.querySelector(".category-main-sidebar");
-const btnCloseSidebar = sidebar.querySelector(".category-main-sidebar-close");
-
-// - Mở/Đóng Sidebar
-btnSidebar.addEventListener("click", function (event) {
-  sidebar.classList.toggle("category-main-sidebar-active");
-  modal.classList.toggle("category-main-modal-show");
-  if (sidebar.classList.contains("category-main-sidebar-active")) {
-    document.documentElement.style.overflow = "hidden";
-  } else {
+// ! Start Sidebar Categories
+(function () {
+  const modal = document.querySelector(".footer-modal");
+  const cateSidebar = document.querySelector(".cate-sidebar");
+  const btnOpenSidebar = document.querySelector(".cate-sidebar-open");
+  const btnCloseSidebar = cateSidebar.querySelector(".cate-sidebar-close");
+  // - Mở/Đóng Sidebar bằng nút Open
+  btnOpenSidebar.addEventListener("click", function (event) {
+    cateSidebar.classList.toggle("cate-sidebar-active");
+    modal.classList.toggle("footer-modal-show");
+    if (cateSidebar.classList.contains("cate-sidebar-active")) {
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      collapseSidebar();
+    }
+  });
+  // - Đóng Sidebar bằng nút Close
+  btnCloseSidebar.addEventListener("click", collapseSidebar);
+  modal.addEventListener("click", collapseSidebar);
+  // - Hàm đóng Sidebar
+  function collapseSidebar() {
+    cateSidebar.classList.remove("cate-sidebar-active");
+    modal.classList.remove("footer-modal-show");
+    document.documentElement.removeAttribute("style");
+  }
+  var mediaSize = 991;
+  window.addEventListener("resize", function () {
+    if (this.innerWidth <= mediaSize) {
+      resizeSidebar();
+    }
+  });
+  function resizeSidebar() {
     collapseSidebar();
   }
-});
-
-const mediaSize = 991;
-window.addEventListener("resize", function () {
-  if (this.innerWidth <= mediaSize) {
-    resizeSidebar();
-  }
-});
-function resizeSidebar() {
-  collapseSidebar();
-}
+})();
+// ! End Sidebar

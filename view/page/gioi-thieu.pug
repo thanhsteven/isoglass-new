@@ -1,12 +1,12 @@
 extends ../layout/layout-page.pug
-block titlePage 
+block title_page 
   title Công ty TNHH TMDV iSOGLASS | Thủy tinh iSOGLASS
 append styleSheet 
   link(rel="stylesheet" href="../style/about-us.css")
 append topbarText
   p Giới thiệu về iSOGLASS
 block main
-  +secTitleBase("Về chúng tôi", "../images/hosting/background-title-about-us.jpg")
+  +secTitleBase("Về chúng tôi", "../images/hosting/background-title-about-us.jpg", [{name: "Trang chủ", href: "/"},{name: "Về chúng tôi", href: "./gioi-thieu.html"}])
   main.main-wrapper
     include ../section/about-us/ve-chung-toi
     include ../section/about-us/lich-su-hinh-thanh

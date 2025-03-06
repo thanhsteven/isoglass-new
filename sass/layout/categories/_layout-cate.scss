@@ -21,20 +21,7 @@
     }
   }
   &-rating {
-    @include flexbox(row, center, center, 8px);
-    & {
-      margin-bottom: 10px;
-    }
-    span {
-      font-weight: 600;
-    }
-    &-star {
-      color: #f7c600;
-      font-size: 20px;
-      i.fa {
-        margin-left: 4px;
-      }
-    }
+    text-align: center;
   }
   &-short_description {
     margin-block: 8px;
@@ -109,58 +96,6 @@
   &-support {
     margin-top: 10px;
     margin-bottom: 20px;
-    &-wrapper {
-      @include maxWidth($large) {
-        max-width: 90%;
-        padding: 15px;
-      }
-      @include maxWidth($medium) {
-        max-width: 100%;
-      }
-    }
-    &-item {
-      border-bottom: 1px solid $borderColor;
-      cursor: pointer;
-      &:first-child {
-        border-top: 1px solid $borderColor;
-      }
-    }
-    &-title {
-      @include flexbox(row, center, flex-start, 15px);
-      & {
-        padding-block: 20px;
-        cursor: pointer;
-      }
-      & * {
-        pointer-events: none;
-      }
-      span {
-        color: $primaryColor;
-        font-size: 26px;
-        font-weight: 700;
-        font-size: 16px;
-        text-wrap: wrap;
-        line-height: 28px;
-        @include maxWidth($medium) {
-          line-height: 26px;
-        }
-      }
-      i.fa {
-        transition: transform linear 0.25s;
-      }
-    }
-    &-answer {
-      max-height: 0px;
-      overflow-y: hidden;
-      transition: all linear 0.3s;
-      &-inner {
-        padding-left: 20px;
-        font-size: 16px;
-        line-height: 28px;
-        color: inherit;
-        font-weight: inherit;
-      }
-    }
   }
 }
 
@@ -174,7 +109,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 800;
+    z-index: 900;
     transform: translateX(100%);
     transition: transform ease-in 0.25s;
   }
@@ -263,7 +198,7 @@
   }
 }
 
-// - Sidebar for Main Categories
+// - Sidebar Details for Main Categories
 .sidebar-main {
   &-cate {
     width: 100%;
@@ -321,5 +256,79 @@
     color: $textColor;
     font-weight: 700;
     font-size: 14px;
+  }
+}
+
+// - CSS rating for Main categories
+.rating {
+  @include flexbox(row, center, center, 8px);
+  &-text {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+  }
+  &-star {
+    color: #f7c600;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    i.fa {
+      margin-left: 4px;
+    }
+  }
+}
+
+// - CSS Support
+.support {
+  &-wrapper {
+    @include maxWidth($large) {
+      max-width: 90%;
+      padding: 15px;
+    }
+    @include maxWidth($medium) {
+      max-width: 100%;
+    }
+  }
+  &-item {
+    border-bottom: 1px solid $borderColor;
+    cursor: pointer;
+    &:first-child {
+      border-top: 1px solid $borderColor;
+    }
+  }
+  &-title {
+    @include flexbox(row, center, flex-start, 15px);
+    & {
+      padding-block: 20px;
+      cursor: pointer;
+    }
+    & * {
+      pointer-events: none;
+    }
+    span {
+      color: $primaryColor;
+      font-size: 26px;
+      font-weight: 700;
+      font-size: 16px;
+      text-wrap: wrap;
+      line-height: 28px;
+      @include maxWidth($medium) {
+        line-height: 26px;
+      }
+    }
+    i.fa {
+      transition: transform linear 0.25s;
+    }
+  }
+  &-answer {
+    max-height: 0px;
+    overflow-y: hidden;
+    transition: all linear 0.3s;
+    &-inner {
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 28px;
+      color: inherit;
+      font-weight: inherit;
+    }
   }
 }

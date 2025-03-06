@@ -37,7 +37,8 @@ html(lang="vi")
         .cate-heading
           block category_h1
         //- - Rating Star
-        block rating_of_categories 
+        .cate-rating 
+          block rating_of_categories 
         //- - Short Description
         .cate-short_description
           block short_description 
@@ -69,7 +70,7 @@ html(lang="vi")
       //- - Section Answer The Question
       section.cate-support 
         .container 
-          block answer_the_question_for_each_categories  
+          block answer_the_question_for_each_categories 
       include ../section/common/review-and-rating.pug
     //- - Footer
     block footer 
@@ -77,4 +78,4 @@ html(lang="vi")
       include ./footer/footer.pug
   block scriptJS
     script(src="../js/main.js")
-    script(src="../js/main-cat.js")
+    //- script(src="../js/main-cat.js")

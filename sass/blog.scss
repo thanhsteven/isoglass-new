@@ -1,7 +1,4 @@
 @use "./abstracts" as *;
-// - CSS Title
-// - Google Font: Inter
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .blog {
   &-wrapper {
     display: grid;
@@ -30,6 +27,26 @@
     }
   }
 }
+
+.page-title {
+  &-entry {
+    color: #fff;
+  }
+  &-breadcrumb {
+    margin-top: 10px;
+    .breadcrumb-list {
+      .breadcrumb-item {
+        a {
+          color: #fff;
+        }
+        &::after {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
 .blog-default {
   &-item {
     border-radius: $border12;

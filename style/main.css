@@ -1136,18 +1136,19 @@ a {
   }
 }
 .title-wrapper .title {
-  font-size: 24px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
   color: #1a2c75;
   text-transform: inherit;
-  font-weight: 600;
   text-align: center;
 }
 .title-wrapper .title-after {
   text-align: center;
-  font-size: 16px;
+  font-size: 1.2rem;
   color: #333;
   font-weight: 500;
-  line-height: 26px;
+  line-height: 2rem;
 }
 @media screen and (max-width: 576px) {
   .title-wrapper .title-after {
@@ -1163,9 +1164,25 @@ a {
   padding-block: 40px;
 }
 .page-title-entry {
-  font-size: 24px;
+  font-size: 2.5rem;
+  line-height: 3rem;
   font-weight: 700;
   text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .page-title-entry {
+    font-size: 2rem;
+  }
+}
+.page-title-breadcrumb .breadcrumb-list .breadcrumb-item a {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .page-title-breadcrumb .breadcrumb-list .breadcrumb-item a {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
 }
 
 .title-child {
@@ -1399,6 +1416,34 @@ a {
   }
 }
 
+.breadcrumb-list {
+  display: flex;
+}
+.breadcrumb-list {
+  flex-direction: row;
+}
+.breadcrumb-list {
+  align-items: center;
+}
+.breadcrumb-list {
+  justify-content: center;
+}
+.breadcrumb-item {
+  color: #1a2c75;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  position: relative;
+}
+.breadcrumb-item::after {
+  font-family: FontAwesome;
+  content: "\f105";
+  margin-inline: 10px;
+}
+.breadcrumb-item:last-child::after {
+  content: "";
+}
+
 .topbar {
   height: 30px;
   background-color: #1a2c75;
@@ -1583,34 +1628,6 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.breadcrumb-list {
-  display: flex;
-}
-.breadcrumb-list {
-  flex-direction: row;
-}
-.breadcrumb-list {
-  align-items: center;
-}
-.breadcrumb-list {
-  justify-content: center;
-}
-.breadcrumb-item {
-  color: #1a2c75;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 600;
-  position: relative;
-}
-.breadcrumb-item::after {
-  font-family: FontAwesome;
-  content: "\f105";
-  margin-inline: 10px;
-}
-.breadcrumb-item:last-child::after {
-  content: "";
 }
 
 .menu-nav {
@@ -2538,32 +2555,7 @@ a {
   }
 }
 .cate-rating {
-  display: flex;
-}
-.cate-rating {
-  flex-direction: row;
-}
-.cate-rating {
-  align-items: center;
-}
-.cate-rating {
-  justify-content: center;
-}
-.cate-rating {
-  gap: 8px;
-}
-.cate-rating {
-  margin-bottom: 10px;
-}
-.cate-rating span {
-  font-weight: 600;
-}
-.cate-rating-star {
-  color: #f7c600;
-  font-size: 20px;
-}
-.cate-rating-star i.fa {
-  margin-left: 4px;
+  text-align: center;
 }
 .cate-short_description {
   margin-block: 8px;
@@ -2645,74 +2637,6 @@ a {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 992px) {
-  .cate-support-wrapper {
-    max-width: 90%;
-    padding: 15px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .cate-support-wrapper {
-    max-width: 100%;
-  }
-}
-.cate-support-item {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
-  cursor: pointer;
-}
-.cate-support-item:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
-}
-.cate-support-title {
-  display: flex;
-}
-.cate-support-title {
-  flex-direction: row;
-}
-.cate-support-title {
-  align-items: center;
-}
-.cate-support-title {
-  justify-content: flex-start;
-}
-.cate-support-title {
-  gap: 15px;
-}
-.cate-support-title {
-  padding-block: 20px;
-  cursor: pointer;
-}
-.cate-support-title * {
-  pointer-events: none;
-}
-.cate-support-title span {
-  color: #1a2c75;
-  font-size: 26px;
-  font-weight: 700;
-  font-size: 16px;
-  text-wrap: wrap;
-  line-height: 28px;
-}
-@media screen and (max-width: 768px) {
-  .cate-support-title span {
-    line-height: 26px;
-  }
-}
-.cate-support-title i.fa {
-  transition: transform linear 0.25s;
-}
-.cate-support-answer {
-  max-height: 0px;
-  overflow-y: hidden;
-  transition: all linear 0.3s;
-}
-.cate-support-answer-inner {
-  padding-left: 20px;
-  font-size: 16px;
-  line-height: 28px;
-  color: inherit;
-  font-weight: inherit;
-}
 
 @media screen and (max-width: 992px) {
   .cate-sidebar {
@@ -2723,7 +2647,7 @@ a {
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 800;
+    z-index: 900;
     transform: translateX(100%);
     transition: transform ease-in 0.25s;
   }
@@ -2906,6 +2830,104 @@ a {
   color: #333;
   font-weight: 700;
   font-size: 14px;
+}
+
+.rating {
+  display: flex;
+}
+.rating {
+  flex-direction: row;
+}
+.rating {
+  align-items: center;
+}
+.rating {
+  justify-content: center;
+}
+.rating {
+  gap: 8px;
+}
+.rating-text {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+.rating-star {
+  color: #f7c600;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.rating-star i.fa {
+  margin-left: 4px;
+}
+
+@media screen and (max-width: 992px) {
+  .support-wrapper {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .support-wrapper {
+    max-width: 100%;
+  }
+}
+.support-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+}
+.support-item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.support-title {
+  display: flex;
+}
+.support-title {
+  flex-direction: row;
+}
+.support-title {
+  align-items: center;
+}
+.support-title {
+  justify-content: flex-start;
+}
+.support-title {
+  gap: 15px;
+}
+.support-title {
+  padding-block: 20px;
+  cursor: pointer;
+}
+.support-title * {
+  pointer-events: none;
+}
+.support-title span {
+  color: #1a2c75;
+  font-size: 26px;
+  font-weight: 700;
+  font-size: 16px;
+  text-wrap: wrap;
+  line-height: 28px;
+}
+@media screen and (max-width: 768px) {
+  .support-title span {
+    line-height: 26px;
+  }
+}
+.support-title i.fa {
+  transition: transform linear 0.25s;
+}
+.support-answer {
+  max-height: 0px;
+  overflow-y: hidden;
+  transition: all linear 0.3s;
+}
+.support-answer-inner {
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 28px;
+  color: inherit;
+  font-weight: inherit;
 }
 
 .prefooter {
@@ -3432,7 +3454,7 @@ a {
   transition: all ease-in-out 0.5s;
   position: fixed;
   inset: 0;
-  z-index: 900;
+  z-index: 800;
 }
 @media screen and (max-width: 992px) {
   .footer-modal-show {
