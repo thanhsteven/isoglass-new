@@ -1,22 +1,20 @@
-//- Layout bài viết
 include ../mixin/mixin.pug
 include ../mixin/mixin-cate.pug
-include ../mixin/blogs.pug
+include ../mixin/mixin-blog.pug
 doctype html
 html(lang="vi")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    block titlePage 
-      title Layout bài viết chuẩn SEO 
-    block stylesheet 
+    block title_of_post  
+      title Layout bài viết post chuẩn SEO thông thường
+    block CSS_for_post  
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
       link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
-      link(rel="stylesheet", href="../style/post.css")
   body 
-    include ../layout/header/header.pug
-    include ../layout/menu/menu-2.pug
+    include ./header/header.pug
+    include ./menu/menu-2.pug
     +secTitleBase("Tin tức tổng hợp iSOGLASS", "../../images/hosting/background-title-blog.jpg")
     main.main-post 
       .container.main-post-wrapper 
@@ -89,7 +87,7 @@ html(lang="vi")
             span Đóng
           .post-sidebar-wrapper 
             include ./sidebar/sidebar-post.pug
-            include ./sidebar/sidebar.pug
+            include ./sidebar/sidebar-cta.pug
     include ../layout/footer/footer.pug
     block scriptJS 
       script(src="../js/main.js")

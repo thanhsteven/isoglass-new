@@ -1,6 +1,8 @@
-extends ../layout/post
-block titlePage 
+extends ../layout/layout-post.pug
+block title_of_post 
   title Quy trình công đoạn sản xuất ly thùy tinh
+append CSS_for_post 
+  link(rel="stylesheet", href="../style/post.css")
 block h1 
   h1 Loại cốc uống nước nào an toàn cho sức khỏe
 block postDate
