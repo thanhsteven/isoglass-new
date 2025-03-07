@@ -2929,10 +2929,16 @@ a {
 }
 .support-answer-inner {
   padding-left: 20px;
+  margin-top: unset;
   font-size: 16px;
   line-height: 28px;
   color: inherit;
   font-weight: inherit;
+}
+@media screen and (max-width: 576px) {
+  .support-answer-inner {
+    padding-left: unset;
+  }
 }
 
 .prefooter {

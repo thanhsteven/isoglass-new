@@ -325,10 +325,14 @@
     transition: all linear 0.3s;
     &-inner {
       padding-left: 20px;
+      margin-top: unset;
       font-size: 16px;
       line-height: 28px;
       color: inherit;
       font-weight: inherit;
+      @include maxWidth($small) {
+        padding-left: unset;
+      }
     }
   }
 }
