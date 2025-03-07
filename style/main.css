@@ -1443,6 +1443,11 @@ a {
 .breadcrumb-item:last-child::after {
   content: "";
 }
+@media screen and (max-width: 576px) {
+  .breadcrumb-item {
+    font-size: 0.75rem;
+  }
+}
 
 .topbar {
   height: 30px;

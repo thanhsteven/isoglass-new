@@ -1,106 +1,167 @@
-// ! Start Menu
 (function () {
+  // 🚀 Khai báo tất cả biến trước khi sử dụng
   const navMenu = document.querySelector(".menu-nav");
-  navMenu.addEventListener("click", function (event) {
-    let menuHasChild = event.target.parentElement;
-    if (menuHasChild.hasAttribute("data-toggle")) {
-      let subMenu = menuHasChild.querySelector(".sub-menu");
-      let icon = menuHasChild.querySelector(".menu-item-icon");
-      // - Kiểm tra submenu có đang mở hay không ?
-      if (subMenu.hasAttribute("style")) {
-        // - Nếu submenu đang mở ~ icon sẽ hiện
-        subMenu.removeAttribute("style"); // đóng submenu lại
-        icon.classList.remove("icon-show"); // đóng luôn cái icon
-      } else {
-        // - Nếu submenu ko mở
-        collapseMenu(); // - Đóng cái thằng ở ngoài đang mở lại
-        toggleIcon(); // - Đóng luôn cái icon nằm ở ngoài và đang mở --> đóng lại
-        subMenu.style.maxHeight = subMenu.scrollHeight + "px"; // Mở cái thằng đang click vào
-        icon.classList.add("icon-show");
-      }
-    } else {
-      console.log("Không có menu con bên trong nên không mở ra gì !");
-      return false;
-    }
-  });
-  const subMenus = navMenu.querySelectorAll(".sub-menu");
-  const menuIcons = navMenu.querySelectorAll(".menu-item-icon");
-  function collapseMenu() {
-    [...subMenus].forEach((item) => {
-      if (item.hasAttribute("style")) {
-        item.removeAttribute("style");
-      }
-    });
-  }
-  function toggleIcon() {
-    [...menuIcons].forEach((item) => {
-      if (item.classList.contains("icon-show")) {
-        item.classList.remove("icon-show");
-      }
-    });
-  }
-  const btnOpenMenu = document.querySelector(".header-right-menu");
   const modalFooter = document.querySelector(".footer-modal");
-  const btnCloseMenu = document.querySelector(".menu-close");
-  btnOpenMenu.addEventListener("click", menuMobile);
-  btnCloseMenu.addEventListener("click", menuMobile);
-  modalFooter.addEventListener("click", menuMobile);
-  function menuMobile() {
-    navMenu.classList.toggle("menu-nav-show");
-    modalFooter.classList.toggle("footer-modal-show");
-    if (document.documentElement.style.overflow === "hidden") {
-      document.documentElement.style.removeProperty("overflow");
-      document.documentElement.removeAttribute("style");
-    } else {
-      document.documentElement.style.setProperty("overflow", "hidden");
-    }
-  }
-  var mediaSize = 991;
-  window.addEventListener("resize", function () {
-    if (this.innerWidth <= mediaSize) {
-      resizeMenu();
-    }
-  });
-  function resizeMenu() {
-    modalFooter.classList.remove("footer-modal-show");
-    navMenu.classList.remove("menu-nav-show");
-  }
-})();
-// ! End Menu
-
-// ! Start Sidebar Categories
-(function () {
-  const modal = document.querySelector(".footer-modal");
   const cateSidebar = document.querySelector(".cate-sidebar");
-  const btnOpenSidebar = document.querySelector(".cate-sidebar-open");
-  const btnCloseSidebar = cateSidebar.querySelector(".cate-sidebar-close");
-  // - Mở/Đóng Sidebar bằng nút Open
-  btnOpenSidebar.addEventListener("click", function (event) {
-    cateSidebar.classList.toggle("cate-sidebar-active");
-    modal.classList.toggle("footer-modal-show");
-    if (cateSidebar.classList.contains("cate-sidebar-active")) {
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      collapseSidebar();
+
+  // 🚀 Xử lý Menu
+  if (navMenu) {
+    const btnOpenMenu = document.querySelector(".header-right-menu");
+    const btnCloseMenu = document.querySelector(".menu-close");
+
+    navMenu.addEventListener("click", function (event) {
+      let menuHasChild = event.target.parentElement;
+      if (menuHasChild.hasAttribute("data-toggle")) {
+        let subMenu = menuHasChild.querySelector(".sub-menu");
+        let icon = menuHasChild.querySelector(".menu-item-icon");
+
+        if (subMenu.hasAttribute("style")) {
+          subMenu.removeAttribute("style");
+          icon.classList.remove("icon-show");
+        } else {
+          collapseMenu();
+          toggleIcon();
+          subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+          icon.classList.add("icon-show");
+        }
+      }
+    });
+
+    function collapseMenu() {
+      const subMenus = navMenu.querySelectorAll(".sub-menu");
+      subMenus.forEach((item) => item.removeAttribute("style"));
     }
-  });
-  // - Đóng Sidebar bằng nút Close
-  btnCloseSidebar.addEventListener("click", collapseSidebar);
-  modal.addEventListener("click", collapseSidebar);
-  // - Hàm đóng Sidebar
-  function collapseSidebar() {
-    cateSidebar.classList.remove("cate-sidebar-active");
-    modal.classList.remove("footer-modal-show");
-    document.documentElement.removeAttribute("style");
+
+    function toggleIcon() {
+      const menuIcons = navMenu.querySelectorAll(".menu-item-icon");
+      menuIcons.forEach((item) => item.classList.remove("icon-show"));
+    }
+
+    if (btnOpenMenu && btnCloseMenu) {
+      btnOpenMenu.addEventListener("click", openMenuMobile);
+      btnCloseMenu.addEventListener("click", closeMenuMobile);
+    }
+
+    function openMenuMobile() {
+      navMenu.classList.add("menu-nav-show");
+      openModal();
+      addOverFlowDoc();
+    }
+
+    function closeMenuMobile() {
+      navMenu.classList.remove("menu-nav-show");
+      closeModal();
+      removeOverFlowDoc();
+    }
   }
-  var mediaSize = 991;
+
+  // 🚀 Xử lý Sidebar
+  if (cateSidebar) {
+    const btnOpenSidebar = document.querySelector(".cate-sidebar-open");
+    const btnCloseSidebar = cateSidebar.querySelector(".cate-sidebar-close");
+
+    if (btnOpenSidebar && btnCloseSidebar) {
+      btnOpenSidebar.addEventListener("click", function () {
+        if (cateSidebar.classList.contains("cate-sidebar-active")) {
+          closeSidebar();
+          removeOverFlowDoc();
+          closeModal();
+        } else {
+          if (navMenu && navMenu.classList.contains("menu-nav-show")) {
+            closeMenuMobile();
+          }
+          openSidebar();
+          openModal();
+          addOverFlowDoc();
+        }
+      });
+
+      btnCloseSidebar.addEventListener("click", closeSidebar);
+    }
+
+    function openSidebar() {
+      cateSidebar.classList.add("cate-sidebar-active");
+      openModal();
+      addOverFlowDoc();
+    }
+
+    function closeSidebar() {
+      cateSidebar.classList.remove("cate-sidebar-active");
+      closeModal();
+      removeOverFlowDoc();
+    }
+  }
+
+  // 🚀 Xử lý Modal
+  if (modalFooter) {
+    modalFooter.addEventListener("click", function () {
+      if (navMenu && navMenu.classList.contains("menu-nav-show")) {
+        closeMenuMobile();
+      } else if (
+        cateSidebar &&
+        cateSidebar.classList.contains("cate-sidebar-active")
+      ) {
+        closeSidebar();
+      }
+    });
+  }
+
+  function openModal() {
+    if (modalFooter) modalFooter.classList.add("footer-modal-show");
+  }
+
+  function closeModal() {
+    if (modalFooter) modalFooter.classList.remove("footer-modal-show");
+  }
+
+  function addOverFlowDoc() {
+    document.documentElement.style.setProperty("overflow", "hidden");
+  }
+
+  function removeOverFlowDoc() {
+    document.documentElement.removeAttribute("style");
+    document.documentElement.style.removeProperty("overflow");
+  }
+
+  // 🚀 Resize Window
+  const mediaSize = 991;
   window.addEventListener("resize", function () {
     if (this.innerWidth <= mediaSize) {
-      resizeSidebar();
+      if (navMenu) closeMenuMobile();
+      if (cateSidebar) closeSidebar();
+      closeModal();
+      removeOverFlowDoc();
     }
   });
-  function resizeSidebar() {
-    collapseSidebar();
-  }
 })();
-// ! End Sidebar
+
+// - Hàm open các Answer
+const answerTitles = document.querySelectorAll(".support-title");
+[...answerTitles].forEach(function (item) {
+  item.addEventListener("click", function (event) {
+    let answerContent = event.target.nextElementSibling;
+    let icon = event.target.querySelector(".fa-angle-down");
+    if (!answerContent.hasAttribute("style")) {
+      collapseAnswers();
+      answerContent.style.maxHeight = answerContent.scrollHeight + "px";
+      icon.style.transform = "rotateX(180deg)";
+    } else {
+      answerContent.removeAttribute("style");
+      icon.removeAttribute("style");
+    }
+  });
+});
+
+// - Hàm đóng các Answer lại
+const answerItems = document.querySelectorAll(".support-item");
+function collapseAnswers() {
+  [...answerItems].forEach(function (item) {
+    let title = item.querySelector(".support-title");
+    let answer = item.querySelector(".support-answer");
+    let icon = title.querySelector(".fa-angle-down");
+    title.removeAttribute("style");
+    answer.removeAttribute("style");
+    icon.removeAttribute("style");
+  });
+}
+

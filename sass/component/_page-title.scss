@@ -192,5 +192,8 @@
     &:last-child::after {
       content: "";
     }
+    @include maxWidth($small) {
+      font-size: 0.75rem;
+    }
   }
 }
