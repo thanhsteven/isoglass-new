@@ -1,4 +1,4 @@
-//- * Rating for Categories
+//- * Rating for Each page
 mixin rating4cate(var_rating)
   - var fullStars = var_rating.rating.length;
   - var emptyStars = 5 - fullStars;
@@ -9,6 +9,7 @@ mixin rating4cate(var_rating)
         i.fa.fa-star(aria-hidden="true")
       each star in Array(emptyStars)
         i.fa.fa-star-o(aria-hidden="true")
+
 
 //- - Category Infomation Box - Style 01
 mixin categoryStyle01(href, image, title, count)

@@ -1,49 +1,42 @@
 include ../mixin/mixin.pug
-include ../mixin/mixin-cate.pug
 include ../mixin/mixin-blog.pug
 doctype html
 html(lang="vi")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    block title_of_post  
+    block title_of_post
       title Layout bài viết post chuẩn SEO thông thường
     block CSS_for_post  
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
       link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
   body 
+    block variable
+    //- - Header
     include ./header/header.pug
+    //- - Menu
     include ./menu/menu-2.pug
-    +secTitleBase("Tin tức tổng hợp iSOGLASS", "../../images/hosting/background-title-blog.jpg")
-    main.main-post 
-      .container.main-post-wrapper 
-        article.post-main 
-          header.post-header 
-            block h1 
+    //- - Page title
+    .post-title
+      block page_title_of_post 
+    main.post-main 
+      .container.post-main-wrapper 
+        article.post-article 
+          header.post-article-header 
+            block main_heading_H1 
               h1 tiêu đề chính h1 
-            .post-date-update 
-              block postDate 
-            .post-overview
-              .post-rating
-                span Đánh giá:
-                .post-rating-star
-                  a(href="http://" title="poor")
-                    i.fa.fa-star(aria-hidden="true")
-                  a(href="http://" title="average")
-                    i.fa.fa-star(aria-hidden="true")
-                  a(href="http://" title="good")
-                    i.fa.fa-star(aria-hidden="true")
-                  a(href="http://" title="very good")
-                    i.fa.fa-star(aria-hidden="true")
-                  a(href="http://" title="excellent")
-                    i.fa.fa-star(aria-hidden="true")
+            .post-publish_date 
+              block post_publish_date 
+            .post-info_overview
+              .post-rating 
+                block rating_for_post 
               .post-comment 
                 i.fa.fa-comment-o(aria-hidden="true")
-                block postReview 
+                block post_review_count
               .post-viewed
                 i.fa.fa-eye(aria-hidden="true")
-                block postView 
+                block total_page_view 
             .post-short-desc
               block sapo 
                 p đoạn mô tả ngắn
@@ -51,7 +44,7 @@ html(lang="vi")
               block imageThumbnail 
                 img(src="", alt="")
                 figcaption
-          main.post-content 
+          main.post-article-body
             .post-layout 
               p Mục lục bài viết 
               ol(type="1").post-layout-list 

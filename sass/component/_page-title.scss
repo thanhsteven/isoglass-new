@@ -16,6 +16,7 @@
       font-size: 2rem;
     }
   }
+  // Breadcrumb dùng trong page title
   &-breadcrumb {
     .breadcrumb-list {
       .breadcrumb-item {
@@ -32,6 +33,7 @@
   }
 }
 
+// Title cho trang danh mục con
 .title-child {
   margin-top: unset;
   margin-bottom: unset;
@@ -174,9 +176,13 @@
   }
 }
 
+// Breadcrumb gốc
 .breadcrumb {
   &-list {
     @include flexbox(row, center, center, null);
+    & {
+      flex-wrap: wrap;
+    }
   }
   &-item {
     color: $primaryColor;

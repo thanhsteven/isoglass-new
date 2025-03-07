@@ -1,16 +1,36 @@
 extends ../layout/layout-post.pug
+block variable 
+  - 
+    var info_post = {
+      title: "Quy trình công đoạn sản xuất ly thủy tinh",
+      publishDate: "20 Tháng 08 năm 2024",
+      rating: ["1", "2", "3", "4"],
+      viewCount: 99,
+      reviewCount: 29
+    };
+
 block title_of_post 
   title Quy trình công đoạn sản xuất ly thùy tinh
 append CSS_for_post 
   link(rel="stylesheet", href="../style/post.css")
-block h1 
+block page_title_of_post
+  +secTitleBase("Tin tức tổng hợp iSOGLASS", "../../images/hosting/background-title-blog.jpg", [{name: "Trang chủ", href: "/"}, {name: "Tin tức", href: "./blog.html"}, {name: "Quy trình công đoạn sản xuất ly thùy tinh", href: ".//bai-viet-mau.html"}])
+block main_heading_H1 
   h1 Loại cốc uống nước nào an toàn cho sức khỏe
-block postDate
-  p Cập nhật: 20 Thg 08 2024
-block postReview 
-  span 29 lượt bình chọn 
-block postView 
-  span 99 lượt xem
+block post_publish_date
+  p Cập nhật: ngày 20 Tháng 08 năm 2024
+
+
+
+block rating_for_post 
+  +rating4post(info_post.rating)
+append post_review_count 
+  span=info_post.reviewCount
+append total_page_view 
+  span=info_post.viewCount
+
+
+
 block sapo 
   p Trong cuộc sống hiện đại, việc lựa chọn cốc uống nước an toàn không chỉ đơn thuần là một thói quen hàng ngày mà còn là một yếu tố quan trọng ảnh hưởng trực tiếp đến sức khỏe của chúng ta. Chất liệu của cốc có thể tác động đến chất lượng nước uống và sức khỏe tổng thể, từ đó ảnh hưởng đến sự phát triển và duy trì sức khỏe lâu dài.
 block imageThumbnail

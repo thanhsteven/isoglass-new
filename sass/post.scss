@@ -1,54 +1,80 @@
 @use "./abstracts" as *;
-// * CSS Sidebar
-@use "./layout/sidebar/sidebar";
-@use "./layout/sidebar/sidebar-post";
-.page {
+// - CSS page title post
+.post {
   &-title {
-    &-entry {
-      color: #fff;
-      font-size: clamp(1.8rem, 2.5vw, 4rem);
-      line-height: clamp(2.5rem, 3vw, 5rem);
+    .page {
+      &-title {
+        line-height: 2rem;
+        &-entry {
+          color: #fff;
+          font-size: 2rem;
+          margin-block: unset;
+          @include maxWidth($medium) {
+            font-size: 1.5rem;
+          }
+        }
+        &-breadcrumb {
+          .breadcrumb {
+            &-item {
+              color: #fff;
+              a {
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 2rem;
+                @include maxWidth($medium) {
+                  line-height: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
-.main-post {
-  &-wrapper {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    @include maxWidth($large) {
-      grid-template-columns: unset;
-    }
-  }
-}
+// - CSS for Layout post
 .post {
   &-main {
-    width: auto;
-    height: auto;
-  }
-  &-sidebar {
-    padding-left: 20px;
-  }
-  &-header {
-    color: $primaryColor;
-    font-size: clamp(1.5rem, 2vw, 4rem);
-    line-height: clamp(2rem, 3vw, 5rem);
-    font-weight: 700;
-    margin-block: 15px;
-    h1 {
-      color: inherit;
-      font-size: inherit;
-      line-height: inherit;
-      font-weight: inherit;
+    &-wrapper {
+      display: grid;
+      grid-template-columns: 75% 25%;
+      @include maxWidth($large) {
+        grid-template-columns: unset;
+      }
     }
   }
-  &-date-update {
-    color: #969696;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 20px;
-    margin-top: 8px;
+}
+
+.post-sidebar {
+  padding-left: 20px;
+}
+
+.post {
+  &-article {
+    width: auto;
+    height: auto;
+    &-header {
+      color: $primaryColor;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-block: 15px;
+      @include maxWidth($medium) {
+        font-size: 1.5rem;
+      }
+    }
   }
-  &-overview {
+  &-publish_date {
+    margin-block: 4px;
+    p {
+      color: #969696;
+      font-size: 1rem;
+      line-height: 2rem;
+      font-weight: 600;
+      margin-block: unset;
+    }
+  }
+  &-info_overview {
     @include flexbox(row, center, flex-start, 25px);
     & {
       margin-bottom: 10px;

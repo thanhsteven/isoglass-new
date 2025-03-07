@@ -23,3 +23,15 @@ mixin blogDefautl(image, href, author, cate, date, title, shortDesc, cmtCount)
         p=shortDesc
     a.blog-default-button(href=href, rel="noopener noreferrer nofollow")
       span Xem chi tiết 
+
+//- * Rating for Each Post
+mixin rating4post(ratingArr)
+  - var full = ratingArr.rating.length;
+  - var empty = 5 - full;
+  .rating
+    span.rating-text Đánh giá:
+    .rating-star
+      each star in Array(full)
+        i.fa.fa-star(aria-hidden="true")
+      each star in Array(empty)
+        i.fa.fa-star-o(aria-hidden="true")

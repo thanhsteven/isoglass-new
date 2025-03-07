@@ -1428,6 +1428,9 @@ a {
 .breadcrumb-list {
   justify-content: center;
 }
+.breadcrumb-list {
+  flex-wrap: wrap;
+}
 .breadcrumb-item {
   color: #1a2c75;
   font-size: 1rem;
