@@ -8,6 +8,7 @@ mixin productStyle01(href, image, title)
         .product-item-1-content
           h3.product-item-1-title=title
     +btnProduct("Đọc tiếp")(class="product-item-1-button")
+
 //- - Product Infomation Box - Style 02
 mixin productStyle02(href, image, title, cats)
   .product-item-2-wrapper 
@@ -20,6 +21,7 @@ mixin productStyle02(href, image, title, cats)
       a(href=href, target="_blank", rel="nofollow noopener noreferrer")=cats 
     .product-item-2-button
       +btnProduct2("Xem thêm")(class="product-item-2-button")
+
 //- - Product Infomation Box - Style 03
 mixin productStyle03(href, image1, image2, title, rating, cate, status)
   .product-item-3-wrapper
@@ -40,6 +42,7 @@ mixin productStyle03(href, image1, image2, title, rating, cate, status)
         .product-item-3-btn
           button.product-item-3-btn-hotline Liên hệ Hotline 
           button.product-item-3-btn-zalo Báo giá Zalo
+
 //- - Product Infomation Box - Style 04
 mixin productStyle04(href, image, image2, title)
   .product-item-4-item 
