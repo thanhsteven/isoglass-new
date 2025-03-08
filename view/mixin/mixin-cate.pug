@@ -1,6 +1,29 @@
+//- * Page title dành cho danh mục sản phẩm con
+mixin pageTitle4ChildCate(titleObject)
+  section.title-child
+    .container
+      .title-child-wrapper
+        .title-child-title
+          span.title-child-back
+            a(href="#" rel="noopener noreferrer nofollow")
+              i.fa.fa-long-arrow-left(aria-hidden="true")
+          p.title-child-heading=titleObject.title 
+        .title-child-menu
+          button.title-child-menu-btn Danh mục sản phẩm
+            i.fa.fa-angle-down(aria-hidden="true")
+          ul.title-child-list
+            each item in titleObject.menuTitle
+              li.title-child-item 
+                a.title-child-item-link(href="#")
+                  img.title-child-item-image(src=item.image, alt=item.menuChild, srcset=`${item.image} 2x`)
+                  .title-child-item-text
+                    span.title-child-item-name=item.menuChild 
+                    span.title-child-item-count=item.count
+
+
 //- * Rating for Each page
-mixin rating4cate(var_rating)
-  - var fullStars = var_rating.rating.length;
+mixin rating4cate(arrRating)
+  - var fullStars = arrRating.length;
   - var emptyStars = 5 - fullStars;
   .rating
     span.rating-text Đánh giá:
@@ -9,36 +32,6 @@ mixin rating4cate(var_rating)
         i.fa.fa-star(aria-hidden="true")
       each star in Array(emptyStars)
         i.fa.fa-star-o(aria-hidden="true")
-
-
-//- - Category Infomation Box - Style 01
-mixin categoryStyle01(href, image, title, count)
-  a.category-item-1-wrapper(href=href, rel="noopener noreferrer")
-    .category-item-1-image
-      img(src=image, alt=title)
-    .category-item-1-content
-      h3.category-item-1-title=title
-      span.category-item-1-count=count
-
-//- - Category Infomation Box - Style 02
-mixin categoryStyle02(href, image, title, countNumber)
-  .category-item-2-wrapper 
-    a.category-item-2-link(href=href, rel="noopener noreferrer") 
-      .category-item-2-image 
-        img(src=image, alt=title, srcset=`${image} 2x`) 
-      .category-item-2-title 
-        h3.category-item-2-title-text=title 
-        .category-item-2-count=countNumber 
-
-//- - Category Infomation Box - Style 03
-mixin categoryStyle03(href, image, title, count)
-  .category-item-3
-    a.category-item-3-link(href=href, rel="noopener noreferrer")
-      .category-item-3-image 
-        img(src=image, alt=title, srcset=`${image} 2x`)
-      .category-item-3-content 
-        h3.category-item-3-title=title 
-        span.category-item-3-count=count 
 
 //- * Categories Details For Each Main Categories
 mixin category4maincat(var_categories)
@@ -76,3 +69,32 @@ mixin answerthequestion4cate(var_QA)
           span=item.question
         .support-answer 
           p.support-answer-inner=item.answer 
+
+//- - Category Infomation Box - Style 01
+mixin categoryStyle01(href, image, title, count)
+  a.category-item-1-wrapper(href=href, rel="noopener noreferrer")
+    .category-item-1-image
+      img(src=image, alt=title)
+    .category-item-1-content
+      h3.category-item-1-title=title
+      span.category-item-1-count=count
+
+//- - Category Infomation Box - Style 02
+mixin categoryStyle02(href, image, title, countNumber)
+  .category-item-2-wrapper 
+    a.category-item-2-link(href=href, rel="noopener noreferrer") 
+      .category-item-2-image 
+        img(src=image, alt=title, srcset=`${image} 2x`) 
+      .category-item-2-title 
+        h3.category-item-2-title-text=title 
+        .category-item-2-count=countNumber 
+
+//- - Category Infomation Box - Style 03
+mixin categoryStyle03(href, image, title, count)
+  .category-item-3
+    a.category-item-3-link(href=href, rel="noopener noreferrer")
+      .category-item-3-image 
+        img(src=image, alt=title, srcset=`${image} 2x`)
+      .category-item-3-content 
+        h3.category-item-3-title=title 
+        span.category-item-3-count=count 

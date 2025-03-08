@@ -1,3 +1,9 @@
+//- - Mixin blog defautl
+mixin blogPage(blog)
+  each item in blog 
+    +blogDefautl(item.image, item.href, item.author, item.cate, item.date, item.title, item.shortDesc, item.cmtCount)
+
+//- - Blog Style Default
 mixin blogDefautl(image, href, author, cate, date, title, shortDesc, cmtCount)
   .blog-default-item
     .blog-default-thumbnail 
@@ -24,7 +30,7 @@ mixin blogDefautl(image, href, author, cate, date, title, shortDesc, cmtCount)
     a.blog-default-button(href=href, rel="noopener noreferrer nofollow")
       span Xem chi tiết 
 
-//- * Rating for Each Post
+//- - Rating for Each Post
 mixin overview4post(overview)
   .post-overview-wrapper 
     .post-rating

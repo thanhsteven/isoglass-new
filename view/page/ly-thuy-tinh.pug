@@ -1,41 +1,46 @@
 extends ../layout/layout-cate.pug
 //- - Title
 block title_of_category 
-  title Ly thuỷ tinh cao cấp - giá tốt tại TP.HCM 
+  -var ltt={title:"Ly thuỷ tinh cao cấp - giá tốt tại TP.HCM ",topbar:"Ly thuỷ tinh giá tốt tại TP.HCM",rating:[1,2,3,4],breadcrumb:[{name:"Trang chủ",href:"/"},{name:"Ly thủy tinh",href:"./ly-thuy-tinh.html"}],H1:"Ly thuỷ tinh sản xuất tại TP.HCM"}
+  title=ltt.title 
 //- - CSS
 append CSS_for_categories 
   link(rel="stylesheet", href="../style/ly-thuy-tinh-cat.css")
 //- - Topbar
 block topbarText
-  p Ly thuỷ tinh giá tốt tại TP.HCM 
+  p=ltt.topbar 
 //- - Banner Slideshow
 block section_banner_slideshow 
-  include ../section/main-cate/ly-thuy-tinh/ltt-slideshow.pug
+  span Đây là slideshow
 //- - Breadcrumb cho Ly thủy tinh
 block breadcrumb_for_each_categories
-  include ../section/main-cate/ly-thuy-tinh/ltt-breadcrumb.pug
+  +breadcrumbForEachPage(ltt.breadcrumb)
 //- - H1 Heading
 block category_h1 
-  h1 Ly thuỷ tinh sản xuất tại TP.HCM
+  h1=ltt.H1
 //- - Rating Ly thủy tinh
 block rating_of_categories
-  +rating4cate(ltt_breadcrumb)
+  +rating4cate(ltt.rating)
 //- - Danh mục Ly thủy tinh con
 block child_categories_of_main_categories
-  include ../section/main-cate/ly-thuy-tinh/ltt-categories.pug
+  - var cate_ly_thuy_tinh = {heading:"Các loại ly thuỷ tinh thông dụng",items:[{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-1.jpg",title:"Ly thuỷ tinh sản xuất tại TP.HCM",count:"49 sản phẩm",href:"#"},{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-2.jpg",title:"Bộ ly thuỷ tinh sản xuất tại TP.HCM",count:"15 sản phẩm",href:"#"},{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-3.jpg",title:"Ly thuỷ tinh 2 lớp sản xuất tại TP.HCM",count:"26 sản phẩm",href:"#"},{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-4.jpg",title:"Ly thuỷ tinh uống rượu sản xuất tại TP.HCM",count:"36 sản phẩm",href:"#"},{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-5.jpg",title:"Ly thuỷ tinh cao cấp sản xuất tại TP.HCM",count:"19 sản phẩm",href:"#"},{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-lam-tach-cafe-gia-re.jpg",title:"Ly thuỷ tinh nhập khẩu",count:"19 sản phẩm",href:"#"},]}
+  +category4maincat(cate_ly_thuy_tinh)
 //- - Sản phẩm Ly thủy tinh
 block products_of_category
-  include ../section/main-cate/ly-thuy-tinh/ltt-products.pug
+  - var ly_thuy_tinh_product = {heading:"Ly thủy tinh tại iSOGLASS",items:[{title:"Ly thuỷ tinh champagne cầu vồng size 180ml iSO-49",image:"../../images/ly-thuy-tinh/ly-thuy-tinh-champagne-cau-vong-size-180ml-iso-49.jpg",href:"#",},{title:"Ly thuỷ tinh dáng tulip uống rượu size 180ml iSO-50",image:"../../images/ly-thuy-tinh/ly-thuy-tinh-dang-tulip-uong-ruou-size-180ml-iso-50.jpg",href:"#",},{title:"Ly thuỷ tinh đế theo yêu cầu uống rượu size 300ml iSO-39",image:"../../images/ly-thuy-tinh/ly-thuy-tinh-de-theo-yeu-cau-uong-ruou-size-300ml-iso-39.jpg",href:"#",},{title:"Ly thuỷ tinh đơn giản uống rượu size 300ml iSO-47",image:"../../images/ly-thuy-tinh/ly-thuy-tinh-don-gian-uong-ruou-size-300ml-iso-47-1.jpg",href:"#",},{title:"Ly thuỷ tinh hình vác nghiêng uống rượu size 300ml iSO-40",image:"../../images/ly-thuy-tinh/ly-thuy-tinh-hinh-vac-nghieng-uong-ruou-size-300ml-iso-40-1.jpg",href:"#",},{title:"Ly thuỷ tinh màu hổ phách uống rượu size 380ml iSO-48",image:"../../images/ly-thuy-tinh/ly-thuy-tinh-mau-ho-phach-uong-ruou-size-380ml-iso-48.jpg",href:"#",}]}
+  +products4cate(ly_thuy_tinh_product)
 //- - Sidebar chai thủy tinh
 block sidebar_for_categories
-  include ../section/main-cate/ly-thuy-tinh/ltt-sidebar.pug
+  - var category_ly_thuy_tinh = {heading:"Phân loại ly thủy tinh",items:[{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-1.jpg",name:"Ly thuỷ tinh cao cấp",title:"Ly thuỷ tinh sản xuất tại TP.HCM",count:"49 sản phẩm",href:"#"},{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-2.jpg",name:"Bộ ly thuỷ tinh",title:"Bộ ly thuỷ tinh - giá tốt tại TP.HCM",count:"15 sản phẩm",href:"#"},{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-3.jpg",name:"Ly thuỷ tinh 2 lớp",title:"Ly thuỷ tinh 2 lớp sản xuất tại TP.HCM",count:"26 sản phẩm",href:"#"},{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-4.jpg",name:"Ly thuỷ tinh uống rượu",title:"Ly thuỷ tinh uống rượu sản xuất tại TP.HCM",count:"36 sản phẩm",href:"#"},{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-5.jpg",name:"Ly thuỷ tinh cao cấp",title:"Ly thuỷ tinh cao cấp sản xuất tại TP.HCM",count:"19 sản phẩm",href:"#"},{image:"../../images/ly-thuy-tinh/ly-thuy-tinh-iSOGLASS-5.jpg",name:"Ly thuỷ tinh nhập khẩu",title:"Ly thuỷ tinh nhập khẩu tại TP.HCM",count:"19 sản phẩm",href:"#"},]}
+  +sidebar4cate(category_ly_thuy_tinh)
 //- - Section tùy chỉnh thêm sau Nội dung dài
 block section_custom_for_each_categories
-  include ../section/main-cate/ly-thuy-tinh/ltt-in-logo.pug
+  p Đây là section in logo dành cho ly thủy tinh
   include ../section/common/tem-nhan-chai-ruou.pug
 //- - Hỏi đáp Ly thủy tinh
 block answer_the_question_for_each_categories
-  include ../section/main-cate/ly-thuy-tinh/ltt-Q&A.pug
+  - var ly_thuy_tinh_QA = {heading:"Câu hỏi thường gặp về Ly thủy tinh",items:[{question:"Ly thuỷ tinh làm từ chất liệu gì ?",answer:"Ly thuỷ tinh thường được làm từ chất liệu silica, có thể là silica thấp, trung bình hoặc cao, được nung nóng ở nhiệt độ cao để tạo ra sản phẩm cứng, trong suốt và chịu nhiệt."},{question:"Ly thuỷ tinh có ưu điểm gì so với ly nhựa ?",answer:"Ly thuỷ tinh có nhiều ưu điểm so với ly nhựa, bao gồm tính đẹp mắt, khả năng giữ nguyên hương vị thực phẩm và đồ uống, không tương tác hóa học với chất lỏng bên trong, đồng thời cũng dễ dàng vệ sinh và tái sử dụng."},{question:"Làm thế nào để vệ sinh ly thuỷ tinh một cách hiệu quả ?",answer:"Để vệ sinh ly thuỷ tinh một cách hiệu quả, bạn có thể sử dụng nước ấm hoặc nước xà phòng nhẹ kết hợp với cọ mềm để rửa sạch bên trong và bên ngoài của ly. Nên để ly khô tự nhiên hoặc lau khô bằng khăn mềm để tránh gây trầy xước."},{question:"Ly thuỷ tinh có ứng dụng trong lĩnh vực nào ngoài ngành thực phẩm và đồ uống ?",answer:"Ly thuỷ tinh cũng có ứng dụng trong nhiều lĩnh vực khác ngoài ngành thực phẩm và đồ uống, chẳng hạn trong trang trí nội thất, làm quà tặng, trang trí tiệc cưới, hoặc dùng để chứa các sản phẩm làm đẹp như kem, dầu gội đầu, dầu massage v.v."},]}
+  +answerthequestion4cate(ly_thuy_tinh_QA)
 //- - Mô tả ngắn Ly thủy tinh
 block short_description
   p 

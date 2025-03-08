@@ -22,7 +22,8 @@ html(lang="vi")
           block blogTitle
       article.blog-article 
         h2 Tin tức iSOGLASS 
-        block blogMain
+        .blog-wrapper 
+          block blogMain
     include ./footer/prefooter.pug
     include ./footer/footer.pug
     block scriptJS 

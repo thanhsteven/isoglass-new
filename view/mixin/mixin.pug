@@ -1,7 +1,7 @@
 //- * Breadcrumbs For Each Page
-mixin breadcrumbForEachPage(var_breadcrumb)
+mixin breadcrumbForEachPage(breadcrumb)
   ul.breadcrumb-list
-    each item in var_breadcrumb.breadcrumb
+    each item in breadcrumb
       li.breadcrumb-item
         a(href=`${item.href}`)=item.name 
 
