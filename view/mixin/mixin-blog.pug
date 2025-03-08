@@ -25,13 +25,20 @@ mixin blogDefautl(image, href, author, cate, date, title, shortDesc, cmtCount)
       span Xem chi tiết 
 
 //- * Rating for Each Post
-mixin rating4post(ratingArr)
-  - var full = ratingArr.rating.length;
-  - var empty = 5 - full;
-  .rating
-    span.rating-text Đánh giá:
-    .rating-star
-      each star in Array(full)
-        i.fa.fa-star(aria-hidden="true")
-      each star in Array(empty)
-        i.fa.fa-star-o(aria-hidden="true")
+mixin overview4post(overview)
+  .post-overview-wrapper 
+    .post-rating
+      - var full = overview.rating.length;
+      - var empty = 5 - full;
+      span Đánh giá:
+      .post-rating-star
+        each star in Array(full)
+          i.fa.fa-star(aria-hidden="true")
+        each star in Array(empty)
+          i.fa.fa-star-o(aria-hidden="true")
+    .post-comment
+      i.fa.fa-comment-o(aria-hidden="true")
+      span=overview.comment 
+    .post-viewed
+      i.fa.fa-eye(aria-hidden="true")
+      span=overview.viewed 

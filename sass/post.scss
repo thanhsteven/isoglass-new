@@ -63,6 +63,9 @@
         font-size: 1.5rem;
       }
     }
+    &-content {
+      width: auto;
+    }
   }
   &-publish_date {
     margin-block: 4px;
@@ -72,49 +75,6 @@
       line-height: 2rem;
       font-weight: 600;
       margin-block: unset;
-    }
-  }
-  &-info_overview {
-    @include flexbox(row, center, flex-start, 25px);
-    & {
-      margin-bottom: 10px;
-      max-height: 30px;
-    }
-    span {
-      color: $primaryColor;
-      font-size: 15px;
-      font-weight: 700;
-    }
-    @include maxWidth($small) {
-      max-height: unset;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: unset;
-    }
-  }
-  &-comment,
-  &-rating,
-  &-viewed {
-    position: relative;
-    @include maxWidth($small) {
-      max-height: 30px;
-    }
-    i.fa {
-      font-size: 16px;
-      font-weight: 400;
-    }
-  }
-  &-rating {
-    &-star {
-      display: inline-flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 4px;
-      position: relative;
-      a {
-        color: #fd9530;
-        font-size: 18px;
-      }
     }
   }
   &-short-desc {
@@ -318,22 +278,59 @@
 }
 
 .post {
-  &-comment,
-  &-viewed {
+  &-overview {
+    margin-bottom: 10px;
+    span {
+      font-size: 1rem;
+      line-height: 40px;
+    }
     i.fa {
-      margin-right: 6px;
+      font-size: 1.3rem;
+      line-height: 40px;
+    }
+    &-wrapper {
+      @include flexbox(row, center, flex-start, 30px);
+      line-height: 40px;
+      @include maxWidth($small) {
+        line-height: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: unset;
+      }
+      span {
+        color: $primaryColor;
+      }
     }
   }
-  &-rating::before,
-  &-comment::before {
+  &-rating {
+    @include flexbox(row, center, flex-start, 4px);
+    height: 100%;
+    position: relative;
+    &-star {
+      @include flexbox(row, center, flex-start, 2px);
+      color: #fd9530;
+    }
+  }
+  &-comment {
+    @include flexbox(row, center, flex-start, 8px);
+    height: 100%;
+    position: relative;
+  }
+  &-viewed {
+    @include flexbox(row, center, flex-start, 8px);
+    height: 100%;
+  }
+  &-rating::after,
+  &-comment::after {
     content: "";
+    display: block;
     width: 10px;
     height: 1px;
-    border-top: 1px solid #333;
+    border-top: 1px solid $primaryColor;
     position: absolute;
-    top: calc(50% + 2px);
-    right: 0;
-    transform: translateX(18px);
+    top: 20px;
+    right: -20px;
     @include maxWidth($small) {
       display: none;
     }

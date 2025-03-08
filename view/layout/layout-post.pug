@@ -12,7 +12,6 @@ html(lang="vi")
       link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
   body 
-    block variable
     //- - Header
     include ./header/header.pug
     //- - Menu
@@ -25,18 +24,11 @@ html(lang="vi")
         article.post-article 
           header.post-article-header 
             block main_heading_H1 
-              h1 tiêu đề chính h1 
+              h1 Chủ đề heading chính của bài post 
             .post-publish_date 
               block post_publish_date 
-            .post-info_overview
-              .post-rating 
-                block rating_for_post 
-              .post-comment 
-                i.fa.fa-comment-o(aria-hidden="true")
-                block post_review_count
-              .post-viewed
-                i.fa.fa-eye(aria-hidden="true")
-                block total_page_view 
+            .post-overview
+              block post_for_overview 
             .post-short-desc
               block sapo 
                 p đoạn mô tả ngắn

@@ -1,14 +1,4 @@
 extends ../layout/layout-post.pug
-block variable 
-  - 
-    var info_post = {
-      title: "Quy trình công đoạn sản xuất ly thủy tinh",
-      publishDate: "20 Tháng 08 năm 2024",
-      rating: ["1", "2", "3", "4"],
-      viewCount: 99,
-      reviewCount: 29
-    };
-
 block title_of_post 
   title Quy trình công đoạn sản xuất ly thùy tinh
 append CSS_for_post 
@@ -22,12 +12,12 @@ block post_publish_date
 
 
 
-block rating_for_post 
-  +rating4post(info_post.rating)
-append post_review_count 
-  span=info_post.reviewCount
-append total_page_view 
-  span=info_post.viewCount
+block post_for_overview
+  +overview4post({
+    rating: [1,2,3,4,5],
+    comment: "80 lượt bình luận",
+    viewed: "199 lượt xem"
+  })
 
 
 
