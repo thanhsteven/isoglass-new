@@ -11,8 +11,8 @@ mixin blogDefautl(image, href, author, cate, date, title, shortDesc, cmtCount)
         img(src=image, alt=title, srcset=`${image} 2x`)
       a.blog-default-link(href=href rel="noopener noreferrer")
       .blog-default-info 
-        a.blog-default-author(href="./ceo-sai-tien-luong.html", target="_blank", rel="noopener noreferrer nofollow")
-          img.blog-default-author-avatar(src="../../../images/khach-hang/le-thi-mai-anh.jpg", alt="Conent Marketing")
+        a.blog-default-author(href="./ceo-sai-tien-luong.html" target="_blank" rel="noopener noreferrer nofollow")
+          img.blog-default-author-avatar(src="../../../images/khach-hang/le-thi-mai-anh.jpg" alt="Conent Marketing")
           span.blog-default-author-name=author 
         .blog-default-comment 
           a.blog-default-comment-icon(href="#" rel="noopener noreferrer nofollow" title="Bình luận bài viết")
@@ -23,7 +23,7 @@ mixin blogDefautl(image, href, author, cate, date, title, shortDesc, cmtCount)
         span=cate 
         span=date 
       .blog-default-title
-        a(href=href, target="_blank", rel="noopener noreferrer" title=title)
+        a(href=href, target="_blank" rel="noopener noreferrer" title=title)
           h3=title
       .blog-default-short
         p=shortDesc

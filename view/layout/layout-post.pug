@@ -4,7 +4,7 @@ doctype html
 html(lang="vi")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     block title_of_post
     block CSS_for_post  
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
@@ -43,16 +43,7 @@ html(lang="vi")
               block post_review_rating
         //- Phần sidebar
         aside.post-article-sidebar 
-          button.post-sidebar-open 
-            i.fa.fa-ellipsis-h(aria-hidden="true")
-          .post-sidebar-scroll 
-            .post-sidebar-wrapper 
-              button.post-sidebar-close 
-                i.fa.fa-close(aria-hidden="true")
-                span Đóng
-                block post_sidebar_for_post 
-                //- Sidebar CTA default
-                include ./sidebar/sidebar-cta.pug
+          include ./sidebar/sidebar.pug
     include ../layout/footer/footer.pug
     block scriptJS 
       script(src="../js/main.js")

@@ -1,0 +1,106 @@
+@use "../../abstracts" as *;
+.sidebar {
+  &-wrapper {
+    @include maxWidth($large) {
+      padding-top: 20px;
+      padding-left: 20px;
+      width: 40vw;
+      min-height: 100vh;
+      box-shadow: $shadow;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 900;
+      transform: translateX(100%);
+      transition: transform ease-in 0.25s;
+    }
+    @include maxWidth($medium) {
+      width: 50vw;
+    }
+    @include maxWidth($small) {
+      width: 70vw;
+    }
+  }
+  &-active {
+    transform: translateX(0%);
+  }
+  &-scroll {
+    & {
+      width: 100%;
+      height: 100%;
+    }
+    @include maxWidth($large) {
+      overflow-y: auto;
+      overflow-x: visible;
+      scroll-behavior: smooth;
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $primaryColor;
+        border-radius: $border8;
+        width: 4px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $secondColor;
+      }
+    }
+    &-wrapper {
+      @include flexbox(column, stretch, flex-start, 15px);
+      @include maxWidth($large) {
+        padding-right: 15px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+  &-open {
+    @include square(50px);
+    & {
+      background-color: rgba($color: #fff, $alpha: 0.8);
+      box-shadow: -4px 0px 7px rgba(0, 0, 0, 0.1);
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      outline: none;
+      border: none;
+      text-align: center;
+      color: $textColor;
+      cursor: pointer;
+      position: absolute;
+      left: 0;
+      top: 25vh;
+      z-index: 500;
+      transform: translateX(-50px);
+      display: none;
+    }
+    & * {
+      pointer-events: none;
+    }
+    @include maxWidth($large) {
+      display: block;
+    }
+  }
+  &-close {
+    border: unset;
+    outline: none;
+    background-color: unset;
+    width: 100%;
+    padding: 20px;
+    border-radius: $border4;
+    box-shadow: $shadow2;
+    margin-bottom: -20px;
+    text-align: left;
+    display: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+    cursor: pointer;
+    @include maxWidth($large) {
+      display: block;
+    }
+    span {
+      margin-left: 6px;
+    }
+  }
+}

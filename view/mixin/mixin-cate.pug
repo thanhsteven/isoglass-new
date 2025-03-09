@@ -1,3 +1,14 @@
+//- * Sidebar For Each Main Categories
+mixin sidebar4cate(sidebar)
+  .sidebar-main-cate
+    p.sidebar-main-title=sidebar.heading
+    ul.sidebar-main-list
+      each item in sidebar.items
+        li.sidebar-main-item
+          a.sidebar-main-link(href=item.link, rel="noopener noreferrer" title=item.title)
+            img.sidebar-main-image(src=item.image, alt=item.name, srcset=`${item.image} 2x`)
+            span.sidebar-main-text=item.name
+
 //- * Page title dành cho danh mục sản phẩm con
 mixin pageTitle4ChildCate(titleObject)
   section.title-child
@@ -20,7 +31,6 @@ mixin pageTitle4ChildCate(titleObject)
                     span.title-child-item-name=item.menuChild 
                     span.title-child-item-count=item.count
 
-
 //- * Rating for Each page
 mixin rating4cate(arrRating)
   - var fullStars = arrRating.length;
@@ -39,17 +49,6 @@ mixin category4maincat(var_categories)
   .cate-group-wrapper 
     each item in var_categories.items
       +categoryStyle01(item.href, item.image, item.title, item.count)
-
-//- * Sidebar For Each Main Categories
-mixin sidebar4cate(sidebar)
-  .sidebar-main-cate
-    p.sidebar-main-title=sidebar.heading
-    ul.sidebar-main-list
-      each item in sidebar.items
-        li.sidebar-main-item
-          a.sidebar-main-link(href=item.link, rel="noopener noreferrer" title=item.title)
-            img.sidebar-main-image(src=item.image, alt=item.name, srcset=`${item.image} 2x`)
-            span.sidebar-main-text=item.name
 
 //- * Products For Categories
 mixin products4cate(var_products)

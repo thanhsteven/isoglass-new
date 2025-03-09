@@ -5,7 +5,7 @@ doctype html
 html(lang="vi")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     block title_of_category
       title Tiêu đề chính cho trang danh mục
     block owlCarousel
@@ -30,52 +30,44 @@ html(lang="vi")
     //- - Main Body
     main.cate-main
       .container
-        //- - Breadcrumb
+        //- Breadcrumb
         .cate-breadcrumb
           block breadcrumb_for_each_categories
-        //- - H1
+        //- H1
         .cate-heading
           block category_h1
-        //- - Đánh giá
+        //- Đánh giá
         .cate-rating 
           block rating_of_categories 
-        //- - Short Description
+        //- Short Description
         .cate-short_description
           block short_description 
-        //- - Section tùy chỉnh cho từng trang danh mục cha/con (nếu có)
+        //- Section tùy chỉnh cho từng trang danh mục cha/con (nếu có)
         section.cate-group
-          //- - Section các danh mục con (nếu có)
+          //- Section các danh mục con (nếu có)
           block child_categories_of_main_categories
-        //- - Phần bài viết dài
+        //- Phần bài viết dài
         .cate-article 
           article.cate-article-content
-            //- - Section các sản phẩm trong danh mục
+            //- Section các sản phẩm trong danh mục
             section.cate-product
               block products_of_category
             .cate-long_description
               block article_long_description
           //- Phần Sidebar
           aside.cate-sidebar
-            button.cate-sidebar-open
-              i.fa.fa-ellipsis-h(aria-hidden="true")
-            .cate-sidebar-scroll
-              .cate-sidebar-wrapper
-                button.cate-sidebar-close 
-                  i.fa.fa-close(aria-hidden="true")
-                  span Đóng
-                block sidebar_for_categories
-                //- Sidebar CTA default
-                include ./sidebar/sidebar-cta.pug
-      //- - Section tùy chỉnh
+            include ./sidebar/sidebar.pug
+      //- Section tùy chỉnh
       block section_custom_for_each_categories 
-      //- - Section Answer The Question
+      //- Section Answer The Question
       section.cate-support 
         .container 
           block answer_the_question_for_each_categories 
       include ../section/common/review-and-rating.pug
-    //- - Footer
+    //- Footer
     block footer 
       include ./footer/prefooter.pug
       include ./footer/footer.pug
   block scriptJS
     script(src="../js/main.js")
+    script(src="../../inc/modules/notification/noti.js") 

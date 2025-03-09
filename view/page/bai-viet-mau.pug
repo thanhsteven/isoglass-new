@@ -3,7 +3,7 @@ block title_of_post
   - var post = {title: "Quy trình công đoạn sản xuất ly thùy tinh", H1: "Loại cốc uống nước nào an toàn cho sức khỏe", publish: "ngày 20 Tháng 08 năm 2024", info: {rating: [1,2,3,4,5], comment: 80, viewed: 199}}
   title=post.title 
 append CSS_for_post 
-  link(rel="stylesheet", href="../style/post.css")
+  link(rel="stylesheet" href="../style/post.css")
 block page_title_of_post
   +secTitleBase("Tin tức tổng hợp iSOGLASS", "../../images/hosting/background-title-blog.jpg", [{name: "Trang chủ", href: "/"}, {name: "Tin tức", href: "./blog.html"}, {name: "Quy trình công đoạn sản xuất ly thùy tinh", href: ".//bai-viet-mau.html"}])
 block main_heading_H1 
@@ -12,13 +12,13 @@ block post_publish_date
   p Cập nhật #{post.publish}
 block post_for_overview
   +overview4post(post.info)
-block post_sidebar_for_post
+block sidebar_for_each_page
   - var post_sidebar = [{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg"}]
   +sidebar4post(post_sidebar)
 block short_description 
   p Trong cuộc sống hiện đại, việc lựa chọn cốc uống nước an toàn không chỉ đơn thuần là một thói quen hàng ngày mà còn là một yếu tố quan trọng ảnh hưởng trực tiếp đến sức khỏe của chúng ta. Chất liệu của cốc có thể tác động đến chất lượng nước uống và sức khỏe tổng thể, từ đó ảnh hưởng đến sự phát triển và duy trì sức khỏe lâu dài.
 block post_thumbnail
-  img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-1.jpg", alt="Quy trình công đoạn sản xuất ly thùy tinh", srcset="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-1.jpg")
+  img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-1.jpg" alt="Quy trình công đoạn sản xuất ly thùy tinh" srcset="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-1.jpg")
   figcaption Quy trình công đoạn sản xuất ly thùy tinh
 
 block post_layout_TOC
@@ -26,23 +26,23 @@ block post_layout_TOC
   +post_TOC(post_TOC)
 
 block long_description 
-  img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe.jpg", alt="Loại cốc uống nước nào an toàn cho sức khỏe")
+  img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe.jpg" alt="Loại cốc uống nước nào an toàn cho sức khỏe")
   p Loại cốc uống nước nào an toàn cho sức khỏe Nhiều nghiên cứu đã chỉ ra rằng các hóa chất độc hại có trong một số loại vật liệu như nhựa có thể thôi nhiễm vào nước uống, gây ra những tác động tiêu cực đến cơ thể. Chẳng hạn, BPA (Bisphenol A) và phthalates là hai loại hóa chất thường xuất hiện trong nhựa, được biết đến với khả năng gây rối loạn nội tiết tố và liên quan đến nhiều vấn đề sức khỏe như béo phì.
-  img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-2.jpg", alt="Loại cốc uống nước nào an toàn cho sức khỏe")
+  img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-2.jpg" alt="Loại cốc uống nước nào an toàn cho sức khỏe")
   p Loại cốc uống nước nào an toàn cho sức khỏe Hơn nữa, cốc thủy tinh còn có khả năng chịu nhiệt tốt hơn so với nhiều loại cốc khác. Bạn có thể thoải mái sử dụng chúng với đồ uống nóng mà không lo lắng về việc giải phóng hóa chất độc hại vào thức uống. 
   h2 Cốc thủy tinh: Cốc uống nước nào an toàn cho sức khỏe
   p Cốc thủy tinh đã trở thành sự lựa chọn hàng đầu cho những ai quan tâm đến sức khỏe. Một trong những lý do chính khiến cốc thủy tinh được ưa chuộng là tính an toàn của nó. Khác với các loại cốc làm từ nhựa, cốc thủy tinh không chứa BPA, phthalates hay bất kỳ hóa chất độc hại nào khác có thể thôi nhiễm vào thực phẩm và nước uống.
   h2 Các loại cốc thủy tinh phổ biến
   p Trên thị trường hiện nay, có rất nhiều loại cốc thủy tinh với thiết kế và tính năng đa dạng, phù hợp với nhu cầu sử dụng khác nhau của người tiêu dùng. Dưới đây là một số sản phẩm gợi ý nổi bật mà bạn có thể tham khảo:
-  img(src="../images/hosting/cac-loai-coc-thuy-tinh-pho-bien.jpg", alt="Các loại cốc thủy tinh phổ biến")
+  img(src="../images/hosting/cac-loai-coc-thuy-tinh-pho-bien.jpg" alt="Các loại cốc thủy tinh phổ biến")
   p Các loại cốc thủy tinh phổ biến
   h3 Ly thủy tinh cao cấp
-  img(src="../images/hosting/ly-thuy-tinh-cao-cap-2.jpg", alt="Ly thủy tinh cao cấp")
+  img(src="../images/hosting/ly-thuy-tinh-cao-cap-2.jpg" alt="Ly thủy tinh cao cấp")
   p Ly thủy tinh cao cấp Đây là lựa chọn hoàn hảo cho những dịp đặc biệt như tiệc tùng hay các buổi gặp mặt sang trọng. Ly thủy tinh cao cấp thường được làm từ chất liệu thủy tinh borosilicate, giúp chịu nhiệt tốt và không dễ bị nứt vỡ. 
-  img(src="../images/hosting/chai-thuy-tinh-ben-chac.jpg", alt="Chai thủy tinh bền chắc")
+  img(src="../images/hosting/chai-thuy-tinh-ben-chac.jpg" alt="Chai thủy tinh bền chắc")
   p Chai thủy tinh bền chắc Chai thủy tinh là lựa chọn lý tưởng cho việc bảo quản nước uống hàng ngày. Với dung tích lớn và thiết kế kín đáo, chai này không chỉ giúp giữ nước luôn sạch sẽ mà còn ngăn chặn bụi bẩn và vi khuẩn xâm nhập. 
   p Loại ly này rất phù hợp cho những ai thường xuyên di chuyển hoặc cần mang theo đồ uống bên mình. Với thiết kế thông minh có nắp đậy kín, ly thủy tinh này giúp giữ cho đồ uống luôn tươi mát và tránh tình trạng rơi vãi khi di chuyển. 
-  img(src="../images/hosting/huong-dan-bao-quan-coc-thuy-tinh-dung-cach.jpg", alt="Hướng dẫn bảo quản cốc thủy tinh đúng cách")
+  img(src="../images/hosting/huong-dan-bao-quan-coc-thuy-tinh-dung-cach.jpg" alt="Hướng dẫn bảo quản cốc thủy tinh đúng cách")
   p Hướng dẫn bảo quản cốc thủy tinh đúng cách Để đảm bảo tuổi thọ và giữ cho cốc thủy tinh luôn trong tình trạng tốt nhất, việc bảo quản đúng cách là rất quan trọng. Dưới đây là một số lưu ý hữu ích mà bạn nên áp dụng:
   strong Rửa sạch ngay sau khi sử dụng: 
   p Sau khi sử dụng cốc thủy tinh, hãy rửa sạch ngay lập tức để tránh tình trạng thức ăn hoặc đồ uống bám dính lâu ngày. Sử dụng nước ấm và xà phòng nhẹ để làm sạch. Nếu có vết bẩn khó tẩy, bạn có thể dùng baking soda hoặc giấm trắng để làm sạch hiệu quả mà không làm hỏng bề mặt của cốc.
@@ -56,7 +56,7 @@ block long_description
   p Thỉnh thoảng, hãy kiểm tra các cốc thủy tinh của bạn để đảm bảo rằng chúng không bị nứt hay hư hỏng nào khác trước khi sử dụng lại. 
   h2 Các lưu ý khi chọn mua cốc uống nước an toàn
   p Khi lựa chọn cốc uống nước, việc chú ý đến chất lượng và tính an toàn của sản phẩm là vô cùng quan trọng. Dưới đây là một số lưu ý giúp bạn có được sự lựa chọn tốt nhất cho sức khỏe của mình:
-  img(src="../images/hosting/cac-luu-y-khi-chon-mua-coc-uong-nuoc-an-toan.jpg", alt="Các lưu ý khi chọn mua cốc uống nước an toàn")
+  img(src="../images/hosting/cac-luu-y-khi-chon-mua-coc-uong-nuoc-an-toan.jpg" alt="Các lưu ý khi chọn mua cốc uống nước an toàn")
   p Các lưu ý khi chọn mua cốc uống nước an toàn
   strong 1. Chọn sản phẩm từ thương hiệu uy tín:
   p Việc mua sắm từ các thương hiệu nổi tiếng và có uy tín trên thị trường không chỉ đảm bảo chất lượng sản phẩm mà còn giúp bạn yên tâm hơn về nguồn gốc và quy trình sản xuất.
@@ -68,9 +68,9 @@ block long_description
   p Một chiếc cốc tốt không chỉ cần an toàn mà còn phải tiện lợi trong quá trình sử dụng. Hãy tìm kiếm những mẫu cốc có thiết kế dễ dàng để cầm nắm, miệng rộng để dễ dàng vệ sinh, cũng như nắp đậy kín nếu bạn muốn bảo quản đồ uống lâu hơn.
   strong 5. Tìm hiểu về khả năng tái chế:
   p Lựa chọn những sản phẩm thân thiện với môi trường cũng rất quan trọng trong thời đại hiện nay. Cốc thủy tinh thường có khả năng tái chế cao hơn so với nhựa.
-  img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-3.jpg", alt="Loại cốc uống nước nào an toàn cho sức khỏe")
+  img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-3.jpg" alt="Loại cốc uống nước nào an toàn cho sức khỏe")
   p Loại cốc uống nước nào an toàn cho sức khỏe Việc lựa chọn cốc uống nước an toàn cho sức khỏe không chỉ là một quyết định cá nhân mà còn là một hành động có trách nhiệm đối với sức khỏe của cả gia đình. 
-  img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-4.jpg", alt="Loại cốc uống nước nào an toàn cho sức khỏe")
+  img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-4.jpg" alt="Loại cốc uống nước nào an toàn cho sức khỏe")
   p Loại cốc uống nước nào an toàn cho sức khỏe Vì vậy, hãy cân nhắc kỹ lưỡng khi lựa chọn sản phẩm cho gia đình mình. 
 block post_footer 
   ul

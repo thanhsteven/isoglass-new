@@ -1,49 +1,49 @@
 extends ../layout/layout-cate.pug
-//- - Title
+//- Title
 block title_of_category
   -var ctt={title:"Chai thuỷ tinh cao cấp - giá tốt tại TP.HCM",topbar:"Chai thuỷ tinh cao cấp",rating:[1,2,3,4,5],breadcrumb:[{name:"Trang chủ",href:"/"},{name:"Chai thủy tinh",href:"./chai-thuy-tinh.html"}],H1:"Chai thuỷ tinh giá tốt sản xuất tại TP.HCM"}
   title=ctt.title 
-//- - CSS
+//- CSS
 append CSS_for_categories
-  link(rel="stylesheet", href="../style/chai-thuy-tinh-cat.css")
-//- - Topbar
+  link(rel="stylesheet" href="../style/chai-thuy-tinh-cat.css")
+//- Topbar
 block topbarText
   p=ctt.topbar 
-//- - Banner SlideShow
+//- Banner SlideShow
 block section_banner_slideshow
   span Đây là phần slideshow 
-//- - Breadcrumb
+//- Breadcrumb
 block breadcrumb_for_each_categories
   +breadcrumbForEachPage(ctt.breadcrumb)
-//- - H1 Heading
+//- H1 Heading
 block category_h1
   h1=ctt.H1
-//- - Rating Chai thủy tinh
+//- Rating Chai thủy tinh
 block rating_of_categories
   +rating4cate(ctt.rating)
-//- - Danh mục chai thủy tinh con
+//- Danh mục chai thủy tinh con
 block child_categories_of_main_categories 
   - var cate_chai_thuy_tinh= { heading:"Các loại chai thủy tinh thông dụng",items:[{image:"../../images/chai-thuy-tinh/chai-thuy-tinh-gia-tot-san-xuat-tai-tphcm-02.jpg",title:"Chai thuỷ tinh giá tốt - sản xuất tại TP.HCM",count:"49 sản phẩm",href:"#"},{image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-ruou-gia-tot-tai-tp-hcm.jpg",title:"Chai thuỷ tinh đựng rượu - sản xuất tại TP.HCM",count:"36 sản phẩm",href:"./chai-thuy-tinh-dung-ruou.html"},{image:"../../images/chai-thuy-tinh/chai-thuy-tinh-than-vuong-nap-con-dung-ruou-size-500ml-iso-32.jpg",title:"Chai thuỷ tinh đựng nước - sản xuất tại TP.HCM",count:"11 sản phẩm",href:"#"},{image:"../../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg",title:"Bộ bình ly thuỷ tinh - giá tốt tại TP.HCM",count:"2 sản phẩm",href:"#"},{image:"../../images/chai-thuy-tinh/bo-binh-ly-thuy-tinh.jpg",title:"Bộ bình ly thuỷ tinh - giá tốt tại TP.HCM",count:"2 sản phẩm",href:"#"},{image:"../../images/chai-thuy-tinh/chai-thuy-tinh-gia-tot-san-xuat-tai-tphcm-02.jpg",title:"Bộ bình ly thuỷ tinh - giá tốt tại TP.HCM",count:"2 sản phẩm",href:"#"},{image:"../../images/chai-thuy-tinh/bo-binh-ly-thuy-tinh.jpg",title:"Bộ bình ly thuỷ tinh - giá tốt tại TP.HCM",count:"2 sản phẩm",href:"#"},{image:"../../images/chai-thuy-tinh/chai-thuy-tinh-than-tru-tron-dung-ruou-size-750ml-iso-46.jpg",title:"Bộ bình ly thuỷ tinh - giá tốt tại TP.HCM",count:"2 sản phẩm",href:"#"},]}
   +category4maincat(cate_chai_thuy_tinh)
-//- - Sản phẩm chai thủy tinh
+//- Sản phẩm chai thủy tinh
 block products_of_category
   - var chai_thuy_tinh_product={heading:"Chai thủy tinh tại iSOGLASS",items:[{title:"Chai thuỷ tinh thân vuông nắp côn đựng rượu size 500ml iSO-32",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-than-vuong-nap-con-dung-ruou-size-500ml-iso-32.jpg",href:"./bai-san-pham.html",},{title:"Chai thuỷ tinh đế núi độc lạ đựng rượu size 500ml iSO-25",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-de-nui-doc-la-dung-ruou-size-500ml-iso-25.jpg",href:"#",},{title:"Chai thuỷ tinh đựng nước khoáng có nắp cài size 1000ml iSO-13",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-khoang-co-nap-cai-size-1000ml-iso-13.jpg",href:"#",},{title:"Chai thuỷ tinh thân trụ vuông đựng rượu size 750ml iSO-45",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-than-tru-vuong-dung-ruou-size-750ml-iso-45.jpg",href:"#",},{title:"Chai thuỷ tinh thân trụ tròn đựng rượu size 750ml iSO-46",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-than-tru-tron-dung-ruou-size-750ml-iso-46.jpg",href:"#",},{title:"Chai thuỷ tinh đựng nước có nắp cài size 500ml iSO-07",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-co-nap-cai-size-500ml-iso-07.jpg",href:"#",},{title:"Chai thuỷ tinh đựng nước có nắp cài size 500ml iSO-07",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-co-nap-cai-size-500ml-iso-07.jpg",href:"#",},{title:"Chai thuỷ tinh đựng nước có nắp cài size 500ml iSO-07",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-co-nap-cai-size-500ml-iso-07.jpg",href:"#",},{title:"Chai thuỷ tinh đựng nước có nắp cài size 500ml iSO-07",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-co-nap-cai-size-500ml-iso-07.jpg",href:"#",}]}
   +products4cate(chai_thuy_tinh_product)
-//- - Sidebar chai thủy tinh
-block sidebar_for_categories
+//- Sidebar chai thủy tinh
+block sidebar_for_each_page
   - var sidebar_chai_thuy_tinh={heading:"Phân loại chai thủy tinh",items:[{name:"Bộ bình ly thuỷ tinh",link:"#",image:"../../images/chai-thuy-tinh/bo-binh-ly-thuy-tinh.jpg",title:"Bộ bình ly thủy tinh - giá tốt tại TP.HCM",},{name:"Chai thuỷ tinh đựng nước",link:"#",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-san-xuat-tai-tp-hcm.jpg",title:"Chai thuỷ tinh đựng nước - giá tốt tại TP.HCM"},{name:"Chai thuỷ tinh đựng rượu",link:"./chai-thuy-tinh-dung-ruou.html",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-ruou-gia-tot-tai-tp-hcm.jpg",title:"Chai thuỷ tinh đựng rượu - giá tốt tại TP.HCM",},{name:"Chai thuỷ tinh 500ml",link:"#",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-ruou-gia-tot-tai-tp-hcm.jpg",title:"Chai thuỷ tinh 500ml sản xuất tại TP.HCM",},]}
   +sidebar4cate(sidebar_chai_thuy_tinh)
-//- - Section tùy chỉnh thêm sau Nội dung dài
+//- Section tùy chỉnh thêm sau Nội dung dài
 block section_custom_for_each_categories
   include ../section/common/tem-nhan-chai-ruou.pug
-//- - Hỏi đáp chai thủy tinh
+//- Hỏi đáp chai thủy tinh
 block answer_the_question_for_each_categories
   - var chai_thuy_tinh_QA={heading:"Câu hỏi thường gặp về Chai thủy tinh",items:[{question:"Chất liệu gì thường được sử dụng để làm cho chai thuỷ tinh ?",answer:"Chất liệu thường được sử dụng để làm cho chai thuỷ tinh là thủy tinh silicat, được sản xuất từ quặng đá vôi, đá vôi trắng, cát thủy tinh và các chất phụ gia khác. Chất liệu này đem lại tính năng độ trong suốt, độ bền, và tính kháng hóa học cho chai thuỷ tinh."},{question:"Công dụng của chai thuỷ tinh trong lĩnh vực nào ?",answer:"Chai thuỷ tinh được sử dụng trong nhiều lĩnh vực, chẳng hạn như đóng gói thực phẩm, đồ uống, dược phẩm, mỹ phẩm, hoá chất và nhiều sản phẩm khác. Chai thuỷ tinh giúp bảo quản sản phẩm trong môi trường không khí, đồng thời giúp duy trì chất lượng, hương vị, và giá trị dinh dưỡng của sản phẩm."},{question:"Làm thế nào để làm sạch chai thuỷ tinh một cách hiệu quả ?",answer:"Để làm sạch chai thuỷ tinh một cách hiệu quả, bạn có thể sử dụng nước ấm hoặc nước nóng pha loãng kết hợp với chất tẩy rửa nhẹ. Dùng bàn chải mềm hoặc giẻ mềm để rửa sạch bên trong và bên ngoài chai, sau đó rửa sạch bằng nước sạch và để khô tự nhiên."},{question:"Có những dạng chai thuỷ tinh nào thường được sử dụng trong ngành công nghiệp thực phẩm và đồ uống ?",answer:"Có nhiều dạng chai thuỷ tinh phổ biến trong ngành công nghiệp thực phẩm và đồ uống, chẳng hạn như chai thủy tinh lọ, chai thủy tinh nắp nhựa, chai thủy tinh ly, chai thủy tinh tia UV, chai thủy tinh hình dáng đặc biệt, v.v. Mỗi dạng chai thuỷ tinh có đặc điểm và ứng dụng riêng, phù hợp với từng loại sản phẩm và nhu cầu sử dụng khác nhau."},]}
   +answerthequestion4cate(chai_thuy_tinh_QA)
-//- - Mô tả ngắn Chai thủy tinh
+//- Mô tả ngắn Chai thủy tinh
 block short_description
   p Đến với iSOGLASS, chúng tôi cung cấp cho Quý khách hàng nhiều sự lựa chọn nhất về các chai lọ thủy tinh để phục vụ nhu cầu sản xuất của Quý khách. Chúng tôi chuyên về sản xuất và cung cấp cho nhiều ngành công nghiệp những loại chai thủy tinh bền nhất, chất lượng nhất, cùng đang dạng mẫu mã với nhiều kích cỡ khác nhau, từ những chai thủy tinh đựng nước, chai thủy tinh đựng rượu cho đến các loại bộ bình dành riêng cho ly thuỷ tinh và các loại bình xịt làm bằng thủy thủy tinh như chai chiết tinh dầu, chai chiết nước hoa,… Đến với iSOGLASS, Quý khách sẽ tìm được những loại chai thủy tinh phù hợp với ngân sách của mình.
-//- - Bài viết dài Chai thủy tinh
+//- Bài viết dài Chai thủy tinh
 block article_long_description
   h2 Các loại chai lọ thủy tinh đẹp tại iSOGLASS
   h3 Chai thủy tinh đẹp

@@ -1,0 +1,129 @@
+@use "../../../sass/abstracts" as *;
+.bottomright {
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+  transform: translateY(120px);
+  z-index: 900;
+  // - Animation
+  animation: bottomAnimation 3s linear 1s 1 forwards;
+}
+
+.bottomleft {
+  position: fixed;
+  bottom: 0px;
+  left: 20px;
+  transform: translateY(120px);
+  z-index: 900;
+  // - Animation
+  animation: bottomAnimation 3s linear 1s 1 forwards;
+}
+
+@keyframes bottomAnimation {
+  20%,
+  80% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(120px);
+  }
+}
+
+.topright {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  transform: translateY(-130px);
+  z-index: 900;
+  animation: topAnimation 3s linear 1s 1 forwards;
+}
+
+.topleft {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  transform: translateY(-130px);
+  z-index: 900;
+  animation: topAnimation 3s linear 1s 1 forwards;
+}
+
+@keyframes topAnimation {
+  20%,
+  80% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-130px);
+  }
+}
+
+.noti {
+  @include flexbox(row, stretch, flex-start, 6px);
+  @include maxWidth($small) {
+  }
+  & {
+    max-width: 300px;
+    height: 110px;
+    background-color: #fff;
+    border-radius: $border12;
+    box-shadow: $shadow2;
+    padding: 10px;
+    @include maxWidth($small) {
+      max-width: 250px;
+    }
+  }
+  &-avatar {
+    flex: 0 0 35%;
+    max-width: 35%;
+    @include maxWidth($small) {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+    img {
+      width: 90px;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      border-radius: 100rem;
+      box-shadow: $shadow2;
+      @include maxWidth($small) {
+        width: 70px;
+      }
+    }
+  }
+  &-content {
+    font-family: $fontPrimary;
+    padding-right: 10px;
+    @include maxWidth($small) {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+  }
+  &-title {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    color: $primaryColor;
+    @include maxWidth($small) {
+      font-size: 14px;
+    }
+  }
+  &-paragraph {
+    display: block;
+    @include line-clamp(2);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    color: $textColor;
+    margin-top: 4px;
+  }
+  &-time {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba($textColor, 80%);
+  }
+}

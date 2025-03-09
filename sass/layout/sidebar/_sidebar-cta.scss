@@ -82,28 +82,4 @@
       }
     }
   }
-  &-close {
-    & {
-      border: unset;
-      outline: none;
-      border-radius: $border4;
-      display: none;
-      position: absolute;
-      top: 10px;
-      left: 25px;
-      cursor: pointer;
-      box-shadow: $shadow2;
-    }
-    @include square(40px);
-    @include maxWidth($large) {
-      display: block;
-    }
-  }
-}
-
-.cate-sidebar.sidebar-active {
-  transform: translateX(0%);
-}
-.post-article-sidebar.sidebar-active {
-  transform: translateX(0%);
 }

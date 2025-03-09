@@ -20,6 +20,8 @@ sass ./sass/page/chai-thuy-tinh-cat.scss ./style/chai-thuy-tinh-cat.css --watch
 # TRang danh mục con
 
 pug ./view/page/chai-thuy-tinh-dung-ruou.pug --watch --pretty --out html
+pug ./view/page/bo-ly-thuy-tinh.pug --watch --pretty --out html
+
 sass ./sass/page/chai-thuy-tinh-dung-ruou.scss ./style/chai-thuy-tinh-dung-ruou.css --watch
 
 # TRang danh mục blog

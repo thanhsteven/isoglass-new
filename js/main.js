@@ -2,8 +2,7 @@
   // Khai báo tất cả biến trước khi sử dụng
   const navMenu = document.querySelector(".menu-nav");
   const modalFooter = document.querySelector(".footer-modal");
-  const cateSidebar = document.querySelector(".cate-sidebar");
-  const postSidebar = document.querySelector(".post-article-sidebar");
+  const sidebar = document.querySelector(".sidebar-wrapper");
 
   // Xử lý Menu
   if (navMenu) {
@@ -31,7 +30,7 @@
       const subMenus = navMenu.querySelectorAll(".sub-menu");
       subMenus.forEach((item) => item.removeAttribute("style"));
     }
-    // Icon
+    // Icon Menu
     function toggleIcon() {
       const menuIcons = navMenu.querySelectorAll(".menu-item-icon");
       menuIcons.forEach((item) => item.classList.remove("icon-show"));
@@ -55,12 +54,12 @@
   }
 
   // Xử lý Sidebar
-  if (cateSidebar) {
-    const btnOpenSidebar = cateSidebar.querySelector(".cate-sidebar-open");
-    const btnCloseSidebar = cateSidebar.querySelector(".cate-sidebar-close");
+  if (sidebar) {
+    const btnOpenSidebar = sidebar.querySelector(".sidebar-open");
+    const btnCloseSidebar = sidebar.querySelector(".sidebar-close");
     if (btnOpenSidebar && btnCloseSidebar) {
       btnOpenSidebar.addEventListener("click", function () {
-        if (cateSidebar.classList.contains("sidebar-active")) {
+        if (sidebar.classList.contains("sidebar-active")) {
           closeSidebar();
           removeOverFlowDoc();
           closeModal();
@@ -77,44 +76,23 @@
     }
     // Open Sidebar
     function openSidebar() {
-      cateSidebar.classList.add("sidebar-active");
+      sidebar.classList.add("sidebar-active");
       openModal();
       addOverFlowDoc();
     }
     // Close Sidebar
     function closeSidebar() {
-      cateSidebar.classList.remove("sidebar-active");
+      sidebar.classList.remove("sidebar-active");
       closeModal();
       removeOverFlowDoc();
     }
   }
-
-  // Sidebar post
-  if (postSidebar) {
-    const btnOpenSidebarPost = postSidebar.querySelector(".post-sidebar-open");
-    const btnCloseSidebarPost = postSidebar.querySelector(
-      ".post-sidebar-close"
-    );
-    if (btnOpenSidebarPost && btnCloseSidebarPost) {
-      btnOpenSidebarPost.addEventListener("click", function (event) {
-        openSidebarPost();
-      });
-    }
-
-    function openSidebarPost() {
-      postSidebar.classList.add("sidebar-active");
-    }
-  }
-
   // Xử lý Modal
   if (modalFooter) {
     modalFooter.addEventListener("click", function () {
       if (navMenu && navMenu.classList.contains("menu-nav-show")) {
         closeMenuMobile();
-      } else if (
-        cateSidebar &&
-        cateSidebar.classList.contains("sidebar-active")
-      ) {
+      } else if (sidebar && sidebar.classList.contains("sidebar-active")) {
         closeSidebar();
       }
     });
@@ -141,13 +119,12 @@
   window.addEventListener("resize", function () {
     if (this.innerWidth <= mediaSize) {
       if (navMenu) closeMenuMobile();
-      if (cateSidebar) closeSidebar();
+      if (sidebar) closeSidebar();
       closeModal();
       removeOverFlowDoc();
     }
   });
 })();
-
 // Xử lý FAQ
 const answerTitles = document.querySelectorAll(".support-title");
 [...answerTitles].forEach(function (item) {

@@ -1,0 +1,10 @@
+.sidebar-wrapper 
+  button.sidebar-open
+    i.fa.fa-ellipsis-h(aria-hidden="true")
+  .sidebar-scroll
+    .sidebar-scroll-wrapper
+      button.sidebar-close 
+        i.fa.fa-close(aria-hidden="true")
+        span Đóng
+      block sidebar_for_each_page 
+      include ./sidebar-cta.pug

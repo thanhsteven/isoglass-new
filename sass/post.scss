@@ -95,7 +95,6 @@
     &-posts {
       border: 1px solid $borderColor;
       border-radius: $border12;
-      margin-bottom: 20px;
     }
     &-wrapper {
       width: 100%;
@@ -217,20 +216,20 @@
     &-sidebar {
       padding-left: 20px;
       background-color: #fff;
-      @include maxWidth($large) {
-        padding-inline: 10px;
-        width: 50vw;
-        min-height: 100vh;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 900;
-        transform: translateX(100%);
-      }
-      @include maxWidth($small) {
-        width: 70vw;
-      }
+      // @include maxWidth($large) {
+      //   padding-inline: 10px;
+      //   width: 50vw;
+      //   min-height: 100vh;
+      //   position: fixed;
+      //   top: 0;
+      //   bottom: 0;
+      //   right: 0;
+      //   z-index: 900;
+      //   transform: translateX(100%);
+      // }
+      // @include maxWidth($small) {
+      //   width: 70vw;
+      // }
     }
   }
 }

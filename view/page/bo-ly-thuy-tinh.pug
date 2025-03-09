@@ -1,0 +1,14 @@
+extends ../layout/layout-cate.pug
+block title_of_category
+  - var bltt = {title: "Bộ ly thủy tinh giá tốt tại TP.HCM", topbar: "Bộ ly thủy tinh", H1: "Bộ ly thủy tinh sản xuất tại TP.HCM", rating: [1,2,3,4], breadcrumb: [{name: "Trang chủ", href: "/"}, {name: "Ly thủy tinh", href: "./ly-thuy-tinh.html"}, {name: "Bộ ly thủy tinh", href: "./bo-ly-thuy-tinh.html"}]}
+  title=bltt.title 
+append CSS_for_categories
+  link(rel="stylesheet" href="")
+block topbarText
+  p=bltt.topbar 
+block category_h1
+  h1=bltt.H1
+block breadcrumb_for_each_categories
+  +breadcrumbForEachPage(bltt.breadcrumb)
+block rating_of_categories
+  +rating4cate(bltt.rating)

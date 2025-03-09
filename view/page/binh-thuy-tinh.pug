@@ -3,7 +3,7 @@ block title_of_category
   - var btt = {title: "Bình thủy tinh giá tốt tại TP.HCM", topbar: "Bình thủy tinh giá tốt tại TP.HCM", rating: [1,2,3,4,5], breadcrumb: [{name:"Trang chủ",href:"/"},{name:"Bình thủy tinh",href:"./binh-thuy-tinh.html"}], H1: "Bình thủy tinh"}
   title=btt.title 
 append CSS_for_categories
-  link(rel="stylesheet", href="")
+  link(rel="stylesheet" href="")
 block topbarText
   p=btt.topbar 
 block breadcrumb_for_each_categories
@@ -14,7 +14,7 @@ block rating_of_categories
   +rating4cate(btt.rating)
 //- block child_categories_of_main_categories 
 //-   +category4maincat(cate_chai_thuy_tinh)
-block sidebar_for_categories
+block sidebar_for_each_page
   -var btt_sidebar = {heading:"Phân loại Bình thủy tinh",items:[{name:"Bình thủy tinh đựng nước",link:"#",image:"../../images/binh-thuy-tinh/binh-thuy-tinh-dung-ruou.jpg",title:"Bộ bình ly thủy tinh - giá tốt tại TP.HCM",},{name:"Bình thủy tinh đựng rượu",link:"#",image:"../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc.jpg",title:"Bình thủy tinh đựng rượu - giá tốt tại TP.HCM"}]}
   +sidebar4cate(btt_sidebar)
 block products_of_category
@@ -24,4 +24,4 @@ block short_description
   p 
     a(href="./binh-thuy-tinh.html") 
       strong Bình thuỷ tinh cao cấp 
-      | của iSOGLASS không chỉ nổi bật với thiết kế tinh tế mà còn đáp ứng tiêu chuẩn an toàn tuyệt đối cho sức khỏe. Sản xuất trên dây chuyền hiện đại đạt chuẩn quốc tế, mỗi chiếc bình thuỷ tinh đều mang đến chất lượng vượt trội, độ bền cao và tính thẩm mỹ tuyệt vời. Đây là sự lựa chọn hoàn hảo cho những ai đang tìm kiếm giải pháp lưu trữ thực phẩm, đồ uống an toàn và thân thiện với môi trường.
+    | của iSOGLASS không chỉ nổi bật với thiết kế tinh tế mà còn đáp ứng tiêu chuẩn an toàn tuyệt đối cho sức khỏe. Sản xuất trên dây chuyền hiện đại đạt chuẩn quốc tế, mỗi chiếc bình thuỷ tinh đều mang đến chất lượng vượt trội, độ bền cao và tính thẩm mỹ tuyệt vời. Đây là sự lựa chọn hoàn hảo cho những ai đang tìm kiếm giải pháp lưu trữ thực phẩm, đồ uống an toàn và thân thiện với môi trường.

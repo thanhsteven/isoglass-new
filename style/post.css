@@ -86,7 +86,6 @@
 .post-sidebar-posts {
   border: 1px solid rgba(0, 0, 0, 0.1019607843);
   border-radius: 12px;
-  margin-bottom: 20px;
 }
 .post-sidebar-wrapper {
   width: 100%;
@@ -228,24 +227,6 @@
 .post-article-sidebar {
   padding-left: 20px;
   background-color: #fff;
-}
-@media screen and (max-width: 992px) {
-  .post-article-sidebar {
-    padding-inline: 10px;
-    width: 50vw;
-    min-height: 100vh;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 900;
-    transform: translateX(100%);
-  }
-}
-@media screen and (max-width: 576px) {
-  .post-article-sidebar {
-    width: 70vw;
-  }
 }
 
 .post-publish_date {
