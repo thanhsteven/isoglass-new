@@ -54,7 +54,7 @@ html(lang="vi")
               block products_of_category
             .cate-long_description
               block article_long_description
-          //- - Phần Sidebar
+          //- Phần Sidebar
           aside.cate-sidebar
             button.cate-sidebar-open
               i.fa.fa-ellipsis-h(aria-hidden="true")
@@ -64,6 +64,7 @@ html(lang="vi")
                   i.fa.fa-close(aria-hidden="true")
                   span Đóng
                 block sidebar_for_categories
+                //- Sidebar CTA default
                 include ./sidebar/sidebar-cta.pug
       //- - Section tùy chỉnh
       block section_custom_for_each_categories 

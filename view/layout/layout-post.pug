@@ -40,17 +40,19 @@ html(lang="vi")
             p Tham khảo các bài viết cùng chuyên mục
             block post_footer 
             .post-review-rating 
-              block post_review_rating 
+              block post_review_rating
+        //- Phần sidebar
         aside.post-article-sidebar 
           button.post-sidebar-open 
             i.fa.fa-ellipsis-h(aria-hidden="true")
-          button.post-sidebar-close 
-            i.fa.fa-close(aria-hidden="true")
-            span Đóng
-          .post-sidebar-wrapper 
-            block post_sidebar_for_post 
-            //- Sidebar CTA default
-            include ./sidebar/sidebar-cta.pug
+          .post-sidebar-scroll 
+            .post-sidebar-wrapper 
+              button.post-sidebar-close 
+                i.fa.fa-close(aria-hidden="true")
+                span Đóng
+                block post_sidebar_for_post 
+                //- Sidebar CTA default
+                include ./sidebar/sidebar-cta.pug
     include ../layout/footer/footer.pug
     block scriptJS 
       script(src="../js/main.js")
