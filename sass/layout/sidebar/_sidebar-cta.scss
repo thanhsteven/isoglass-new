@@ -100,3 +100,10 @@
     }
   }
 }
+
+.cate-sidebar.sidebar-active {
+  transform: translateX(0%);
+}
+.post-article-sidebar.sidebar-active {
+  transform: translateX(0%);
+}

@@ -1,9 +1,9 @@
-//- - Mixin blog defautl
+//- Mixin blog defautl
 mixin blogPage(blog)
   each item in blog 
     +blogDefautl(item.image, item.href, item.author, item.cate, item.date, item.title, item.shortDesc, item.cmtCount)
 
-//- - Blog Style Default
+//- Blog Style Default
 mixin blogDefautl(image, href, author, cate, date, title, shortDesc, cmtCount)
   .blog-default-item
     .blog-default-thumbnail 
@@ -48,3 +48,28 @@ mixin overview4post(overview)
     .post-viewed
       i.fa.fa-eye(aria-hidden="true")
       span #{overview.viewed} lượt xem 
+
+//- Sidebar for post
+mixin sidebar4post(sidebarPost)
+  aside.post-sidebar-posts  
+    p.post-sidebar-title Bài viết được nhiều quan tâm 
+    ul.post-sidebar-list 
+      each item in sidebarPost 
+        li.post-sidebar-item 
+          a(href=item.href, rel="noopener noreferrer" title=item.title)
+            img(src=item.image, alt=item.title)
+            span=item.titlePost
+
+//- Table of Content
+mixin post_TOC(postTOC)
+  .post-toc 
+    p Mục lục bài viết 
+    ol(type="1").post-toc-list 
+      each item in postTOC
+        li.post-toc-list-item 
+          a(href="#")=item.title
+          if (item.child)
+            ul.post-toc-child 
+              each child in item.child 
+                li.post-toc-list-item 
+                  a(href=`${child.href}`)=child.childTitle

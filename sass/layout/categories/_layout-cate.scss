@@ -119,9 +119,6 @@
   @include maxWidth($small) {
     width: 70vw;
   }
-  &-active {
-    transform: translateX(0%);
-  }
   &-scroll {
     background-color: #fff;
     width: 100%;

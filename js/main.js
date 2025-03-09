@@ -3,6 +3,7 @@
   const navMenu = document.querySelector(".menu-nav");
   const modalFooter = document.querySelector(".footer-modal");
   const cateSidebar = document.querySelector(".cate-sidebar");
+  const postSidebar = document.querySelector(".post-article-sidebar");
 
   // Xử lý Menu
   if (navMenu) {
@@ -14,7 +15,6 @@
       if (menuHasChild.hasAttribute("data-toggle")) {
         let subMenu = menuHasChild.querySelector(".sub-menu");
         let icon = menuHasChild.querySelector(".menu-item-icon");
-
         if (subMenu.hasAttribute("style")) {
           subMenu.removeAttribute("style");
           icon.classList.remove("icon-show");
@@ -26,28 +26,27 @@
         }
       }
     });
-
+    // Đóng/Hiện Menu
     function collapseMenu() {
       const subMenus = navMenu.querySelectorAll(".sub-menu");
       subMenus.forEach((item) => item.removeAttribute("style"));
     }
-
+    // Icon
     function toggleIcon() {
       const menuIcons = navMenu.querySelectorAll(".menu-item-icon");
       menuIcons.forEach((item) => item.classList.remove("icon-show"));
     }
-
     if (btnOpenMenu && btnCloseMenu) {
       btnOpenMenu.addEventListener("click", openMenuMobile);
       btnCloseMenu.addEventListener("click", closeMenuMobile);
     }
-
+    // Mở Menu Mobile
     function openMenuMobile() {
       navMenu.classList.add("menu-nav-show");
       openModal();
       addOverFlowDoc();
     }
-
+    // Đóng Menu Mobile
     function closeMenuMobile() {
       navMenu.classList.remove("menu-nav-show");
       closeModal();
@@ -57,12 +56,11 @@
 
   // Xử lý Sidebar
   if (cateSidebar) {
-    const btnOpenSidebar = document.querySelector(".cate-sidebar-open");
+    const btnOpenSidebar = cateSidebar.querySelector(".cate-sidebar-open");
     const btnCloseSidebar = cateSidebar.querySelector(".cate-sidebar-close");
-
     if (btnOpenSidebar && btnCloseSidebar) {
       btnOpenSidebar.addEventListener("click", function () {
-        if (cateSidebar.classList.contains("cate-sidebar-active")) {
+        if (cateSidebar.classList.contains("sidebar-active")) {
           closeSidebar();
           removeOverFlowDoc();
           closeModal();
@@ -75,20 +73,36 @@
           addOverFlowDoc();
         }
       });
-
       btnCloseSidebar.addEventListener("click", closeSidebar);
     }
-
+    // Open Sidebar
     function openSidebar() {
-      cateSidebar.classList.add("cate-sidebar-active");
+      cateSidebar.classList.add("sidebar-active");
       openModal();
       addOverFlowDoc();
     }
-
+    // Close Sidebar
     function closeSidebar() {
-      cateSidebar.classList.remove("cate-sidebar-active");
+      cateSidebar.classList.remove("sidebar-active");
       closeModal();
       removeOverFlowDoc();
+    }
+  }
+
+  // Sidebar post
+  if (postSidebar) {
+    const btnOpenSidebarPost = postSidebar.querySelector(".post-sidebar-open");
+    const btnCloseSidebarPost = postSidebar.querySelector(
+      ".post-sidebar-close"
+    );
+    if (btnOpenSidebarPost && btnCloseSidebarPost) {
+      btnOpenSidebarPost.addEventListener("click", function (event) {
+        openSidebarPost();
+      });
+    }
+
+    function openSidebarPost() {
+      postSidebar.classList.add("sidebar-active");
     }
   }
 
@@ -99,30 +113,29 @@
         closeMenuMobile();
       } else if (
         cateSidebar &&
-        cateSidebar.classList.contains("cate-sidebar-active")
+        cateSidebar.classList.contains("sidebar-active")
       ) {
         closeSidebar();
       }
     });
   }
-
+  // Open Modal
   function openModal() {
     if (modalFooter) modalFooter.classList.add("footer-modal-show");
   }
-
+  // Close Modal
   function closeModal() {
     if (modalFooter) modalFooter.classList.remove("footer-modal-show");
   }
-
+  // Active Document
   function addOverFlowDoc() {
     document.documentElement.style.setProperty("overflow", "hidden");
   }
-
+  // remove Document
   function removeOverFlowDoc() {
     document.documentElement.removeAttribute("style");
     document.documentElement.style.removeProperty("overflow");
   }
-
   // Resize Window
   const mediaSize = 991;
   window.addEventListener("resize", function () {
@@ -183,4 +196,3 @@ if (titleChildMenu) {
     }
   });
 }
-

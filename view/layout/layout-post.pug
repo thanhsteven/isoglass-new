@@ -6,72 +6,50 @@ html(lang="vi")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     block title_of_post
-      title Layout bài viết post chuẩn SEO thông thường
     block CSS_for_post  
       link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
       link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
   body 
-    //- Header
     include ./header/header.pug
-    //- Menu
     include ./menu/menu-2.pug
-    //- Page title cho bài viết
     .post-title
       block page_title_of_post 
-    main.post-main 
-      .container.post-main-wrapper 
-        article.post-article 
+    main.post-main.container 
+      .post-main-wrapper 
+        article.post-article-content 
           header.post-article-header 
             block main_heading_H1 
-              h1 Chủ đề heading chính của bài post 
             .post-publish_date 
               block post_publish_date 
             .post-overview
               block post_for_overview 
             .post-short_description 
               block short_description 
-                p đoạn mô tả ngắn
             figure.post-image 
-              block imageThumbnail 
-                img(src="", alt="")
-                figcaption
+              block post_thumbnail  
           main.post-article-body
-            .post-layout 
-              p Mục lục bài viết 
-              ol(type="1").post-layout-list 
-                li 
-                  a(href="#") Điểm chính 1
-                  ul.post-layout-list-child 
-                    li 
-                      a(href="#") Tiêu điểm con 2
-                    li 
-                      a(href="#") Tiêu điểm con 2
-                    li 
-                      a(href="#") Tiêu điểm con 2
-                li 
-                  a(href="#") Điểm chính 2
-                li 
-                  a(href="#") Điểm chính 3
+            block post_layout_TOC 
             .post-long_description 
               block long_description 
-          .post-company
-            p Phần này là thông tin công ty
-          .post-author
-            p Phần giới thiệu thông tin tác giả
+            .post-company
+              block post_company 
+            .post-author
+              p Phần giới thiệu thông tin tác giả
           footer.post-article-footer 
             p Tham khảo các bài viết cùng chuyên mục
             block post_footer 
-        .post-review-rating 
-          p phần này là section bình luận bài viết
-        aside.post-sidebar 
+            .post-review-rating 
+              block post_review_rating 
+        aside.post-article-sidebar 
           button.post-sidebar-open 
             i.fa.fa-ellipsis-h(aria-hidden="true")
           button.post-sidebar-close 
             i.fa.fa-close(aria-hidden="true")
             span Đóng
           .post-sidebar-wrapper 
-            include ./sidebar/sidebar-post.pug
+            block post_sidebar_for_post 
+            //- Sidebar CTA default
             include ./sidebar/sidebar-cta.pug
     include ../layout/footer/footer.pug
     block scriptJS 

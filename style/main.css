@@ -2543,6 +2543,14 @@ a {
   }
 }
 
+.cate-sidebar.sidebar-active {
+  transform: translateX(0%);
+}
+
+.post-article-sidebar.sidebar-active {
+  transform: translateX(0%);
+}
+
 .cate-main {
   padding-top: 15px;
 }
@@ -2669,9 +2677,6 @@ a {
   .cate-sidebar {
     width: 70vw;
   }
-}
-.cate-sidebar-active {
-  transform: translateX(0%);
 }
 .cate-sidebar-scroll {
   background-color: #fff;

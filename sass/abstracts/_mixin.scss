@@ -119,6 +119,13 @@
   overflow: hidden;
 }
 
+// * Hiện tiêu đề trên 1 hàng
+@mixin textEllipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 // * Hiện thanh scroll ngang trên mobile
 @mixin scrollHorizontalBar() {
   scroll-snap-type: x mandatory;
@@ -137,4 +144,3 @@
     background-color: #f8f8f8;
   }
 }
-

@@ -1,5 +1,5 @@
 @use "./abstracts" as *;
-// - CSS page title post
+// CSS page title post
 .post {
   &-title {
     .page {
@@ -33,7 +33,8 @@
     }
   }
 }
-// - CSS for Layout post
+
+// CSS for Layout post
 .post {
   &-main {
     &-wrapper {
@@ -46,14 +47,134 @@
   }
 }
 
-.post-sidebar {
-  padding-left: 20px;
+// CSS sidebar post
+.post {
+  &-sidebar {
+    &-open {
+      border: none;
+      outline: none;
+      background-color: rgba($color: #fff, $alpha: 0.9);
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      color: rgba($color: #333, $alpha: 0.8);
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      line-height: 40px;
+      box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 25vh;
+      left: 0;
+      transform: translateX(-50px);
+      cursor: pointer;
+      display: none;
+      @include maxWidth($large) {
+        display: block;
+      }
+      i.fa {
+        pointer-events: none;
+      }
+    }
+    &-close {
+      background-color: unset;
+      border: none;
+      outline: none;
+      padding: 10px;
+      cursor: pointer;
+      display: none;
+      width: 100%;
+      text-align: left;
+      span {
+        margin-left: 6px;
+        color: rgba($color: #333, $alpha: 0.9);
+      }
+      @include maxWidth($large) {
+        display: block;
+      }
+    }
+    &-posts {
+      border: 1px solid $borderColor;
+      border-radius: $border12;
+      margin-bottom: 20px;
+    }
+    &-wrapper {
+      width: 100%;
+      border-radius: $border12;
+      @include maxWidth($large) {
+        padding-inline: 10px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        overflow-y: scroll;
+        overflow-x: visible;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $primaryColor;
+          border-radius: $border8;
+        }
+      }
+    }
+    &-title {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 2rem;
+      text-align: center;
+      padding: 4px 15px;
+      white-space: nowrap;
+      margin-block: unset;
+      background-color: $primaryColor;
+      border-top-left-radius: $border12;
+      border-top-right-radius: $border12;
+      @include minmax(1000px, 1100px) {
+        @include textEllipsis();
+      }
+    }
+    &-list {
+      border-top: 1px solid $borderColor;
+      list-style: none;
+    }
+    &-item {
+      border-top: 1px solid $borderColor;
+      a {
+        @include flexbox(row, center, flex-start, 8px);
+        & {
+          padding-block: 10px;
+          padding-inline: 20px;
+        }
+        span {
+          color: $textColor;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 20px;
+          @include minmax($large, 1100px) {
+            @include webkitBox(2);
+          }
+        }
+        img {
+          @include square(40px);
+          & {
+            object-fit: cover;
+            border-radius: $border4;
+          }
+        }
+      }
+      &:hover {
+        background-color: #f7f7f7;
+      }
+    }
+  }
 }
 
+// Post article
 .post {
   &-article {
-    width: auto;
-    height: auto;
+    &-content {
+      width: auto;
+      height: auto;
+    }
     &-header {
       color: $primaryColor;
       font-size: 2rem;
@@ -63,8 +184,9 @@
         font-size: 1.5rem;
       }
     }
-    &-content {
+    &-body {
       width: auto;
+      height: auto;
     }
     &-footer {
       p {
@@ -92,7 +214,29 @@
         }
       }
     }
+    &-sidebar {
+      padding-left: 20px;
+      background-color: #fff;
+      margin-top: 30px;
+      @include maxWidth($large) {
+        padding-inline: 10px;
+        width: 40vw;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 900;
+        transform: translateX(100%);
+      }
+      @include maxWidth($small) {
+        width: 70vw;
+      }
+    }
   }
+}
+
+.post {
   &-publish_date {
     margin-block: 4px;
     p {
@@ -130,12 +274,13 @@
       color: #5c5c5c;
     }
   }
-  &-layout {
+  &-toc {
     border: 1px solid $borderColor;
     border-radius: $border12;
     p {
       background-color: $secondColor;
       padding: 10px 20px;
+      margin-block: unset;
       border-top-left-radius: $border12;
       border-top-right-radius: $border12;
       color: $primaryColor;
@@ -144,44 +289,40 @@
       font-weight: 700;
     }
     &-list {
-      margin-top: 10px;
       list-style-type: decimal;
       padding-inline: 40px;
-      padding-bottom: 20px;
-      li {
-        padding-top: 10px;
-        &:hover {
-          & > a {
-            text-decoration: underline;
-            color: $secondColor;
-          }
-        }
+      margin-block: 15px;
+      &-item {
         a {
           color: $primaryColor;
           font-size: 1rem;
+          line-height: 2rem;
           font-weight: 600;
-          line-height: 1.5rem;
+          transition: all linear 0.1s;
           cursor: pointer;
+          &:hover {
+            color: $secondColor;
+            text-decoration: underline;
+          }
         }
       }
-      &-child {
-        list-style: circle;
-        padding-left: 15px;
-      }
+    }
+    &-child {
+      list-style: circle;
+      padding-left: 15px;
     }
   }
   &-long_description {
+    h2 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
     h2,
     h3 {
-      color: $primaryColor;
-      line-height: 28px;
-      font-weight: 700;
-    }
-    h2 {
-      font-size: 20px;
-    }
-    h3 {
-      font-size: 18px;
+      line-height: 2rem;
+      margin-block: 10px;
     }
     img {
       border-radius: $border12;
@@ -198,86 +339,6 @@
       margin-block: 10px;
     }
   }
-  &-sidebar {
-    padding: 20px;
-    background-color: #fff;
-    @include maxWidth($large) {
-      padding-inline: 10px;
-      width: 40vw;
-      min-height: 100vh;
-      box-shadow: $shadow2;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      z-index: 900;
-      transform: translateX(100%);
-    }
-    @include maxWidth($small) {
-      width: 70vw;
-    }
-    &-open {
-      border: none;
-      outline: none;
-      background-color: rgba($color: #fff, $alpha: 0.9);
-      border-top-left-radius: 30px;
-      border-bottom-left-radius: 30px;
-      color: rgba($color: #333, $alpha: 0.8);
-      text-align: center;
-      width: 50px;
-      height: 50px;
-      line-height: 40px;
-      box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.1);
-      position: absolute;
-      top: 25vh;
-      left: 0;
-      transform: translateX(-50px);
-      cursor: pointer;
-      display: none;
-      @include maxWidth($large) {
-        display: block;
-      }
-    }
-    &-close {
-      background-color: unset;
-      border: none;
-      outline: none;
-      padding: 10px;
-      cursor: pointer;
-      display: none;
-      width: 100%;
-      text-align: left;
-      span {
-        margin-left: 6px;
-        color: rgba($color: #333, $alpha: 0.9);
-      }
-      @include maxWidth($large) {
-        display: block;
-      }
-    }
-    &-wrapper {
-      width: 100%;
-      height: calc(100% - 40px);
-      @include maxWidth($large) {
-        padding-inline: 10px;
-        padding-top: 10px;
-        padding-bottom: 30px;
-        overflow-y: scroll;
-        overflow-x: visible;
-        scroll-behavior: smooth;
-        &::-webkit-scrollbar {
-          width: 6px;
-        }
-        &::-webkit-scrollbar-thumb {
-          background-color: $primaryColor;
-          border-radius: $border8;
-        }
-      }
-    }
-  }
-}
-
-.post {
   &-overview {
     margin-bottom: 10px;
     span {

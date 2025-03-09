@@ -12,11 +12,19 @@ block post_publish_date
   p Cập nhật #{post.publish}
 block post_for_overview
   +overview4post(post.info)
+block post_sidebar_for_post
+  - var post_sidebar = [{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg",},{href:"#",title:"Quy trình công đoạn sản xuất ly thùy tinh",titlePost:"Quy trình công đoạn sản xuất ly thùy tinh",image:"../../images/hosting/cach-bao-quan-chai-thuy-tinh-dung-ruou.jpg"}]
+  +sidebar4post(post_sidebar)
 block short_description 
   p Trong cuộc sống hiện đại, việc lựa chọn cốc uống nước an toàn không chỉ đơn thuần là một thói quen hàng ngày mà còn là một yếu tố quan trọng ảnh hưởng trực tiếp đến sức khỏe của chúng ta. Chất liệu của cốc có thể tác động đến chất lượng nước uống và sức khỏe tổng thể, từ đó ảnh hưởng đến sự phát triển và duy trì sức khỏe lâu dài.
-block imageThumbnail
+block post_thumbnail
   img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-1.jpg", alt="Quy trình công đoạn sản xuất ly thùy tinh", srcset="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe-1.jpg")
   figcaption Quy trình công đoạn sản xuất ly thùy tinh
+
+block post_layout_TOC
+  - var post_TOC = [{title:"Điểm chính 1",href:"#",child:[{childTitle:"Tiêu điểm con 1",href:"#"},{childTitle:"Tiêu điểm con 2",href:"#"},{childTitle:"Tiêu điểm con 3",href:"#"},]},{title:"Điểm chính 2",href:"",child:[{childTitle:"Tiêu điểm con 1",href:"#"},{childTitle:"Tiêu điểm con 2",href:"#"}]},{title:"Điểm chính 3",href:"#"},{title:"Điểm chính 4",href:"#"}]
+  +post_TOC(post_TOC)
+
 block long_description 
   img(src="../images/hosting/loai-coc-uong-nuoc-nao-an-toan-cho-suc-khoe.jpg", alt="Loại cốc uống nước nào an toàn cho sức khỏe")
   p Loại cốc uống nước nào an toàn cho sức khỏe Nhiều nghiên cứu đã chỉ ra rằng các hóa chất độc hại có trong một số loại vật liệu như nhựa có thể thôi nhiễm vào nước uống, gây ra những tác động tiêu cực đến cơ thể. Chẳng hạn, BPA (Bisphenol A) và phthalates là hai loại hóa chất thường xuất hiện trong nhựa, được biết đến với khả năng gây rối loạn nội tiết tố và liên quan đến nhiều vấn đề sức khỏe như béo phì.
@@ -66,13 +74,13 @@ block long_description
   p Loại cốc uống nước nào an toàn cho sức khỏe Vì vậy, hãy cân nhắc kỹ lưỡng khi lựa chọn sản phẩm cho gia đình mình. 
 block post_footer 
   ul
-    li 
+    li
       a(href="") Quy trình công đoạn sản xuất chai thủy tinh
-    li 
+    li
       a(href="") Cách phân biệt thủy tinh và pha lê
-    li 
+    li
       a(href="") Tại sao dùng rượu vang luôn chọn ly thủy tinh
-    li 
+    li
       a(href="") 5 cách vệ sinh ly thủy tinh
-    li 
+    li
       a(href="") Cách vệ sinh chai thủy tinh đúng cách
