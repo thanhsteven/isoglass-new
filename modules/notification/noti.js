@@ -1,36 +1,38 @@
+console.log("Đã kết nối với file noti.js");
+
 const arrNoti = [
   {
-    avatar: "../inc/modules/notification/images/khach-hang-1.jpg",
+    avatar: "../modules/notification/images/khach-hang-1.jpg",
     name: "Nguyễn Văn An",
     title: "Sản phẩm rất tuyệt vời, giao hàng nhanh chóng!",
     time: "5 phút trước",
   },
   {
-    avatar: "../inc/modules/notification/images/khach-hang-1.jpg",
+    avatar: "../modules/notification/images/khach-hang-2.jpg",
     name: "Trần Thị Bích",
     title: "Dịch vụ chăm sóc khách hàng rất chuyên nghiệp.",
     time: "8 phút trước",
   },
   {
-    avatar: "../inc/modules/notification/images/khach-hang-1.jpg",
+    avatar: "../modules/notification/images/khach-hang-3.jpg",
     name: "Lê Minh Khôi",
     title: "Tôi sẽ giới thiệu bạn bè ủng hộ shop!",
     time: "12 phút trước",
   },
   {
-    avatar: "../inc/modules/notification/images/khach-hang-1.jpg",
+    avatar: "../modules/notification/images/khach-hang-4.jpg",
     name: "Phạm Thị Hoa",
     title: "Chất lượng sản phẩm đúng như quảng cáo, rất đáng tiền.",
     time: "15 phút trước",
   },
   {
-    avatar: "../inc/modules/notification/images/khach-hang-1.jpg",
+    avatar: "../modules/notification/images/khach-hang-5.jpg",
     name: "Hoàng Nam",
     title: "Shop giao hàng đúng hẹn, rất đáng tin cậy.",
     time: "20 phút trước",
   },
   {
-    avatar: "../inc/modules/notification/images/khach-hang-1.jpg",
+    avatar: "../modules/notification/images/khach-hang-6.jpg",
     name: "Nguyễn Thảo Linh",
     title: "Tôi rất hài lòng, sẽ tiếp tục ủng hộ shop lần sau!",
     time: "30 phút trước",
@@ -42,11 +44,12 @@ const arrNoti = [
 // Truyền biến vào: True là bật, Flase là tắt
 // Truyền vị trí của noti: topleft (mặc định), topright, bottomleft, bottomright
 
-controlNotification(true, "bottomright", 4000);
+// Hàm công tắc
+controlNotification(true, "topleft", 4000);
 
-// * Xác định vị trí của Noti
+// Xác định vị trí của Noti
 const positionNoti = ["topleft", "topright", "bottomleft", "bottomright"];
-// * Hàm điều khiển
+// Hàm vận hành
 function controlNotification(
   onOff = false,
   strPos = "topleft",
@@ -80,7 +83,7 @@ function controlNotification(
   }
 }
 
-// * Hàm khởi tạo HTML Notification
+// Hàm khởi tạo HTML Notification
 function createNotification(avatar, name, title, time, position) {
   const tplNoti = `
     <div class="noti ${position}">
