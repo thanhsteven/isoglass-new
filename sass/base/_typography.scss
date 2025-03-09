@@ -11,7 +11,7 @@ body {
 
 h2 {
   color: $primaryColor;
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-block: 10px;
   @include maxWidth($medium) {
@@ -19,9 +19,8 @@ h2 {
     line-height: 3rem;
   }
   @include maxWidth($small) {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     line-height: 1.8rem;
-    margin-block: unset;
   }
 }
 
@@ -29,10 +28,10 @@ h3 {
   color: $primaryColor;
   margin-block: 10px;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.8rem;
   @include maxWidth($small) {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.6rem;
   }
 }

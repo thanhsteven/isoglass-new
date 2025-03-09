@@ -5,13 +5,13 @@ doctype html
 html(lang="vi")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     block titlePage  
       title Layout cho trang danh mục bài viết 
     link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
     link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
     link(rel="stylesheet" href="../style/main.css")
-    link(rel="stylesheet", href="../style/blog.css")
+    link(rel="stylesheet" href="../style/blog.css")
   body 
     include ../layout/header/header.pug
     include ../layout/menu/menu-2.pug
@@ -28,3 +28,4 @@ html(lang="vi")
     include ./footer/footer.pug
     block scriptJS 
       script(src="../js/main.js")
+      script(src="../../modules/notification/noti.js")
