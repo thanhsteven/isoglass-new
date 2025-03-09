@@ -12,11 +12,11 @@ html(lang="vi")
       link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
       link(rel="stylesheet" href="../style/main.css")
   body 
-    //- - Header
+    //- Header
     include ./header/header.pug
-    //- - Menu
+    //- Menu
     include ./menu/menu-2.pug
-    //- - Page title
+    //- Page title cho bài viết
     .post-title
       block page_title_of_post 
     main.post-main 
@@ -29,8 +29,8 @@ html(lang="vi")
               block post_publish_date 
             .post-overview
               block post_for_overview 
-            .post-short-desc
-              block sapo 
+            .post-short_description 
+              block short_description 
                 p đoạn mô tả ngắn
             figure.post-image 
               block imageThumbnail 
@@ -53,15 +53,15 @@ html(lang="vi")
                   a(href="#") Điểm chính 2
                 li 
                   a(href="#") Điểm chính 3
-            .post-extra-desc 
-              block extraDescription
+            .post-long_description 
+              block long_description 
           .post-company
             p Phần này là thông tin công ty
           .post-author
             p Phần giới thiệu thông tin tác giả
-          footer.post-footer 
+          footer.post-article-footer 
             p Tham khảo các bài viết cùng chuyên mục
-            block postFooter 
+            block post_footer 
         .post-review-rating 
           p phần này là section bình luận bài viết
         aside.post-sidebar 

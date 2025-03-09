@@ -30,7 +30,7 @@ mixin blogDefautl(image, href, author, cate, date, title, shortDesc, cmtCount)
     a.blog-default-button(href=href, rel="noopener noreferrer nofollow")
       span Xem chi tiết 
 
-//- - Rating for Each Post
+//- Rating dành riêng cho bài viết
 mixin overview4post(overview)
   .post-overview-wrapper 
     .post-rating
@@ -44,7 +44,7 @@ mixin overview4post(overview)
           i.fa.fa-star-o(aria-hidden="true")
     .post-comment
       i.fa.fa-comment-o(aria-hidden="true")
-      span=overview.comment 
+      span #{overview.comment} lượt bình luận
     .post-viewed
       i.fa.fa-eye(aria-hidden="true")
-      span=overview.viewed 
+      span #{overview.viewed} lượt xem 

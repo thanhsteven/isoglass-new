@@ -59,6 +59,30 @@
 .post-article-content {
   width: auto;
 }
+.post-article-footer p {
+  color: #1a2c75;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  margin-block: 15px;
+}
+.post-article-footer ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.post-article-footer li {
+  margin-block: 10px;
+}
+.post-article-footer li a {
+  color: #1a2c75;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all ease 0.3s;
+}
+.post-article-footer li a:hover {
+  color: #b59d78;
+}
 .post-publish_date {
   margin-block: 4px;
 }
@@ -69,17 +93,17 @@
   font-weight: 600;
   margin-block: unset;
 }
-.post-short-desc {
+.post-short_description {
   margin-bottom: 10px;
 }
-.post-short-desc p {
+.post-short_description p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
   color: #333;
 }
 @media screen and (max-width: 576px) {
-  .post-short-desc p {
+  .post-short_description p {
     text-align: justify;
   }
 }
@@ -134,55 +158,31 @@
   list-style: circle;
   padding-left: 15px;
 }
-.post-extra-desc h2,
-.post-extra-desc h3 {
+.post-long_description h2,
+.post-long_description h3 {
   color: #1a2c75;
   line-height: 28px;
   font-weight: 700;
 }
-.post-extra-desc h2 {
+.post-long_description h2 {
   font-size: 20px;
 }
-.post-extra-desc h3 {
+.post-long_description h3 {
   font-size: 18px;
 }
-.post-extra-desc img {
+.post-long_description img {
   border-radius: 12px;
   width: 100%;
   object-fit: cover;
   margin-block: 15px;
 }
-.post-extra-desc p {
+.post-long_description p {
   text-align: justify;
   line-height: 1.5rem;
   font-size: 1rem;
   font-weight: 400;
   color: #333;
   margin-block: 10px;
-}
-.post-footer p {
-  color: #1a2c75;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
-  margin-block: 15px;
-}
-.post-footer ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-.post-footer li {
-  margin-block: 10px;
-}
-.post-footer li a {
-  color: #1a2c75;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  transition: all ease 0.3s;
-}
-.post-footer li a:hover {
-  color: #b59d78;
 }
 .post-sidebar {
   padding: 20px;
@@ -351,10 +351,6 @@
   gap: 2px;
 }
 .post-comment {
-  height: 100%;
-  position: relative;
-}
-.post-comment {
   display: flex;
 }
 .post-comment {
@@ -368,6 +364,10 @@
 }
 .post-comment {
   gap: 8px;
+}
+.post-comment {
+  height: 100%;
+  position: relative;
 }
 .post-viewed {
   height: 100%;

@@ -1,14 +1,14 @@
 (function () {
-  // 🚀 Khai báo tất cả biến trước khi sử dụng
+  // Khai báo tất cả biến trước khi sử dụng
   const navMenu = document.querySelector(".menu-nav");
   const modalFooter = document.querySelector(".footer-modal");
   const cateSidebar = document.querySelector(".cate-sidebar");
 
-  // 🚀 Xử lý Menu
+  // Xử lý Menu
   if (navMenu) {
     const btnOpenMenu = document.querySelector(".header-right-menu");
     const btnCloseMenu = document.querySelector(".menu-close");
-
+    // Xử lý sự kiện
     navMenu.addEventListener("click", function (event) {
       let menuHasChild = event.target.parentElement;
       if (menuHasChild.hasAttribute("data-toggle")) {
@@ -55,7 +55,7 @@
     }
   }
 
-  // 🚀 Xử lý Sidebar
+  // Xử lý Sidebar
   if (cateSidebar) {
     const btnOpenSidebar = document.querySelector(".cate-sidebar-open");
     const btnCloseSidebar = cateSidebar.querySelector(".cate-sidebar-close");
@@ -92,7 +92,7 @@
     }
   }
 
-  // 🚀 Xử lý Modal
+  // Xử lý Modal
   if (modalFooter) {
     modalFooter.addEventListener("click", function () {
       if (navMenu && navMenu.classList.contains("menu-nav-show")) {
@@ -123,7 +123,7 @@
     document.documentElement.style.removeProperty("overflow");
   }
 
-  // 🚀 Resize Window
+  // Resize Window
   const mediaSize = 991;
   window.addEventListener("resize", function () {
     if (this.innerWidth <= mediaSize) {
@@ -135,7 +135,7 @@
   });
 })();
 
-// - Hàm open các Answer
+// Xử lý FAQ
 const answerTitles = document.querySelectorAll(".support-title");
 [...answerTitles].forEach(function (item) {
   item.addEventListener("click", function (event) {
@@ -152,7 +152,7 @@ const answerTitles = document.querySelectorAll(".support-title");
   });
 });
 
-// - Hàm đóng các Answer lại
+// Đóng FAQ
 const answerItems = document.querySelectorAll(".support-item");
 function collapseAnswers() {
   [...answerItems].forEach(function (item) {
@@ -162,6 +162,25 @@ function collapseAnswers() {
     title.removeAttribute("style");
     answer.removeAttribute("style");
     icon.removeAttribute("style");
+  });
+}
+
+// Page Title cho danh mục con
+const titleChildMenu = document.querySelector(".title-child-menu");
+if (titleChildMenu) {
+  const btnChildTitleSubCate = titleChildMenu.querySelector(
+    ".title-child-menu-btn"
+  );
+  btnChildTitleSubCate.addEventListener("click", function (event) {
+    let subMenuTitleList = titleChildMenu.querySelector(".title-child-list");
+    let subMenuTitleIcon = titleChildMenu.querySelector(".fa-angle-down");
+    if (subMenuTitleList.hasAttribute("style")) {
+      subMenuTitleList.removeAttribute("style");
+      subMenuTitleIcon.classList.remove("fa-show");
+    } else {
+      subMenuTitleList.style.maxHeight = subMenuTitleList.scrollHeight + "px";
+      subMenuTitleIcon.classList.add("fa-show");
+    }
   });
 }
 
