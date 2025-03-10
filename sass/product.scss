@@ -1,19 +1,14 @@
 @use "./abstracts" as *;
-// * CSS Sidebar
-@use "./layout/sidebar/sidebar";
-@use "./layout/sidebar/sidebar-product";
 // * CSS Section product
 @use "./section/product-main";
-// * Import Google font
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .product {
   &-main {
-    &-wrapper {
-      margin-top: 30px;
-      @include maxWidth($medium) {
-        margin-top: 10px;
-      }
-    }
+    padding-top: 20px;
+  }
+  &-breadcrumb {
+    margin-block: 20px;
+  }
+  &-article {
   }
   &-header {
     @include flexbox(row-reverse, stretch, space-between, null);
@@ -21,26 +16,39 @@
       flex-direction: column-reverse;
       gap: 15px;
     }
-    &-info {
-      flex: 0 0 40%;
-      max-width: 40%;
-      padding-left: 20px;
-      @include flexbox(column, stretch, flex-start, 10px);
-      @include maxWidth($medium) {
-        padding-left: unset;
-      }
-      h1 {
-        color: $primaryColor;
-        font-weight: 700;
-        font-size: clamp(1.5rem, 2.2vw, 2rem);
-        line-height: clamp(2rem, 3vw, 4rem);
-      }
-    }
-    &-viewer {
-      flex: 0 0 60%;
-      max-width: 60%;
+  }
+  &-body {
+    margin-bottom: unset;
+    @include maxWidth($medium) {
+      margin-top: 20px;
     }
   }
+}
+
+.product {
+  &-infomation {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    @include flexbox(column, stretch, flex-start, 10px);
+    @include maxWidth($medium) {
+      padding-left: unset;
+    }
+    h1 {
+      color: $primaryColor;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 2.2vw, 2rem);
+      line-height: clamp(2rem, 3vw, 4rem);
+    }
+  }
+  &-gallery {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+}
+
+.product {
   &-meta {
     span {
       display: block;
@@ -61,7 +69,8 @@
       color: $primaryColor;
     }
   }
-  &-viewer {
+
+  &-viewed {
     span {
       font-size: inherit;
       i {
@@ -69,7 +78,7 @@
       }
     }
   }
-  &-sapo {
+  &-shor_description {
     font-weight: 700;
     font-size: 20px;
     margin-top: 10px;
@@ -150,251 +159,7 @@
       background-color: #0274b3;
     }
   }
-  &-image {
-    &-wrapper {
-      border-radius: $border12;
-    }
-    &-carousel {
-      @include flexbox(row, stretch, flex-start, null);
-      &-vertical {
-        @include flexbox(column, stretch, space-between, null);
-        & {
-          flex: 0 0 20%;
-          max-width: 20%;
-          padding-right: 10px;
-        }
-      }
-      &-thumb {
-        flex: 0 0 93%;
-        max-height: 530px;
-        overflow: hidden;
-      }
-      &-main {
-        flex: 0 0 80%;
-        max-width: 80%;
-        position: relative;
-        &-item {
-          width: 100%;
-          height: 100%;
-          aspect-ratio: 1/1;
-          border-radius: $border12;
-          overflow: hidden;
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            transform: scale(1);
-            transition: transform linear 0.3s;
-          }
-          &:hover {
-            img {
-              transform: scale(1.08);
-            }
-          }
-        }
-      }
-      &-image {
-        border-radius: $border8;
-        overflow: hidden;
-        margin-bottom: 10px;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-    }
-    &-button {
-      flex: 0 0 7%;
-      max-height: 7%;
-      @include flexbox(row, stretch, space-between, 10px);
-      button {
-        flex: 1 1 50%;
-        max-width: 50%;
-        background-color: #f7f7f7;
-        border-radius: $border8;
-        border: none;
-        outline: none;
-        padding-block: 6px;
-        cursor: pointer;
-      }
-    }
-    &-show {
-      background-color: #fff;
-      box-shadow: $shadow;
-      border-radius: 30px;
-      position: absolute;
-      left: 20px;
-      bottom: 20px;
-      a {
-        @include flexbox(row, center, center, null);
-        & {
-          color: $textColor;
-          flex-wrap: nowrap;
-          min-width: 50px;
-          height: 50px;
-          padding-right: 0px;
-          overflow: hidden;
-          cursor: pointer;
-          transition: padding-right ease-in-out 0.5s;
-        }
-        span {
-          max-width: 0px;
-          overflow: hidden;
-          font-weight: 600;
-          padding-left: 0px;
-          padding-right: 0px;
-          white-space: nowrap;
-          transition: max-width ease-in-out 0.5s;
-        }
-        i {
-          display: block;
-          width: 50px;
-          height: 50px;
-          line-height: 50px;
-          text-align: center;
-        }
-        &:hover {
-          padding-right: 15px;
-          span {
-            max-width: 280px;
-          }
-        }
-      }
-    }
-  }
-  &-content {
-    margin-bottom: unset;
-    @include maxWidth($medium) {
-      margin-top: 20px;
-    }
-    &-wrapper {
-      display: grid;
-      grid-template-columns: 75% 25%;
-      @include maxWidth($large) {
-        grid-template-columns: unset;
-      }
-    }
-    &-extra {
-      h2,
-      h3 {
-        color: $primaryColor;
-        font-weight: 700;
-        line-height: 2rem;
-        margin-top: 10px;
-      }
-      h2 {
-        font-size: 22px;
-      }
-      h3 {
-        font-size: 20px;
-      }
-      p {
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5rem;
-        text-align: justify;
-        margin-block: 10px;
-      }
-      li {
-        margin-block: 10px;
-      }
-    }
-    &-sidebar {
-      padding-left: 20px;
-      background-color: #fff;
-      @include maxWidth($large) {
-        width: 40vw;
-        box-shadow: $shadow;
-        padding-top: 10px;
-        padding-bottom: 30px;
-        padding-right: 10px;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 900;
-        transform: translateX(100%);
-        transition: all linear 0.25s;
-        &-active {
-          transform: translateX(0%);
-        }
-      }
-      @include maxWidth($medium) {
-        width: 45vw;
-      }
-      @include maxWidth($small) {
-        width: 70vw;
-      }
-      &-open {
-        @include square(50px);
-        & {
-          display: block;
-          background-color: rgba($color: #fff, $alpha: 0.8);
-          box-shadow: -4px 0px 7px rgba(0, 0, 0, 0.1);
-          border-top-left-radius: 30px;
-          border-bottom-left-radius: 30px;
-          outline: none;
-          border: none;
-          text-align: center;
-          color: $textColor;
-          cursor: pointer;
-          position: absolute;
-          left: 0;
-          top: 25vh;
-          z-index: 500;
-          transform: translateX(-50px);
-          display: none;
-        }
-        & * {
-          pointer-events: none;
-        }
-        @include maxWidth($large) {
-          display: block;
-        }
-      }
-      &-close {
-        border: unset;
-        outline: none;
-        background-color: unset;
-        width: 100%;
-        padding-block: 10px;
-        padding-left: 10px;
-        text-align: left;
-        display: none;
-        cursor: pointer;
-        @include maxWidth($large) {
-          display: block;
-        }
-        span {
-          color: #333;
-          font-size: 16px;
-          font-weight: 500;
-          margin-left: 6px;
-        }
-      }
-      &-wrapper {
-        width: 100%;
-        height: calc(100% - 30px);
-        @include maxWidth($large) {
-          margin-bottom: 20px;
-          padding-bottom: 20px;
-          padding-inline: 10px;
-          overflow-y: auto;
-          overflow-x: visible;
-          scroll-behavior: smooth;
-          &::-webkit-scrollbar {
-            width: 4px;
-          }
-          &::-webkit-scrollbar-thumb {
-            background-color: $primaryColor;
-            border-radius: $border8;
-          }
-        }
-      }
-    }
-  }
+
   &-modal {
     background-color: rgba($color: #000000, $alpha: 0.7);
     position: fixed;
@@ -531,6 +296,253 @@
       &:hover {
         background-color: $secondColor;
         color: $primaryColor;
+      }
+    }
+  }
+  &-long_description {
+    h2,
+    h3 {
+      color: $primaryColor;
+      font-weight: 700;
+      line-height: 2rem;
+      margin-top: 10px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5rem;
+      text-align: justify;
+      margin-block: 10px;
+    }
+    li {
+      margin-block: 10px;
+    }
+  }
+}
+
+.proudct {
+  &-wrapper {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    @include maxWidth($large) {
+      grid-template-columns: unset;
+    }
+  }
+
+  &-sidebar {
+    padding-left: 20px;
+    background-color: #fff;
+    @include maxWidth($large) {
+      width: 40vw;
+      box-shadow: $shadow;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      padding-right: 10px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 900;
+      transform: translateX(100%);
+      transition: all linear 0.25s;
+      &-active {
+        transform: translateX(0%);
+      }
+    }
+    @include maxWidth($medium) {
+      width: 45vw;
+    }
+    @include maxWidth($small) {
+      width: 70vw;
+    }
+    &-open {
+      @include square(50px);
+      & {
+        display: block;
+        background-color: rgba($color: #fff, $alpha: 0.8);
+        box-shadow: -4px 0px 7px rgba(0, 0, 0, 0.1);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        outline: none;
+        border: none;
+        text-align: center;
+        color: $textColor;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 25vh;
+        z-index: 500;
+        transform: translateX(-50px);
+        display: none;
+      }
+      & * {
+        pointer-events: none;
+      }
+      @include maxWidth($large) {
+        display: block;
+      }
+    }
+    &-close {
+      border: unset;
+      outline: none;
+      background-color: unset;
+      width: 100%;
+      padding-block: 10px;
+      padding-left: 10px;
+      text-align: left;
+      display: none;
+      cursor: pointer;
+      @include maxWidth($large) {
+        display: block;
+      }
+      span {
+        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 6px;
+      }
+    }
+    &-wrapper {
+      width: 100%;
+      height: calc(100% - 30px);
+      @include maxWidth($large) {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        padding-inline: 10px;
+        overflow-y: auto;
+        overflow-x: visible;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $primaryColor;
+          border-radius: $border8;
+        }
+      }
+    }
+  }
+}
+
+// Khu vực Gallery sản phẩm
+.product {
+  &-image {
+    &-wrapper {
+      border-radius: $border12;
+    }
+    &-carousel {
+      @include flexbox(row, stretch, flex-start, null);
+      &-vertical {
+        @include flexbox(column, stretch, space-between, null);
+        & {
+          flex: 0 0 20%;
+          max-width: 20%;
+          padding-right: 10px;
+        }
+      }
+      &-thumb {
+        flex: 0 0 93%;
+        max-height: 530px;
+        overflow: hidden;
+      }
+      &-main {
+        flex: 0 0 80%;
+        max-width: 80%;
+        position: relative;
+        &-item {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 1/1;
+          border-radius: $border12;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(1);
+            transition: transform linear 0.3s;
+          }
+          &:hover {
+            img {
+              transform: scale(1.08);
+            }
+          }
+        }
+      }
+      &-image {
+        border-radius: $border8;
+        overflow: hidden;
+        margin-bottom: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-button {
+      flex: 0 0 7%;
+      max-height: 7%;
+      @include flexbox(row, stretch, space-between, 10px);
+      button {
+        flex: 1 1 50%;
+        max-width: 50%;
+        background-color: #f7f7f7;
+        border-radius: $border8;
+        border: none;
+        outline: none;
+        padding-block: 6px;
+        cursor: pointer;
+      }
+    }
+    &-show {
+      background-color: #fff;
+      box-shadow: $shadow;
+      border-radius: 30px;
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      a {
+        @include flexbox(row, center, center, null);
+        & {
+          color: $textColor;
+          flex-wrap: nowrap;
+          min-width: 50px;
+          height: 50px;
+          padding-right: 0px;
+          overflow: hidden;
+          cursor: pointer;
+          transition: padding-right ease-in-out 0.5s;
+        }
+        span {
+          max-width: 0px;
+          overflow: hidden;
+          font-weight: 600;
+          padding-left: 0px;
+          padding-right: 0px;
+          white-space: nowrap;
+          transition: max-width ease-in-out 0.5s;
+        }
+        i {
+          display: block;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+        }
+        &:hover {
+          padding-right: 15px;
+          span {
+            max-width: 280px;
+          }
+        }
       }
     }
   }

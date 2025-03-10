@@ -5,9 +5,8 @@ doctype html
 html(lang="vi")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    block titleProductDetails
-      title Layout Trang chi tiết sản phẩm
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    block product_title 
     //- Font Awesome
     link(rel="shortcut icon" href="../images/logo/favicon-isoglass.png" type="image/x-icon")
     link(rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css")
@@ -16,72 +15,63 @@ html(lang="vi")
   body 
     include ./header/header.pug
     include ./menu/menu-2.pug
-    main.product-main
-      .container 
-        .product-breadcrumb 
-        article.product-main-wrapper 
-          header.product-header 
-            .product-header-info
-              block header1 
-                h1 Tên sản phẩm chính
-              p.product-meta 
-                span Ngày đăng: 
-                  time(datetime="2024-11-27") 27 Th05 2024
-                span Danh mục:
-                  a(href="./chai-thuy-tinh.html" title="Chai thuỷ tinh") Chai thuỷ tinh,
-                  a(href="./chai-thuy-tinh-dung-ruou.html", rel="noopener noreferrer" title="Chai thuỷ tinh đựng rượu") Chai thuỷ tinh đựng rượu
-              p.product-viewer 
-                span 
-                  i.fa.fa-eye(aria-hidden="true")
-                  | 99 Khách hàng đang đem sản phẩm này !
-              p.product-sapo Đánh giá:
-                span Chai đựng rượu 750ml nắp gia công iSOGLASS là sản phẩm thủy tinh cao cấp, được thiết kế đẹp mắt, in hoa văn và logo theo yêu cầu khách hàng. Liên hệ: info@isoglass.com.vn hoặc hotline: 0963 181 517.
-              p.product-contact 
-                a(href="https://zalo.me/0963181517", target="_blank", rel="noopener noreferrer nofollow") Liên hệ ngay
-              .product-share 
-                span Chia sẻ:
-                ul.product-share-social
-                  li.product-share-social-item
-                    a.product-share-facebook(href="#", target="_blank", rel="noopener noreferrer nofollow")
-                      i.fa.fa-facebook-f(aria-hidden="true")
-                  li.product-share-social-item
-                    a.product-share-twitter(href="#", target="_blank", rel="noopener noreferrer nofollow") 
-                      i.fa.fa-twitter(aria-hidden="true")
-                  li.product-share-social-item
-                    a.product-share-pinterest(href="#", target="_blank", rel="noopener noreferrer nofollow") 
-                      i.fa.fa-pinterest-p(aria-hidden="true")
-                  li.product-share-social-item
-                    a.product-share-linkedin(href="#", target="_blank", rel="noopener noreferrer nofollow") 
-                      i.fa.fa-linkedin(aria-hidden="true")
-                  li.product-share-social-item
-                    a.product-share-telegram(href="#", target="_blank", rel="noopener noreferrer nofollow") 
-                      i.fa.fa-telegram(aria-hidden="true")
-            .product-header-viewer 
-              include ../section/product/product-view.pug
-          section.product-content
-            .product-content-wrapper 
-              article.product-content-extra
-                .product-table 
-                  block productTable 
-                block productExtraContent 
-              aside.product-content-sidebar
-                button.product-content-sidebar-close 
-                  i.fa.fa-close(aria-hidden="true")
-                  span Đóng
-                button.product-content-sidebar-open 
-                  i.fa.fa-ellipsis-h(aria-hidden="true")
-                .product-content-sidebar-wrapper 
-                  .sidebar-product-categories
-                    include ../section/main-cate/chai-thuy-tinh/sidebar-chai-thuy-tinh.pug
-                  include ./sidebar/sidebar.pug
-        section.product-banner
-          .product-banner-image
-            img(src="../../images/hosting/ly-thuy-tinh-gia-tot-tai-tphcm.jpg", alt="Sản xuất chai thủy tinh và ly thủy tinh giá tốt tại TP.HCM", srcset="../../images/hosting/ly-thuy-tinh-gia-tot-tai-tphcm.jpg 2x")
-            .product-banner-content 
-              p.product-banner-subtitle Công ty TNHH Sản xuất Thương mại
-              h3.product-banner-title iSOGLASS
-              p.product-banner-desc Sản xuất và cung cấp Chai thuỷ tinh và Ly thuỷ tinh chuẩn chất lượng ISO
-              a.product-banner-button(href="./gioi-thieu.html", target="_blank", rel="noopener noreferrer nofollow") Xem thêm
+    main.product-main.container
+      .product-breadcrumb 
+        block product_breadcrumb 
+      .product-article 
+        .product-header
+          .product-infomation 
+            block product_H1
+            p.product-meta 
+              span Ngày đăng: 
+                time(datetime="2024-11-27") 27 Th05 2024
+              span Danh mục:
+                a(href="./chai-thuy-tinh.html" title="Chai thuỷ tinh") Chai thuỷ tinh,
+                a(href="./chai-thuy-tinh-dung-ruou.html" rel="noopener noreferrer" title="Chai thuỷ tinh đựng rượu") Chai thuỷ tinh đựng rượu
+            p.product-viewed 
+              span 
+                i.fa.fa-eye(aria-hidden="true")
+                | 99 Khách hàng đang đem sản phẩm này !
+            p.product-shor_description Đánh giá:
+              span Chai đựng rượu 750ml nắp gia công iSOGLASS là sản phẩm thủy tinh cao cấp, được thiết kế đẹp mắt, in hoa văn và logo theo yêu cầu khách hàng. Liên hệ: info@isoglass.com.vn hoặc hotline: 0963 181 517.
+            p.product-contact 
+              a(href="https://zalo.me/0963181517" target="_blank" rel="noopener noreferrer nofollow") Liên hệ ngay
+            .product-share 
+              span Chia sẻ:
+              ul.product-share-social
+                li.product-share-social-item
+                  a.product-share-facebook(href="#" target="_blank" rel="noopener noreferrer nofollow")
+                    i.fa.fa-facebook-f(aria-hidden="true")
+                li.product-share-social-item
+                  a.product-share-twitter(href="#" target="_blank" rel="noopener noreferrer nofollow") 
+                    i.fa.fa-twitter(aria-hidden="true")
+                li.product-share-social-item
+                  a.product-share-pinterest(href="#" target="_blank" rel="noopener noreferrer nofollow") 
+                    i.fa.fa-pinterest-p(aria-hidden="true")
+                li.product-share-social-item
+                  a.product-share-linkedin(href="#" target="_blank" rel="noopener noreferrer nofollow") 
+                    i.fa.fa-linkedin(aria-hidden="true")
+                li.product-share-social-item
+                  a.product-share-telegram(href="#" target="_blank" rel="noopener noreferrer nofollow") 
+                    i.fa.fa-telegram(aria-hidden="true")
+          .product-gallery
+            include ../section/product/product-view.pug
+        .product-body 
+          article.product-details_info 
+            .product-table 
+              block product_table
+            .product-long_description 
+              block product_long_description  
+          aside.product-sidebar
+            include ./sidebar/sidebar.pug
+      section.product-banner
+        .product-banner-image
+          img(src="../../images/hosting/ly-thuy-tinh-gia-tot-tai-tphcm.jpg" alt="Sản xuất chai thủy tinh và ly thủy tinh giá tốt tại TP.HCM" srcset="../../images/hosting/ly-thuy-tinh-gia-tot-tai-tphcm.jpg 2x")
+          .product-banner-content 
+            p.product-banner-subtitle Công ty TNHH Sản xuất Thương mại
+            h3.product-banner-title iSOGLASS
+            p.product-banner-desc Sản xuất và cung cấp Chai thuỷ tinh và Ly thuỷ tinh chuẩn chất lượng ISO
+            a.product-banner-button(href="./gioi-thieu.html" target="_blank" rel="noopener noreferrer nofollow") Xem thêm
         include ../section/product/product-tab
       include ../section/product/product-featured
       include ../section/product/product-seen

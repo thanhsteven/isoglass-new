@@ -2,7 +2,7 @@ extends ../layout/layout-blog.pug
 block titlePage
   - var blog = {title: "Blog bài viết tin tức iSOGLASS", topbar: "Tin tức tổng hợp iSOGLASS"}
   title=blog.title 
-block topbarText
+block topbar_text
   p=blog.topbar 
 block blogHeading 
   +secTitleBase("Tin tức nổi bật của iSOGLASS", "../../images/hosting/background-title-blog.jpg", [{name: "Trang chủ", href: "/"},{name: "Tin tức", href: "./blog.html"}])

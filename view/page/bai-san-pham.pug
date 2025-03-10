@@ -1,11 +1,14 @@
 extends ../layout/layout-product.pug
-block titleProductDetails
-  title Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09 - iSOGLASS 
-block topbarText
-  p Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09
-block header1
+block product_title
+  - var product = {title: "Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09",  topbar: "Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09", rating: [1,2,3,4,5], breadcrumb: [{name: "Trang chủ", href: "/"}, {name: "Chai thủy tinh", href: "./chai-thuy-tinh.html"}, {name: "Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09", href: "./bai-san-pham.html"}]};
+  title=product.title 
+block topbar_text
+  p=product.topbar 
+block product_breadcrumb
+  +breadcrumbForEachPage(product.breadcrumb)
+block product_H1
   h1 Chai đựng rượu 750ml nắp gia công iSOGLASS
-block productTable
+block product_table
   h2 Thông tin sản phẩm
   table
     thead
@@ -43,7 +46,7 @@ block productTable
       tr
         td Xuất xứ
         td Trung Quốc
-block productExtraContent 
+block product_long_description 
   h2 Chai thuỷ tinh thân trụ vuông đựng rượu size 750ml iSO-45
   p Chai thủy tinh thân trụ vuông đựng rượu trong suốt iSO-45 size 750ml. Thường được các khách hàng tin dùng cho ngành thực phẩm và đồ uống nói chung. Nhưng đặc biệt thuỷ tinh nhà iSOGLASS rất phù hợp với công năng đựng nước. Thủy tinh trong và dày dặn, kiểu bình đa dạng phù hợp với mọi nhu cầu của khách hàng. Bên cạnh đó nhà iSO còn đảm bảo được sự đa dạng trong từng chiếc nắp bình. Với sản phẩm chất lượng cao, chúng tôi hướng tới việc cung cấp số lượng lớn chai thủy tinh cho thị trường Việt Nam. iSOGLASS sẽ là nơi phù hợp với các khách hàng làm trong ngành bán lẻ hoặc các phụ vụ với các khách sạn sang trọng.
   h3 Đặc điểm của chai thuỷ tinh thân trụ vuông đựng rượu size 750ml iSO-45
