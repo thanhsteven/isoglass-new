@@ -1,13 +1,22 @@
 extends ../layout/layout-product.pug
 block product_title
-  - var product = {title: "Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09",  topbar: "Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09", rating: [1,2,3,4,5], breadcrumb: [{name: "Trang chủ", href: "/"}, {name: "Chai thủy tinh", href: "./chai-thuy-tinh.html"}, {name: "Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09", href: "./bai-san-pham.html"}]};
+  - var product = {title: "Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09",  topbar: "Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09", rating: [1,2,3,4,5], breadcrumb: [{name: "Trang chủ", href: "/"}, {name: "Chai thủy tinh", href: "./chai-thuy-tinh.html"}, {name: "Chai thủy tinh đựng rượu", href: "./chai-thuy-tinh-dung-ruou.html"}, {name: "Chai thuỷ tinh cổ cao thân bầu đựng nước size 330ml iSO-09", href: "./bai-san-pham.html"}], H1: "Chai đựng rượu 750ml nắp gia công iSOGLASS"};
   title=product.title 
 block topbar_text
   p=product.topbar 
 block product_breadcrumb
   +breadcrumbForEachPage(product.breadcrumb)
+block product_gallery
+  - var product_gallery = ["../../images/chai-thuy-tinh/chai-thuy-tinh-750ml/chai-thuy-tinh-750ml-than-tru-vuong-dung-ruou-1.jpg", "../../images/chai-thuy-tinh/chai-thuy-tinh-750ml/chai-thuy-tinh-750ml-than-tru-vuong-dung-ruou-2.jpg", "../../images/chai-thuy-tinh/chai-thuy-tinh-750ml/chai-thuy-tinh-750ml-than-tru-vuong-dung-ruou-3.jpg", "../../images/chai-thuy-tinh/chai-thuy-tinh-750ml/chai-thuy-tinh-750ml-than-tru-vuong-dung-ruou-4.jpg", "../../images/chai-thuy-tinh/chai-thuy-tinh-750ml/chai-thuy-tinh-750ml-than-tru-vuong-dung-ruou-5.jpg", "../../images/chai-thuy-tinh/chai-thuy-tinh-750ml/chai-thuy-tinh-750ml-than-tru-vuong-dung-ruou-6.jpg"];
+  +productGallery(product_gallery)
 block product_H1
-  h1 Chai đựng rượu 750ml nắp gia công iSOGLASS
+  h1=product.H1 
+block sidebar_for_each_page
+  - var product_sidebar = {heading:"Phân loại chai thủy tinh",items:[{name:"Bộ bình ly thuỷ tinh",link:"#",image:"../../images/chai-thuy-tinh/bo-binh-ly-thuy-tinh.jpg",title:"Bộ bình ly thủy tinh - giá tốt tại TP.HCM",},{name:"Chai thuỷ tinh đựng nước",link:"#",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-san-xuat-tai-tp-hcm.jpg",title:"Chai thuỷ tinh đựng nước - giá tốt tại TP.HCM"},{name:"Chai thuỷ tinh đựng rượu",link:"./chai-thuy-tinh-dung-ruou.html",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-ruou-gia-tot-tai-tp-hcm.jpg",title:"Chai thuỷ tinh đựng rượu - giá tốt tại TP.HCM",},{name:"Chai thuỷ tinh 500ml",link:"#",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-ruou-gia-tot-tai-tp-hcm.jpg",title:"Chai thuỷ tinh 500ml sản xuất tại TP.HCM"}]};
+  +sidebar4cate(product_sidebar)
+block product_seen 
+  - var product_seen = [{image:"../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-1.jpg",image2:"../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-7.jpg",title:"Bình thủy tinh đựng nước cao cấp iSO",href:"#"},{image:"../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-2.jpg",image2:"../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-6.jpg",title:"Bình thủy tinh đựng nước cao cấp iSO",href:"#"},{image:"../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-3.jpg",image2:"../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-5.jpg",title:"Bình thủy tinh đựng nước cao cấp iSO",href:"#"},{image:"../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-4.jpg",image2:"../../images/binh-thuy-tinh/binh-thuy-tinh-dung-nuoc-cao-cap-iSO-2.jpg",title:"Bình thủy tinh đựng nước cao cấp iSO",href:"#"}];
+  +productSeen(product_seen)
 block product_table
   h2 Thông tin sản phẩm
   table

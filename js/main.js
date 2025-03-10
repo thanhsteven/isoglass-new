@@ -125,6 +125,7 @@
     }
   });
 })();
+
 // Xử lý FAQ
 const answerTitles = document.querySelectorAll(".support-title");
 [...answerTitles].forEach(function (item) {
@@ -170,6 +171,26 @@ if (titleChildMenu) {
     } else {
       subMenuTitleList.style.maxHeight = subMenuTitleList.scrollHeight + "px";
       subMenuTitleIcon.classList.add("fa-show");
+    }
+  });
+}
+
+// Xử lý thành phần Tab trong trang Sản phẩm
+const tabLists = document.querySelectorAll(".product-tab-list");
+const tabContents = document.querySelectorAll(".product-tab-content");
+[...tabLists].forEach((tablist) => {
+  tablist.addEventListener("click", handleTagClick);
+});
+function handleTagClick(event) {
+  [...tabLists].forEach((item) => {
+    item.classList.remove("product-tab-active");
+  });
+  event.target.classList.add("product-tab-active");
+  let tabNumber = event.target.getAttribute("data-tab");
+  [...tabContents].forEach((content) => {
+    content.classList.remove("product-tab-active");
+    if (tabNumber === content.getAttribute("data-tab")) {
+      content.classList.add("product-tab-active");
     }
   });
 }

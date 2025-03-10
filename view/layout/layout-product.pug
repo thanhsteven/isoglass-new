@@ -23,21 +23,19 @@ html(lang="vi")
           .product-infomation 
             block product_H1
             p.product-meta 
-              span Ngày đăng: 
+              span.product-text Ngày đăng:
                 time(datetime="2024-11-27") 27 Th05 2024
-              span Danh mục:
+              span.product-text Danh mục:
                 a(href="./chai-thuy-tinh.html" title="Chai thuỷ tinh") Chai thuỷ tinh,
                 a(href="./chai-thuy-tinh-dung-ruou.html" rel="noopener noreferrer" title="Chai thuỷ tinh đựng rượu") Chai thuỷ tinh đựng rượu
             p.product-viewed 
-              span 
-                i.fa.fa-eye(aria-hidden="true")
-                | 99 Khách hàng đang đem sản phẩm này !
-            p.product-shor_description Đánh giá:
-              span Chai đựng rượu 750ml nắp gia công iSOGLASS là sản phẩm thủy tinh cao cấp, được thiết kế đẹp mắt, in hoa văn và logo theo yêu cầu khách hàng. Liên hệ: info@isoglass.com.vn hoặc hotline: 0963 181 517.
+              span.product-text 99 Khách hàng đang đem sản phẩm này !
+            .product-shor_description Đánh giá: 
+              p Chai đựng rượu 750ml nắp gia công iSOGLASS là sản phẩm thủy tinh cao cấp, được thiết kế đẹp mắt, in hoa văn và logo theo yêu cầu khách hàng. Liên hệ: info@isoglass.com.vn hoặc hotline: 0963 181 517.
             p.product-contact 
               a(href="https://zalo.me/0963181517" target="_blank" rel="noopener noreferrer nofollow") Liên hệ ngay
             .product-share 
-              span Chia sẻ:
+              p.product-share-text Chia sẻ:
               ul.product-share-social
                 li.product-share-social-item
                   a.product-share-facebook(href="#" target="_blank" rel="noopener noreferrer nofollow")
@@ -55,15 +53,16 @@ html(lang="vi")
                   a.product-share-telegram(href="#" target="_blank" rel="noopener noreferrer nofollow") 
                     i.fa.fa-telegram(aria-hidden="true")
           .product-gallery
-            include ../section/product/product-view.pug
+            block product_gallery 
         .product-body 
-          article.product-details_info 
-            .product-table 
-              block product_table
-            .product-long_description 
-              block product_long_description  
-          aside.product-sidebar
-            include ./sidebar/sidebar.pug
+          .product-layout
+            article.product-details_info 
+              .product-table 
+                block product_table
+              .product-long_description 
+                block product_long_description  
+            aside.product-sidebar
+              include ./sidebar/sidebar.pug
       section.product-banner
         .product-banner-image
           img(src="../../images/hosting/ly-thuy-tinh-gia-tot-tai-tphcm.jpg" alt="Sản xuất chai thủy tinh và ly thủy tinh giá tốt tại TP.HCM" srcset="../../images/hosting/ly-thuy-tinh-gia-tot-tai-tphcm.jpg 2x")
@@ -72,11 +71,35 @@ html(lang="vi")
             h3.product-banner-title iSOGLASS
             p.product-banner-desc Sản xuất và cung cấp Chai thuỷ tinh và Ly thuỷ tinh chuẩn chất lượng ISO
             a.product-banner-button(href="./gioi-thieu.html" target="_blank" rel="noopener noreferrer nofollow") Xem thêm
-        include ../section/product/product-tab
-      include ../section/product/product-featured
-      include ../section/product/product-seen
-    .product-modal 
-    include ./footer/prefooter 
-    include ./footer/footer
-    script(src="../js/main.js")
-    script(src="../js/product-details.js")
+    section.product-tab-info 
+      .container 
+        .product-tab-wrapper 
+          .product-tab-head 
+            .product-tab-list.product-tab-active(data-tab="1") 
+              span Đóng gói 
+            .product-tab-list(data-tab="2") 
+              span Vận chuyển 
+            .product-tab-list(data-tab="3") 
+              span Tư vấn 
+          .product-tab-body 
+            .product-tab-content.product-tab-active(data-tab="1")
+              p Đây là content số 
+                strong 1 
+                | nha các bạn
+            .product-tab-content(data-tab="2")
+              p Hôm nay là thứ mấy chắc chắn là thứ 
+                strong 2
+            .product-tab-content(data-tab="3")
+              p Tình yêu không có lỗi, lỗi tại kẻ thứ 
+                strong 3
+    section.product-featured 
+      .container 
+        - var product_featured = [{image:"../../images/hosting/tinh-hien-dai-cua-isoglass.jpg",title:"MODERN",subtitle:"Hiện đại",},{image:"../../images/hosting/tinh-thanh-lich-cua-isoglass.jpg",title:"ELEGANT",subtitle:"Thanh lịch",},{image:"../../images/hosting/tinh-tinh-xao-cua-isoglass.jpg",title:"SOPHISTICATED",subtitle:"Tinh xảo"}];
+          +productFeatured(product_featured)
+    section.product-seen 
+      .container 
+        block product_seen 
+    include ./footer/prefooter.pug
+    include ./footer/footer.pug
+    block JavaScript 
+      script(src="../js/main.js")
