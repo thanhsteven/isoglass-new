@@ -122,3 +122,38 @@
       href: "#"
     }
   ]
+
+
+- var info = {
+  title: [
+    {title: "Đóng gói", dataTab: "1", active: true},
+    {title: "Vận chuyển", dataTab: "2", active: false},
+    {title: "Tư vấn", dataTab: "3", active: false}
+  ],
+  content: [
+    {text: "Đây là content số 1", dataTab: "1" ,active: true},
+    {text: "Đây là content số 2", dataTab: "2" ,active: false},
+    {text: "Đây là content số 3", dataTab: "3" ,active: false}
+  ]
+};
+
+
+block product_tab_infomation 
+  - var tab_info = {titleTab:[{title:"Đóng gói",dataTab:"1",active:true},{title:"Vận chuyển",dataTab:"2",active:false},{title:"Tư vấn",dataTab:"3",active:false}],content:[{text:"Quy trình đóng gói tại iSOGLASS vô cùng nghiêm nghặc, chúng tôi kiểm tra tới từng gói hàng đều phải được bao bọc kỹ lưỡng, chắc chắn.",dataTab:"1",active:true},{text:"Vận chuyển theo 3 đường: đường bộ, đường thủy và đường hàng không. Tất cả đều được bộ phận quản lý kho hàng và vận chuyển iSOGLASS lo liệu",dataTab:"2",active:false},{text:"Đội ngũ tư vấn viên tại iSOGLASS cực kì nhiệt tình và hỗ trợ tối đa theo yêu cầu của khách hàng",dataTab:"3",active:false}]};
+  .product-tab-wrapper 
+    .product-tab-head 
+      each item in tab_info.titleTab
+        if item.active 
+          .product-tab-list.product-tab-active(data-tab=`${item.dataTab}`) 
+            span=item.title
+        else 
+          .product-tab-list(data-tab=`${item.dataTab}`)
+            span=item.title 
+    .product-tab-body 
+      each item in tab_info.content 
+        if item.active 
+          .product-tab-content.product-tab-active(data-tab=`${item.dataTab}`)
+            p=item.text 
+        else 
+          .product-tab-content(data-tab=`${item.dataTab}`)
+            p=item.text 

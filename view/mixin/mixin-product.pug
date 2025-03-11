@@ -1,24 +1,23 @@
 //- Product Gallery
 mixin productGallery(gallery)
   .product-gallery-wrapper 
-    .product-gallery-carousel 
-      .product-gallery-carousel-vertical 
-        .product-gallery-carousel-thumb
-          each item in gallery
-            .product-gallery-carousel-image 
-              img(src=item, alt="Chai thuỷ tinh đựng rượu dung tích 750ml")
-        .product-gallery-button 
-          button.product-gallery-button-up 
-            i.fa.fa-angle-up(aria-hidden="true")
-          button.product-gallery-button-down 
-            i.fa.fa-angle-down(aria-hidden="true")
-      .product-gallery-carousel-main
-        .product-gallery-carousel-main-item 
-          img(src="../../images/chai-thuy-tinh/chai-thuy-tinh-750ml/chai-thuy-tinh-than-tru-vuong-dung-ruou-size-750ml-iso-45.jpg" alt="Chai thuỷ tinh đựng nước giá tốt tại TP.HCM" srcset="../../images/chai-thuy-tinh/chai-thuy-tinh-750ml/chai-thuy-tinh-than-tru-vuong-dung-ruou-size-750ml-iso-45.jpg 2x")
-        .product-gallery-show 
-          a(href="#" rel="noopener noreferrer nofollow")
-            i.fa.fa-expand(aria-hidden="true")
-            span Click để mở rộng
+    .product-gallery-vertical 
+      .product-gallery-thumb
+        each item in gallery
+          .product-gallery-image 
+            img(src=item, alt="Chai thuỷ tinh đựng rượu dung tích 750ml")
+      .product-gallery-button 
+        button.product-gallery-button-up 
+          i.fa.fa-angle-up(aria-hidden="true")
+        button.product-gallery-button-down 
+          i.fa.fa-angle-down(aria-hidden="true")
+    .product-gallery-main
+      .product-gallery-main-item 
+        img(src="../../images/chai-thuy-tinh/chai-thuy-tinh-750ml/chai-thuy-tinh-than-tru-vuong-dung-ruou-size-750ml-iso-45.jpg" alt="Chai thuỷ tinh đựng nước giá tốt tại TP.HCM" srcset="../../images/chai-thuy-tinh/chai-thuy-tinh-750ml/chai-thuy-tinh-than-tru-vuong-dung-ruou-size-750ml-iso-45.jpg 2x")
+      .product-gallery-show 
+        a(href="#" rel="noopener noreferrer nofollow")
+          i.fa.fa-expand(aria-hidden="true")
+          span Click để mở rộng
 
 //- Product Featured
 mixin productFeatured(featured)

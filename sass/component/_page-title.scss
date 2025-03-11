@@ -190,13 +190,10 @@
     line-height: 1.5rem;
     font-weight: 600;
     position: relative;
-    &::after {
+    &:not(:last-child)::after {
       font-family: FontAwesome;
       content: "\f105";
       margin-inline: 10px;
-    }
-    &:last-child::after {
-      content: "";
     }
     @include maxWidth($small) {
       font-size: 0.75rem;

@@ -22,36 +22,26 @@ html(lang="vi")
         .product-header
           .product-infomation 
             block product_H1
-            p.product-meta 
-              span.product-text Ngày đăng:
-                time(datetime="2024-11-27") 27 Th05 2024
-              span.product-text Danh mục:
-                a(href="./chai-thuy-tinh.html" title="Chai thuỷ tinh") Chai thuỷ tinh,
-                a(href="./chai-thuy-tinh-dung-ruou.html" rel="noopener noreferrer" title="Chai thuỷ tinh đựng rượu") Chai thuỷ tinh đựng rượu
-            p.product-viewed 
-              span.product-text 99 Khách hàng đang đem sản phẩm này !
-            .product-shor_description Đánh giá: 
-              p Chai đựng rượu 750ml nắp gia công iSOGLASS là sản phẩm thủy tinh cao cấp, được thiết kế đẹp mắt, in hoa văn và logo theo yêu cầu khách hàng. Liên hệ: info@isoglass.com.vn hoặc hotline: 0963 181 517.
-            p.product-contact 
+            block product_infomation 
+              .product-meta 
+                span.product-text Ngày đăng:
+                  time(datetime=`${info.date}`)=info.textdate
+                span.product-text Danh mục:
+                  each link in info.cate 
+                    a.product-cate(href=`${link.href}` title=`${link.name}`)=link.name
+              .product-viewed 
+                span.product-text #{info.view} Khách hàng đang đem sản phẩm này!
+              .product-shor_description Đánh giá: 
+                p=info.sapo 
+            .product-order  
               a(href="https://zalo.me/0963181517" target="_blank" rel="noopener noreferrer nofollow") Liên hệ ngay
             .product-share 
-              p.product-share-text Chia sẻ:
+              .product-share-text Chia sẻ:
               ul.product-share-social
-                li.product-share-social-item
-                  a.product-share-facebook(href="#" target="_blank" rel="noopener noreferrer nofollow")
-                    i.fa.fa-facebook-f(aria-hidden="true")
-                li.product-share-social-item
-                  a.product-share-twitter(href="#" target="_blank" rel="noopener noreferrer nofollow") 
-                    i.fa.fa-twitter(aria-hidden="true")
-                li.product-share-social-item
-                  a.product-share-pinterest(href="#" target="_blank" rel="noopener noreferrer nofollow") 
-                    i.fa.fa-pinterest-p(aria-hidden="true")
-                li.product-share-social-item
-                  a.product-share-linkedin(href="#" target="_blank" rel="noopener noreferrer nofollow") 
-                    i.fa.fa-linkedin(aria-hidden="true")
-                li.product-share-social-item
-                  a.product-share-telegram(href="#" target="_blank" rel="noopener noreferrer nofollow") 
-                    i.fa.fa-telegram(aria-hidden="true")
+                each item in ["facebook", "twitter", "pinterest", "linkedin", "telegram"]
+                  li.product-share-social-item
+                    a(class="product-share-"+item, href="#" target="_blank" rel="noopener noreferrer nofollow")
+                      i(class="fa fa-"+item, aria-hidden="true")
           .product-gallery
             block product_gallery 
         .product-body 
@@ -74,24 +64,20 @@ html(lang="vi")
     section.product-tab-info 
       .container 
         .product-tab-wrapper 
-          .product-tab-head 
-            .product-tab-list.product-tab-active(data-tab="1") 
-              span Đóng gói 
-            .product-tab-list(data-tab="2") 
-              span Vận chuyển 
-            .product-tab-list(data-tab="3") 
-              span Tư vấn 
-          .product-tab-body 
-            .product-tab-content.product-tab-active(data-tab="1")
-              p Đây là content số 
-                strong 1 
-                | nha các bạn
-            .product-tab-content(data-tab="2")
-              p Hôm nay là thứ mấy chắc chắn là thứ 
-                strong 2
-            .product-tab-content(data-tab="3")
-              p Tình yêu không có lỗi, lỗi tại kẻ thứ 
-                strong 3
+        .product-tab-head 
+          .product-tab-list.product-tab-active(data-tab="1") 
+            span Đóng gói 
+          .product-tab-list(data-tab="2") 
+            span Vận chuyển 
+          .product-tab-list(data-tab="3") 
+            span Tư vấn 
+        .product-tab-body 
+          .product-tab-content.product-tab-active(data-tab="1")
+            p Quy trình đóng gói tại iSOGLASS vô cùng nghiêm nghặc, chúng tôi kiểm tra tới từng gói hàng đều phải được bao bọc kỹ lưỡng, chắc chắn.
+          .product-tab-content(data-tab="2")
+            p Vận chuyển theo 3 đường: đường bộ, đường thủy và đường hàng không. Tất cả đều được bộ phận quản lý kho hàng và vận chuyển iSOGLASS lo liệu.
+          .product-tab-content(data-tab="3")
+            p Đội ngũ tư vấn viên tại iSOGLASS cực kì nhiệt tình và hỗ trợ tối đa theo yêu cầu của khách hàng.
     section.product-featured 
       .container 
         - var product_featured = [{image:"../../images/hosting/tinh-hien-dai-cua-isoglass.jpg",title:"MODERN",subtitle:"Hiện đại",},{image:"../../images/hosting/tinh-thanh-lich-cua-isoglass.jpg",title:"ELEGANT",subtitle:"Thanh lịch",},{image:"../../images/hosting/tinh-tinh-xao-cua-isoglass.jpg",title:"SOPHISTICATED",subtitle:"Tinh xảo"}];

@@ -98,6 +98,11 @@ h2 {
   font-weight: 700;
   margin-block: 10px;
 }
+@media screen and (max-width: 992px) {
+  h2 {
+    line-height: 2.8rem;
+  }
+}
 @media screen and (max-width: 768px) {
   h2 {
     font-size: 1.5rem;
@@ -117,6 +122,11 @@ h3 {
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.8rem;
+}
+@media screen and (max-width: 992px) {
+  h3 {
+    line-height: 2.5rem;
+  }
 }
 @media screen and (max-width: 576px) {
   h3 {
@@ -1437,13 +1447,10 @@ a {
   font-weight: 600;
   position: relative;
 }
-.breadcrumb-item::after {
+.breadcrumb-item:not(:last-child)::after {
   font-family: FontAwesome;
   content: "\f105";
   margin-inline: 10px;
-}
-.breadcrumb-item:last-child::after {
-  content: "";
 }
 @media screen and (max-width: 576px) {
   .breadcrumb-item {

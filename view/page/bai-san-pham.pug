@@ -11,6 +11,9 @@ block product_gallery
   +productGallery(product_gallery)
 block product_H1
   h1=product.H1 
+prepend product_infomation 
+  //- Phần Product infomation chỉ cần sử dụng biến
+  - var info = {date: "2024-05-27", textdate: "27 Tháng 05 năm 2024", cate: [{name: "Chai thuỷ tinh", href: "./chai-thuy-tinh.html"}, {name: "Chai thuỷ tinh đựng rượu", href: "./chai-thuy-tinh-dung-ruou.html"}], view: 99, sapo: "Chai đựng rượu 750ml nắp gia công iSOGLASS là sản phẩm thủy tinh cao cấp, được thiết kế đẹp mắt, in hoa văn và logo theo yêu cầu khách hàng. Liên hệ: info@isoglass.com.vn hoặc hotline: 0963 181 517"};
 block sidebar_for_each_page
   - var product_sidebar = {heading:"Phân loại chai thủy tinh",items:[{name:"Bộ bình ly thuỷ tinh",link:"#",image:"../../images/chai-thuy-tinh/bo-binh-ly-thuy-tinh.jpg",title:"Bộ bình ly thủy tinh - giá tốt tại TP.HCM",},{name:"Chai thuỷ tinh đựng nước",link:"#",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-nuoc-san-xuat-tai-tp-hcm.jpg",title:"Chai thuỷ tinh đựng nước - giá tốt tại TP.HCM"},{name:"Chai thuỷ tinh đựng rượu",link:"./chai-thuy-tinh-dung-ruou.html",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-ruou-gia-tot-tai-tp-hcm.jpg",title:"Chai thuỷ tinh đựng rượu - giá tốt tại TP.HCM",},{name:"Chai thuỷ tinh 500ml",link:"#",image:"../../images/chai-thuy-tinh/chai-thuy-tinh-dung-ruou-gia-tot-tai-tp-hcm.jpg",title:"Chai thuỷ tinh 500ml sản xuất tại TP.HCM"}]};
   +sidebar4cate(product_sidebar)

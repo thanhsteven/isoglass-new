@@ -32,8 +32,8 @@ mixin pageTitle4ChildCate(titleObject)
                     span.title-child-item-count=item.count
 
 //- * Rating for Each page
-mixin rating4cate(arrRating)
-  - var fullStars = arrRating.length;
+mixin rating4cate(rating)
+  - var fullStars = rating.length;
   - var emptyStars = 5 - fullStars;
   .rating
     span.rating-text Đánh giá:

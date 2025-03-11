@@ -15,9 +15,27 @@
   }
   &-header {
     @include flexbox(row-reverse, stretch, space-between, null);
-    @include maxWidth($medium) {
+    @include maxWidth($large) {
       flex-direction: column-reverse;
-      gap: 15px;
+      row-gap: 20px;
+    }
+  }
+  &-gallery {
+    flex: 0 0 60%;
+    max-width: 60%;
+    @include maxWidth($large) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  &-infomation {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-left: 20px;
+    @include maxWidth($large) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-left: unset;
     }
   }
   &-body {
@@ -40,9 +58,6 @@
 // Thành phần product
 .product {
   &-infomation {
-    flex: 0 0 40%;
-    max-width: 40%;
-    padding-left: 20px;
     @include flexbox(column, stretch, flex-start, 4px);
     @include maxWidth($medium) {
       padding-left: unset;
@@ -52,11 +67,11 @@
       font-weight: 700;
       line-height: 2.8rem;
       color: $primaryColor;
+      @include maxWidth($medium) {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+      }
     }
-  }
-  &-gallery {
-    flex: 0 0 60%;
-    max-width: 60%;
   }
   &-meta {
     margin-block: unset;
@@ -65,19 +80,26 @@
       font-weight: 500;
       margin-left: 10px;
     }
-    a {
-      font-size: 1rem;
-      margin-left: 12px;
-      line-height: 1.5rem;
-      color: $primaryColor;
+  }
+  &-cate {
+    font-size: 1rem;
+    margin-left: 6px;
+    line-height: 1.5rem;
+    color: $primaryColor;
+    &:not(:last-child)::after {
+      content: ",";
     }
   }
   &-text {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-top: 8px;
     line-height: 1.5rem;
+    @include maxWidth($medium) {
+      font-size: 1rem;
+      line-height: 1.3rem;
+    }
   }
   &-viewed {
     position: relative;
@@ -100,7 +122,7 @@
     margin-top: 10px;
     text-align: justify;
   }
-  &-contact {
+  &-order {
     background-color: $primaryColor;
     border-radius: $border4;
     text-align: center;
@@ -125,6 +147,9 @@
     }
   }
   &-share {
+    @include maxWidth($large) {
+      margin-top: 20px;
+    }
     &-text {
       color: $primaryColor;
       font-weight: 700;
@@ -187,62 +212,91 @@
 .product-gallery {
   &-wrapper {
     border-radius: $border12;
-  }
-  &-carousel {
     @include flexbox(row, stretch, flex-start, null);
-    &-vertical {
-      @include flexbox(column, stretch, space-between, null);
-      & {
-        flex: 0 0 20%;
-        max-width: 20%;
-        padding-right: 10px;
-      }
+    @include maxWidth($small) {
+      flex-direction: column-reverse;
     }
-    &-thumb {
-      flex: 0 0 93%;
-      max-height: 530px;
+  }
+
+  &-main {
+    flex: 0 0 80%;
+    max-width: 80%;
+    position: relative;
+    @include maxWidth($small) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    &-item {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1/1;
+      border-radius: $border12;
       overflow: hidden;
-    }
-    &-main {
-      flex: 0 0 80%;
-      max-width: 80%;
-      position: relative;
-      &-item {
-        width: 100%;
-        height: 100%;
-        aspect-ratio: 1/1;
-        border-radius: $border12;
-        overflow: hidden;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          transform: scale(1);
-          transition: transform linear 0.3s;
-        }
-        &:hover {
-          img {
-            transform: scale(1.08);
-          }
-        }
-      }
-    }
-    &-image {
-      border-radius: $border8;
-      overflow: hidden;
-      margin-bottom: 10px;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
+        transform: scale(1);
+        transition: transform linear 0.3s;
       }
+      &:hover {
+        img {
+          transform: scale(1.08);
+        }
+      }
+    }
+  }
+
+  &-vertical {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding-right: 10px;
+    @include flexbox(column, stretch, space-between, null);
+    @include maxWidth($small) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-right: unset;
+    }
+  }
+  &-thumb {
+    flex: 0 0 93%;
+    max-height: 530px;
+    overflow: hidden;
+    @include maxWidth($small) {
+      margin-top: 15px;
+      padding-bottom: 15px;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-rows: 90px;
+      grid-template-columns: repeat(3, 90px);
+      gap: 10px;
+      @include scrollHorizontalBar();
+    }
+  }
+  &-image {
+    border-radius: $border8;
+    overflow: hidden;
+    margin-bottom: 10px;
+    @include maxWidth($small) {
+      & {
+        scroll-snap-align: center;
+      }
+      @include square(90px);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
   &-button {
     flex: 0 0 7%;
     max-height: 7%;
     @include flexbox(row, stretch, space-between, 10px);
+    @include maxWidth($small) {
+      display: none;
+    }
     button {
       flex: 1 1 50%;
       max-width: 50%;
@@ -358,6 +412,7 @@
     position: relative;
     overflow: hidden;
     @include maxWidth($small) {
+      min-height: 250px;
       &::before {
         content: "";
         display: block;
@@ -374,10 +429,7 @@
       transform: scale(1);
       transition: transform ease 0.5s;
       @include maxWidth($medium) {
-        min-height: 220px;
-      }
-      @include maxWidth($small) {
-        min-height: 200px;
+        min-height: 250px;
       }
     }
     &:hover {
@@ -589,6 +641,14 @@
     @include maxWidth($medium) {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 10px;
+    }
+    @include maxWidth($small) {
+      grid-template-columns: repeat(4, 300px);
+      grid-auto-flow: column;
+      @include scrollHorizontalBar();
+      .product-item-4-item {
+        scroll-snap-align: center;
+      }
     }
   }
 }
