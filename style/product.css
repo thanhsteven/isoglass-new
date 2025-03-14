@@ -101,6 +101,9 @@
     line-height: 2.2rem;
   }
 }
+.product-rating .rating {
+  justify-content: flex-start;
+}
 .product-meta {
   margin-block: unset;
 }

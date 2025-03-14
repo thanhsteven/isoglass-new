@@ -4,6 +4,8 @@ block product_title
   title=product.title 
 block topbar_text
   p=product.topbar 
+block product_rating
+  +rating4cate(product.rating)
 block product_breadcrumb
   +breadcrumbForEachPage(product.breadcrumb)
 block product_gallery

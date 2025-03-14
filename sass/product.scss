@@ -73,6 +73,11 @@
       }
     }
   }
+  &-rating {
+    .rating {
+      justify-content: flex-start;
+    }
+  }
   &-meta {
     margin-block: unset;
     time {
