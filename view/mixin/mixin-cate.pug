@@ -1,4 +1,4 @@
-//- * Sidebar For Each Main Categories
+//- Sidebar For Each Main Categories
 mixin sidebar4cate(sidebar)
   .sidebar-main-cate
     p.sidebar-main-title=sidebar.heading
@@ -9,7 +9,7 @@ mixin sidebar4cate(sidebar)
             img.sidebar-main-image(src=item.image, alt=item.name, srcset=`${item.image} 2x`)
             span.sidebar-main-text=item.name
 
-//- * Page title dành cho danh mục sản phẩm con
+//- Page title dành cho danh mục sản phẩm con
 mixin pageTitle4ChildCate(titleObject)
   section.title-child
     .container
@@ -31,7 +31,7 @@ mixin pageTitle4ChildCate(titleObject)
                     span.title-child-item-name=item.menuChild 
                     span.title-child-item-count=item.count
 
-//- * Rating for Each page
+//- Rating for Each page
 mixin rating4cate(rating)
   - var fullStars = rating.length;
   - var emptyStars = 5 - fullStars;
@@ -43,21 +43,21 @@ mixin rating4cate(rating)
       each star in Array(emptyStars)
         i.fa.fa-star-o(aria-hidden="true")
 
-//- * Categories Details For Each Main Categories
+//- Categories Details For Each Main Categories
 mixin category4maincat(var_categories)
   h2=var_categories.heading
   .cate-group-wrapper 
     each item in var_categories.items
       +categoryStyle01(item.href, item.image, item.title, item.count)
 
-//- * Products For Categories
+//- Products For Categories
 mixin products4cate(var_products)
   h2=var_products.heading
   .cate-product-wrapper
     each item in var_products.items
       +productStyle01(item.href, item.image, item.title)
 
-//- * Q&A For Categories
+//- Q&A For Categories
 mixin answerthequestion4cate(var_QA)
   h2=var_QA.heading 
   .support-wrapper
@@ -68,6 +68,13 @@ mixin answerthequestion4cate(var_QA)
           span=item.question
         .support-answer 
           p.support-answer-inner=item.answer 
+
+//- Gallery Images
+mixin galleryImage(images)
+  .images-gallery-wrapper 
+    each item in images
+      .images-gallery-item 
+        img(src=item.image, alt=item.alt, srcset=`${item.image} 2x`)
 
 //- - Category Infomation Box - Style 01
 mixin categoryStyle01(href, image, title, count)
