@@ -1,5 +1,6 @@
 @use "./base";
 @use "./component";
-
-// Modules
-@use "./modules";
+// CSS cho từng Modules
+@forward "./modules/notification";
+@forward "./modules/carousel";
+@forward "./modules/images-gallery";

@@ -1,5 +1,5 @@
-@use "./header";
-@use "./menu";
-@use "./categories";
-@use "./sidebar";
-@use "./footer";
+@forward "./header";
+@forward "./menu";
+@forward "./categories";
+@forward "./sidebar";
+@forward "./footer";

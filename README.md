@@ -50,7 +50,7 @@ sass ./sass/page/about-us.scss ./style/about-us.css --watch
 pug ./view/page/lien-he.pug --watch --pretty --out html
 sass ./sass/page/contact-us.scss ./style/contact-us.css --watch
 
-# không sử dụng nữa
+# ! Không sử dụng nữa
 
 sass ./sass/sub-cate.scss ./style/sub-cate.css --watch
 sass ./sass/main-cat.scss ./style/main-cat.css --watch
