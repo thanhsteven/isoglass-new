@@ -32,9 +32,9 @@ h2 {
 h3 {
   color: $primaryColor;
   margin-block: 10px;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
   @include maxWidth($large) {
     line-height: 2.5rem;
   }
