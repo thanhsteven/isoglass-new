@@ -1,3 +1,11 @@
+//- Gallery Images
+mixin galleryImage(gallery)
+  h2=gallery.title
+  .images-gallery-wrapper 
+    each image in gallery.images 
+      .images-gallery-item 
+        img(src=image.href, alt=image.alt, srcset=`${image.href} 2x`)
+
 //- Sidebar For Each Main Categories
 mixin sidebar4cate(sidebar)
   .sidebar-main-cate
@@ -68,13 +76,6 @@ mixin answerthequestion4cate(var_QA)
           span=item.question
         .support-answer 
           p.support-answer-inner=item.answer 
-
-//- Gallery Images
-mixin galleryImage(images)
-  .images-gallery-wrapper 
-    each item in images
-      .images-gallery-item 
-        img(src=item.image, alt=item.alt, srcset=`${item.image} 2x`)
 
 //- - Category Infomation Box - Style 01
 mixin categoryStyle01(href, image, title, count)

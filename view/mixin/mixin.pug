@@ -5,16 +5,16 @@ mixin breadcrumbForEachPage(breadcrumb)
       li.breadcrumb-item
         a(href=`${item.href}`)=item.name 
 
-//- - Title Style 01
+//- Title Style 01
 mixin title(subtitle, title, titleAfter)
-  .title-wrapper 
+  .title-wrapper
     if (subtitle)
       span.subtitle=subtitle
     h2.title=title
     if (titleAfter)
       p.title-after=titleAfter
 
-//- - Page Title for Page, Categories
+//- Page Title cho trang
 mixin secTitleBase(title, image, var_breadcrumb)
   .page-title-wrapper(style=`background-image: url(${image})`)
     .container 
@@ -26,7 +26,7 @@ mixin secTitleBase(title, image, var_breadcrumb)
               a(href=`${item.href}`)=item.name
 
 
-//- - Page Title for Child Categories
+//- Page Title cho Danh mục con
 mixin titleChildCate(title, image, childTitle, count)
   .page-title-child
     .container.page-title-child-wrapper
@@ -43,25 +43,25 @@ mixin titleChildCate(title, image, childTitle, count)
               span.page-title-child-item-name=childTitle 
               span.page-title-child-item-count=count
 
-//- - Button Product Style 01
+//- Nút Sản phẩm - Loại 1
 mixin btnProduct(text)
   a.btn_product_ver1(class!=attributes.class href="#" target="_blank" rel="nofollow noopener noreferrer")
     span=text 
 
-//- - Button Product Style 02
+//- Nút sản phẩm - Loại 2
 mixin btnProduct2(text)
   a.btn-product-2(class!=attributes.class href="#" target="_blank" rel="nofollow noopener noreferrer")
     span=text
 
-//- - Button Zalo for CTA
+//- Nút liên hệ CTA
 mixin btnZalo(text)
   a.btn-zalo(class!=attributes.class, href="https://zalo.me/0963181517" target="_blank" rel="noopener noreferrer nofollow")=text
 
-//- - Button Order
+//- Nút Đặt hàng
 mixin btnOrder(text)
   a.btn-order(href="" target="_blank" rel="noopener noreferrer nofollow", class!=attributes.class)=text
 
-//- - Button Xem thêm sản phẩm
+//- Nút xem thêm sản phẩm
 mixin btnSeeMorePro(text)
   a.btn-see-more-products(href="#" target="_blank" rel="noopener noreferrer nofollow")
     span=text 

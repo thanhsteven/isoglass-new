@@ -2,6 +2,7 @@
 
 pug index.pug --watch --pretty --out html
 sass ./sass/main.scss ./style/main.css --watch
+sass ./sass/modules.scss ./style/modules.css --watch
 
 # TRang chủ
 
