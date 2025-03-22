@@ -5,7 +5,6 @@ const images = document.querySelectorAll(".images-gallery-item img");
     const image = event.target;
     let imageSrc = image.getAttribute("src");
     let imageAlt = image.getAttribute("alt");
-    let lastIndex = 0;
     let index =
       [...images].findIndex((item) => item.getAttribute("src") === imageSrc) +
       1;
@@ -137,6 +136,7 @@ const images = document.querySelectorAll(".images-gallery-item img");
       ) {
         lightbox.remove();
         document.documentElement.removeAttribute("style");
+        document.exitFullscreen();
       }
     }
   });
