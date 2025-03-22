@@ -91,7 +91,7 @@ const images = document.querySelectorAll(".images-gallery-item img");
     // Xử lý Zoom Image
     imageZoom.addEventListener("click", zoomImageGallery);
     btnZoom.addEventListener("click", zoomImageGallery);
-    function zoomImageGallery(event) {
+    function zoomImageGallery() {
       let imageShow = document.querySelector(".lightbox-image img");
       let icon = btnZoom.firstElementChild;
       if (!imageShow.classList.contains("zoom-in")) {
@@ -100,15 +100,27 @@ const images = document.querySelectorAll(".images-gallery-item img");
         icon.classList.add("fa-search-minus");
       } else {
         imageShow.classList.remove("zoom-in");
+        imageShow.removeAttribute("class");
         icon.classList.add("fa-search-plus");
         icon.classList.remove("fa-search-minus");
       }
     }
 
     // Xử lý button Full Screen
-    btnFS.addEventListener("click", function (e) {
-      console.log(e.target);
-    });
+    btnFS.addEventListener("click", fullScreen);
+    function fullScreen() {
+      let iconFS = btnFS.firstElementChild;
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+        iconFS.classList.remove("fa-expand");
+        iconFS.classList.add("fa-compress");
+      } else {
+        document.exitFullscreen();
+        iconFS.classList.remove("fa-compress");
+        iconFS.classList.add("fa-expand");
+      }
+    }
+
     // Xử lý button Share
     btnShare.addEventListener("click", function (e) {
       console.log(e.target);
@@ -118,8 +130,11 @@ const images = document.querySelectorAll(".images-gallery-item img");
     btnClose.addEventListener("click", removeLightBox);
     lightbox.addEventListener("click", removeLightBox);
     function removeLightBox(event) {
-      let modalLightBox = event.target.parentNode;
-      if (modalLightBox.matches(".lightbox")) {
+      if (
+        event.target.matches(".lightbox-image") ||
+        event.target == btnClose ||
+        event.target.parentNode.matches(".lightbox")
+      ) {
         lightbox.remove();
         document.documentElement.removeAttribute("style");
       }
