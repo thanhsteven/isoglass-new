@@ -1,28 +1,26 @@
-console.log("Đã kết nối với gallery.js");
-
 const images = document.querySelectorAll(".images-gallery-item img");
 // console.log([...images]);
 [...images].forEach(function (image) {
   image.addEventListener("click", function (event) {
-    // * Lấy attribute
     const image = event.target;
     let imageSrc = image.getAttribute("src");
     let imageAlt = image.getAttribute("alt");
-    document.documentElement.style.overflow = "hidden";
+    let lastIndex = 0;
     let index =
-      [...images].findIndex(function (item) {
-        if (item.getAttribute("src") === imageSrc) {
-          return item;
-        }
-      }) + 1;
-    let legnth = [...images].length;
+      [...images].findIndex((item) => item.getAttribute("src") === imageSrc) +
+      1;
+    let indexLenght = [...images].length;
+
+    // console.log("index tại điểm click: " + index);
+
+    // Khởi tạo LightBox
     const tplLightBox = `
     <div class="lightbox">
-      <div class="lightbox-header"> 
+      <div class="lightbox-header">
         <div class="lightbox-left">
-          <span>${index}/${legnth}</span>
+          <span>${index}/${indexLenght}</span>
         </div>
-        <div class="lightbox-right"> 
+        <div class="lightbox-right">
           <button class="lightbox-zoom" title="Zoom in/out">
             <i class="fa fa-search-plus" aria-hidden="true"></i>
           </button>
@@ -37,20 +35,20 @@ const images = document.querySelectorAll(".images-gallery-item img");
           </button>
         </div>
       </div>
-      <div class="lightbox-body"> 
+      <div class="lightbox-body">
         <button class="lightbox-pre">
           <i class="fa fa-angle-left" aira-hidden="true"></i>
         </button>
         <div class="lightbox-image">
           <img src="${imageSrc}" alt="${imageAlt}">
         </div>
-        <button class="lightbox-next"> 
+        <button class="lightbox-next">
           <i class="fa fa-angle-right" aira-hidden="true"></i>
         </button>
       </div>
     </div>`;
-
     document.body.insertAdjacentHTML("afterend", tplLightBox);
+    document.documentElement.style.overflow = "hidden";
 
     // Khai báo các biến
     const lightbox = document.querySelector(".lightbox");
@@ -62,63 +60,62 @@ const images = document.querySelectorAll(".images-gallery-item img");
     const btnPrev = lightbox.querySelector(".lightbox-pre");
     const btnNext = lightbox.querySelector(".lightbox-next");
 
-    let lastIndex;
-
-    // - Xử lý button prev
-    btnPrev.addEventListener("click", function (e) {
-      index = index - 1;
-      let newSrc = [...images][index + 1].getAttribute("src");
-      let image = lightbox.querySelector(".lightbox-image img");
-      image.setAttribute("src", newSrc);
-      let sttSpan = lightbox.querySelector(".lightbox-left span");
-      sttSpan.innerText = `${index}/${legnth}`;
-    });
-
-    // - Xử lý button next
-    btnNext.addEventListener("click", function (e) {
+    // Xử lý button next
+    btnNext.addEventListener("click", nextImageGallery);
+    function nextImageGallery() {
       index = index + 1;
-      let newSrc = [...images][index - 1].getAttribute("src");
-      let image = lightbox.querySelector(".lightbox-image img");
-      image.setAttribute("src", newSrc);
-      let sttSpan = lightbox.querySelector(".lightbox-left span");
-      sttSpan.innerText = `${index}/${legnth}`;
-    });
-
-    // * Xử lý Zoom Image
-    imageZoom.addEventListener("click", function (e) {
-      if (!e.target.hasAttribute("style")) {
-        e.target.style.transform = "scale(1.2)";
-      } else {
-        e.target.removeAttribute("style");
+      if (index > indexLenght) {
+        index = 1;
       }
-    });
+      let newSrc = [...images][index - 1].getAttribute("src");
+      let nextÍmage = lightbox.querySelector(".lightbox-image img");
+      nextÍmage.setAttribute("src", newSrc);
+      let sttSpan = lightbox.querySelector(".lightbox-left span");
+      sttSpan.innerText = `${index}/${indexLenght}`;
+    }
 
-    // * Xử lý button Zoom
-    btnZoom.addEventListener("click", function (e) {
-      const lightboxImage = document.querySelector(".lightbox-image img");
-      let icon = e.target.firstElementChild;
-      if (icon.classList.contains("fa-search-minus")) {
-        icon.classList.remove("fa-search-minus");
-        icon.classList.add("fa-search-plus");
-        lightboxImage.removeAttribute("style");
-      } else {
+    // Xử lý button prev
+    btnPrev.addEventListener("click", prevImageGallery);
+    function prevImageGallery() {
+      index = index - 1;
+      if (index == 0) {
+        index = indexLenght;
+      }
+      let prevSrc = [...images][index - 1].getAttribute("src");
+      let prevImage = lightbox.querySelector(".lightbox-image img");
+      prevImage.setAttribute("src", prevSrc);
+      let sttSpan = lightbox.querySelector(".lightbox-left span");
+      sttSpan.innerText = `${index}/${indexLenght}`;
+    }
+
+    // Xử lý Zoom Image
+    imageZoom.addEventListener("click", zoomImageGallery);
+    btnZoom.addEventListener("click", zoomImageGallery);
+    function zoomImageGallery(event) {
+      let imageShow = document.querySelector(".lightbox-image img");
+      let icon = btnZoom.firstElementChild;
+      if (!imageShow.classList.contains("zoom-in")) {
+        imageShow.classList.add("zoom-in");
         icon.classList.remove("fa-search-plus");
         icon.classList.add("fa-search-minus");
-        lightboxImage.style.transform = "scale(1.2)";
+      } else {
+        imageShow.classList.remove("zoom-in");
+        icon.classList.add("fa-search-plus");
+        icon.classList.remove("fa-search-minus");
       }
-    });
-    // - Xử lý button Full Screen
+    }
+
+    // Xử lý button Full Screen
     btnFS.addEventListener("click", function (e) {
       console.log(e.target);
     });
-    // - Xử lý button Share
+    // Xử lý button Share
     btnShare.addEventListener("click", function (e) {
       console.log(e.target);
     });
 
-    // * Xử lý button Close
+    // Xử lý button Close
     btnClose.addEventListener("click", removeLightBox);
-
     lightbox.addEventListener("click", function (e) {
       if (e.target.parentNode.matches(".lightbox")) {
         removeLightBox();

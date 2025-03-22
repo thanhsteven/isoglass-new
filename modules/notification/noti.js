@@ -1,5 +1,3 @@
-console.log("Đã kết nối với file noti.js");
-
 const arrNoti = [
   {
     avatar: "../modules/notification/images/khach-hang-1.jpg",

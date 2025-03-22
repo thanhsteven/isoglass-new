@@ -1769,9 +1769,13 @@ a {
   height: 600px;
   margin-bottom: auto;
   object-fit: cover;
-  border-radius: 12px;
   cursor: zoom-in;
+  border-radius: 12px;
   transition: all linear 0.3s;
+}
+.lightbox-image .zoom-in {
+  transform: scale(1.2);
+  cursor: zoom-out;
 }
 .lightbox-pre, .lightbox-next {
   background-color: transparent;

@@ -99,9 +99,13 @@
       height: 600px;
       margin-bottom: auto;
       object-fit: cover;
-      border-radius: $border12;
       cursor: zoom-in;
+      border-radius: $border12;
       transition: all linear 0.3s;
+    }
+    .zoom-in {
+      transform: scale(1.2);
+      cursor: zoom-out;
     }
   }
   &-pre,
