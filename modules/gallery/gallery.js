@@ -116,15 +116,13 @@ const images = document.querySelectorAll(".images-gallery-item img");
 
     // Xử lý button Close
     btnClose.addEventListener("click", removeLightBox);
-    lightbox.addEventListener("click", function (e) {
-      if (e.target.parentNode.matches(".lightbox")) {
-        removeLightBox();
+    lightbox.addEventListener("click", removeLightBox);
+    function removeLightBox(event) {
+      let modalLightBox = event.target.parentNode;
+      if (modalLightBox.matches(".lightbox")) {
+        lightbox.remove();
+        document.documentElement.removeAttribute("style");
       }
-    });
-
-    function removeLightBox() {
-      lightbox.remove();
-      document.documentElement.removeAttribute("style");
     }
   });
 });
